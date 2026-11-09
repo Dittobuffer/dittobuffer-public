@@ -1,0 +1,2445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dittobuffer Admin</title>
+<style>
+  :root{
+    --primary:#6750A4; --on-primary:#FFFFFF; --primary-container:#EADDFF; --on-primary-container:#21005D;
+    --secondary-container:#E8DEF8; --on-secondary-container:#1D192B; --tertiary:#7D5260;
+    --surface:#FEF7FF; --surface-container-low:#F7F2FA; --surface-container:#F3EDF7;
+    --surface-container-high:#ECE6F0; --surface-container-highest:#E6E0E9;
+    --on-surface:#1D1B20; --on-surface-variant:#49454F; --outline:#79747E; --outline-variant:#CAC4D0;
+    --error:#B3261E; --error-container:#F9DEDC; --success:#2E6B4F; --success-container:#D7F0E3;
+    --shadow:0 1px 3px rgba(0,0,0,.14),0 1px 2px rgba(0,0,0,.08);
+    --radius-xl:28px; --radius-lg:20px; --radius-md:14px; --radius-sm:9px;
+    font-family:Roboto,"Segoe UI Variable","Segoe UI",system-ui,-apple-system,sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--surface);color:var(--on-surface)}
+  body{min-height:100vh;font-size:14px;line-height:1.45}
+  button,input,select{font:inherit;color:inherit}
+  h1,h2,h3,p{margin:0}
+  h1{font-size:22px;font-weight:500;letter-spacing:.1px}
+  h2{font-size:17px;font-weight:600;letter-spacing:.1px}
+  .topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 24px;background:rgba(243,237,247,.94);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--outline-variant)}
+  .brand{display:flex;align-items:center;gap:14px;min-width:0}
+  .brand-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+    background:var(--primary);color:#fff;flex:none;box-shadow:var(--shadow)}
+  .brand p{color:var(--on-surface-variant);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52vw}
+  .top-actions{display:flex;align-items:center;gap:8px}
+  .chip{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:0 12px;border-radius:999px;
+    background:var(--secondary-container);color:var(--on-secondary-container);font-size:12px;font-weight:600;white-space:nowrap}
+  .chip.good{background:var(--success-container);color:var(--success)}
+  .icon-btn{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;
+    background:transparent;cursor:pointer;color:var(--on-surface-variant);transition:background .15s}
+  .icon-btn:hover{background:var(--surface-container-highest)}
+  .tabs{display:flex;gap:6px;padding:10px 24px 0;max-width:1480px;margin:0 auto;overflow:auto}
+  .notice{max-width:1480px;margin:10px auto 0;padding:10px 14px;border-radius:var(--radius-sm);font-size:13px;line-height:1.45}
+  .notice.warn{background:#FFF4E5;border:1px solid #E8B25C;color:#5C3B00}
+  .notice strong{color:#7A4A00}
+  .notice code{font-family:ui-monospace,Consolas,monospace;font-size:12px}
+  .tab{border:0;background:transparent;color:var(--on-surface-variant);font-weight:600;font-size:14px;
+    padding:11px 18px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+  .tab:hover{background:var(--surface-container)}
+  .tab.active{background:var(--secondary-container);color:var(--on-secondary-container)}
+  main{max-width:1480px;margin:0 auto;padding:16px 24px 96px}
+  .panel{display:none}
+  .panel.active{display:block;animation:fade .18s ease}
+  @keyframes fade{from{opacity:.4;transform:translateY(2px)}to{opacity:1;transform:none}}
+  .card{background:var(--surface-container-low);border-radius:var(--radius-xl);padding:20px;box-shadow:var(--shadow)}
+  .card h2{margin-bottom:4px}
+  .card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+  .hint{color:var(--on-surface-variant);font-size:12px;margin-top:4px}
+  .map-grid{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:16px;align-items:start;margin-bottom:16px}
+  .map-card{padding:12px}
+  .map{position:relative;height:540px;border-radius:var(--radius-lg);overflow:hidden;background:var(--surface-container-highest);
+    cursor:crosshair;touch-action:none;user-select:none}
+  .tile-layer,.marker-layer{position:absolute;inset:0}
+  .tile-layer img{position:absolute;width:256px;height:256px;user-select:none;pointer-events:none}
+  .marker{position:absolute;transform:translate(-50%,-100%);pointer-events:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+  .marker.player{transform:translate(-50%,-50%)}
+  .player-dot{display:block;width:18px;height:18px;border-radius:50%;background:#1A73E8;border:4px solid #fff;
+    box-shadow:0 0 0 6px rgba(26,115,232,.22);animation:pulse 2.2s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 5px rgba(26,115,232,.20)}50%{box-shadow:0 0 0 11px rgba(26,115,232,.06)}}
+  .map-pin{display:grid;place-items:center;width:30px;height:30px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);
+    color:#fff;font-weight:800;font-size:13px;border:2px solid #fff}
+  .map-pin span{transform:rotate(45deg)}
+  .map-pin.gym{background:#7D5260}
+  .map-pin.stop{background:#386A20;border-radius:50%}
+  .map-pin.power{background:#6D4C00}
+  .map-pin.power span{font-size:15px;line-height:1;color:#FFD8A8}
+  .marker-sprite{display:block;width:42px;height:42px;image-rendering:auto}
+  .marker-sprite.shadowed,.sprite.shadowed{filter:brightness(.48) sepia(.55) hue-rotate(228deg) saturate(2.5)}
+  .pin{display:block;width:18px;height:18px;border-radius:50%;background:var(--primary);border:4px solid #fff;
+    box-shadow:0 0 0 4px rgba(103,80,164,.25)}
+  .map-controls{position:absolute;right:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;z-index:5}
+  .map-controls .icon-btn{background:#fff;box-shadow:var(--shadow);color:var(--on-surface)}
+  .map-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 8px 2px;flex-wrap:wrap}
+  .map-meta .label{display:block;font-size:11px;color:var(--on-surface-variant);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+  .map-meta strong{font-size:13px;font-variant-numeric:tabular-nums}
+  .row{display:flex;gap:6px;flex-wrap:wrap}
+  .field{display:flex;flex-direction:column;gap:5px;margin-top:12px}
+  .field>span,.field>label{font-size:12px;font-weight:600;color:var(--on-surface-variant)}
+  .field input,.field select{width:100%;border:1px solid var(--outline);border-radius:var(--radius-sm);
+    background:var(--surface);padding:11px 12px;outline:none;transition:border-color .15s,box-shadow .15s}
+  .field input:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+  .field select[size]{padding:6px;overflow:auto}
+  .field select[size] option{padding:7px 9px;border-radius:6px}
+  .search{margin-bottom:2px!important;background:var(--surface-container)!important}
+  .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .preview-row{display:flex;align-items:center;gap:12px;margin-top:12px;padding:10px;border-radius:var(--radius-md);
+    background:var(--surface-container)}
+  .preview-row strong{display:block;font-size:14px}
+  .sprite{width:56px;height:56px;object-fit:contain}
+  .switch-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+  .switch{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;cursor:pointer;user-select:none}
+  .switch input{position:absolute;opacity:0;width:1px;height:1px}
+  .switch .track{position:relative;display:inline-block;width:52px;height:32px;border-radius:999px;
+    border:2px solid var(--outline);background:var(--surface-container-highest);transition:background .18s,border-color .18s;flex:none}
+  .switch .thumb{position:absolute;top:50%;left:6px;width:16px;height:16px;border-radius:50%;background:var(--outline);
+    transform:translateY(-50%);transition:left .18s,width .18s,height .18s,background .18s}
+  .switch input:checked+.track{background:var(--primary);border-color:var(--primary)}
+  .switch input:checked+.track .thumb{left:26px;width:24px;height:24px;background:#fff}
+  .switch input:focus-visible+.track{outline:2px solid var(--primary);outline-offset:2px}
+  .btn{border:0;border-radius:999px;min-height:40px;padding:0 20px;font-weight:600;font-size:13px;cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:filter .15s,background .15s}
+  .btn:hover{filter:brightness(.96)}
+  .btn.filled{background:var(--primary);color:var(--on-primary);box-shadow:var(--shadow)}
+  .btn.tonal{background:var(--secondary-container);color:var(--on-secondary-container)}
+  .btn.text{background:transparent;color:var(--primary);padding:0 12px}
+  .btn.text:hover{background:rgba(103,80,164,.08)}
+  .btn.danger{background:var(--error-container);color:var(--error);min-height:34px;padding:0 14px;font-size:12px}
+  .btn.wide{width:100%;margin-top:16px}
+  .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .chip-btn{border:1px solid var(--outline-variant);background:transparent;border-radius:999px;padding:6px 13px;
+    font-size:12px;font-weight:600;color:var(--on-surface-variant);cursor:pointer}
+  .chip-btn:hover{background:var(--surface-container)}
+  .segmented{display:inline-flex;gap:2px;padding:3px;border-radius:999px;background:var(--surface-container-high);margin-top:10px}
+  .segmented button{border:0;background:transparent;border-radius:999px;padding:8px 20px;font-weight:600;font-size:13px;
+    color:var(--on-surface-variant);cursor:pointer}
+  .segmented button.active{background:var(--surface);color:var(--on-surface);box-shadow:var(--shadow)}
+  .two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+  .list{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+  .list-row{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--radius-md);
+    background:var(--surface-container);min-width:0}
+  .list-row .icon{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:50%;
+    background:var(--surface-container-highest);overflow:hidden}
+  .list-row .icon img{width:40px;height:40px;object-fit:contain}
+  .list-row .grow{min-width:0;flex:1}
+  .list-row .title{font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .list-row .sub{font-size:11px;color:var(--on-surface-variant);font-variant-numeric:tabular-nums}
+  .list-row input{border:1px solid var(--outline);border-radius:var(--radius-sm);background:var(--surface);
+    padding:9px 10px;min-width:0;outline:none}
+  .list-row input:focus{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+  .badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:999px;font-size:10px;font-weight:700;
+    letter-spacing:.2px;text-transform:uppercase}
+  .badge.shiny{background:#FFF0C2;color:#6B5200}
+  .badge.shadow{background:#EADDFF;color:#21005D}
+  .badge.admin{background:var(--success-container);color:var(--success)}
+  .badge.egg{background:#E8DEF8;color:#1D192B}
+  .empty{padding:28px 10px;text-align:center;color:var(--on-surface-variant);font-size:13px}
+  .snackbar{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:60;max-width:min(92vw,560px);
+    background:#322F35;color:#F5EFF7;padding:14px 20px;border-radius:var(--radius-md);font-size:13px;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+  .snackbar.show{opacity:1;transform:translate(-50%,0)}
+  .snackbar.error{background:var(--error);color:#fff}
+  .player-row{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto;gap:12px;align-items:center;
+    padding:12px;border-radius:var(--radius-md);background:var(--surface-container)}
+  .player-row .avatar{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--primary-container);
+    color:var(--on-primary-container);font-weight:700}
+  .table-head{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--on-surface-variant);font-weight:700}
+  @media(max-width:1050px){.map-grid,.two-col{grid-template-columns:1fr}.map{height:430px}}
+  @media(max-width:640px){main{padding:12px 12px 90px}.topbar{padding:10px 14px}.tabs{padding:8px 12px 0}
+    .grid-3{grid-template-columns:1fr 1fr}.brand p{display:none}.player-row{grid-template-columns:1fr auto}}
+</style>
+<link rel="stylesheet" href="/studio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+        <circle cx="12" cy="12" r="9.2"/><path d="M3 12h6M15 12h6"/><circle cx="12" cy="12" r="3.2" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Dittobuffer Admin</h1>
+      <p id="statusLine">Connecting to the family server…</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <span class="chip" id="serverChip">127.0.0.1:8080</span>
+    <button class="icon-btn" id="refreshBtn" title="Refresh" aria-label="Refresh">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<div class="notice warn" role="status">
+  <strong>Known issues in this build:</strong> map tiles can stay blank on the phone, and Power Spots can
+  be missing in game. Hand-placed spots are stored and returned by <code>GET_MAP_OBJECTS</code>, but the
+  Lightship tile transport and the native Max UI still need work. Rotating spots only have candidate data
+  for the Netherlands. Full diagnosis and the handoff task list: <code>docs/KNOWN-ISSUES.md</code>.
+</div>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-tab="map" role="tab">Map &amp; spawns</button>
+  <button class="tab" data-tab="studio" role="tab">Seasons &amp; Events</button>
+  <button class="tab" data-tab="gyms" role="tab">Gyms &amp; stops</button>
+  <button class="tab" data-tab="raids" role="tab">Raids</button>
+  <button class="tab" data-tab="rocket" role="tab">Team GO Rocket</button>
+  <button class="tab" data-tab="max" role="tab">Dynamax &amp; Power Spots</button>
+  <button class="tab" data-tab="pvp" role="tab">Trainer battles</button>
+  <button class="tab" data-tab="players" role="tab">Players</button>
+  <button class="tab" data-tab="rewards" role="tab">Rewards</button>
+  <button class="tab" data-tab="loot" role="tab">Pokéstop loot</button>
+  <button class="tab" data-tab="routes" role="tab">Routes &amp; features</button>
+  <button class="tab" data-tab="liveops" role="tab">Live events</button>
+  <button class="tab" data-tab="research" role="tab">Research</button>
+  <button class="tab" data-tab="shadow" role="tab">Shadow</button>
+  <button class="tab" data-tab="platform" role="tab">Platform</button>
+</nav>
+
+<main>
+  <section class="panel" id="panel-studio"></section>
+  <section class="panel active" id="panel-map">
+    <div class="map-grid">
+      <article class="card map-card">
+        <div class="map" id="map">
+          <div class="tile-layer" id="tileLayer"></div>
+          <div class="marker-layer" id="markerLayer"></div>
+          <div class="map-controls">
+            <button class="icon-btn" id="zoomIn" title="Zoom in">+</button>
+            <button class="icon-btn" id="zoomOut" title="Zoom out">−</button>
+            <button class="icon-btn" id="centerBtn" title="Center on player">⌖</button>
+          </div>
+        </div>
+        <div class="map-meta">
+          <div><span class="label">Selected point</span><strong id="selectedLabel">none</strong></div>
+          <div class="row">
+            <button class="btn text" id="usePlayerBtn">Use player location</button>
+            <button class="btn text" id="gpsBtn">Read phone GPS</button>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card">
+        <h2>Spawn Pokémon</h2>
+        <p class="hint">Click the map to place the pin, then spawn here.</p>
+        <div class="field">
+          <label for="spawnSpecies">Species</label>
+          <input id="spawnSpeciesSearch" class="search" placeholder="Filter by name or number…" autocomplete="off">
+          <select id="spawnSpecies" size="7" aria-label="Species"></select>
+        </div>
+        <div class="preview-row">
+          <img id="spawnPreview" class="sprite" alt="">
+          <div><strong id="spawnPreviewName">Mewtwo</strong><span class="hint" id="spawnPreviewId">#150</span></div>
+        </div>
+        <div class="grid-3">
+          <label class="field"><span>Level</span><input id="spawnLevel" type="number" min="1" max="50" value="25"></label>
+          <label class="field"><span>ATK IV</span><input id="spawnAtk" type="number" min="0" max="15" value="15"></label>
+          <label class="field"><span>DEF IV</span><input id="spawnDef" type="number" min="0" max="15" value="15"></label>
+        </div>
+        <label class="field"><span>STA IV</span><input id="spawnSta" type="number" min="0" max="15" value="15"></label>
+        <div class="switch-row">
+          <label class="switch"><input type="checkbox" id="spawnShiny"><span class="track"><span class="thumb"></span></span>Shiny</label>
+          <label class="switch"><input type="checkbox" id="spawnShadow"><span class="track"><span class="thumb"></span></span>Shadow form</label>
+          <label class="switch"><input type="checkbox" id="spawnLucky"><span class="track"><span class="thumb"></span></span>Lucky</label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span>Form</span><select id="spawnForm"></select></label>
+          <label class="field"><span>Costume</span><select id="spawnCostume"></select></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span>Mega form</span><select id="spawnMega"></select></label>
+          <label class="field"><span>Max form</span><select id="spawnMax"><option value="0">Normal</option><option value="1">Dynamax</option><option value="2">Gigantamax</option></select></label>
+        </div>
+        <div class="chip-row">
+          <button class="chip-btn" onclick="pickSpecialForm('spawn',890,2580)">Eternamax</button>
+          <button class="chip-btn" onclick="pickSpecialForm('spawn',718,2591)">Zygarde 10%</button>
+          <button class="chip-btn" onclick="pickSpecialForm('spawn',718,2592)">Zygarde 50%</button>
+          <button class="chip-btn" onclick="pickSpecialForm('spawn',718,2593)">Zygarde Complete</button>
+        </div>
+        <div class="grid-3">
+          <label class="field"><span>Count</span><input id="spawnCount" type="number" min="1" max="25" value="1"></label>
+          <label class="field"><span>Radius m</span><input id="spawnRadius" type="number" min="0" max="500" value="40"></label>
+          <label class="field"><span>Duration s</span><input id="spawnDuration" type="number" min="60" max="604800" value="86400"></label>
+        </div>
+        <div class="chip-row">
+          <button class="chip-btn" data-duration="3600">1 h</button>
+          <button class="chip-btn" data-duration="21600">6 h</button>
+          <button class="chip-btn" data-duration="86400">24 h</button>
+          <button class="chip-btn" data-duration="604800">7 d</button>
+        </div>
+        <button class="btn filled wide" id="spawnBtn">Spawn</button>
+      </aside>
+    </div>
+
+    <article class="card" style="margin-bottom:16px">
+      <div class="card-head"><h2>Wild spawns</h2><span class="chip" id="randomSpawnChip">on</span></div>
+      <p class="hint">Random mode builds a weighted pool from every locally imported form and replaces the whole neighbourhood every refresh.</p>
+      <label class="switch"><input type="checkbox" id="randomSpawns" checked><span class="track"><span class="thumb"></span></span>Random Pokémon spawns (default on)</label>
+      <div class="grid-3">
+        <label class="field"><span>Refresh seconds</span><input id="randomRefresh" type="number" min="300" max="86400" value="1800"></label>
+        <label class="field"><span>Level min</span><input id="randomLevelLow" type="number" min="1" max="40" value="5"></label>
+        <label class="field"><span>Level max</span><input id="randomLevelHigh" type="number" min="1" max="40" value="35"></label>
+      </div>
+      <div class="grid-3">
+        <label class="field"><span>IV min</span><input id="randomIvLow" type="number" min="0" max="15" value="0"></label>
+        <label class="field"><span>IV max</span><input id="randomIvHigh" type="number" min="0" max="15" value="15"></label>
+        <label class="field"><span>Spawns per tile</span><input id="randomPoints" type="number" min="1" max="30" value="6"></label>
+      </div>
+      <button class="btn filled wide" id="saveSpawnSettings">Save spawn settings</button>
+      <p class="hint">Restart the game server after saving so the new pool is used.</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h2>Active spawns</h2>
+        <div class="row"><span class="chip" id="spawnCountChip">0</span>
+          <button class="btn danger" id="clearAdminSpawns">Remove all admin spawns</button></div>
+      </div>
+      <div id="spawnList" class="list"></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h2>Streets &amp; map data</h2><span class="chip" id="osmChip">0 cells</span></div>
+      <p class="hint">OpenStreetMap cells download automatically, one small area at a time, when a trainer plays: the cell under the player is fetched before the map reply, then the server keeps walking outward ring by ring for as long as it runs, so distant streets fill in over time. Generated tiles are saved under <code>data/maps/tile-cache</code> and served from disk. Small streets, service roads, tracks and footpaths are included, not just main roads.</p>
+      <div class="grid-2">
+        <label class="field"><span>On-the-fly download</span><select id="osmEnabled"><option value="true">On</option><option value="false">Off</option></select></label>
+        <label class="field"><span>Radius per login (m)</span><input id="osmRadius" type="number" min="200" max="20000" step="100" value="5000"></label>
+        <label class="field"><span>Endless outward expansion</span><select id="osmExpand"><option value="true">On</option><option value="false">Off</option></select></label>
+        <label class="field"><span>Download interval (s)</span><input id="osmInterval" type="number" min="0.5" max="60" step="0.5" value="2"></label>
+        <label class="field"><span>Stop after ring (0 = endless)</span><input id="osmRingMax" type="number" min="0" step="1" value="0"></label>
+        <label class="field"><span>Expand around (lat, lng)</span><input id="osmFocus" type="text" placeholder="52.370, 4.895"></label>
+      </div>
+      <div class="grid-2">
+        <label class="field"><span>Auto-import OSM POIs</span><select id="poiImportEnabled"><option value="true">On</option><option value="false">Off</option></select></label>
+        <label class="field"><span>Chance a POI becomes a gym (%)</span><input id="poiImportGym" type="number" min="0" max="100" step="1" value="20"></label>
+        <label class="field"><span>POI scan radius (m)</span><input id="poiImportRadius" type="number" min="200" max="5000" step="100" value="1200"></label>
+        <label class="field"><span>POI scan interval (s)</span><input id="poiImportInterval" type="number" min="15" max="3600" step="5" value="60"></label>
+      </div>
+      <div class="row-actions"><button class="btn tonal" id="poiImportSaveBtn">Save POI import</button><button class="btn tonal" id="osmSaveBtn">Save map settings</button><button class="btn tonal" id="osmClearCacheBtn">Clear tile cache</button></div>
+      <p class="hint" id="poiImportSummary"></p>
+      <p class="hint" id="osmSummary"></p>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-gyms">
+    <div class="two-col">
+      <article class="card">
+        <h2>Place a gym or Pokéstop</h2>
+        <p class="hint">Select a point on the map first. Admin POIs live in a local overlay, so the published world stays untouched.</p>
+        <div class="segmented" id="poiKind">
+          <button class="active" data-kind="0">Gym</button>
+          <button data-kind="1">Pokéstop</button>
+        </div>
+        <label class="field"><span>Name</span><input id="poiName" maxlength="60" placeholder="Garden gym"></label>
+        <p class="hint" id="poiLocation">No point selected.</p>
+        <button class="btn filled wide" id="poiBtn">Add at selected point</button>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Admin gyms &amp; stops</h2><span class="chip" id="poiCountChip">0</span></div>
+        <div id="poiList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-raids">
+    <div class="two-col">
+      <article class="card">
+        <h2>Create a raid</h2>
+        <label class="field"><span>Gym</span><select id="raidGym"></select></label>
+        <div class="field">
+          <label for="raidSpecies">Boss</label>
+          <input id="raidSpeciesSearch" class="search" placeholder="Filter by name or number…" autocomplete="off">
+          <select id="raidSpecies" size="6" aria-label="Raid boss"></select>
+        </div>
+        <div class="preview-row">
+          <img id="raidPreview" class="sprite" alt="">
+          <div><strong id="raidPreviewName">Mewtwo</strong><span class="hint" id="raidPreviewId">#150</span></div>
+        </div>
+        <div class="grid-3">
+          <label class="field"><span>Tier</span>
+            <select id="raidTier"><option value="1">1</option><option value="3">3</option><option value="5" selected>5</option><option value="6">6 · Mega</option></select>
+          </label>
+          <label class="field"><span>Boss HP</span><input id="raidHp" type="number" min="10" max="1000000" value="2000"></label>
+          <label class="field"><span>Boss CP</span><input id="raidCp" type="number" min="10" max="1000000" value="22000"></label>
+        </div>
+        <div class="grid-3">
+          <label class="field"><span>Level</span><input id="raidLevel" type="number" min="1" max="50" value="20"></label>
+          <label class="field"><span>Egg seconds</span><input id="raidEgg" type="number" min="0" max="3600" value="0"></label>
+          <label class="field"><span>Active seconds</span><input id="raidActive" type="number" min="60" max="86400" value="3600"></label>
+        </div>
+        <div class="field">
+          <label>Shiny rate <output id="raidShinyOut">5%</output></label>
+          <input id="raidShiny" type="range" min="0" max="100" step="1" value="5">
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label>Battle time <output id="raidBattleOut">120 s</output></label>
+            <input id="raidBattle" type="range" min="20" max="600" step="5" value="120">
+          </div>
+          <div class="field">
+            <label>Catch IV floor <output id="raidIvFloorOut">10/10/10</output></label>
+            <input id="raidIvFloor" type="range" min="0" max="15" step="1" value="10">
+          </div>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span>Form</span><select id="raidForm"></select></label>
+          <label class="field"><span>Costume</span><select id="raidCostume"></select></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span>Mega form</span><select id="raidMega"></select></label>
+          <label class="field"><span>Max form</span><select id="raidMax"><option value="0">Normal</option><option value="1">Dynamax</option><option value="2">Gigantamax</option></select></label>
+        </div>
+        <div class="field">
+          <label>Lobby time <output id="raidLobbyOut">120 s</output></label>
+          <input id="raidLobby" type="range" min="20" max="600" step="5" value="120">
+        </div>
+        <div class="chip-row" style="margin-bottom:10px">
+          <button class="btn tonal" id="saveRaidDefault">Save lobby time as default</button>
+        </div>
+        <div class="chip-row">
+          <button class="chip-btn" onclick="pickSpecialForm('raid',890,2580)">Eternamax</button>
+          <button class="chip-btn" onclick="pickSpecialForm('raid',718,2591)">Zygarde 10%</button>
+          <button class="chip-btn" onclick="pickSpecialForm('raid',718,2592)">Zygarde 50%</button>
+          <button class="chip-btn" onclick="pickSpecialForm('raid',718,2593)">Zygarde Complete</button>
+        </div>
+        <label class="switch"><input type="checkbox" id="raidShadow"><span class="track"><span class="thumb"></span></span>Shadow form (when available)</label>
+        <button class="btn filled wide" id="raidBtn">Create raid</button>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Active raids</h2><span class="chip" id="raidCountChip">0</span></div>
+        <div id="raidList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-rocket">
+    <div class="two-col">
+      <article class="card">
+        <h2>Team GO Rocket</h2>
+        <p class="hint">Local balloons drop a shadow Pokémon at the chosen point. Rosters are stored in config/rocket.json. Rescue simulates winning the Rocket battle and moves the shadow Pokémon into the selected player's storage.</p>
+        <div class="grid-2">
+          <label class="field"><span>Balloon kind</span>
+            <select id="rocketKind"><option value="grunt">Grunt</option><option value="leader">Leader</option><option value="giovanni">Giovanni</option></select>
+          </label>
+          <label class="field"><span>Character</span><select id="rocketCharacter"></select></label>
+        </div>
+        <label class="field"><span>Lifetime seconds</span><input id="rocketDuration" type="number" min="60" max="86400" value="1200"></label>
+        <label class="field"><span>Rescue shadow Pokémon to</span><select id="rocketPlayer"></select></label>
+        <button class="btn filled wide" id="rocketSpawnBtn">Launch balloon at selected point</button>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Rosters &amp; settings</h2>
+          <button class="btn text" id="rocketSaveBtn">Save</button></div>
+        <label class="field"><span>config/rocket.json</span><textarea id="rocketConfig" rows="18" style="width:100%;border:1px solid var(--outline);border-radius:var(--radius-sm);padding:10px;background:var(--surface);font-family:ui-monospace,Consolas,monospace;font-size:12px"></textarea></label>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Active balloons</h2><span class="chip" id="rocketCountChip">0</span></div>
+        <div id="rocketList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-max">
+    <div class="two-col">
+      <article class="card">
+        <div class="card-head"><h2>Dynamax &amp; Gigantamax settings</h2>
+          <button class="btn text" id="maxSaveBtn">Save</button></div>
+        <p class="hint">Mode 1 is Dynamax, mode 2 is Gigantamax. A Gigantamax Power Spot needs a source-allowlisted form; the shipped reference snapshot allowlists <strong id="maxGmaxCount">0</strong>.</p>
+        <div class="grid-3">
+          <label class="field"><span>Power Spots</span><select id="maxEnabled"><option value="false">Off</option><option value="true">On</option></select></label>
+          <label class="field"><span>Max battles</span><select id="maxBattles"><option value="false">Off</option><option value="true">On</option></select></label>
+          <label class="field"><span>Cap policy</span><select id="maxCapPolicy"><option value="threshold">Threshold</option><option value="clamp">Clamp</option></select></label>
+          <label class="field"><span>Minimum level</span><input id="maxMinLevel" type="number" min="1" max="100"></label>
+          <label class="field"><span>Particle capacity</span><input id="maxCapacity" type="number" min="1" max="100000"></label>
+          <label class="field"><span>Daily limit</span><input id="maxDailyLimit" type="number" min="1" max="100000"></label>
+          <label class="field"><span>Particles per visit</span><input id="maxStationParticles" type="number" min="1" max="10000"></label>
+          <label class="field"><span>First visit bonus</span><input id="maxFirstBonus" type="number" min="0" max="10000"></label>
+          <label class="field"><span>Rotation (s)</span><input id="maxRotation" type="number" min="60" max="604800"></label>
+          <label class="field"><span>Active window (s)</span><input id="maxActive" type="number" min="30" max="604800"></label>
+          <label class="field"><span>Active probability</span><input id="maxProbability" type="number" min="0" max="1" step="0.01"></label>
+          <label class="field"><span>Reset hour</span><input id="maxResetHour" type="number" min="0" max="23"></label>
+          <label class="field"><span>Seed</span><input id="maxSeed"></label>
+          <label class="field"><span>Timezone</span><input id="maxTimezone"></label>
+        </div>
+        <p class="hint" id="maxSummary"></p>
+        <button class="btn text" id="maxJsonBtn">Advanced JSON</button>
+        <label class="field" id="maxJsonWrap" hidden><span>config/family.json · max_system</span><textarea id="maxConfig" rows="16" style="width:100%;border:1px solid var(--outline);border-radius:var(--radius-sm);padding:10px;background:var(--surface);font-family:ui-monospace,Consolas,monospace;font-size:12px"></textarea></label>
+      </article>
+      <article class="card">
+        <h2>Place a Power Spot</h2>
+        <p class="hint">Click the map, then fill the coordinates from that point. Hand-placed spots stay exactly where you put them; rotation and expiry never move them.</p>
+        <div class="grid-2">
+          <label class="field"><span>Species</span><select id="maxSpotSpecies"></select></label>
+          <label class="field"><span>Form</span><select id="maxSpotForm"></select></label>
+          <label class="field"><span>Mode</span><select id="maxSpotMode"><option value="1">Dynamax</option><option value="2">Gigantamax</option></select></label>
+          <label class="field"><span>Tier</span><select id="maxSpotTier"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>7</option></select></label>
+          <label class="field"><span>Level</span><input id="maxSpotLevel" type="number" min="1" max="40" value="20"></label>
+          <label class="field"><span>Name</span><input id="maxSpotName" maxlength="60" value="Power Spot"></label>
+          <label class="field"><span>Latitude</span><input id="maxSpotLat" type="number" step="0.000001"></label>
+          <label class="field"><span>Longitude</span><input id="maxSpotLng" type="number" step="0.000001"></label>
+          <label class="field"><span>Duration (hours)</span><input id="maxSpotHours" type="number" min="0.1" max="720" step="0.5" value="24"></label>
+        </div>
+        <div class="row-actions">
+          <button class="btn text" id="maxSpotMapBtn">Use selected map point</button>
+          <button class="btn text" id="maxSpotPlayerBtn">Use player location</button>
+        </div>
+        <button class="btn filled wide" id="maxSpotPlaceBtn">Place Power Spot</button>
+        <p class="hint" id="maxSpotHint"></p>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Released boss pool</h2>
+          <span class="chip" id="maxPoolChip">0</span></div>
+        <p class="hint">Only bosses in this pool can appear at a Power Spot. Add the species, form and mode here before placing a hand-made spot.</p>
+        <div class="grid-3">
+          <label class="field"><span>Species</span><select id="maxPoolSpecies"></select></label>
+          <label class="field"><span>Form</span><select id="maxPoolForm"></select></label>
+          <label class="field"><span>Mode</span><select id="maxPoolMode"><option value="1">Dynamax</option><option value="2">Gigantamax</option></select></label>
+          <label class="field"><span>Tier</span><select id="maxPoolTier"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>7</option></select></label>
+          <label class="field"><span>Level</span><input id="maxPoolLevel" type="number" min="1" max="40" value="20"></label>
+          <label class="field"><span>Weight</span><input id="maxPoolWeight" type="number" min="1" value="1"></label>
+        </div>
+        <button class="btn text" id="maxPoolAdd">+ Add boss</button>
+        <div id="maxPoolList" class="list"></div>
+        <button class="btn text wide" id="maxPoolSave">Save pool</button>
+      </article>
+    </div>
+    <div class="two-col" style="margin-top:16px">
+      <article class="card">
+        <h2>Particles</h2>
+        <p class="hint">The Max Particles wallet is separate from the item bag.</p>
+        <div class="grid-2">
+          <label class="field"><span>Particle player</span><select id="maxPlayer"></select></label>
+          <label class="field"><span>Particles</span><input id="maxParticleAmount" type="number" min="0" max="1000000" value="100"></label>
+        </div>
+        <div class="row-actions">
+          <button class="btn tonal" id="maxGrantBtn">Grant particles</button>
+          <button class="btn tonal" id="maxSetBtn">Set particles</button>
+          <button class="btn text" id="maxDailyBtn">Reset daily claim</button>
+        </div>
+        <div class="row-actions" style="margin-top:10px">
+          <button class="btn danger" id="maxExpireBtn">Expire finished spots</button>
+          <button class="btn danger" id="maxClearManualBtn">Clear hand-placed spots</button>
+          <button class="btn danger" id="maxClearBtn">Clear all spots</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Stored Power Spots</h2><span class="chip" id="maxStationChip">0</span></div>
+        <div id="maxStationList" class="list"></div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Particle wallets</h2></div>
+        <div id="maxWalletList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-pvp">
+    <div class="two-col">
+      <article class="card">
+        <h2>Trainer battles (Go Battle League)</h2>
+        <p class="hint">Leagues, season length, sets, AI backfill and rewards live in the <code>pvp</code> config block. Queue rows and battle records are read from the live database.</p>
+        <div class="card-head"><h2 style="font-size:14px">Settings</h2>
+          <button class="btn text" id="pvpSaveBtn">Save</button></div>
+        <label class="field"><span>config/family.json · pvp</span><textarea id="pvpConfig" rows="22" style="width:100%;border:1px solid var(--outline);border-radius:var(--radius-sm);padding:10px;background:var(--surface);font-family:ui-monospace,Consolas,monospace;font-size:12px"></textarea></label>
+        <div class="grid-2" style="margin-top:12px">
+          <label class="field"><span>Player</span><select id="pvpPlayer"></select></label>
+          <label class="field"><span>Season</span><input id="pvpSeason" type="number" min="1" value="1"></label>
+        </div>
+        <div class="row-actions">
+          <button class="btn tonal" id="pvpResetBtn">Reset player season</button>
+          <button class="btn danger" id="pvpQueueBtn">Clear queue</button>
+          <button class="btn danger" id="pvpEndBtn">End open battles</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Standings</h2><span class="chip" id="pvpProfileChip">0</span></div>
+        <div id="pvpProfileList" class="list"></div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Queue</h2><span class="chip" id="pvpQueueChip">0</span></div>
+        <div id="pvpQueueList" class="list"></div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Recent battles</h2></div>
+        <div id="pvpBattleList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-players">
+    <article class="card">
+      <div class="card-head"><h2>Players</h2><button class="btn text" id="playersGps">Read phone GPS</button></div>
+      <div id="playerList" class="list"></div>
+    </article>
+  </section>
+  <section class="panel" id="panel-rewards">
+    <div class="map-grid">
+      <article class="card">
+        <h2>Grant rewards</h2>
+        <p class="hint">Writes XP, Stardust, items, candy, XL candy and storage upgrades straight into the live database.</p>
+        <label class="field"><span>Player</span><select id="rewardPlayer"></select></label>
+        <div class="grid-3">
+          <label class="field"><span>XP</span><input id="rewardXp" type="number" min="0" step="100" value="1000"></label>
+          <label class="field"><span>Stardust</span><input id="rewardDust" type="number" min="0" step="100" value="1000"></label>
+          <label class="field"><span>Candy family</span><input id="rewardCandySpecies" type="number" min="1" max="1025" value="150"></label>
+        </div>
+        <div class="grid-2">
+          <label class="field"><span>Candy amount</span><input id="rewardCandy" type="number" min="0" value="10"></label>
+          <label class="field"><span>XL candy amount</span><input id="rewardXlCandy" type="number" min="0" value="0"></label>
+        </div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Items to grant</h2>
+          <button class="btn text" id="rewardAddItem">+ Add item</button></div>
+        <div id="rewardItems" class="list"></div>
+        <div class="grid-2">
+          <label class="field"><span>Pokémon storage +</span><input id="rewardPokemonStorage" type="number" min="0" max="5000" value="0"></label>
+          <label class="field"><span>Item bag +</span><input id="rewardItemStorage" type="number" min="0" max="5000" value="0"></label>
+        </div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Mega Energy</h2></div>
+        <div class="grid-3">
+          <label class="field"><span>Mega species</span><select id="rewardMegaSpecies"></select></label>
+          <label class="field"><span>Mega form</span><select id="rewardMegaForm"></select></label>
+          <label class="field"><span>Energy</span><input id="rewardMegaAmount" type="number" min="0" max="50000" value="0"></label>
+        </div>
+        <button class="btn filled wide" id="rewardBtn">Grant rewards</button>
+      </article>
+      <article class="card">
+        <div class="card-head"><h2>Balances</h2><span class="chip" id="rewardChip">—</span></div>
+        <div id="rewardList" class="list"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-loot">
+    <div class="two-col">
+      <article class="card">
+        <h2>Pokéstop loot table</h2>
+        <p class="hint">Changes apply to the next spin. Stored in <code>data/admin/stop-loot.json</code>.</p>
+        <div class="grid-3">
+          <label class="field"><span>Items per spin</span><input id="lootCount" type="number" min="0" max="20" value="2"></label>
+          <label class="field"><span>Premium pass %</span><input id="lootPremium" type="number" min="0" max="100" step="0.1" value="2.5"></label>
+          <label class="field"><span>Remote pass %</span><input id="lootRemote" type="number" min="0" max="100" step="0.1" value="2.5"></label>
+        </div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Guaranteed drops</h2>
+          <button class="btn text" id="lootAddGuaranteed">+ Add</button></div>
+        <div id="lootGuaranteed" class="list"></div>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Weighted drops</h2>
+          <button class="btn text" id="lootAddDrop">+ Add</button></div>
+        <div id="lootDrops" class="list"></div>
+        <button class="btn filled wide" id="lootSave">Save loot table</button>
+        <button class="btn text wide" id="lootReset">Reset to defaults</button>
+      </article>
+      <article class="card">
+        <h2>How it works</h2>
+        <p class="hint">Every spin rolls the weighted rows, adds the guaranteed rows, then rolls each pass chance independently. Type an item name or id in any item field.</p>
+        <div id="lootSummary" class="list"></div>
+      </article>
+    </div>
+  </section>
+  <section class="panel" id="panel-routes">
+    <div class="two-col">
+      <article class="card">
+        <h2>Routes</h2>
+        <p class="hint">Author walking routes. Capture waypoints on the Map tab, then save. The server plays them through the native route RPCs.</p>
+        <label class="field"><span>Name</span><input id="routeName" maxlength="60" placeholder="Harbour loop"></label>
+        <label class="field"><span>Description</span><input id="routeDescription" maxlength="400" placeholder="A calm walk along the shore"></label>
+        <label class="field"><span>Official route</span><input id="routeOfficial" type="checkbox"></label>
+        <div class="card-head"><h2 style="font-size:14px">Draft waypoints (<span id="routeCount">0</span>)</h2>
+          <button class="btn text" id="routeClear">Clear</button></div>
+        <div id="routeWaypoints" class="list"></div>
+        <button class="btn" id="routeStartDraft">Capture waypoints on map</button>
+        <button class="btn filled wide" id="routeSave">Save route</button>
+        <div class="card-head" style="margin-top:16px"><h2 style="font-size:14px">Saved routes</h2>
+          <button class="btn text" id="routeReload">Reload</button></div>
+        <div id="routeList" class="list"></div>
+      </article>
+      <article class="card">
+        <h2>Feature switches</h2>
+        <p class="hint">Saved to <code>config/family.json</code> and <code>config/rocket.json</code>. Values marked restart apply on the next server start.</p>
+        <label class="field"><span>Team GO Rocket enabled</span><input id="featRocket" type="checkbox"></label>
+        <label class="field"><span>Rocket battles (restart)</span><input id="featRocketCombat" type="checkbox"></label>
+        <label class="field"><span>Rocket hideouts (restart)</span><input id="featRocketHideouts" type="checkbox"></label>
+        <label class="field"><span>Balloon interval (minutes)</span><input id="featBalloon" type="number" min="1" max="1440"></label>
+        <label class="field"><span>Routes enabled (restart)</span><input id="featRoutes" type="checkbox"></label>
+        <label class="field"><span>Route stardust reward</span><input id="featRouteDust" type="number" min="0"></label>
+        <label class="field"><span>Route XP reward</span><input id="featRouteXp" type="number" min="0"></label>
+        <label class="field"><span>Map tile port (restart)</span><input id="featMapPort" type="number" min="1024" max="65535"></label>
+        <label class="field"><span>Dynamax / Power Spots</span><input id="featMax" type="checkbox"></label>
+        <label class="field"><span>Max battles (restart)</span><input id="featMaxBattle" type="checkbox"></label>
+        <label class="field"><span>GO Battle League</span><input id="featPvp" type="checkbox"></label>
+        <button class="btn filled wide" id="featSave">Save feature switches</button>
+        <div id="featStatus" class="list"></div>
+      </article>
+    </div>
+  </section>
+  <section class="panel" id="panel-liveops">
+    <article class="card">
+      <div class="card-head"><h2>Shiny rates, spawns &amp; raid tiers</h2><span class="chip" id="loChip">live-ops</span></div>
+      <p class="hint">Species keys accept <code>25</code> or <code>25:form</code>. Shiny rates are 0–1; weights are multipliers. Tier shares decide how often each raid tier appears.</p>
+      <div class="grid-2">
+        <label class="field"><span>Shiny rates (species=rate)</span><textarea id="loShiny" rows="5" spellcheck="false"></textarea></label>
+        <label class="field"><span>Spawn weights (species=multiplier)</span><textarea id="loSpawn" rows="5" spellcheck="false"></textarea></label>
+      </div>
+      <div class="grid-2">
+        <label class="field"><span>Raid boss weights (species=multiplier)</span><textarea id="loBoss" rows="3" spellcheck="false"></textarea></label>
+        <label class="field"><span>Wild allow-list (empty = every species)</span><input id="loAllow" placeholder="25, 150"></label>
+      </div>
+      <label class="field"><span>Spawn share (species=percent)</span>
+        <textarea id="loPercent" rows="4" placeholder="16=20&#10;66=35&#10;112=6" spellcheck="false"></textarea>
+        <span class="hint">Exact share of wild spawns, e.g. 20% Pidgey, 35% Machop, 6% Rhydon. Everything else splits the remaining <strong id="loPercentOther">100%</strong> automatically. Restart the server after saving.</span>
+      </label>
+      <div class="grid-3">
+        <label class="field"><span>Tier 1 share</span><input id="loTier1" type="number" min="0" step="1"></label>
+        <label class="field"><span>Tier 3 share</span><input id="loTier3" type="number" min="0" step="1"></label>
+        <label class="field"><span>Tier 5 share</span><input id="loTier5" type="number" min="0" step="1"></label>
+      </div>
+      <label class="field"><span>Tier 6 (Mega) share</span><input id="loTier6" type="number" min="0" step="1"></label>
+      <button class="btn filled wide" id="loSave">Save live-ops</button>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h2>Community Day</h2><span class="chip" id="loCdChip">1/25 default</span></div>
+      <p class="hint">During the window only this species spawns, with its Community Day shiny rate.</p>
+      <div class="grid-3">
+        <label class="field"><span>Name</span><input id="loCdName" value="Community Day"></label>
+        <label class="field"><span>Species id</span><input id="loCdSpecies" type="number" min="1" value="25"></label>
+        <label class="field"><span>Shiny chance (1 in)</span><input id="loCdRate" type="number" min="1" value="25"></label>
+      </div>
+      <div class="grid-2">
+        <label class="field"><span>Starts</span><input id="loCdStart" type="datetime-local"></label>
+        <label class="field"><span>Ends</span><input id="loCdEnd" type="datetime-local"></label>
+      </div>
+      <button class="btn tonal wide" id="loCdAdd">Schedule Community Day</button>
+      <div class="list" id="loCdList"></div>
+    </article>
+
+    <article class="card">
+      <div class="card-head"><h2>Scheduled events</h2><span class="chip" id="loActive">0 active</span></div>
+      <div class="grid-3">
+        <label class="field"><span>Name</span><input id="loEventName" placeholder="Spotlight hour"></label>
+        <label class="field"><span>Kind</span><select id="loEventKind"><option value="spotlight">Spotlight / spawn</option><option value="shiny">Shiny boost</option><option value="raid">Raid takeover</option></select></label>
+        <label class="field"><span>Species ids (comma)</span><input id="loEventSpecies" placeholder="25, 150"></label>
+      </div>
+      <div class="grid-3">
+        <label class="field"><span>Shiny chance (1 in)</span><input id="loEventShiny" type="number" min="0" value="0"></label>
+        <label class="field"><span>Spawn multiplier</span><input id="loEventMult" type="number" min="0" step="0.1" value="2"></label>
+        <label class="field"><span>Raid tier shares (JSON)</span><input id="loEventTiers" placeholder='{"5":80}'></label>
+      </div>
+      <div class="grid-2">
+        <label class="field"><span>Starts</span><input id="loEventStart" type="datetime-local"></label>
+        <label class="field"><span>Ends</span><input id="loEventEnd" type="datetime-local"></label>
+      </div>
+      <button class="btn tonal wide" id="loEventAdd">Schedule event</button>
+      <div class="list" id="loEventList"></div>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-research">
+    <article class="card">
+      <div class="card-head"><h2>Custom Research</h2><span class="chip">field tasks &amp; stories</span></div>
+      <p class="hint">Full document: <code>enabled</code>, <code>capacity</code>, <code>field_tasks</code>, <code>field_pool</code>, <code>stories</code>, breakthrough rewards. Saved to <code>data/research.json</code> and validated before writing.</p>
+      <label class="field"><span>Research JSON</span><textarea id="researchJson" rows="26" spellcheck="false"></textarea></label>
+      <div class="row-actions"><button class="btn filled" id="researchSave">Save research</button><button class="btn text" id="researchReload">Reload</button></div>
+      <p class="hint" id="researchState"></p>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-shadow">
+    <article class="card">
+      <div class="card-head"><h2>Shadow &amp; Purified</h2><span class="chip">costs &amp; table</span></div>
+      <div class="grid-3">
+        <label class="field"><span>Shadow enabled</span><select id="shadowEnabled"><option value="true">On</option><option value="false">Off</option></select></label>
+        <label class="field"><span>Purify Stardust</span><input id="shadowDust" type="number" min="0"></label>
+        <label class="field"><span>Purify Candy</span><input id="shadowCandy" type="number" min="0"></label>
+      </div>
+      <div class="grid-2">
+        <label class="field"><span>Shadow 2nd move Stardust ×</span><input id="shadowSd" type="number" step="0.05"></label>
+        <label class="field"><span>Shadow 2nd move Candy ×</span><input id="shadowSc" type="number" step="0.05"></label>
+        <label class="field"><span>Purified 2nd move Stardust ×</span><input id="shadowPd" type="number" step="0.05"></label>
+        <label class="field"><span>Purified 2nd move Candy ×</span><input id="shadowPc" type="number" step="0.05"></label>
+      </div>
+      <label class="field"><span>Per-Pokémon overrides (JSON: {"25": {"enabled": true, "dust": 1000, "candy": 25}})</span><textarea id="shadowOverrides" rows="8" spellcheck="false"></textarea></label>
+      <button class="btn filled wide" id="shadowSave">Save Shadow table</button>
+    </article>
+  </section>
+
+  <section class="panel" id="panel-platform">
+    <article class="card">
+      <div class="card-head"><h2>Dittobuffer Platform</h2><span class="chip" id="platformChip">local</span></div>
+      <p class="hint">Host this server as a signed HiveMQ room. A room is <strong>just a name</strong> &mdash; no domain, DNS or website. Players type that name in Dittobuffer; assets stay on the phone. Switching to <em>Room managed</em> locks this admin.</p>
+      <div class="grid-2">
+        <label class="field"><span>Mode</span><select id="pfMode"><option value="local">Local only</option><option value="host">Host a room</option><option value="player">Room managed (admin locked)</option></select></label>
+        <label class="field"><span>Enabled</span><select id="pfEnabled"><option value="false">Off</option><option value="true">On</option></select></label>
+      </div>
+      <label class="field"><span>Room name</span><input id="pfDomain" placeholder="Fairview Community"></label>
+      <label class="field"><span>Platform registry URL (optional)</span><input id="pfUrl" placeholder="Leave empty to use HiveMQ only"></label>
+      <div class="grid-2">
+        <label class="field"><span>Display name</span><input id="pfTitle"></label>
+        <label class="field"><span>Manage token (optional)</span><input id="pfToken"></label>
+      </div>
+      <label class="field"><span>Description</span><input id="pfDescription"></label>
+      <div class="row-actions"><button class="btn filled" id="pfSave">Save platform</button><button class="btn tonal" id="pfPublish">Publish now</button></div>
+      <p class="hint" id="pfStatus"></p>
+      <p class="hint">Players pin this key automatically the first time they join, so it never needs to be pasted anywhere.</p>
+      <label class="field"><span>Host public key (read-only)</span><textarea id="pfKey" rows="4" readonly spellcheck="false"></textarea></label>
+    </article>
+  </section>
+</main>
+
+<datalist id="itemCatalog"></datalist>
+
+<div class="snackbar" id="snackbar" role="status"></div>
+
+<script src="/admin-access.js"></script>
+<script>
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => [...document.querySelectorAll(selector)];
+const state = {
+  lat: 60.265371, lng: 25.021610, zoom: 17, selected: null, player: null,
+  species: [], spawns: [], pois: [], gyms: [], raids: [], players: [],
+  items: [], megaSpecies: [], rewardItems: [], loot: null, lootDefaults: null,
+  max: null, maxStations: [], poiKind: 0, loading: false, tab: 'map',
+  routes: [], routeDraft: [], routeDrafting: false, features: null,
+};
+const SPRITE = (id, shiny = false) =>
+  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${shiny ? 'shiny/' : ''}${id}.png`;
+const PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="25" fill="#E6E0E9"/><path d="M7 32h18M39 32h18" stroke="#79747E" stroke-width="4"/><circle cx="32" cy="32" r="9" fill="none" stroke="#79747E" stroke-width="4"/></svg>');
+const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (char) =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+
+async function api(path, options = {}) {
+  const response = await fetch(path, {headers: {'Content-Type': 'application/json'}, ...options});
+  const document = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(document.error || `HTTP ${response.status}`);
+  return document;
+}
+
+function snack(message, error = false) {
+  const bar = $('#snackbar');
+  bar.textContent = message;
+  bar.classList.toggle('error', error);
+  bar.classList.add('show');
+  clearTimeout(snack.timer);
+  snack.timer = setTimeout(() => bar.classList.remove('show'), 3600);
+}
+
+/* --------------------------------------------------------------- map maths */
+const TILE = 256;
+function project(lat, lng, zoom) {
+  const size = TILE * 2 ** zoom;
+  const sin = Math.sin(lat * Math.PI / 180);
+  return {x: (lng + 180) / 360 * size, y: (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * size};
+}
+function unproject(x, y, zoom) {
+  const size = TILE * 2 ** zoom;
+  const lng = x / size * 360 - 180;
+  const n = Math.PI - 2 * Math.PI * y / size;
+  return {lat: 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n))), lng};
+}
+
+function renderMap() {
+  const map = $('#map');
+  const width = map.clientWidth, height = map.clientHeight;
+  if (!width || !height) return;
+  const center = project(state.lat, state.lng, state.zoom);
+  const left = center.x - width / 2, top = center.y - height / 2;
+  const tiles = $('#tileLayer');
+  tiles.innerHTML = '';
+  const count = 2 ** state.zoom;
+  const x0 = Math.floor(left / TILE), x1 = Math.floor((left + width) / TILE);
+  const y0 = Math.floor(top / TILE), y1 = Math.floor((top + height) / TILE);
+  for (let x = x0; x <= x1; x++) {
+    for (let y = y0; y <= y1; y++) {
+      if (y < 0 || y >= count) continue;
+      const image = document.createElement('img');
+      image.src = `https://tile.openstreetmap.org/${state.zoom}/${((x % count) + count) % count}/${y}.png`;
+      image.alt = '';
+      image.style.left = `${x * TILE - left}px`;
+      image.style.top = `${y * TILE - top}px`;
+      tiles.appendChild(image);
+    }
+  }
+  const markers = $('#markerLayer');
+  markers.innerHTML = '';
+  const add = (lat, lng, html, classes = '') => {
+    const point = project(lat, lng, state.zoom);
+    const element = document.createElement('div');
+    element.className = `marker ${classes}`;
+    element.style.left = `${point.x - left}px`;
+    element.style.top = `${point.y - top}px`;
+    element.innerHTML = html;
+    markers.appendChild(element);
+  };
+  if (state.player && Number.isFinite(state.player.lat) && Number.isFinite(state.player.lng)) {
+    add(state.player.lat, state.player.lng, '<span class="player-dot"></span>', 'player');
+  }
+  for (const poi of state.pois) {
+    add(poi.lat, poi.lng, poi.kind === 0
+      ? '<span class="map-pin gym"><span>G</span></span>'
+      : '<span class="map-pin stop"><span>P</span></span>', 'poi');
+  }
+  for (const spawn of state.spawns.slice(0, 90)) {
+    add(spawn.lat, spawn.lng,
+      `<img class="marker-sprite ${spawn.shadow ? 'shadowed' : ''}" src="${SPRITE(spawn.species, spawn.shiny)}" alt="">`,
+      'spawn');
+  }
+  for (const station of state.maxStations || []) {
+    if (!(station.end_ms > Date.now())) continue;
+    add(station.lat, station.lng, '<span class="map-pin power"><span>⚡</span></span>', 'power');
+  }
+  if (state.selected) add(state.selected.lat, state.selected.lng, '<span class="pin"></span>', 'selected');
+  const label = state.selected
+    ? `${state.selected.lat.toFixed(6)}, ${state.selected.lng.toFixed(6)}`
+    : (state.player && Number.isFinite(state.player.lat)
+      ? `player ${state.player.lat.toFixed(6)}, ${state.player.lng.toFixed(6)}`
+      : 'click the map');
+  $('#selectedLabel').textContent = label;
+  $('#poiLocation').textContent = state.selected
+    ? `At ${state.selected.lat.toFixed(6)}, ${state.selected.lng.toFixed(6)}`
+    : 'No point selected — click the map.';
+}
+
+function centerOn(lat, lng) {
+  state.lat = lat;
+  state.lng = lng;
+  renderMap();
+}
+
+function selectPoint(lat, lng) {
+  state.selected = {lat, lng};
+  if (state.routeDrafting) {
+    state.routeDraft.push({lat, lng});
+    renderRouteDraft();
+    snack(`Waypoint ${state.routeDraft.length} added`);
+  }
+  renderMap();
+}
+
+async function loadRoutes() {
+  try {
+    const value = await api('/api/routes');
+    state.routes = value.routes || [];
+    renderRoutes();
+  } catch (error) { snack(error.message, true); }
+  loadFeatures();
+}
+
+function renderRouteDraft() {
+  const count = $('#routeCount');
+  if (count) count.textContent = String(state.routeDraft.length);
+  const list = $('#routeWaypoints');
+  if (list) list.innerHTML = state.routeDraft.map((point, index) =>
+    `<div class="row"><span>${index + 1}. ${point.lat.toFixed(6)}, ${point.lng.toFixed(6)}</span></div>`).join('');
+}
+
+function renderRoutes() {
+  const list = $('#routeList');
+  if (!list) return;
+  list.innerHTML = (state.routes || []).map((route) =>
+    `<div class="row"><span><b>${esc(route.name)}</b> · ${route.waypoints.length} pts · ${Math.round(route.distance_m)} m${route.official ? ' · official' : ''}</span>` +
+    `<span><button class="btn text" data-route-delete="${esc(route.route_id)}">Delete</button></span></div>`).join('') ||
+    '<p class="hint">No routes yet.</p>';
+  $$('[data-route-delete]').forEach((button) => button.addEventListener('click', async () => {
+    try {
+      await api('/api/routes/' + encodeURIComponent(button.dataset.routeDelete), {method: 'DELETE'});
+      snack('Route deleted'); loadRoutes();
+    } catch (error) { snack(error.message, true); }
+  }));
+}
+
+async function saveRoute() {
+  const body = {name: $('#routeName').value, description: $('#routeDescription').value,
+    official: $('#routeOfficial').checked, waypoints: state.routeDraft};
+  try {
+    await api('/api/routes', {method: 'POST', body: JSON.stringify(body)});
+    state.routeDraft = [];
+    renderRouteDraft();
+    $('#routeName').value = '';
+    $('#routeDescription').value = '';
+    snack('Route saved');
+    loadRoutes();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadFeatures() {
+  try {
+    const value = await api('/api/features');
+    state.features = value;
+    $('#featRocket').checked = value.rocket.enabled;
+    $('#featRocketCombat').checked = value.rocket.combat_enabled;
+    $('#featRocketHideouts').checked = value.rocket.hideouts_enabled;
+    $('#featBalloon').value = value.rocket.balloon_interval_minutes;
+    $('#featRoutes').checked = value.routes.enabled;
+    $('#featRouteDust').value = value.routes.reward_stardust;
+    $('#featRouteXp').value = value.routes.reward_xp;
+    $('#featMapPort').value = value.world.map_tiles_port;
+    $('#featMax').checked = !!value.max_system.enabled;
+    $('#featMaxBattle').checked = !!value.max_system.battle_enabled;
+    $('#featPvp').checked = !!value.pvp.enabled;
+    $('#featStatus').innerHTML = `<p class="hint">Map tiles: <code>${esc(value.world.map_tiles_base || '')}</code></p>`;
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveFeatures() {
+  const body = {
+    rocket: {enabled: $('#featRocket').checked, combat_enabled: $('#featRocketCombat').checked,
+      hideouts_enabled: $('#featRocketHideouts').checked,
+      balloon_interval_minutes: Number($('#featBalloon').value)},
+    routes: {enabled: $('#featRoutes').checked,
+      reward_stardust: Number($('#featRouteDust').value), reward_xp: Number($('#featRouteXp').value)},
+    world: {map_tiles_port: Number($('#featMapPort').value)},
+    max_system: {enabled: $('#featMax').checked, battle_enabled: $('#featMaxBattle').checked},
+    pvp: {enabled: $('#featPvp').checked},
+  };
+  try {
+    await api('/api/features', {method: 'POST', body: JSON.stringify(body)});
+    snack('Feature switches saved');
+    loadFeatures();
+  } catch (error) { snack(error.message, true); }
+}
+
+function setZoom(zoom, event) {
+  zoom = Math.max(15, Math.min(19, zoom));
+  if (zoom === state.zoom) return;
+  const map = $('#map');
+  const rect = map.getBoundingClientRect();
+  const mx = event ? event.clientX - rect.left : map.clientWidth / 2;
+  const my = event ? event.clientY - rect.top : map.clientHeight / 2;
+  const center = project(state.lat, state.lng, state.zoom);
+  const anchor = unproject(center.x - map.clientWidth / 2 + mx, center.y - map.clientHeight / 2 + my, state.zoom);
+  const moved = project(anchor.lat, anchor.lng, zoom);
+  const next = unproject(moved.x - (mx - map.clientWidth / 2), moved.y - (my - map.clientHeight / 2), zoom);
+  state.zoom = zoom;
+  state.lat = next.lat;
+  state.lng = next.lng;
+  renderMap();
+}
+
+let drag = null;
+function bindMap() {
+  const map = $('#map');
+  map.addEventListener('pointerdown', (event) => {
+    if (event.target.closest('.map-controls')) return;
+    drag = {x: event.clientX, y: event.clientY, lat: state.lat, lng: state.lng, moved: false};
+    map.setPointerCapture(event.pointerId);
+  });
+  map.addEventListener('pointermove', (event) => {
+    if (!drag) return;
+    const dx = event.clientX - drag.x, dy = event.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 3) drag.moved = true;
+    const center = project(drag.lat, drag.lng, state.zoom);
+    const next = unproject(center.x - dx, center.y - dy, state.zoom);
+    state.lat = next.lat;
+    state.lng = next.lng;
+    renderMap();
+  });
+  map.addEventListener('pointerup', (event) => {
+    if (!drag) return;
+    const moved = drag.moved;
+    drag = null;
+    if (moved) return;
+    const rect = map.getBoundingClientRect();
+    const center = project(state.lat, state.lng, state.zoom);
+    const point = unproject(center.x - map.clientWidth / 2 + event.clientX - rect.left,
+      center.y - map.clientHeight / 2 + event.clientY - rect.top, state.zoom);
+    selectPoint(point.lat, point.lng);
+  });
+  map.addEventListener('pointercancel', () => { drag = null; });
+  map.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    setZoom(state.zoom + (event.deltaY < 0 ? 1 : -1), event);
+  }, {passive: false});
+  $('#zoomIn').onclick = (event) => setZoom(state.zoom + 1, event);
+  $('#zoomOut').onclick = (event) => setZoom(state.zoom - 1, event);
+  $('#centerBtn').onclick = () => {
+    if (state.player) centerOn(state.player.lat, state.player.lng);
+    else snack('No player location known yet', true);
+  };
+  new ResizeObserver(renderMap).observe(map);
+}
+
+/* ---------------------------------------------------------------- species */
+function fillSpecies(select, list, preferred = 150) {
+  select.innerHTML = list.map((entry) =>
+    `<option value="${entry.id}">${esc(entry.name)} · #${entry.id}</option>`).join('');
+  if (list.some((entry) => entry.id === preferred)) select.value = String(preferred);
+  else if (list.length) select.value = String(list[0].id);
+}
+
+function filterSpecies(select, term) {
+  const query = term.trim().toLowerCase();
+  for (const option of select.options) option.hidden = query && !option.textContent.toLowerCase().includes(query);
+}
+
+function currentSpecies(select) {
+  return state.species.find((entry) => entry.id === Number(select.value));
+}
+
+function updateSpawnPreview() {
+  const id = Number($('#spawnSpecies').value);
+  const entry = currentSpecies($('#spawnSpecies'));
+  const shiny = $('#spawnShiny').checked;
+  const image = $('#spawnPreview');
+  image.onerror = () => { image.src = PLACEHOLDER; };
+  image.src = SPRITE(id, shiny);
+  image.classList.toggle('shadowed', $('#spawnShadow').checked);
+  $('#spawnPreviewName').textContent = entry ? entry.name : `Pokémon #${id}`;
+  $('#spawnPreviewId').textContent = `#${id}`;
+}
+
+function updateRaidPreview() {
+  const id = Number($('#raidSpecies').value);
+  const entry = currentSpecies($('#raidSpecies'));
+  const image = $('#raidPreview');
+  image.onerror = () => { image.src = PLACEHOLDER; };
+  image.src = SPRITE(id, false);
+  image.classList.toggle('shadowed', $('#raidShadow').checked);
+  $('#raidPreviewName').textContent = entry ? entry.name : `Pokémon #${id}`;
+  $('#raidPreviewId').textContent = `#${id}`;
+}
+
+/* --------------------------------------------------------------- variants */
+async function pickSpecialForm(scope, species, form) {
+  const raid = scope === 'raid';
+  const speciesSelect = raid ? '#raidSpecies' : '#spawnSpecies';
+  const formSelect = raid ? '#raidForm' : '#spawnForm';
+  $(speciesSelect).value = String(species);
+  await loadVariants(species, formSelect, raid ? '#raidCostume' : '#spawnCostume',
+                     raid ? '#raidMega' : '#spawnMega', raid ? '#raidMax' : '#spawnMax');
+  $(formSelect).value = String(form);
+  if (raid) updateRaidPreview(); else updateSpawnPreview();
+  snack(`Selected ${species} form ${form}`);
+}
+
+async function loadVariants(species, formSelector, costumeSelector, megaSelector, maxSelector) {
+  const form = $(formSelector), costume = $(costumeSelector), mega = megaSelector ? $(megaSelector) : null;
+  const max = maxSelector ? $(maxSelector) : null;
+  form.innerHTML = '<option value="">Default form</option>';
+  costume.innerHTML = '<option value="0">No costume</option>';
+  if (mega) {
+    mega.innerHTML = '<option value="0">Not Mega</option>';
+    mega.disabled = true;
+  }
+  if (max) {
+    max.innerHTML = '<option value="0">Normal</option><option value="1">Dynamax</option>';
+    max.disabled = true;
+  }
+  if (!species) return;
+  try {
+    const data = await api(`/api/forms?species=${species}`);
+    for (const entry of data.forms || []) {
+      const option = document.createElement('option');
+      option.value = entry.id;
+      option.textContent = entry.id === 0 ? `Ordinary · ${entry.name}` : entry.name;
+      form.appendChild(option);
+    }
+    for (const entry of data.costumes || []) {
+      const option = document.createElement('option');
+      option.value = entry.id;
+      option.textContent = entry.name;
+      costume.appendChild(option);
+    }
+    for (const entry of (mega ? data.mega || [] : [])) {
+      const option = document.createElement('option');
+      option.value = entry.id;
+      option.textContent = entry.name;
+      mega.appendChild(option);
+    }
+    if (mega) mega.disabled = !(data.mega || []).length;
+    if (max) {
+      for (const entry of (data.max || [])) {
+        if (![...max.options].some((option) => option.value === String(entry.id))) {
+          const option = document.createElement('option');
+          option.value = entry.id;
+          option.textContent = entry.name;
+          max.appendChild(option);
+        }
+      }
+      max.disabled = false;
+    }
+  } catch (error) { /* variant selectors are optional */ }
+}
+
+/* ---------------------------------------------------------------- rewards */
+function fillItemCatalog(items) {
+  state.items = items || state.items || [];
+  $('#itemCatalog').innerHTML = state.items.map((item) =>
+    `<option value="${esc(`${item.name} · #${item.id}`)}"></option>`).join('');
+}
+
+function itemLabel(id) {
+  const entry = (state.items || []).find((item) => item.id === Number(id));
+  return entry ? `${entry.name} · #${entry.id}` : `Item #${id}`;
+}
+
+function parseItem(text) {
+  const value = String(text || '').trim();
+  const hashed = value.match(/#(\d+)\s*$/);
+  if (hashed) return Number(hashed[1]);
+  if (/^\d+$/.test(value)) return Number(value);
+  const entry = (state.items || []).find((item) => item.name.toLowerCase() === value.toLowerCase());
+  return entry ? entry.id : 0;
+}
+
+function renderRewardItems() {
+  $('#rewardItems').innerHTML = (state.rewardItems || []).map((row, index) => `<div class="list-row">
+    <div class="grow"><input class="search" list="itemCatalog" value="${esc(itemLabel(row.item))}" data-reward-item="${index}" aria-label="Item"></div>
+    <input type="number" min="0" max="99999" value="${row.count}" data-reward-count="${index}" style="width:110px" aria-label="Item count">
+    <button class="btn danger" data-reward-remove="${index}">Remove</button>
+  </div>`).join('');
+}
+
+function syncRewardItems() {
+  state.rewardItems = $$('#rewardItems [data-reward-item]').map((input, index) => ({
+    item: parseItem(input.value) || state.rewardItems[index]?.item || 1,
+    count: Number($(`[data-reward-count="${index}"]`).value || 0),
+  }));
+}
+
+function fillMegaSelectors() {
+  const species = $('#rewardMegaSpecies');
+  const previous = species.value;
+  species.innerHTML = (state.megaSpecies || []).map((entry) =>
+    `<option value="${entry.id}">${esc(entry.name)} · #${entry.id}</option>`).join('');
+  if (previous && [...species.options].some((option) => option.value === previous)) species.value = previous;
+  fillMegaForms();
+}
+
+function fillMegaForms() {
+  const entry = (state.megaSpecies || []).find((item) => item.id === Number($('#rewardMegaSpecies').value));
+  $('#rewardMegaForm').innerHTML = (entry ? entry.forms : []).map((form) =>
+    `<option value="${form.id}">${esc(form.name)}</option>`).join('');
+}
+
+async function loadRewards() {
+  try {
+    const data = await api('/api/rewards');
+    const select = $('#rewardPlayer'), previous = select.value;
+    select.innerHTML = '';
+    for (const player of data.players || []) {
+      const option = document.createElement('option');
+      option.value = player.id;
+      option.textContent = `${player.name} · L${player.level} · ${player.xp} XP`;
+      select.appendChild(option);
+    }
+    if (previous && [...select.options].some((option) => option.value === previous)) select.value = previous;
+    fillItemCatalog(data.items);
+    state.megaSpecies = data.mega || [];
+    fillMegaSelectors();
+    if (!state.rewardItems || !state.rewardItems.length) state.rewardItems = [{item: 1402, count: 1}];
+    renderRewardItems();
+    $('#rewardChip').textContent = `${(data.players || []).length} players · ${(data.items || []).length} items`;
+  } catch (error) { snack(error.message, true); }
+}
+
+async function grantRewards() {
+  const player = $('#rewardPlayer').value;
+  if (!player) return snack('No player selected', true);
+  syncRewardItems();
+  const items = {};
+  for (const row of state.rewardItems || []) {
+    if (row.item > 0 && row.count > 0) items[row.item] = (items[row.item] || 0) + row.count;
+  }
+  const family = Number($('#rewardCandySpecies').value || 0);
+  const amount = Number($('#rewardCandy').value || 0);
+  const candy = amount > 0 && family > 0 ? {[family]: amount} : {};
+  const xlAmount = Number($('#rewardXlCandy').value || 0);
+  const xl_candy = xlAmount > 0 && family > 0 ? {[family]: xlAmount} : {};
+  const pokemon_storage = Number($('#rewardPokemonStorage').value || 0);
+  const item_storage = Number($('#rewardItemStorage').value || 0);
+  const megaAmount = Number($('#rewardMegaAmount').value || 0);
+  const mega_energy = megaAmount > 0 ? [{species: Number($('#rewardMegaSpecies').value),
+    evo: Number($('#rewardMegaForm').value), amount: megaAmount}] : [];
+  try {
+    const result = await api('/api/rewards', {method: 'POST', body: JSON.stringify({
+      player_id: player, xp: Number($('#rewardXp').value || 0),
+      stardust: Number($('#rewardDust').value || 0), items, candy, xl_candy,
+      pokemon_storage, item_storage, mega_energy,
+    })});
+    const grantedItems = Object.keys(result.granted.items || {}).length;
+    $('#rewardChip').textContent = `${result.xp} XP · ${result.stardust} dust`;
+    snack(`Granted ${result.granted.xp} XP, ${result.granted.stardust} Stardust` +
+      (grantedItems ? `, ${grantedItems} item stack(s)` : '') +
+      (pokemon_storage ? `, +${pokemon_storage} Pokémon slots` : '') +
+      (item_storage ? `, +${item_storage} bag slots` : '') +
+      (megaAmount ? `, ${megaAmount} Mega Energy` : '') +
+      ` · storage ${result.pokemon_capacity}/${result.item_capacity}`);
+    await refreshAll();
+    await loadRewards();
+  } catch (error) { snack(error.message, true); }
+}
+
+/* ------------------------------------------------------------------- loot */
+function syncLoot() {
+  const table = state.loot || {};
+  table.count = Number($('#lootCount').value || 0);
+  table.passes = {premium: Number($('#lootPremium').value || 0) / 100,
+    remote: Number($('#lootRemote').value || 0) / 100};
+  table.guaranteed = $$('#lootGuaranteed [data-loot-g-item]').map((input, index) => ({
+    item: parseItem(input.value),
+    count: Number($(`[data-loot-g-count="${index}"]`).value || 1),
+  }));
+  table.drops = $$('#lootDrops [data-loot-d-item]').map((input, index) => ({
+    item: parseItem(input.value),
+    weight: Number($(`[data-loot-d-weight="${index}"]`).value || 0),
+    min_level: Number($(`[data-loot-d-level="${index}"]`).value || 1),
+    min_count: Number($(`[data-loot-d-min="${index}"]`).value || 1),
+    max_count: Number($(`[data-loot-d-max="${index}"]`).value || 1),
+  }));
+  state.loot = table;
+}
+
+function renderLootSummary() {
+  const table = state.loot || {};
+  const drops = table.drops || [], guaranteed = table.guaranteed || [];
+  const total = drops.reduce((sum, row) => sum + Number(row.weight || 0), 0);
+  const lines = [
+    `${table.count ?? 0} weighted item(s) per spin`,
+    `${guaranteed.length} guaranteed row(s) · ${drops.length} weighted row(s) · total weight ${Math.round(total)}`,
+    `Premium Battle Pass ${((table.passes?.premium || 0) * 100).toFixed(2)}% per spin`,
+    `Remote Raid Pass ${((table.passes?.remote || 0) * 100).toFixed(2)}% per spin`,
+    `${(state.items || []).length} items available in the catalog`,
+  ];
+  $('#lootSummary').innerHTML = lines.map((line) => `<div class="list-row"><div class="grow"><div class="sub">${esc(line)}</div></div></div>`).join('');
+}
+
+function renderLoot() {
+  const table = state.loot || {count: 0, guaranteed: [], drops: [], passes: {}};
+  $('#lootCount').value = table.count ?? 0;
+  $('#lootPremium').value = ((table.passes?.premium || 0) * 100).toFixed(2).replace(/\.?0+$/, '');
+  $('#lootRemote').value = ((table.passes?.remote || 0) * 100).toFixed(2).replace(/\.?0+$/, '');
+  $('#lootGuaranteed').innerHTML = (table.guaranteed || []).map((row, index) => `<div class="list-row">
+    <div class="grow"><input class="search" list="itemCatalog" value="${esc(itemLabel(row.item))}" data-loot-g-item="${index}" aria-label="Guaranteed item"></div>
+    <input type="number" min="1" max="999" value="${row.count}" data-loot-g-count="${index}" style="width:110px" aria-label="Count">
+    <button class="btn danger" data-loot-g-remove="${index}">Remove</button>
+  </div>`).join('') || empty('No guaranteed drops.');
+  $('#lootDrops').innerHTML = (table.drops || []).map((row, index) => `<div class="list-row" style="flex-wrap:wrap">
+    <div class="grow" style="min-width:210px"><input class="search" list="itemCatalog" value="${esc(itemLabel(row.item))}" data-loot-d-item="${index}" aria-label="Drop item"></div>
+    <input type="number" min="0" max="100000" step="1" value="${row.weight}" data-loot-d-weight="${index}" style="width:90px" title="Weight" aria-label="Weight">
+    <input type="number" min="1" max="50" value="${row.min_level}" data-loot-d-level="${index}" style="width:80px" title="Minimum trainer level" aria-label="Minimum level">
+    <input type="number" min="1" max="999" value="${row.min_count}" data-loot-d-min="${index}" style="width:80px" title="Minimum count" aria-label="Minimum count">
+    <input type="number" min="1" max="999" value="${row.max_count}" data-loot-d-max="${index}" style="width:80px" title="Maximum count" aria-label="Maximum count">
+    <button class="btn danger" data-loot-d-remove="${index}">Remove</button>
+  </div>`).join('') || empty('No weighted drops.');
+  renderLootSummary();
+}
+
+async function loadLoot() {
+  try {
+    const data = await api('/api/loot');
+    state.loot = data.table;
+    state.lootDefaults = data.defaults;
+    fillItemCatalog(data.items);
+    renderLoot();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveLoot() {
+  syncLoot();
+  try {
+    const data = await api('/api/loot', {method: 'POST', body: JSON.stringify(state.loot)});
+    state.loot = data.table;
+    renderLoot();
+    snack(`Loot table saved · ${data.table.count} weighted item(s), ${(data.table.drops || []).length} rows`);
+  } catch (error) { snack(error.message, true); }
+}
+
+/* ------------------------------------------------------------------ lists */
+const speciesName = (id) => (state.species.find((entry) => entry.id === id) || {name: `Pokémon #${id}`}).name;
+
+function empty(text) {
+  return `<div class="empty">${esc(text)}</div>`;
+}
+
+function renderSpawnList() {
+  $('#spawnCountChip').textContent = String(state.spawns.length);
+  if (!state.spawns.length) {
+    $('#spawnList').innerHTML = empty('No spawns nearby. Click the map and spawn one above.');
+    return;
+  }
+  $('#spawnList').innerHTML = state.spawns.map((spawn) => {
+    const expires = new Date(spawn.expires_ms);
+    const badges = [
+      spawn.shiny ? '<span class="badge shiny">shiny</span>' : '',
+      spawn.shadow ? '<span class="badge shadow">shadow</span>' : '',
+      spawn.lucky ? '<span class="badge" style="background:#FFF0C2;color:#6B5200">lucky</span>' : '',
+      spawn.mega ? '<span class="badge" style="background:#EADDFF;color:#21005D">mega</span>' : '',
+      spawn.max ? `<span class="badge" style="background:#D7ECFF;color:#00344F">${spawn.max === 2 ? 'gigantamax' : 'dynamax'}</span>` : '',
+      spawn.admin ? '<span class="badge admin">admin</span>' : '',
+    ].join(' ');
+    return `<div class="list-row">
+      <div class="icon"><img class="${spawn.shadow ? 'shadowed' : ''}" src="${SPRITE(spawn.species, spawn.shiny)}" alt="" onerror="this.src='${PLACEHOLDER}'"></div>
+      <div class="grow">
+        <div class="title">${esc(speciesName(spawn.species))} <span style="color:var(--on-surface-variant);font-weight:500">#${spawn.species}</span></div>
+        <div class="sub">L${spawn.level ?? '?'} · IV ${(spawn.ivs || []).join('/')} · ${spawn.lat.toFixed(5)}, ${spawn.lng.toFixed(5)} · until ${expires.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} ${badges}</div>
+      </div>
+      <button class="btn danger" data-delete-spawn="${spawn.id}">Remove</button>
+    </div>`;
+  }).join('');
+}
+
+function renderPoiList() {
+  $('#poiCountChip').textContent = String(state.pois.length);
+  if (!state.pois.length) {
+    $('#poiList').innerHTML = empty('No admin gyms or stops yet.');
+    return;
+  }
+  $('#poiList').innerHTML = state.pois.map((poi) => `<div class="list-row">
+    <div class="icon">${poi.kind === 0 ? '🏟️' : '🔵'}</div>
+    <div class="grow"><div class="title">${esc(poi.name)}</div>
+      <div class="sub">${poi.kind === 0 ? 'Gym' : 'Pokéstop'} · ${poi.lat.toFixed(5)}, ${poi.lng.toFixed(5)}</div></div>
+    <button class="btn danger" data-delete-poi="${esc(poi.id)}">Remove</button>
+  </div>`).join('');
+}
+
+function renderRaidList() {
+  $('#raidCountChip').textContent = String(state.raids.length);
+  if (!state.raids.length) {
+    $('#raidList').innerHTML = empty('No active raids. Create one on the left.');
+    return;
+  }
+  $('#raidList').innerHTML = state.raids.map((raid) => {
+    const badges = [
+      `<span class="badge ${raid.egg ? 'egg' : 'admin'}">${raid.egg ? 'egg' : 'active'}</span>`,
+      raid.shadow ? '<span class="badge shadow">shadow</span>' : '',
+      raid.mega ? '<span class="badge" style="background:#EADDFF;color:#21005D">mega</span>' : '',
+      raid.max ? `<span class="badge" style="background:#D7ECFF;color:#00344F">${raid.max === 2 ? 'gigantamax' : 'dynamax'}</span>` : '',
+      raid.admin ? '<span class="badge admin">admin</span>' : '',
+    ].join(' ');
+    const shiny = Math.round((raid.shiny_rate || 0) * 1000) / 10;
+    return `<div class="list-row">
+      <div class="icon"><img class="${raid.shadow ? 'shadowed' : ''}" src="${SPRITE(raid.species)}" alt="" onerror="this.src='${PLACEHOLDER}'"></div>
+      <div class="grow">
+        <div class="title">${esc(speciesName(raid.species))} <span style="color:var(--on-surface-variant);font-weight:500">#${raid.species}</span></div>
+        <div class="sub">${esc(raid.fort_name || raid.fort_id)} · T${raid.tier} · ${raid.hp} HP / ${raid.cp} CP · shiny ${shiny}% · ends ${new Date(raid.end_ms).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} ${badges}</div>
+      </div>
+      <button class="btn danger" data-delete-raid="${raid.seed}">Remove</button>
+    </div>`;
+  }).join('');
+}
+
+function renderPlayerList() {
+  $('#playerList').innerHTML = `<div class="table-head">${state.players.length} trainer${state.players.length === 1 ? '' : 's'}</div>` +
+    state.players.map((player) => {
+      const located = Number.isFinite(player.lat) && Number.isFinite(player.lng);
+      return `<div class="player-row">
+        <div style="display:flex;gap:10px;align-items:center;min-width:0">
+          <div class="avatar">${esc((player.name || '?').slice(0, 1).toUpperCase())}</div>
+          <div style="min-width:0"><div class="title">${esc(player.name)}</div>
+            <div class="sub">${player.username ? '@' + esc(player.username) + ' · ' : ''}level ${player.level} · ${player.xp} XP · storage ${player.pokemon_capacity ?? '—'}/${player.item_capacity ?? '—'}</div></div>
+        </div>
+        <div class="sub">${located ? `${player.lat.toFixed(6)}, ${player.lng.toFixed(6)}` : 'location not reported'}</div>
+        <button class="btn tonal" ${located ? '' : 'disabled'} data-center-player="${esc(player.id)}">Show</button>
+      </div>`;
+    }).join('');
+}
+
+function renderGymSelect() {
+  const select = $('#raidGym');
+  const current = select.value;
+  select.innerHTML = state.gyms.map((gym) =>
+    `<option value="${esc(gym.id)}">${esc(gym.name)} · ${gym.lat.toFixed(4)}, ${gym.lng.toFixed(4)}</option>`).join('');
+  if (!state.gyms.length) select.innerHTML = '<option value="">Add a gym first</option>';
+  if (state.gyms.some((gym) => gym.id === current)) select.value = current;
+}
+
+/* ---------------------------------------------------------------- actions */
+async function refreshSpawns() {
+  const query = new URLSearchParams({
+    lat: String(state.lat), lng: String(state.lng), radius: '3000', limit: '300',
+  });
+  state.spawns = await api('/api/spawns?' + query);
+  renderSpawnList();
+  renderMap();
+}
+
+async function refreshAll() {
+  if (state.loading) return;
+  state.loading = true;
+  try {
+    const [status, players, pois, gyms, raids] = await Promise.all([
+      api('/api/status'), api('/api/players'), api('/api/pois'), api('/api/gyms'), api('/api/raids'),
+    ]);
+    state.players = players;
+    state.pois = pois;
+    state.gyms = gyms;
+    state.raids = raids;
+    const located = players.find((player) => Number.isFinite(player.lat) && Number.isFinite(player.lng));
+    state.player = status.location || (located ? {lat: located.lat, lng: located.lng} : null);
+    if (status.location && !state.selected) {
+      state.lat = status.location.lat;
+      state.lng = status.location.lng;
+    }
+    const counts = status.counts || {};
+    $('#statusLine').textContent =
+      `${counts.players ?? 0} players · ${counts.active_spawns ?? 0} spawns · ${counts.active_raids ?? 0} raids · ${counts.forts ?? 0} forts`;
+    $('#serverChip').textContent = location.host;
+    $('#serverChip').classList.add('good');
+    renderPlayerList();
+    renderPoiList();
+    renderRaidList();
+    renderGymSelect();
+    await refreshSpawns();
+    if (state.tab === 'map') renderMap();
+  } catch (error) {
+    $('#statusLine').textContent = 'Admin API unavailable';
+    snack(error.message, true);
+  } finally {
+    state.loading = false;
+  }
+}
+
+async function spawnPokemon() {
+  const selected = state.selected || (state.player && {lat: state.player.lat, lng: state.player.lng});
+  if (!selected) return snack('Click the map to choose a spawn point', true);
+  const entry = currentSpecies($('#spawnSpecies'));
+  if (!entry) return snack('Choose a species', true);
+  const body = {
+    species: entry.id, lat: selected.lat, lng: selected.lng,
+    level: Number($('#spawnLevel').value), iv_attack: Number($('#spawnAtk').value),
+    iv_defense: Number($('#spawnDef').value), iv_stamina: Number($('#spawnSta').value),
+    shiny: $('#spawnShiny').checked, shadow: $('#spawnShadow').checked, lucky: $('#spawnLucky').checked,
+    mega: Number($('#spawnMega').value || 0),
+    max_mode: Number($('#spawnMax').value || 0),
+    form: $('#spawnForm').value === '' ? null : Number($('#spawnForm').value),
+    costume: Number($('#spawnCostume').value || 0),
+    count: Number($('#spawnCount').value), radius_m: Number($('#spawnRadius').value),
+    duration_s: Number($('#spawnDuration').value), label: 'admin panel',
+  };
+  try {
+    const created = await api('/api/spawns', {method: 'POST', body: JSON.stringify(body)});
+    const maxLabel = {1: ' (Dynamax)', 2: ' (Gigantamax)'}[body.max_mode] || '';
+    snack(`Spawned ${created.length}× ${entry.name}${body.shiny ? ' (shiny)' : ''}${body.shadow ? ' (shadow)' : ''}${body.lucky ? ' (lucky)' : ''}${body.mega ? ' (mega)' : ''}${maxLabel}`);
+    await refreshSpawns();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadSpawnSettings() {
+  try {
+    const value = await api('/api/spawn-settings');
+    const cfg = value.random_spawns;
+    $('#randomSpawns').checked = !!cfg.enabled;
+    $('#randomSpawnChip').textContent = cfg.enabled ? 'on' : 'off';
+    $('#randomRefresh').value = cfg.refresh_seconds;
+    $('#randomLevelLow').value = cfg.level_range[0];
+    $('#randomLevelHigh').value = cfg.level_range[1];
+    $('#randomIvLow').value = cfg.iv_range[0];
+    $('#randomIvHigh').value = cfg.iv_range[1];
+    $('#randomPoints').value = cfg.points_per_tile;
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveSpawnSettings() {
+  try {
+    await api('/api/spawn-settings', {method: 'POST', body: JSON.stringify({random_spawns: {
+      enabled: $('#randomSpawns').checked,
+      refresh_seconds: Number($('#randomRefresh').value),
+      level_range: [Number($('#randomLevelLow').value), Number($('#randomLevelHigh').value)],
+      iv_range: [Number($('#randomIvLow').value), Number($('#randomIvHigh').value)],
+      points_per_tile: Number($('#randomPoints').value),
+    }})});
+    snack('Spawn settings saved; restart the game server to apply');
+    await loadSpawnSettings();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadRaidSettings() {
+  try {
+    const value = await api('/api/raid-settings');
+    $('#raidLobby').value = value.lobby_seconds;
+    $('#raidLobbyOut').value = `${value.lobby_seconds} s`;
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveRaidDefault() {
+  try {
+    const value = await api('/api/raid-settings', {method: 'POST', body: JSON.stringify({
+      lobby_seconds: Number($('#raidLobby').value),
+    })});
+    const output = $('#raidLobbyOut');
+    output.value = `${value.lobby_seconds} s`;
+    snack(`Default raid lobby is now ${value.lobby_seconds} s`);
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadRocket() {
+  try {
+    const value = await api('/api/rocket');
+    state.rocket = value;
+    $('#rocketConfig').value = JSON.stringify(value.config, null, 2);
+    fillRocketCharacters();
+    $('#rocketPlayer').innerHTML = (state.players || []).map((player) =>
+      `<option value="${esc(player.id)}">${esc(player.name)}</option>`).join('');
+    renderRocket(value.balloons);
+  } catch (error) { snack(error.message, true); }
+}
+
+function fillRocketCharacters() {
+  const cfg = state.rocket && state.rocket.config || {};
+  const kind = $('#rocketKind').value;
+  const rows = kind === 'grunt' ? (cfg.grunts || []) : kind === 'leader' ? (cfg.leaders || []) : (cfg.giovanni ? [cfg.giovanni] : []);
+  $('#rocketCharacter').innerHTML = rows.map((row) => `<option value="${row.id}">${row.name}</option>`).join('');
+}
+
+function renderRocket(rows = []) {
+  $('#rocketCountChip').textContent = rows.length;
+  $('#rocketList').innerHTML = rows.length ? rows.map((row) => `
+    <div class="list-row">
+      <div><strong>${row.character_name}</strong><span class="hint">${row.kind} · ${row.incident_id.slice(-8)} · ${new Date(row.expires_ms).toLocaleTimeString()}</span></div>
+      <button class="btn tonal" onclick="rescueRocket('${row.incident_id}')">Rescue Pokémon</button>
+      <button class="btn danger" onclick="deleteRocket('${row.incident_id}')">Clear</button>
+    </div>`).join('') : '<p class="hint">No active balloons. Launch one from the map selection.</p>';
+}
+
+async function spawnRocketBalloon() {
+  if (!state.selected) return snack('Click the map to choose a balloon location', true);
+  try {
+    const balloon = await api('/api/rocket/balloons', {method: 'POST', body: JSON.stringify({
+      kind: $('#rocketKind').value, character_id: $('#rocketCharacter').value,
+      lat: state.selected.lat, lng: state.selected.lng,
+      duration_s: Number($('#rocketDuration').value),
+    })});
+    snack(`Launched ${balloon.character_name} balloon`);
+    await loadRocket();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveRocket() {
+  try {
+    const config = JSON.parse($('#rocketConfig').value);
+    await api('/api/rocket', {method: 'POST', body: JSON.stringify({config})});
+    snack('Rocket rosters saved');
+    await loadRocket();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function rescueRocket(incidentId) {
+  const playerId = $('#rocketPlayer').value;
+  if (!playerId) return snack('Choose a player first', true);
+  try {
+    const value = await api(`/api/rocket/balloons/${encodeURIComponent(incidentId)}/rescue`, {
+      method: 'POST', body: JSON.stringify({player_id: playerId})});
+    snack(`Rescued shadow ${speciesName(value.species)} (${value.ivs.join('/')}) to storage`);
+    await loadRocket();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function deleteRocket(incidentId) {
+  if (!confirm('Clear this balloon and its shadow encounter?')) return;
+  try {
+    await api(`/api/rocket/balloons/${encodeURIComponent(incidentId)}`, {method: 'DELETE'});
+    snack('Balloon cleared');
+    await loadRocket();
+  } catch (error) { snack(error.message, true); }
+}
+
+/* ------------------------------------------------- max, power spots, GBL */
+async function loadMax() {
+  try {
+    const value = await api('/api/max');
+    state.max = value;
+    const options = (state.players || []).map((player) =>
+      `<option value="${esc(player.id)}">${esc(player.name)}</option>`).join('');
+    $('#maxPlayer').innerHTML = options;
+    $('#maxSummary').textContent =
+      `${value.config.enabled ? 'enabled' : 'disabled'} · battles ${value.config.battle_enabled ? 'on' : 'off'} · ` +
+      `${value.candidates == null ? '?' : value.candidates} candidates · ${value.pools.length} pool entries`;
+    syncMaxFields();
+    renderMaxPool();
+    renderMax(value.stations || []);
+    renderMaxWallets(value.wallets || []);
+  } catch (error) { snack(error.message, true); }
+}
+
+function syncMaxFields() {
+  const config = (state.max && state.max.config) || {};
+  $('#maxEnabled').value = String(Boolean(config.enabled));
+  $('#maxBattles').value = String(Boolean(config.battle_enabled));
+  $('#maxCapPolicy').value = config.cap_policy === 'clamp' ? 'clamp' : 'threshold';
+  const fields = {
+    '#maxMinLevel': config.minimum_level, '#maxCapacity': config.capacity,
+    '#maxDailyLimit': config.daily_limit, '#maxStationParticles': config.station_particles,
+    '#maxFirstBonus': config.first_visit_bonus, '#maxRotation': config.rotation_seconds,
+    '#maxActive': config.active_seconds, '#maxProbability': config.active_probability,
+    '#maxResetHour': config.reset_hour,
+  };
+  for (const [selector, value] of Object.entries(fields)) {
+    if (value !== undefined && value !== null) $(selector).value = value;
+  }
+  $('#maxSeed').value = config.seed ?? '';
+  $('#maxTimezone').value = config.timezone ?? '';
+  $('#maxConfig').value = JSON.stringify(config, null, 2);
+  const gmax = state.max.gmax || {};
+  $('#maxGmaxCount').textContent = String(gmax.source_allowlisted ?? 0);
+  $('#maxGmaxCount').title = (gmax.allowlisted || []).map((entry) => `${entry.name} (${entry.forms.join('/')})`).join(', ') || 'No source-allowlisted Gigantamax forms';
+  $('#maxSpotHint').textContent = gmax.power_spot_supported
+    ? 'Gigantamax Power Spots are allowlisted by the reference snapshot.'
+    : 'Gigantamax Power Spots are blocked: the reference snapshot allowlists no Gmax form, so mode 2 is rejected here. Gigantamax can still be spawned as a raid or wild Pokémon from the other tabs.';
+}
+
+function maxDraft() {
+  try { return JSON.parse($('#maxConfig').value); }
+  catch (error) { throw new Error('Max JSON is invalid: ' + error.message); }
+}
+
+function readMaxFields() {
+  return {
+    enabled: $('#maxEnabled').value === 'true',
+    battle_enabled: $('#maxBattles').value === 'true',
+    cap_policy: $('#maxCapPolicy').value,
+    minimum_level: Number($('#maxMinLevel').value),
+    capacity: Number($('#maxCapacity').value),
+    daily_limit: Number($('#maxDailyLimit').value),
+    station_particles: Number($('#maxStationParticles').value),
+    first_visit_bonus: Number($('#maxFirstBonus').value),
+    rotation_seconds: Number($('#maxRotation').value),
+    active_seconds: Number($('#maxActive').value),
+    active_probability: Number($('#maxProbability').value),
+    reset_hour: Number($('#maxResetHour').value),
+    seed: $('#maxSeed').value.trim(),
+    timezone: $('#maxTimezone').value.trim(),
+  };
+}
+
+function renderMaxPool() {
+  const pools = (state.max && state.max.config && state.max.config.pools) || [];
+  $('#maxPoolChip').textContent = pools.length;
+  $('#maxPoolList').innerHTML = pools.length ? pools.map((row, index) => `
+    <div class="list-row">
+      <div><strong>${esc(speciesName(row.species))}</strong>
+        <span class="hint">form ${esc(row.form ?? 0)} · ${Number(row.mode) === 2 ? 'Gigantamax' : 'Dynamax'} · tier ${esc(row.tier ?? 1)} · Lv ${esc(row.level ?? 10)} · weight ${esc(row.weight ?? 1)}</span></div>
+      <button class="btn text" data-max-pool-remove="${index}">Remove</button>
+    </div>`).join('') : '<p class="hint">The released pool is empty, so no Power Spot can appear or be placed.</p>';
+}
+
+function renderMax(rows = []) {
+  state.maxStations = rows;
+  $('#maxStationChip').textContent = rows.length;
+  const now = Date.now();
+  $('#maxStationList').innerHTML = rows.length ? rows.map((row) => `
+    <div class="list-row">
+      <div><strong>${esc(row.name)}</strong>
+        <span class="hint">${row.lat.toFixed(5)}, ${row.lng.toFixed(5)} · ${esc(row.species_name || '')} · ${Number(row.mode) === 2 ? 'Gigantamax' : 'Dynamax'}${row.manual ? ' · hand-placed' : ''} · ${row.end_ms > now ? new Date(row.end_ms).toLocaleString() : 'expired'}</span></div>
+      <div class="row">
+        <button class="btn text" data-max-extend="${esc(row.id)}">+1 h</button>
+        <button class="btn text" data-max-end="${esc(row.id)}">End</button>
+        <button class="btn danger" data-max-delete="${esc(row.id)}">Delete</button>
+      </div>
+    </div>`).join('') : '<p class="hint">No Power Spots stored. Rotating spots are materialized from the candidate database on the next map request.</p>';
+  if (state.tab === 'map') renderMap();
+}
+
+function renderMaxWallets(rows = []) {
+  $('#maxWalletList').innerHTML = rows.length ? rows.map((row) => `
+    <div class="list-row">
+      <div><strong>${esc(row.name || row.player_id)}</strong><span class="hint">${esc(row.player_id)}</span></div>
+      <span class="chip">${row.balance} MP</span>
+    </div>`).join('') : '<p class="hint">No particle wallets yet.</p>';
+}
+
+async function saveMax() {
+  try {
+    const config = maxDraft();
+    Object.assign(config, readMaxFields());
+    await api('/api/max', {method: 'POST', body: JSON.stringify({config})});
+    snack('Max settings saved');
+    await loadMax();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function maxAction(action, extra = {}) {
+  try {
+    const value = await api('/api/max/action', {method: 'POST', body: JSON.stringify({action, ...extra})});
+    snack(JSON.stringify(value));
+    await loadMax();
+  } catch (error) { snack(error.message, true); }
+}
+
+function addMaxPoolEntry() {
+  const entry = currentSpecies($('#maxPoolSpecies'));
+  if (!entry) return snack('Choose a species', true);
+  try {
+    const config = maxDraft();
+    if (!Array.isArray(config.pools)) config.pools = [];
+    const boss = {
+      species: entry.id,
+      mode: Number($('#maxPoolMode').value),
+      tier: Number($('#maxPoolTier').value),
+      level: Number($('#maxPoolLevel').value),
+      weight: Number($('#maxPoolWeight').value),
+    };
+    if ($('#maxPoolForm').value !== '') boss.form = Number($('#maxPoolForm').value);
+    config.pools.push(boss);
+    if (state.max) state.max.config = config;
+    $('#maxConfig').value = JSON.stringify(config, null, 2);
+    renderMaxPool();
+    snack('Boss added — press Save pool to apply');
+  } catch (error) { snack(error.message, true); }
+}
+
+function removeMaxPoolEntry(index) {
+  try {
+    const config = maxDraft();
+    if (!Array.isArray(config.pools)) return;
+    config.pools.splice(index, 1);
+    if (state.max) state.max.config = config;
+    $('#maxConfig').value = JSON.stringify(config, null, 2);
+    renderMaxPool();
+    snack('Boss removed — press Save pool to apply');
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadMaxForms(species, selector) {
+  const select = $(selector);
+  select.innerHTML = '<option value="">Default form</option>';
+  if (!species) return;
+  try {
+    const data = await api(`/api/forms?max=1&species=${species}`);
+    for (const entry of data.forms || []) {
+      const option = document.createElement('option');
+      option.value = entry.id;
+      option.textContent = entry.id === 0 ? `Base · ${entry.name}` : entry.name;
+      select.appendChild(option);
+    }
+  } catch (error) { /* the default form stays selectable */ }
+}
+
+function maxSpotFromMap() {
+  if (!state.selected) return snack('Click the map to choose a spot location', true);
+  $('#maxSpotLat').value = state.selected.lat.toFixed(6);
+  $('#maxSpotLng').value = state.selected.lng.toFixed(6);
+}
+
+function maxSpotFromPlayer() {
+  if (!state.player) return snack('No player location known yet', true);
+  $('#maxSpotLat').value = state.player.lat.toFixed(6);
+  $('#maxSpotLng').value = state.player.lng.toFixed(6);
+}
+
+async function placeMaxSpot() {
+  const entry = currentSpecies($('#maxSpotSpecies'));
+  if (!entry) return snack('Choose a boss species', true);
+  const lat = Number($('#maxSpotLat').value), lng = Number($('#maxSpotLng').value);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat === 0 && lng === 0) {
+    return snack('Use the map point or type real coordinates', true);
+  }
+  try {
+    const value = await api('/api/max/action', {method: 'POST', body: JSON.stringify({
+      action: 'place_station', species: entry.id,
+      form: $('#maxSpotForm').value === '' ? null : Number($('#maxSpotForm').value),
+      mode: Number($('#maxSpotMode').value), tier: Number($('#maxSpotTier').value),
+      level: Number($('#maxSpotLevel').value), name: $('#maxSpotName').value.trim(),
+      lat, lng, duration_s: Math.round(Number($('#maxSpotHours').value) * 3600),
+    })});
+    snack(`Placed ${value.name} at ${lat.toFixed(5)}, ${lng.toFixed(5)}`);
+    await loadMax();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function maxStationAction(action, id, extra = {}) {
+  try {
+    await api('/api/max/action', {method: 'POST', body: JSON.stringify({action, id, ...extra})});
+    snack(action === 'delete_station' ? 'Power Spot deleted' : action === 'end_station' ? 'Power Spot ended' : 'Power Spot extended by one hour');
+    await loadMax();
+  } catch (error) { snack(error.message, true); }
+}
+
+/* ------------------------------------------------------- on-the-fly streets */
+async function loadOsm() {
+  try {
+    const value = await api('/api/osm');
+    state.osm = value;
+    $('#osmEnabled').value = String(Boolean(value.enabled));
+    $('#osmRadius').value = value.radius_m;
+    $('#osmExpand').value = String(value.expand !== false);
+    $('#osmInterval').value = value.interval_s;
+    $('#osmRingMax').value = value.ring_max;
+    const centre = value.focus || value.hub;
+    if (centre && document.activeElement !== $('#osmFocus')) {
+      $('#osmFocus').value = `${centre[0].toFixed(4)}, ${centre[1].toFixed(4)}`;
+    }
+    $('#osmChip').textContent = `${value.cells} cells`;
+    const size = (value.bytes / 1048576).toFixed(2);
+    const cache = value.tile_cache || {files: 0, bytes: 0};
+    $('#osmSummary').textContent = `${size} MB of OSM cells in ${value.directory}` +
+      (value.newest_ms ? ` · newest ${new Date(value.newest_ms).toLocaleString()}` : ' · nothing downloaded yet') +
+      ` · tiles saved on disk: ${cache.files} (${(cache.bytes / 1048576).toFixed(2)} MB)` +
+      ` · ring ${value.ring}${value.ring_max ? `/${value.ring_max}` : ''}, ${value.queued} queued, ${value.pending} in flight` +
+      (value.unavailable ? `, ${value.unavailable} unavailable` : '');
+  } catch (error) { snack(error.message, true); }
+}
+
+async function saveOsm() {
+  try {
+    const world = {
+      osm_download: $('#osmEnabled').value === 'true',
+      osm_download_radius_m: Number($('#osmRadius').value),
+      osm_expand: $('#osmExpand').value === 'true',
+      osm_request_interval_s: Number($('#osmInterval').value),
+      osm_expand_ring_max: Number($('#osmRingMax').value),
+    };
+    const focus = $('#osmFocus').value.trim();
+    if (focus) {
+      const parts = focus.split(/[,\s]+/).filter(Boolean).map(Number);
+      if (parts.length !== 2 || !parts.every(Number.isFinite)) throw new Error('Focus point must be "lat, lng"');
+      world.osm_expand_focus = {lat: parts[0], lng: parts[1]};
+    }
+    await api('/api/osm', {method: 'POST', body: JSON.stringify({world})});
+    snack('Map settings saved');
+    await loadOsm();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function clearOsmCache() {
+  try {
+    const value = await api('/api/osm/clear', {method: 'POST', body: '{}'});
+    snack(`Cleared ${(value.cleared || []).length} saved tile epoch(s)`);
+    await loadOsm();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadPoiImport() {
+  try {
+    const value = await api('/api/poi-import');
+    $('#poiImportEnabled').value = String(Boolean(value.enabled));
+    $('#poiImportGym').value = value.gym_percent;
+    $('#poiImportRadius').value = value.radius_m;
+    $('#poiImportInterval').value = value.interval_s;
+    const when = value.last_scan_ms ? new Date(value.last_scan_ms).toLocaleString() : 'no scan yet';
+    $('#poiImportSummary').textContent = `${value.auto_pois} imported POIs (${value.auto_gyms} gyms) · ${when}` +
+      (value.last_error ? ` · last error: ${value.last_error}` : '');
+  } catch (error) { snack(error.message, true); }
+}
+
+async function savePoiImport() {
+  try {
+    const value = await api('/api/poi-import', {method: 'POST', body: JSON.stringify({
+      enabled: $('#poiImportEnabled').value === 'true',
+      gym_percent: Number($('#poiImportGym').value),
+      radius_m: Number($('#poiImportRadius').value),
+      interval_s: Number($('#poiImportInterval').value),
+    })});
+    snack(value.enabled ? 'OSM POI import on — scanning in the background' : 'OSM POI import off — imported POIs removed');
+    await loadPoiImport();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function loadPvp() {
+  try {
+    const value = await api('/api/pvp');
+    state.pvp = value;
+    $('#pvpConfig').value = JSON.stringify(value.config, null, 2);
+    $('#pvpPlayer').innerHTML = (state.players || []).map((player) =>
+      `<option value="${esc(player.id)}">${esc(player.name)}</option>`).join('');
+    $('#pvpSeason').value = value.config.season;
+    renderPvp(value);
+  } catch (error) { snack(error.message, true); }
+}
+
+function renderPvp(value) {
+  const profiles = value.profiles || [];
+  $('#pvpProfileChip').textContent = profiles.length;
+  $('#pvpProfileList').innerHTML = profiles.length ? profiles.map((row) => `
+    <div class="list-row">
+      <div><strong>${esc(row.name || row.player_id)}</strong><span class="hint">rank ${row.rank} · ${row.wins}/${row.battles} wins · streak ${row.streak}</span></div>
+      <span class="chip">${Math.round(row.rating)}</span>
+    </div>`).join('') : '<p class="hint">No battle profiles for this season yet.</p>';
+  const queue = value.queue || [];
+  $('#pvpQueueChip').textContent = queue.filter((row) => row.state === 'queued').length;
+  $('#pvpQueueList').innerHTML = queue.length ? queue.map((row) => `
+    <div class="list-row">
+      <div><strong>${esc(row.name || row.player_id)}</strong><span class="hint">${esc(row.league)} · ${esc(row.state)}</span></div>
+      <span class="chip">${Math.round(row.rating)}</span>
+    </div>`).join('') : '<p class="hint">Queue is empty.</p>';
+  const battles = value.battles || [];
+  $('#pvpBattleList').innerHTML = battles.length ? battles.map((row) => `
+    <div class="list-row">
+      <div><strong>${esc(row.id.slice(0, 18))}…</strong><span class="hint">${esc(row.kind)} · ${esc(row.league)} · ${row.finished ? 'finished' : 'live'}</span></div>
+      <span class="chip">${new Date(row.end_ms).toLocaleTimeString()}</span>
+    </div>`).join('') : '<p class="hint">No Trainer battles recorded.</p>';
+}
+
+async function savePvp() {
+  try {
+    const config = JSON.parse($('#pvpConfig').value);
+    await api('/api/pvp', {method: 'POST', body: JSON.stringify({config})});
+    snack('Battle settings saved');
+    await loadPvp();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function pvpAction(action, extra = {}) {
+  try {
+    const value = await api('/api/pvp/action', {method: 'POST', body: JSON.stringify({action, ...extra})});
+    snack(JSON.stringify(value));
+    await loadPvp();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function addPoi() {
+  if (!state.selected) return snack('Click the map to choose a location', true);
+  const name = $('#poiName').value.trim();
+  if (!name) return snack('Give the gym or stop a name', true);
+  try {
+    await api('/api/pois', {method: 'POST', body: JSON.stringify({
+      name, kind: state.poiKind, lat: state.selected.lat, lng: state.selected.lng,
+    })});
+    $('#poiName').value = '';
+    snack('Added to the local world overlay');
+    await refreshAll();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function addRaid() {
+  const entry = currentSpecies($('#raidSpecies'));
+  const fort = $('#raidGym').value;
+  if (!entry) return snack('Choose a boss', true);
+  if (!fort) return snack('Add a gym first', true);
+  try {
+    const raid = await api('/api/raids', {method: 'POST', body: JSON.stringify({
+      fort_id: fort, species: entry.id, tier: Number($('#raidTier').value),
+      hp: Number($('#raidHp').value), cp: Number($('#raidCp').value),
+      level: Number($('#raidLevel').value), shiny_rate: Number($('#raidShiny').value) / 100,
+      shadow: $('#raidShadow').checked, mega: Number($('#raidMega').value || 0),
+      max_mode: Number($('#raidMax').value || 0), lobby_seconds: Number($('#raidLobby').value),
+      form: $('#raidForm').value === '' ? null : Number($('#raidForm').value),
+      costume: Number($('#raidCostume').value || 0),
+      battle_seconds: Number($('#raidBattle').value), iv_floor: Number($('#raidIvFloor').value),
+      egg_seconds: Number($('#raidEgg').value), active_seconds: Number($('#raidActive').value),
+      label: 'admin panel',
+    })});
+    snack(`Raid ${Date.now() < raid.battle_ms ? 'egg' : 'active'}: ${entry.name} at ${new Date(raid.battle_ms).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`);
+    await refreshAll();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function deleteItem(kind, id) {
+  if (!confirm('Remove this from the live game?')) return;
+  try {
+    await api(`/api/${kind}/${id}`, {method: 'DELETE'});
+    snack('Removed');
+    await refreshAll();
+  } catch (error) { snack(error.message, true); }
+}
+
+async function readPhoneGps() {
+  try {
+    const value = await api('/api/device-location');
+    if (!value || !Number.isFinite(value.lat)) return snack('No fused location from the phone yet', true);
+    state.player = {lat: value.lat, lng: value.lng};
+    centerOn(value.lat, value.lng);
+    selectPoint(value.lat, value.lng);
+    snack('Using the phone\'s current GPS position');
+  } catch (error) { snack(error.message, true); }
+}
+
+/* --------------------------------------------------------------- bootstrap */
+async function init() {
+  bindMap();
+  $('#serverChip').textContent = location.host;
+  try {
+    state.species = await api('/api/species');
+  } catch (error) {
+    snack('Could not load species: ' + error.message, true);
+    state.species = [{id: 150, name: 'Mewtwo'}];
+  }
+  fillSpecies($('#spawnSpecies'), state.species, 150);
+  fillSpecies($('#raidSpecies'), state.species, 150);
+  fillSpecies($('#maxSpotSpecies'), state.species, 25);
+  fillSpecies($('#maxPoolSpecies'), state.species, 25);
+  loadMaxForms(Number($('#maxSpotSpecies').value), '#maxSpotForm');
+  loadMaxForms(Number($('#maxPoolSpecies').value), '#maxPoolForm');
+  updateSpawnPreview();
+  updateRaidPreview();
+  loadVariants(150, '#spawnForm', '#spawnCostume', '#spawnMega', '#spawnMax');
+  loadVariants(150, '#raidForm', '#raidCostume', '#raidMega', '#raidMax');
+  loadRaidSettings();
+  loadRewards();
+  loadLoot();
+
+  $$('.tab').forEach((button) => button.addEventListener('click', () => {
+    state.tab = button.dataset.tab;
+    $$('.tab').forEach((item) => item.classList.toggle('active', item === button));
+    $$('.panel').forEach((panel) => panel.classList.toggle('active', panel.id === `panel-${state.tab}`));
+    if (state.tab === 'map') { requestAnimationFrame(renderMap); loadOsm(); loadPoiImport(); }
+    if (state.tab === 'rewards') loadRewards();
+    if (state.tab === 'loot') loadLoot();
+    if (state.tab === 'rocket') loadRocket();
+    if (state.tab === 'max') loadMax();
+    if (state.tab === 'pvp') loadPvp();
+    if (state.tab === 'routes') loadRoutes();
+  }));
+  $('#routeSave').onclick = saveRoute;
+  $('#routeClear').onclick = () => { state.routeDraft = []; renderRouteDraft(); };
+  $('#routeStartDraft').onclick = () => { state.routeDrafting = true; snack('Click the map to add waypoints'); };
+  $('#routeReload').onclick = loadRoutes;
+  $('#featSave').onclick = saveFeatures;
+  $('#spawnSpecies').addEventListener('change', updateSpawnPreview);
+  $('#spawnSpecies').addEventListener('change', (event) => loadVariants(Number(event.target.value), '#spawnForm', '#spawnCostume', '#spawnMega', '#spawnMax'));
+  $('#spawnShiny').addEventListener('change', updateSpawnPreview);
+  $('#spawnShadow').addEventListener('change', updateSpawnPreview);
+  $('#raidSpecies').addEventListener('change', updateRaidPreview);
+  $('#raidSpecies').addEventListener('change', (event) => loadVariants(Number(event.target.value), '#raidForm', '#raidCostume', '#raidMega', '#raidMax'));
+  $('#raidMega').addEventListener('change', (event) => {
+    if (Number(event.target.value)) $('#raidTier').value = '6';
+  });
+  $('#raidShadow').addEventListener('change', updateRaidPreview);
+  $('#spawnSpeciesSearch').addEventListener('input', (event) => filterSpecies($('#spawnSpecies'), event.target.value));
+  $('#raidSpeciesSearch').addEventListener('input', (event) => filterSpecies($('#raidSpecies'), event.target.value));
+  $('#raidShiny').addEventListener('input', (event) => { $('#raidShinyOut').value = `${event.target.value}%`; });
+  $('#raidBattle').addEventListener('input', (event) => { $('#raidBattleOut').value = `${event.target.value} s`; });
+  $('#raidLobby').addEventListener('input', (event) => { $('#raidLobbyOut').value = `${event.target.value} s`; });
+  $('#saveRaidDefault').onclick = saveRaidDefault;
+  $('#raidIvFloor').addEventListener('input', (event) => { $('#raidIvFloorOut').value = `${event.target.value}/${event.target.value}/${event.target.value}`; });
+  $('#saveSpawnSettings').onclick = saveSpawnSettings;
+  loadSpawnSettings();
+  $('#rocketKind').addEventListener('change', fillRocketCharacters);
+  $('#rocketSpawnBtn').onclick = spawnRocketBalloon;
+  $('#rocketSaveBtn').onclick = saveRocket;
+  $('#maxSaveBtn').onclick = saveMax;
+  $('#maxJsonBtn').onclick = () => { $('#maxJsonWrap').hidden = !$('#maxJsonWrap').hidden; };
+  $('#maxPoolAdd').onclick = addMaxPoolEntry;
+  $('#maxPoolSave').onclick = saveMax;
+  $('#maxSpotSpecies').addEventListener('change', (event) => loadMaxForms(Number(event.target.value), '#maxSpotForm'));
+  $('#maxPoolSpecies').addEventListener('change', (event) => loadMaxForms(Number(event.target.value), '#maxPoolForm'));
+  $('#maxSpotMapBtn').onclick = maxSpotFromMap;
+  $('#maxSpotPlayerBtn').onclick = maxSpotFromPlayer;
+  $('#maxSpotPlaceBtn').onclick = placeMaxSpot;
+  $('#osmSaveBtn').onclick = saveOsm;
+  $('#osmClearCacheBtn').onclick = clearOsmCache;
+  $('#poiImportSaveBtn').onclick = savePoiImport;
+  loadOsm();
+  loadPoiImport();
+  $('#maxGrantBtn').onclick = () => maxAction('grant_particles',
+    {player_id: $('#maxPlayer').value, amount: Number($('#maxParticleAmount').value)});
+  $('#maxSetBtn').onclick = () => maxAction('set_particles',
+    {player_id: $('#maxPlayer').value, amount: Number($('#maxParticleAmount').value)});
+  $('#maxDailyBtn').onclick = () => maxAction('reset_daily', {player_id: $('#maxPlayer').value});
+  $('#maxExpireBtn').onclick = () => maxAction('expire_stations');
+  $('#maxClearManualBtn').onclick = () => {
+    if (confirm('Delete every hand-placed Power Spot?')) maxAction('clear_manual');
+  };
+  $('#maxClearBtn').onclick = () => {
+    if (confirm('Delete every stored Power Spot?')) maxAction('clear_stations');
+  };
+  $('#pvpSaveBtn').onclick = savePvp;
+  $('#pvpResetBtn').onclick = () => pvpAction('reset_profile',
+    {player_id: $('#pvpPlayer').value, season: Number($('#pvpSeason').value)});
+  $('#pvpQueueBtn').onclick = () => pvpAction('clear_queue');
+  $('#pvpEndBtn').onclick = () => {
+    if (confirm('Mark every open Trainer battle as finished?')) pvpAction('end_battles');
+  };
+  $('#raidTier').addEventListener('change', (event) => {
+    const [hp, cp] = ({1: [600, 5000], 3: [1200, 9000], 5: [2000, 22000], 6: [3000, 30000]})[event.target.value] || [2000, 22000];
+    $('#raidHp').value = hp;
+    $('#raidCp').value = cp;
+  });
+  $$('#poiKind button').forEach((button) => button.addEventListener('click', () => {
+    state.poiKind = Number(button.dataset.kind);
+    $$('#poiKind button').forEach((item) => item.classList.toggle('active', item === button));
+  }));
+  $$('.chip-btn').forEach((button) => button.addEventListener('click', () => {
+    $('#spawnDuration').value = button.dataset.duration;
+  }));
+  $('#spawnBtn').onclick = spawnPokemon;
+  $('#clearAdminSpawns').onclick = async () => {
+    if (!confirm('Remove every admin-created spawn from the live world?')) return;
+    try {
+      const result = await api('/api/spawns/clear-admin', {method: 'POST', body: '{}'});
+      snack(`Removed ${result.deleted} admin spawn${result.deleted === 1 ? '' : 's'}`);
+      await refreshAll();
+    } catch (error) { snack(error.message, true); }
+  };
+  $('#poiBtn').onclick = addPoi;
+  $('#raidBtn').onclick = addRaid;
+  $('#rewardBtn').onclick = grantRewards;
+  $('#rewardAddItem').onclick = () => {
+    syncRewardItems();
+    state.rewardItems.push({item: 1, count: 1});
+    renderRewardItems();
+  };
+  $('#rewardMegaSpecies').onchange = fillMegaForms;
+  $('#lootAddGuaranteed').onclick = () => {
+    syncLoot();
+    state.loot.guaranteed.push({item: 1, count: 1});
+    renderLoot();
+  };
+  $('#lootAddDrop').onclick = () => {
+    syncLoot();
+    state.loot.drops.push({item: 1, weight: 10, min_level: 1, min_count: 1, max_count: 1});
+    renderLoot();
+  };
+  $('#lootSave').onclick = saveLoot;
+  $('#lootReset').onclick = () => {
+    state.loot = JSON.parse(JSON.stringify(state.lootDefaults || state.loot));
+    renderLoot();
+    snack('Defaults loaded — press Save to apply');
+  };
+  $('#refreshBtn').onclick = () => refreshAll();
+  $('#gpsBtn').onclick = readPhoneGps;
+  $('#playersGps').onclick = readPhoneGps;
+  $('#usePlayerBtn').onclick = () => {
+    if (!state.player) return snack('No player location known yet', true);
+    selectPoint(state.player.lat, state.player.lng);
+    centerOn(state.player.lat, state.player.lng);
+  };
+  document.addEventListener('click', (event) => {
+    const poolRemove = event.target.closest('[data-max-pool-remove]');
+    if (poolRemove) return removeMaxPoolEntry(Number(poolRemove.dataset.maxPoolRemove));
+    const maxEnd = event.target.closest('[data-max-end]');
+    if (maxEnd) return maxStationAction('end_station', maxEnd.dataset.maxEnd);
+    const maxExtend = event.target.closest('[data-max-extend]');
+    if (maxExtend) return maxStationAction('extend_station', maxExtend.dataset.maxExtend, {seconds: 3600});
+    const maxDelete = event.target.closest('[data-max-delete]');
+    if (maxDelete) {
+      if (confirm('Delete this Power Spot? Any stationed Pokémon must be returned first.')) {
+        maxStationAction('delete_station', maxDelete.dataset.maxDelete);
+      }
+      return;
+    }
+    const spawn = event.target.closest('[data-delete-spawn]');
+    if (spawn) return deleteItem('spawns', spawn.dataset.deleteSpawn);
+    const poi = event.target.closest('[data-delete-poi]');
+    if (poi) return deleteItem('pois', poi.dataset.deletePoi);
+    const raid = event.target.closest('[data-delete-raid]');
+    if (raid) return deleteItem('raids', raid.dataset.deleteRaid);
+    const rewardRemove = event.target.closest('[data-reward-remove]');
+    if (rewardRemove) {
+      syncRewardItems();
+      state.rewardItems.splice(Number(rewardRemove.dataset.rewardRemove), 1);
+      renderRewardItems();
+      return;
+    }
+    const lootGuaranteed = event.target.closest('[data-loot-g-remove]');
+    if (lootGuaranteed) {
+      syncLoot();
+      state.loot.guaranteed.splice(Number(lootGuaranteed.dataset.lootGRemove), 1);
+      renderLoot();
+      return;
+    }
+    const lootDrop = event.target.closest('[data-loot-d-remove]');
+    if (lootDrop) {
+      syncLoot();
+      state.loot.drops.splice(Number(lootDrop.dataset.lootDRemove), 1);
+      renderLoot();
+      return;
+    }
+    const player = event.target.closest('[data-center-player]');
+    if (player) {
+      const entry = state.players.find((item) => item.id === player.dataset.centerPlayer);
+      if (entry && Number.isFinite(entry.lat)) {
+        centerOn(entry.lat, entry.lng);
+        selectPoint(entry.lat, entry.lng);
+      }
+    }
+  });
+  await refreshAll();
+  setInterval(() => { if (!state.loading) refreshAll(); }, 20000);
+}
+/* ------------------------------------------------- live-ops, research, shadow, platform */
+function loPairs(text) {
+  return Object.fromEntries(String(text || '').split(/\n+/).map((line) => line.trim()).filter(Boolean).map((line) => {
+    const at = line.indexOf('=');
+    if (at < 0) throw new Error('Use species=value lines');
+    const key = line.slice(0, at).trim();
+    const value = Number(line.slice(at + 1).trim());
+    if (!key || !Number.isFinite(value)) throw new Error('Invalid line: ' + line);
+    return [key, value];
+  }));
+}
+function loLines(value) {
+  return Object.entries(value || {}).map(([key, item]) => `${key}=${item}`).join('\n');
+}
+function loMs(id) {
+  const value = $(id).value;
+  return value ? new Date(value).getTime() : 0;
+}
+function loDate(ms) {
+  if (!ms) return 'always';
+  return new Date(ms).toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+}
+function loSpecies(text) {
+  return String(text || '').split(',').map((part) => Number(part.trim())).filter((value) => Number.isInteger(value) && value > 0);
+}
+function updatePercentOther() {
+  let total = 0;
+  try {
+    total = Object.values(loPairs($('#loPercent').value)).reduce((sum, value) => sum + value, 0);
+  } catch (error) { total = 0; }
+  const other = Math.max(0, 100 - total);
+  const chip = $('#loPercentOther');
+  chip.textContent = (Math.round(other * 10) / 10) + '%';
+  chip.style.color = total > 100 ? '#b3261e' : '';
+}
+function renderLiveops() {
+  const value = state.liveops || {};
+  $('#loShiny').value = loLines(value.shiny_rates);
+  $('#loSpawn').value = loLines(value.spawn_weights);
+  $('#loPercent').value = loLines(value.spawn_percent);
+  updatePercentOther();
+  $('#loBoss').value = loLines(value.raid_boss_weights);
+  $('#loAllow').value = (value.spawn_allow || []).join(', ');
+  const tiers = value.raid_tier_weights || {};
+  $('#loTier1').value = tiers['1'] ?? 0;
+  $('#loTier3').value = tiers['3'] ?? 0;
+  $('#loTier5').value = tiers['5'] ?? 0;
+  $('#loTier6').value = tiers['6'] ?? 0;
+  const now = Date.now();
+  const active = (value.events || []).filter((entry) => entry.enabled && entry.starts_ms <= now && entry.ends_ms > now);
+  $('#loActive').textContent = `${active.length} active`;
+  $('#loEventList').innerHTML = (value.events || []).map((entry) =>
+    `<div class="player-row"><div><strong>${entry.name}</strong><div class="hint">${entry.kind} · ${loDate(entry.starts_ms)} → ${loDate(entry.ends_ms)} · ${(entry.species || []).join(', ') || 'all species'}</div></div><div class="hint">shiny 1/${entry.shiny_rate ? Math.round(1 / entry.shiny_rate) : '—'} · spawn ×${entry.spawn_multiplier}</div><button class="btn text" data-lo-event="${entry.id}">Remove</button></div>`).join('') || '<p class="hint">No events scheduled.</p>';
+  $('#loCdList').innerHTML = (value.community_days || []).map((entry) =>
+    `<div class="player-row"><div><strong>${entry.name}</strong><div class="hint">#${entry.species} · ${loDate(entry.starts_ms)} → ${loDate(entry.ends_ms)}</div></div><div class="hint">1/${Math.round(1 / entry.shiny_rate)} shiny</div><button class="btn text" data-lo-day="${entry.id}">Remove</button></div>`).join('') || '<p class="hint">No Community Days scheduled.</p>';
+}
+async function loadLiveops() {
+  try {
+    const value = await api('/api/liveops');
+    state.liveops = value.settings;
+    $('#loChip').textContent = value.readonly ? 'platform managed' : 'live-ops';
+    renderLiveops();
+  } catch (error) { snack('Live-ops: ' + error.message, true); }
+}
+async function saveLiveops() {
+  try {
+    const tiers = {1: Number($('#loTier1').value), 3: Number($('#loTier3').value), 5: Number($('#loTier5').value), 6: Number($('#loTier6').value)};
+    const settings = {...state.liveops,
+      shiny_rates: loPairs($('#loShiny').value), spawn_weights: loPairs($('#loSpawn').value),
+      spawn_percent: loPairs($('#loPercent').value),
+      raid_boss_weights: loPairs($('#loBoss').value),
+      spawn_allow: loSpecies($('#loAllow').value), raid_tier_weights: tiers};
+    const value = await api('/api/liveops', {method:'POST', body: JSON.stringify({settings})});
+    state.liveops = value.settings; renderLiveops(); snack('Live-ops saved');
+  } catch (error) { snack(error.message, true); }
+}
+async function addLiveopsEvent() {
+  try {
+    const shiny = Number($('#loEventShiny').value);
+    const entry = {id: 'event-' + Date.now(), name: $('#loEventName').value.trim() || 'Event',
+      kind: $('#loEventKind').value, species: loSpecies($('#loEventSpecies').value),
+      shiny_rate: shiny > 0 ? 1 / shiny : null, spawn_multiplier: Number($('#loEventMult').value) || 1,
+      raid_tier_weights: JSON.parse($('#loEventTiers').value || '{}'),
+      starts_ms: loMs('#loEventStart'), ends_ms: loMs('#loEventEnd'), enabled: true};
+    if (!entry.starts_ms || !entry.ends_ms || entry.ends_ms <= entry.starts_ms) throw new Error('Choose a valid event window');
+    await api('/api/liveops', {method:'POST', body: JSON.stringify({settings: {...state.liveops, events: [...(state.liveops.events || []), entry]}})});
+    await loadLiveops(); snack('Event scheduled');
+  } catch (error) { snack(error.message, true); }
+}
+async function addCommunityDay() {
+  try {
+    const shiny = Math.max(1, Number($('#loCdRate').value) || 25);
+    const entry = {id: 'community-day-' + Date.now(), name: $('#loCdName').value.trim() || 'Community Day',
+      species: Number($('#loCdSpecies').value), shiny_rate: 1 / shiny,
+      starts_ms: loMs('#loCdStart'), ends_ms: loMs('#loCdEnd'), enabled: true, spawn_share: 1};
+    if (!entry.species || !entry.starts_ms || !entry.ends_ms || entry.ends_ms <= entry.starts_ms) throw new Error('Choose a species and a valid window');
+    await api('/api/liveops', {method:'POST', body: JSON.stringify({settings: {...state.liveops, community_days: [...(state.liveops.community_days || []), entry]}})});
+    await loadLiveops(); snack('Community Day scheduled');
+  } catch (error) { snack(error.message, true); }
+}
+async function removeLiveopsEntry(kind, id) {
+  const key = kind === 'event' ? 'events' : 'community_days';
+  try {
+    await api('/api/liveops', {method:'POST', body: JSON.stringify({settings: {...state.liveops, [key]: (state.liveops[key] || []).filter((entry) => entry.id !== id)}})});
+    await loadLiveops(); snack('Removed');
+  } catch (error) { snack(error.message, true); }
+}
+async function loadResearch() {
+  try {
+    const value = await api('/api/research');
+    $('#researchJson').value = JSON.stringify(value.research, null, 2);
+    $('#researchState').textContent = value.saved ? 'Using data/research.json' : 'Using the bundled default document';
+  } catch (error) { snack('Research: ' + error.message, true); }
+}
+async function saveResearch() {
+  try {
+    const value = JSON.parse($('#researchJson').value);
+    const result = await api('/api/research', {method:'POST', body: JSON.stringify({research: value})});
+    $('#researchJson').value = JSON.stringify(result.research, null, 2);
+    $('#researchState').textContent = 'Saved and validated';
+    snack('Research saved');
+  } catch (error) { snack(error.message, true); }
+}
+async function loadShadow() {
+  try {
+    const value = await api('/api/shadow');
+    $('#shadowEnabled').value = String(value.config.enabled);
+    $('#shadowDust').value = value.config.purify_stardust_cost;
+    $('#shadowCandy').value = value.config.purify_candy_cost;
+    $('#shadowSd').value = value.config.shadow_third_move_stardust_multiplier;
+    $('#shadowSc').value = value.config.shadow_third_move_candy_multiplier;
+    $('#shadowPd').value = value.config.purified_third_move_stardust_multiplier;
+    $('#shadowPc').value = value.config.purified_third_move_candy_multiplier;
+    $('#shadowOverrides').value = JSON.stringify(value.overrides || {}, null, 2);
+  } catch (error) { snack('Shadow: ' + error.message, true); }
+}
+async function saveShadow() {
+  try {
+    await api('/api/shadow', {method:'POST', body: JSON.stringify({config: {
+      enabled: $('#shadowEnabled').value === 'true',
+      purify_stardust_cost: Number($('#shadowDust').value), purify_candy_cost: Number($('#shadowCandy').value),
+      shadow_third_move_stardust_multiplier: Number($('#shadowSd').value), shadow_third_move_candy_multiplier: Number($('#shadowSc').value),
+      purified_third_move_stardust_multiplier: Number($('#shadowPd').value), purified_third_move_candy_multiplier: Number($('#shadowPc').value),
+    }, overrides: JSON.parse($('#shadowOverrides').value || '{}')})});
+    snack('Shadow table saved');
+  } catch (error) { snack(error.message, true); }
+}
+async function loadPlatform() {
+  try {
+    const value = await api('/api/platform');
+    const settings = value.settings;
+    $('#pfMode').value = settings.mode; $('#pfEnabled').value = String(settings.enabled);
+    $('#pfUrl').value = settings.url || ''; $('#pfDomain').value = settings.room || settings.domain || '';
+    $('#pfTitle').value = settings.title; $('#pfToken').value = settings.manage_token;
+    $('#pfDescription').value = settings.description;
+    $('#pfKey').value = JSON.stringify(value.public_key);
+    $('#platformChip').textContent = settings.mode === 'host' ? (settings.room || settings.domain || 'hosting') : settings.mode;
+    $('#pfStatus').textContent = value.publisher.last_error ? 'Last error: ' + value.publisher.last_error :
+      (value.publisher.last_ms ? 'Last publish ' + new Date(value.publisher.last_ms).toLocaleTimeString() : 'Not published yet') +
+      ' · fingerprint ' + value.fingerprint.slice(0, 23);
+  } catch (error) { snack('Platform: ' + error.message, true); }
+}
+async function savePlatform() {
+  try {
+    await api('/api/platform', {method:'POST', body: JSON.stringify({settings: {
+      mode: $('#pfMode').value, enabled: $('#pfEnabled').value === 'true', url: $('#pfUrl').value.trim(),
+      room: $('#pfDomain').value.trim(), title: $('#pfTitle').value.trim(),
+      manage_token: $('#pfToken').value.trim(), description: $('#pfDescription').value.trim(),
+    }})});
+    await loadPlatform(); snack('Platform settings saved');
+  } catch (error) { snack(error.message, true); }
+}
+async function publishPlatform() {
+  try {
+    const value = await api('/api/platform/publish', {method:'POST', body:'{}'});
+    snack('Published room "' + (value.room || 'room') + '" to HiveMQ'); await loadPlatform();
+  } catch (error) { snack(error.message, true); }
+}
+$('#loPercent').addEventListener('input', updatePercentOther);
+$('#loSave').onclick = saveLiveops;
+$('#loEventAdd').onclick = addLiveopsEvent;
+$('#loCdAdd').onclick = addCommunityDay;
+$('#researchSave').onclick = saveResearch;
+$('#researchReload').onclick = loadResearch;
+$('#shadowSave').onclick = saveShadow;
+$('#pfSave').onclick = savePlatform;
+$('#pfPublish').onclick = publishPlatform;
+document.addEventListener('click', (event) => {
+  const removeEvent = event.target.closest('[data-lo-event]');
+  if (removeEvent) return removeLiveopsEntry('event', removeEvent.dataset.loEvent);
+  const removeDay = event.target.closest('[data-lo-day]');
+  if (removeDay) return removeLiveopsEntry('day', removeDay.dataset.loDay);
+});
+document.querySelectorAll('.tab').forEach((button) => button.addEventListener('click', () => {
+  if (button.dataset.tab === 'liveops') loadLiveops();
+  if (button.dataset.tab === 'research') loadResearch();
+  if (button.dataset.tab === 'shadow') loadShadow();
+  if (button.dataset.tab === 'platform') loadPlatform();
+}));
+loadLiveops(); loadResearch(); loadShadow(); loadPlatform();
+
+init();
+</script>
+<script src="/studio.js"></script>
+</body>
+</html>

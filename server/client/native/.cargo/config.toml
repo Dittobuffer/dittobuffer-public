@@ -1,0 +1,8 @@
+# cargo-ndk is not installed, so wire the NDK linker by hand.
+# The "28" matches the app's minSdkVersion (429 apktool.yml: sdkInfo.minSdkVersion 28).
+[target.aarch64-linux-android]
+linker = "/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang"
+# Cargo does not set an SONAME for cdylibs. The original ships
+# `SONAME: libNianticLabsPlugin.so`; match it so anything resolving this library by
+# soname behaves the same.
+rustflags = ["-C", "link-arg=-Wl,-soname,libNianticLabsPlugin.so"]

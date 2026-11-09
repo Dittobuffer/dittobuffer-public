@@ -1,0 +1,108 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "research",
+  "metadata": {
+    "name": "Mysterious Signals",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "Mysterious Signals",
+      "description": "Original multistage Special Research and an editable encounter.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-06T17:00:00+00:00",
+      "end": "2026-12-11T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "special",
+      "event_only": false,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "event": "spin",
+              "target": 2,
+              "description": "Spin 2 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 500
+            }
+          ],
+          "dialog": "Every observation adds a new detail to our field notes. Let us compare what you discover."
+        },
+        {
+          "objectives": [
+            {
+              "event": "evolve",
+              "target": 1,
+              "description": "Evolve 1 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "xp",
+              "amount": 500
+            }
+          ],
+          "dialog": "Every observation adds a new detail to our field notes. Let us compare what you discover."
+        },
+        {
+          "objectives": [
+            {
+              "event": "raid",
+              "target": 1,
+              "description": "Raid 1 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "encounter",
+              "species": 1,
+              "level": 10,
+              "shiny_rate": 0
+            }
+          ],
+          "dialog": "Every observation adds a new detail to our field notes. Let us compare what you discover."
+        }
+      ],
+      "id": "bundle-206ca0b7cd1a06a54cccdb82"
+    }
+  ],
+  "regions": []
+}

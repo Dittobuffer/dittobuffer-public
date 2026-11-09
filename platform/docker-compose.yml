@@ -1,0 +1,32 @@
+name: dittobuffer-platform
+
+services:
+  platform:
+    build: .
+    image: dittobuffer/platform:1.1.0
+    container_name: dittobuffer-platform
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8780:8780"
+    volumes:
+      - ./docker-data:/data
+      - ../server:/workspace
+    command:
+      - python
+      - run.py
+      - --config
+      - /data/config.json
+      - --data
+      - /data/platform.json
+      - --key
+      - /data/platform-key.json
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8780"
+      - --server-root
+      - /workspace
+      - --room-address
+      - "${ROOM_ADDRESS:-my-room}"
+      - --public-url
+      - "${PUBLIC_URL:-}"

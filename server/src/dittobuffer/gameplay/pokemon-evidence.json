@@ -1,0 +1,517 @@
+{
+  "19:45:0:2": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 1,
+    "shiny_verified": true,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "appraisal": true,
+      "restart": true,
+      "fast_tm": true,
+      "charged_tm": true,
+      "elite_fast_tm": true,
+      "second_charged_attack": true
+    },
+    "evidence": [
+      "builds/m9-batch1-world.png",
+      "builds/m9-shiny-rattata-encounter.png",
+      "builds/m9-shiny-rattata-catch.png",
+      "builds/m9-shiny-rattata-summary.png",
+      "builds/m9-shiny-rattata-appraisal.png",
+      "builds/m9-fast-tm-picker.png",
+      "builds/m9-fast-tm-result.png",
+      "builds/m9-charged-tm-result.png",
+      "builds/m9-elite-fast-options.png",
+      "builds/m9-elite-fast-success.png",
+      "builds/m9-second-move-trainer-tab.png",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "26:49:0:2": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 2,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "elite_charged_tm": true,
+      "gym_battle": true
+    },
+    "evidence": [
+      "builds/m9-raichu-final-summary.png",
+      "builds/m9-raichu-high-throw.png",
+      "builds/m9-elite-charged-options.png",
+      "builds/m9-elite-charged-success.png",
+      "builds/m9-thunder-rematch-animation.png",
+      "builds/m9-thunder-rematch.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "52:63:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 3,
+    "background_verified": [
+      32001
+    ],
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "special_background": true
+    },
+    "evidence": [
+      "builds/m9-background-meowth-encounter.png",
+      "builds/m9-background-meowth-catch.png",
+      "builds/m9-background-cycle-05.png",
+      "builds/m9-background-contact.png",
+      "builds/m9-background-native.json",
+      "builds/m9-special-restart-0.png",
+      "builds/m9-search-background.png",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "20:47:0:2": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 1,
+    "shiny_verified": true,
+    "actions": {
+      "evolution": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "gym_battle": true
+    },
+    "evidence": [
+      "builds/m9-shiny-evolution-animation.png",
+      "builds/m9-shiny-raticate-evolved.png",
+      "builds/m9-tag-two-pokemon.png",
+      "builds/m9-thunder-rematch.json",
+      "builds/m9-search-shiny.png",
+      "builds/m9-second-slot-restart.png",
+      "builds/m9-pvp-power-display.png",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "1:163:0:2": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 7,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0001.json",
+      "builds/m9-sweep-0001-world.png",
+      "builds/m9-sweep-0001-encounter.png",
+      "builds/m9-sweep-0001-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "2:166:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 8,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "raid_battle": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0002.json",
+      "builds/m9-sweep-0002-world.png",
+      "builds/m9-sweep-0002-encounter.png",
+      "builds/m9-sweep-0002-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-snorlax-raid-start.png",
+      "builds/m9-raid-victory.png",
+      "builds/m9-raid-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "3:169:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 9,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "raid_battle": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0003.json",
+      "builds/m9-sweep-0003-world.png",
+      "builds/m9-sweep-0003-encounter.png",
+      "builds/m9-sweep-0003-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-snorlax-raid-start.png",
+      "builds/m9-raid-victory.png",
+      "builds/m9-raid-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "4:172:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 10,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0004.json",
+      "builds/m9-sweep-0004-world.png",
+      "builds/m9-sweep-0004-encounter.png",
+      "builds/m9-sweep-0004-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "5:175:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 11,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0005.json",
+      "builds/m9-sweep-0005-world.png",
+      "builds/m9-sweep-0005-encounter.png",
+      "builds/m9-sweep-0005-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "7:181:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 12,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0007.json",
+      "builds/m9-sweep-0007-world.png",
+      "builds/m9-sweep-0007-encounter.png",
+      "builds/m9-sweep-0007-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "8:184:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 13,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0008.json",
+      "builds/m9-sweep-0008-world.png",
+      "builds/m9-sweep-0008-encounter.png",
+      "builds/m9-sweep-0008-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "10:953:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 14,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0010.json",
+      "builds/m9-sweep-0010-world.png",
+      "builds/m9-sweep-0010-encounter.png",
+      "builds/m9-sweep-0010-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "11:956:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 15,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0011.json",
+      "builds/m9-sweep-0011-world.png",
+      "builds/m9-sweep-0011-encounter.png",
+      "builds/m9-sweep-0011-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "12:959:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 16,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0012-retry.json",
+      "builds/m9-sweep-0012-retry-world.png",
+      "builds/m9-sweep-0012-retry-encounter.png",
+      "builds/m9-sweep-0012-retry-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "16:962:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 17,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0016.json",
+      "builds/m9-sweep-0016-world.png",
+      "builds/m9-sweep-0016-encounter.png",
+      "builds/m9-sweep-0016-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "17:965:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 18,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0017.json",
+      "builds/m9-sweep-0017-world.png",
+      "builds/m9-sweep-0017-encounter.png",
+      "builds/m9-sweep-0017-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "25:598:0:2": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 19,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "gender_model": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0025.json",
+      "builds/m9-sweep-0025-world.png",
+      "builds/m9-sweep-0025-encounter.png",
+      "builds/m9-sweep-0025-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-female-pikachu-tail.png",
+      "builds/m9-model-addresses-correct.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "144:716:0:3": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 20,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m9-sweep-0144.json",
+      "builds/m9-sweep-0144-world.png",
+      "builds/m9-sweep-0144-encounter.png",
+      "builds/m9-sweep-0144-summary.png",
+      "builds/m9-storage-restart.png",
+      "builds/m9-final-player-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "20:47:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 5,
+    "actions": {
+      "evolution": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "location_background": true
+    },
+    "evidence": [
+      "builds/m9-location-evolved-0.png",
+      "builds/m9-location-restart-0.png",
+      "builds/m9-search-background.png",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ],
+    "background_verified": [
+      32002
+    ]
+  },
+  "143:199:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 6,
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true,
+      "restart": true,
+      "raid_boss": true
+    },
+    "evidence": [
+      "builds/m9-smoke-snorlax.json",
+      "builds/m9-snorlax-strong-throw.png",
+      "builds/m9-snorlax-summary.png",
+      "builds/m9-raid-state.json",
+      "builds/m9-raid-bonus.png",
+      "builds/m9-raid-caught-summary.png",
+      "builds/m9-raid-state.json",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ]
+  },
+  "19:45:0:1": {
+    "client": "0.429.2",
+    "profile": "m9-spawns1",
+    "owned_id": 5,
+    "background_verified": [
+      32002
+    ],
+    "actions": {
+      "world": true,
+      "encounter": true,
+      "catch": true,
+      "storage": true,
+      "summary": true
+    },
+    "evidence": [
+      "builds/m9-location-card-2.png",
+      "builds/m9-location-evolved-0.png",
+      "builds/m9-storage-full-top.png",
+      "builds/m9-storage-full-bottom.png"
+    ],
+    "limitations": [
+      "Caught Rattata evolved before final restart; target Raticate identity/background persist."
+    ]
+  }
+}

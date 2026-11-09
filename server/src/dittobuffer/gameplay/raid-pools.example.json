@@ -1,0 +1,22 @@
+{
+  "raids": {
+    "enabled": false,
+    "development_only": true,
+    "participation_limit": 1,
+    "daily_free_passes": 1,
+    "minimum_level": 5,
+    "egg_seconds": 120,
+    "active_seconds": 3600,
+    "rotation_seconds": 7200,
+    "lobby_seconds": 20,
+    "relobby_seconds": 20,
+    "battle_seconds": 180,
+    "premier_balls": 12,
+    "encounter_seconds": 86400,
+    "pools": [
+      {"species": 16, "tier": 1, "hp": 200, "cp": 1000, "weight": 4, "level": 20, "xp": 1000, "dust": 500, "items": {"101": 2, "201": 1}},
+      {"species": 25, "tier": 3, "hp": 600, "cp": 3000, "weight": 2, "level": 20, "xp": 3000, "dust": 1000, "items": {"101": 3, "201": 2}},
+      {"species": 144, "tier": 5, "hp": 250, "cp": 5000, "weight": 1, "level": 20, "xp": 5000, "dust": 1500, "items": {"101": 3, "201": 3}}
+    ]
+  }
+}

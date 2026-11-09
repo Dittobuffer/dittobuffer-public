@@ -1,0 +1,1887 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "season",
+  "metadata": {
+    "name": "Season of Beginnings",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "An evening spotlight field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-24T17:00:00+00:00",
+      "end": "2026-12-29T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-07c5e74927dd8a7bb33b97f0"
+    },
+    {
+      "kind": "event",
+      "name": "An evening spotlight",
+      "description": "One focused spawn pool and one catch bonus.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-17T17:00:00+00:00",
+      "end": "2026-11-17T18:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 53,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-3b0e6b7c7015f929f733a69f"
+        ]
+      },
+      "event_type": "spotlight-hour",
+      "id": "bundle-0df8d658f51cf84a4f0e7f2e",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "event",
+      "name": "An evening spotlight",
+      "description": "One focused spawn pool and one catch bonus.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-03T17:00:00+00:00",
+      "end": "2026-11-03T18:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 180,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-d101811328a9f3dfddd2bf69"
+        ]
+      },
+      "event_type": "spotlight-hour",
+      "id": "bundle-134a546cb169124292efac47",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "research",
+      "name": "An evening spotlight field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-17T17:00:00+00:00",
+      "end": "2026-12-22T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-3b0e6b7c7015f929f733a69f"
+    },
+    {
+      "kind": "season",
+      "name": "Season of Beginnings",
+      "description": "An original editable season generated from the restored client catalog.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-11-29T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 10,
+      "rules": {
+        "bonuses": {
+          "catch_xp": 1
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-ec5ba70a5aebd5764f44f302",
+          "bundle-f9cce0ed7ac88c94beeeda0f"
+        ]
+      },
+      "theme": "Kanto and Johto discoveries",
+      "generations": [
+        1,
+        2
+      ],
+      "weeks": [
+        {
+          "name": "Week 1",
+          "theme": "Kanto and Johto discoveries",
+          "rules": {
+            "spawns": [
+              {
+                "species": 180,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 138,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 14,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 65,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 179,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 1,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 114,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 31,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 85,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 102,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 53,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 115,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              }
+            ],
+            "raids": [
+              {
+                "species": 180,
+                "tier": 1,
+                "hp": 600,
+                "cp": 5000,
+                "weight": 1,
+                "level": 20,
+                "xp": 1000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 115,
+                "tier": 3,
+                "hp": 1200,
+                "cp": 9000,
+                "weight": 1,
+                "level": 20,
+                "xp": 3000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 144,
+                "tier": 5,
+                "hp": 2000,
+                "cp": 18000,
+                "weight": 1,
+                "level": 20,
+                "xp": 5000,
+                "dust": 500,
+                "shiny_rate": 0
+              }
+            ],
+            "eggs": [
+              {
+                "species": 180,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 138,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 14,
+                "km": 5,
+                "weight": 1,
+                "shiny_rate": 0
+              }
+            ],
+            "research": [
+              "bundle-ec5ba70a5aebd5764f44f302",
+              "bundle-f9cce0ed7ac88c94beeeda0f"
+            ]
+          }
+        },
+        {
+          "name": "Week 2",
+          "theme": "Kanto and Johto discoveries",
+          "rules": {
+            "spawns": [
+              {
+                "species": 1,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 114,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 31,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 85,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 102,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 53,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 115,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 46,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 67,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 87,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 15,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 132,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              }
+            ],
+            "raids": [
+              {
+                "species": 1,
+                "tier": 1,
+                "hp": 600,
+                "cp": 5000,
+                "weight": 1,
+                "level": 20,
+                "xp": 1000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 132,
+                "tier": 3,
+                "hp": 1200,
+                "cp": 9000,
+                "weight": 1,
+                "level": 20,
+                "xp": 3000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 244,
+                "tier": 5,
+                "hp": 2000,
+                "cp": 18000,
+                "weight": 1,
+                "level": 20,
+                "xp": 5000,
+                "dust": 500,
+                "shiny_rate": 0
+              }
+            ],
+            "eggs": [
+              {
+                "species": 1,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 114,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 31,
+                "km": 5,
+                "weight": 1,
+                "shiny_rate": 0
+              }
+            ],
+            "research": [
+              "bundle-ec5ba70a5aebd5764f44f302",
+              "bundle-f9cce0ed7ac88c94beeeda0f"
+            ]
+          }
+        },
+        {
+          "name": "Week 3",
+          "theme": "Kanto and Johto discoveries",
+          "rules": {
+            "spawns": [
+              {
+                "species": 53,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 115,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 46,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 67,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 87,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 15,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 132,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 167,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 209,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 141,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 119,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 232,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              }
+            ],
+            "raids": [
+              {
+                "species": 53,
+                "tier": 1,
+                "hp": 600,
+                "cp": 5000,
+                "weight": 1,
+                "level": 20,
+                "xp": 1000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 232,
+                "tier": 3,
+                "hp": 1200,
+                "cp": 9000,
+                "weight": 1,
+                "level": 20,
+                "xp": 3000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 250,
+                "tier": 5,
+                "hp": 2000,
+                "cp": 18000,
+                "weight": 1,
+                "level": 20,
+                "xp": 5000,
+                "dust": 500,
+                "shiny_rate": 0
+              }
+            ],
+            "eggs": [
+              {
+                "species": 53,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 115,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 46,
+                "km": 5,
+                "weight": 1,
+                "shiny_rate": 0
+              }
+            ],
+            "research": [
+              "bundle-ec5ba70a5aebd5764f44f302",
+              "bundle-f9cce0ed7ac88c94beeeda0f"
+            ]
+          }
+        },
+        {
+          "name": "Week 4",
+          "theme": "Kanto and Johto discoveries",
+          "rules": {
+            "spawns": [
+              {
+                "species": 15,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 132,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 167,
+                "weight": 12,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 209,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 141,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 119,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 232,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 94,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 142,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              },
+              {
+                "species": 6,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "forest"
+              },
+              {
+                "species": 201,
+                "weight": 5,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125,
+                "biome": "urban"
+              },
+              {
+                "species": 97,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  30
+                ],
+                "shiny_rate": 0.001953125
+              }
+            ],
+            "raids": [
+              {
+                "species": 15,
+                "tier": 1,
+                "hp": 600,
+                "cp": 5000,
+                "weight": 1,
+                "level": 20,
+                "xp": 1000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 97,
+                "tier": 3,
+                "hp": 1200,
+                "cp": 9000,
+                "weight": 1,
+                "level": 20,
+                "xp": 3000,
+                "dust": 500,
+                "shiny_rate": 0
+              },
+              {
+                "species": 249,
+                "tier": 5,
+                "hp": 2000,
+                "cp": 18000,
+                "weight": 1,
+                "level": 20,
+                "xp": 5000,
+                "dust": 500,
+                "shiny_rate": 0
+              }
+            ],
+            "eggs": [
+              {
+                "species": 15,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 132,
+                "km": 2,
+                "weight": 1,
+                "shiny_rate": 0
+              },
+              {
+                "species": 167,
+                "km": 5,
+                "weight": 1,
+                "shiny_rate": 0
+              }
+            ],
+            "research": [
+              "bundle-ec5ba70a5aebd5764f44f302",
+              "bundle-f9cce0ed7ac88c94beeeda0f"
+            ]
+          }
+        }
+      ],
+      "generator": {
+        "version": 1,
+        "seed": "beginnings-four-weeks-v1",
+        "options": {
+          "name": "Season of Beginnings",
+          "start": "2026-11-01T10:00:00Z",
+          "seed": "beginnings-four-weeks-v1",
+          "weeks": 4,
+          "theme": "Kanto and Johto discoveries"
+        }
+      },
+      "id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "event",
+      "name": "An evening spotlight",
+      "description": "One focused spawn pool and one catch bonus.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-10T17:00:00+00:00",
+      "end": "2026-11-10T18:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-fbd1e87b656ba1e797882a67"
+        ]
+      },
+      "event_type": "spotlight-hour",
+      "id": "bundle-755b34d2cad0812c34bd614f",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "research",
+      "name": "Community gathering field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-13T13:00:00+00:00",
+      "end": "2026-12-18T13:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-76c99c3862c2959baa6c99ff"
+    },
+    {
+      "kind": "research",
+      "name": "Field notes day field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-26T10:00:00+00:00",
+      "end": "2026-12-31T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-7a107aeee63bb9e0bc95f99c"
+    },
+    {
+      "kind": "research",
+      "name": "Field notes day field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-12T10:00:00+00:00",
+      "end": "2026-12-17T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-824ed1f5ce876e8fd00341a1"
+    },
+    {
+      "kind": "event",
+      "name": "Community gathering",
+      "description": "Featured encounters, catch bonuses and Field Research.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-13T13:00:00+00:00",
+      "end": "2026-11-13T16:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.04
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-76c99c3862c2959baa6c99ff"
+        ]
+      },
+      "event_type": "community-day",
+      "id": "bundle-88e063921bab284fb82ba95f",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "event",
+      "name": "Season of Beginnings - Week 3 field gathering",
+      "description": "A short catch-and-discover Field Research event.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-19T10:00:00+00:00",
+      "end": "2026-11-19T13:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 2,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 3,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 4,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 5,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 6,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 7,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 8,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 9,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 10,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-cc93606529d0060538d3ec90"
+        ]
+      },
+      "event_type": "research-day",
+      "id": "bundle-97c034246ef83998c8f98275",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "research",
+      "name": "Field notes day field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-05T10:00:00+00:00",
+      "end": "2026-12-10T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-ab389d776aba88a4cac8a893"
+    },
+    {
+      "kind": "event",
+      "name": "Season of Beginnings - Week 2 field gathering",
+      "description": "A short catch-and-discover Field Research event.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-12T10:00:00+00:00",
+      "end": "2026-11-12T13:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 2,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 3,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 4,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 5,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 6,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 7,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 8,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 9,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 10,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-824ed1f5ce876e8fd00341a1"
+        ]
+      },
+      "event_type": "research-day",
+      "id": "bundle-ab80425349d18bcc71e92a46",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "event",
+      "name": "An evening spotlight",
+      "description": "One focused spawn pool and one catch bonus.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-24T17:00:00+00:00",
+      "end": "2026-11-24T18:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 15,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-07c5e74927dd8a7bb33b97f0"
+        ]
+      },
+      "event_type": "spotlight-hour",
+      "id": "bundle-acbbf3e5e1dbb1e89b6a2a37",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "event",
+      "name": "Season of Beginnings - Week 4 field gathering",
+      "description": "A short catch-and-discover Field Research event.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-26T10:00:00+00:00",
+      "end": "2026-11-26T13:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 2,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 3,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 4,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 5,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 6,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 7,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 8,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 9,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 10,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-7a107aeee63bb9e0bc95f99c"
+        ]
+      },
+      "event_type": "research-day",
+      "id": "bundle-b5d38149ca500a404d599008",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "research",
+      "name": "Field notes day field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-19T10:00:00+00:00",
+      "end": "2026-12-24T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-cc93606529d0060538d3ec90"
+    },
+    {
+      "kind": "event",
+      "name": "Season of Beginnings - Week 1 field gathering",
+      "description": "A short catch-and-discover Field Research event.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-05T10:00:00+00:00",
+      "end": "2026-11-05T13:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 2,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 3,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 4,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 5,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 6,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 7,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 8,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 9,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 10,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-ab389d776aba88a4cac8a893"
+        ]
+      },
+      "event_type": "research-day",
+      "id": "bundle-cd27da21cb6825e0ad77ee33",
+      "season_id": "bundle-3b0ea23d36fcf347c9a2a3e1"
+    },
+    {
+      "kind": "research",
+      "name": "An evening spotlight field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-03T17:00:00+00:00",
+      "end": "2026-12-08T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-d101811328a9f3dfddd2bf69"
+    },
+    {
+      "kind": "research",
+      "name": "Season of Beginnings - First steps",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-12-06T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "special",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "event": "spin",
+              "target": 2,
+              "description": "Spin 2 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        },
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 5,
+              "description": "Catch 5 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "encounter",
+              "species": 180,
+              "level": 10,
+              "shiny_rate": 0
+            }
+          ]
+        }
+      ],
+      "id": "bundle-ec5ba70a5aebd5764f44f302"
+    },
+    {
+      "kind": "research",
+      "name": "Season of Beginnings - Field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-12-06T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-f9cce0ed7ac88c94beeeda0f"
+    },
+    {
+      "kind": "research",
+      "name": "An evening spotlight field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-10T17:00:00+00:00",
+      "end": "2026-12-15T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-fbd1e87b656ba1e797882a67"
+    }
+  ],
+  "regions": []
+}

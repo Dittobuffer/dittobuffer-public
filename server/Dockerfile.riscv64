@@ -1,0 +1,46 @@
+# syntax=docker/dockerfile:1.7
+# Best-effort RISC-V runtime image. The standard Dockerfile uses the official
+# Python slim image, which currently has amd64 and arm64 manifests but no
+# riscv64 manifest. Debian trixie provides the required Python 3.13 packages.
+FROM debian:trixie-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    DITTOBUFFER_ROOT=/app
+
+WORKDIR /app
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3 python3-venv python3-pip \
+        ca-certificates tzdata build-essential libssl-dev libffi-dev pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
+
+COPY pyproject.toml README.md LICENSE ./
+COPY src ./src
+COPY protocol ./protocol
+RUN pip install --no-cache-dir --no-deps -e .
+
+COPY config ./config
+COPY tools ./tools
+COPY scripts ./scripts
+
+RUN mkdir -p /app/data /app/assets /app/logs /app/run \
+    && useradd --create-home --uid 10001 dittobuffer \
+    && chown -R dittobuffer:dittobuffer /app
+USER dittobuffer
+
+EXPOSE 8445 8080 8081
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=90s --retries=3 \
+    CMD python -c "import socket;s=socket.create_connection(('127.0.0.1',8445),3);s.close()" || exit 1
+
+CMD ["python", "-m", "dittobuffer.runtime.http", "--config", "config/family.json"]

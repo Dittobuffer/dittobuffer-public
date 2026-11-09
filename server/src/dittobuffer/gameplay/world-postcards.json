@@ -1,0 +1,511 @@
+{
+  "format": 1,
+  "scope": "Reviewed city anchors only; no arbitrary-coordinate classification",
+  "patterns": 18,
+  "origins": [
+    {
+      "id": "world-postcard:ne-1159151181",
+      "name": "San Juan",
+      "area": "San Juan",
+      "country": "Puerto Rico",
+      "country_code": "PRI",
+      "lat": 18.440023,
+      "lng": -66.129979,
+      "region": "ARCHIPELAGO",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151181,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151519",
+      "name": "Amsterdam",
+      "area": "Amsterdam",
+      "country": "Netherlands",
+      "country_code": "NLD",
+      "lat": 52.351914,
+      "lng": 4.914694,
+      "region": "CONTINENTAL",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151519,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151609",
+      "name": "Tokyo",
+      "area": "Tokyo",
+      "country": "Japan",
+      "country_code": "JPN",
+      "lat": 35.686963,
+      "lng": 139.749462,
+      "region": "ELEGANT",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151609,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151577",
+      "name": "London",
+      "area": "London",
+      "country": "United Kingdom",
+      "country_code": "GBR",
+      "lat": 51.501941,
+      "lng": -0.118668,
+      "region": "GARDEN",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151577,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151479",
+      "name": "San Francisco",
+      "area": "San Francisco",
+      "country": "United States of America",
+      "country_code": "USA",
+      "lat": 37.784263,
+      "lng": -122.3996,
+      "region": "HIGH_PLAINS",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151479,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159150939",
+      "name": "Nuuk",
+      "area": "Nuuk",
+      "country": "Greenland",
+      "country_code": "GRL",
+      "lat": 64.198281,
+      "lng": -51.732659,
+      "region": "ICY_SNOW",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159150939,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151599",
+      "name": "Jakarta",
+      "area": "Jakarta",
+      "country": "Indonesia",
+      "country_code": "IDN",
+      "lat": -6.172472,
+      "lng": 106.827492,
+      "region": "JUNGLE",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151599,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151273",
+      "name": "Lisbon",
+      "area": "Lisbon",
+      "country": "Portugal",
+      "country_code": "PRT",
+      "lat": 38.724669,
+      "lng": -9.146812,
+      "region": "MARINE",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151273,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151613",
+      "name": "Paris",
+      "area": "Paris",
+      "country": "France",
+      "country_code": "FRA",
+      "lat": 48.858092,
+      "lng": 2.352992,
+      "region": "MEADOW",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151613,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151489",
+      "name": "Atlanta",
+      "area": "Atlanta",
+      "country": "United States of America",
+      "country_code": "USA",
+      "lat": 33.739457,
+      "lng": -84.367642,
+      "region": "MODERN",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151489,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151567",
+      "name": "Taipei",
+      "area": "Taipei",
+      "country": "Taiwan",
+      "country_code": "TWN",
+      "lat": 25.035833,
+      "lng": 121.568333,
+      "region": "MONSOON",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151567,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151221",
+      "name": "Honolulu",
+      "area": "Honolulu",
+      "country": "United States of America",
+      "country_code": "USA",
+      "lat": 21.303429,
+      "lng": -157.858301,
+      "region": "OCEAN",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151221,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151059",
+      "name": "Ottawa",
+      "area": "Ottawa",
+      "country": "Canada",
+      "country_code": "CAN",
+      "lat": 45.418643,
+      "lng": -75.701961,
+      "region": "POLAR",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151059,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151165",
+      "name": "Adelaide",
+      "area": "Adelaide",
+      "country": "Australia",
+      "country_code": "AUS",
+      "lat": -34.933042,
+      "lng": 138.598059,
+      "region": "RIVER",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151165,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151497",
+      "name": "Dubai",
+      "area": "Dubai",
+      "country": "United Arab Emirates",
+      "country_code": "ARE",
+      "lat": 25.214912,
+      "lng": 55.286946,
+      "region": "SANDSTORM",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151497,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151621",
+      "name": "S\u00e3o Paulo",
+      "area": "S\u00e3o Paulo",
+      "country": "Brazil",
+      "country_code": "BRA",
+      "lat": -23.556734,
+      "lng": -46.626966,
+      "region": "SAVANNA",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151621,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159151155",
+      "name": "Darwin",
+      "area": "Darwin",
+      "country": "Australia",
+      "country_code": "AUS",
+      "lat": -12.425354,
+      "lng": 130.850039,
+      "region": "SUN",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159151155,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    },
+    {
+      "id": "world-postcard:ne-1159150587",
+      "name": "Reykjav\u00edk",
+      "area": "Reykjav\u00edk",
+      "country": "Iceland",
+      "country_code": "ISL",
+      "lat": 64.143459,
+      "lng": -21.936546,
+      "region": "TUNDRA",
+      "origin_type": "VIRTUAL_WORLD_POSTCARD",
+      "description": "Virtual city Postcard; no real PokeStop or player is implied.",
+      "image": "world-explorer-original",
+      "enabled": true,
+      "provenance": {
+        "dataset": "Natural Earth 10m populated places simple",
+        "ne_id": 1159150587,
+        "source_sha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+        "license": "Public domain",
+        "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+        "source_url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places_simple.geojson"
+      },
+      "classification": {
+        "status": "REVIEWED_CITY_ANCHOR",
+        "review_date": "2026-10-26",
+        "reference": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=en",
+        "method": "Reviewed city interior within the habitat shown on the official published map; point registry only, not a global boundary classifier."
+      }
+    }
+  ]
+}

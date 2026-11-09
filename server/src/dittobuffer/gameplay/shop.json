@@ -1,0 +1,6 @@
+{
+  "offer_seconds": 900,
+  "products": [
+    {"sku": "pokeball.20", "item": 1, "quantity": 20, "coins": 10, "sprite": "pokeball.20"}
+  ]
+}

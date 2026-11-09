@@ -1,0 +1,866 @@
+{
+  "format": 1,
+  "source_catalog_sha256": "3ef16ec0f36910f1cbf3382a3e8976434b5d493c15e4464072214437c56fb35e",
+  "reference_sha256": "5c947ac64d1de8859bea1b3bf044609d74b6e8429d53f8cb1aa30a72a46dce84",
+  "scope": "Local development selection; available assets do not imply Android acceptance. Prices/unlock assignments are explicit custom rules.",
+  "articles": [
+    {
+      "id": "n_backpack_default-new_0",
+      "slot": "backpack",
+      "avatar_slot": 7,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_backpack_defaultnew_0_icon",
+        "displayStringId": "n_backpack_default-new_0_display_name"
+      },
+      "model_address": "n_backpack_default-new_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_backpack_movie2020_0",
+      "slot": "backpack",
+      "avatar_slot": 7,
+      "ownership": "event",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_backpack_movie2020_0_icon",
+        "displayStringId": "n_backpack_movie2020_0_display_name"
+      },
+      "model_address": "n_backpack_movie2020_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_gloves_default-new_0",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_gloves_defaultnew_0_icon",
+        "displayStringId": "n_gloves_default-new_0_display_name"
+      },
+      "model_address": "n_gloves_default-new_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_gloves_megabangle_0",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "medal",
+      "coins": 0,
+      "sku": "",
+      "medal": 3,
+      "medal_rank": 1,
+      "display": {
+        "iconAddress": "n_gloves_megabangle_0_icon",
+        "displayStringId": "n_gloves_megabangle_0_display_name"
+      },
+      "model_address": "n_gloves_megabangle_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_gloves_megabangle_1",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "medal",
+      "coins": 0,
+      "sku": "",
+      "medal": 3,
+      "medal_rank": 1,
+      "display": {
+        "iconAddress": "n_gloves_megabangle_1_icon",
+        "displayStringId": "n_gloves_megabangle_1_display_name"
+      },
+      "model_address": "n_gloves_megabangle_1",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_gloves_megabangle_2",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "medal",
+      "coins": 0,
+      "sku": "",
+      "medal": 3,
+      "medal_rank": 1,
+      "display": {
+        "iconAddress": "n_gloves_megabangle_2_icon",
+        "displayStringId": "n_gloves_megabangle_2_display_name"
+      },
+      "model_address": "n_gloves_megabangle_2",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_gloves_megabangle_3",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "medal",
+      "coins": 0,
+      "sku": "",
+      "medal": 3,
+      "medal_rank": 1,
+      "display": {
+        "iconAddress": "n_gloves_megabangle_3_icon",
+        "displayStringId": "n_gloves_megabangle_3_display_name"
+      },
+      "model_address": "n_gloves_megabangle_3",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_gloves_megabangle_4",
+      "slot": "gloves",
+      "avatar_slot": 8,
+      "ownership": "medal",
+      "coins": 0,
+      "sku": "",
+      "medal": 3,
+      "medal_rank": 1,
+      "display": {
+        "iconAddress": "n_gloves_megabangle_4_icon",
+        "displayStringId": "n_gloves_megabangle_4_display_name"
+      },
+      "model_address": "n_gloves_megabangle_4",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_hair_default_a_0",
+      "slot": "hair",
+      "avatar_slot": 1,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_hair_default_a_0_icon"
+      },
+      "model_address": "n_hair_default_a_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_hair_default_b_0",
+      "slot": "hair",
+      "avatar_slot": 1,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_hair_default_b_0_icon"
+      },
+      "model_address": "n_hair_default_b_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_hair_wavyshort_0",
+      "slot": "hair",
+      "avatar_slot": 1,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_hair_wavyshort_0_icon"
+      },
+      "model_address": "n_hair_wavyshort_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_hat_strawhat_0",
+      "slot": "hat",
+      "avatar_slot": 4,
+      "ownership": "purchase",
+      "coins": 10,
+      "sku": "dittobuffer.avatar.strawhat",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_hat_strawhat_0_icon",
+        "displayStringId": "n_hat_strawhat_0_display_name"
+      },
+      "model_address": "n_hat_strawhat_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_pants_default_a_0",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_0_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default_a_1",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_1_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_1",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default_a_2",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_2_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_2",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default_a_3",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_3_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_3",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default_a_4",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_4_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_4",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default_a_5",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_default_a_5_icon",
+        "displayStringId": "n_pants_default_a_0_display_name"
+      },
+      "model_address": "n_pants_default_a_5",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_default-new_0",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_defaultnew_0_icon",
+        "displayStringId": "n_pants_default-new_0_display_name"
+      },
+      "model_address": "n_pants_default-new_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_pants_skinnyjeans_b_0",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_skinnyjeans_b_0_icon",
+        "displayStringId": "n_pants_skinnyjeans_b_0_display_name"
+      },
+      "model_address": "n_pants_skinnyjeans_b_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_skinnyjeans_b_1",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_skinnyjeans_b_1_icon",
+        "displayStringId": "n_pants_skinnyjeans_b_0_display_name"
+      },
+      "model_address": "n_pants_skinnyjeans_b_1",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pants_skinnyjeans_b_2",
+      "slot": "pants",
+      "avatar_slot": 3,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_pants_skinnyjeans_b_2_icon",
+        "displayStringId": "n_pants_skinnyjeans_b_0_display_name"
+      },
+      "model_address": "n_pants_skinnyjeans_b_2",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_0",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_0_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_1",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_1_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_1",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_2",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_2_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_2",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_3",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_3_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_3",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_4",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_4_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_4",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_5",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_5_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_5",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_6",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_6_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_6",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_7",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_7_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_7",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_default_a_8",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_default_a_8_icon",
+        "displayStringId": "n_shirt_default_a_1_display_name"
+      },
+      "model_address": "n_shirt_default_a_8",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_shirt_default-new_0",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_defaultnew_0_icon",
+        "displayStringId": "n_shirt_default-new_0_display_name"
+      },
+      "model_address": "n_shirt_default-new_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shirt_svdlc1_0",
+      "slot": "shirt",
+      "avatar_slot": 2,
+      "ownership": "event",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shirt_svdlc1_0_icon",
+        "displayStringId": "n_shirt_svdlc1_0_display_name"
+      },
+      "model_address": "n_shirt_svdlc1_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_0",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_0_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_1",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_1_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_1",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_2",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_2_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_2",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_3",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_3_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_3",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_4",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_4_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_4",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_5",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_5_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_5",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default_a_6",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_default_a_6_icon",
+        "displayStringId": "n_shoes_default_a_0_display_name"
+      },
+      "model_address": "n_shoes_default_a_6",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_shoes_default-new_0",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_defaultnew_0_icon",
+        "displayStringId": "n_shoes_default-new_0_display_name"
+      },
+      "model_address": "n_shoes_default-new_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_shoes_svdlc1_0",
+      "slot": "shoes",
+      "avatar_slot": 5,
+      "ownership": "event",
+      "coins": 0,
+      "sku": "",
+      "medal": 0,
+      "medal_rank": 0,
+      "display": {
+        "iconAddress": "n_shoes_svdlc1_0_icon",
+        "displayStringId": "n_shoes_svdlc1_0_display_name"
+      },
+      "model_address": "n_shoes_svdlc1_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": false
+    },
+    {
+      "id": "n_pose_idle",
+      "slot": "pose",
+      "avatar_slot": 14,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "display": {
+        "iconAddress": "n_pose_idle_icon",
+        "displayStringId": "n_pose_empty_display_name"
+      },
+      "model_address": "n_pose_idle",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_eyebrows_legacymale_0",
+      "slot": "eye_brow",
+      "avatar_slot": 19,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "display": {},
+      "model_address": "n_eyebrows_legacymale_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    },
+    {
+      "id": "n_eyelashes_legacymale_0",
+      "slot": "eye_lash",
+      "avatar_slot": 20,
+      "ownership": "starter",
+      "coins": 0,
+      "sku": "",
+      "display": {},
+      "model_address": "n_eyelashes_legacymale_0",
+      "asset_state": "DEPENDENCIES_AVAILABLE",
+      "android_verified": true,
+      "android_evidence": "M10: equipped model rendered in restarted profile/overworld; category thumbnails are not accepted."
+    }
+  ],
+  "appearance_addresses": [
+    "FacePresetDefault",
+    "FacePresetFive",
+    "FacePresetFour",
+    "FacePresetOne",
+    "FacePresetSeven",
+    "FacePresetSix",
+    "FacePresetThree",
+    "FacePresetTwo",
+    "n_gradient_eye_0",
+    "n_gradient_eye_1",
+    "n_gradient_eye_10",
+    "n_gradient_eye_11",
+    "n_gradient_eye_12",
+    "n_gradient_eye_13",
+    "n_gradient_eye_14",
+    "n_gradient_eye_15",
+    "n_gradient_eye_16",
+    "n_gradient_eye_17",
+    "n_gradient_eye_18",
+    "n_gradient_eye_19",
+    "n_gradient_eye_2",
+    "n_gradient_eye_3",
+    "n_gradient_eye_4",
+    "n_gradient_eye_5",
+    "n_gradient_eye_6",
+    "n_gradient_eye_7",
+    "n_gradient_eye_8",
+    "n_gradient_eye_9",
+    "n_gradient_hair_0",
+    "n_gradient_hair_1",
+    "n_gradient_hair_10",
+    "n_gradient_hair_11",
+    "n_gradient_hair_12",
+    "n_gradient_hair_13",
+    "n_gradient_hair_14",
+    "n_gradient_hair_15",
+    "n_gradient_hair_16",
+    "n_gradient_hair_17",
+    "n_gradient_hair_18",
+    "n_gradient_hair_19",
+    "n_gradient_hair_2",
+    "n_gradient_hair_20",
+    "n_gradient_hair_21",
+    "n_gradient_hair_22",
+    "n_gradient_hair_23",
+    "n_gradient_hair_24",
+    "n_gradient_hair_25",
+    "n_gradient_hair_26",
+    "n_gradient_hair_27",
+    "n_gradient_hair_28",
+    "n_gradient_hair_29",
+    "n_gradient_hair_3",
+    "n_gradient_hair_30",
+    "n_gradient_hair_31",
+    "n_gradient_hair_4",
+    "n_gradient_hair_5",
+    "n_gradient_hair_6",
+    "n_gradient_hair_7",
+    "n_gradient_hair_8",
+    "n_gradient_hair_9",
+    "n_gradient_skin_0",
+    "n_gradient_skin_1",
+    "n_gradient_skin_10",
+    "n_gradient_skin_11",
+    "n_gradient_skin_12",
+    "n_gradient_skin_13",
+    "n_gradient_skin_14",
+    "n_gradient_skin_15",
+    "n_gradient_skin_16",
+    "n_gradient_skin_17",
+    "n_gradient_skin_18",
+    "n_gradient_skin_19",
+    "n_gradient_skin_2",
+    "n_gradient_skin_20",
+    "n_gradient_skin_21",
+    "n_gradient_skin_22",
+    "n_gradient_skin_23",
+    "n_gradient_skin_24",
+    "n_gradient_skin_3",
+    "n_gradient_skin_4",
+    "n_gradient_skin_5",
+    "n_gradient_skin_6",
+    "n_gradient_skin_7",
+    "n_gradient_skin_8",
+    "n_gradient_skin_9"
+  ],
+  "body_presets": [
+    "BodyPresetDefault",
+    "BodyPresetEight",
+    "BodyPresetFour"
+  ],
+  "body_preset_scope": "Supplied onboarding preset IDs; native appearance values remain authoritative; further previews need device verification.",
+  "face_presets": [
+    "FacePresetSeven"
+  ],
+  "face_preset_limit": "Only FacePresetSeven has locally complete brow/lash articles. Other preset ScriptableObjects alone do not establish complete appearance dependencies."
+}

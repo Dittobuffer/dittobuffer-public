@@ -1,0 +1,93 @@
+# ---------------------------------------------------------------------------
+# Dittobuffer — tracked content policy
+#
+#   kept      source, tests, docs, config profiles, protocol, client agents,
+#             Game Master (assets/game-master, assets/static/gmts.binpb.gz),
+#             manifests (data/static/manifest.json, builds/*.json),
+#             Frida Gadget, gnirehtet, apktool, build-tools, POI photos.
+#   ignored   Pokémon art/audio (assets/pokemon), player saves and world
+#             snapshots, generated APKs, caches, anything above 100 MiB.
+#
+# A clone therefore boots from the JSON development world with no external
+# download; the OSM world snapshot and the Pokémon artwork are supplied
+# locally. See docs/ASSETS.md.
+# ---------------------------------------------------------------------------
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# --- Local state and caches -------------------------------------------------
+logs/
+run/
+.staging/
+.private/
+.tools/
+*.log
+*.pid
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Databases: player saves, world snapshots, admin overlays ---------------
+# Only the small, reviewed Power Spot candidate index ships with the code.
+data/*.sqlite3
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+data/*.before-v*
+data/development.sqlite3*
+data/boot-test.sqlite3*
+data/world/*.sqlite3
+data/world/*.sqlite3-shm
+data/world/*.sqlite3-wal
+data/world/publications/
+assets/world/*.sqlite3*
+builds/*.sqlite3*
+builds/*.before-v*
+!data/world/power-spots.sqlite3
+
+# --- World extracts (multi-GB, ODbL; import locally) ------------------------
+netherlands-*.sqlite3
+*.osm.pbf
+*.pbf
+data/maps/areas/
+
+# --- Pokémon art, models and audio are not redistributed --------------------
+assets/pokemon/
+assets/client-cache/
+builds/m151-client-runtime-v3/
+builds/kit-standalone/
+
+# --- Android build output and bundled multi-GB payload ----------------------
+android/app/src/main/assets/payload-*.zip
+android/payload-parts/
+android/.splits/
+android/app/src/main/assets/server-bootstrap.zip
+android/app/src/main/assets/client/
+android/app/build/
+android/.gradle/
+android/build/
+android/local.properties
+
+# --- Built artefacts --------------------------------------------------------
+apk/built/
+apk/patched/
+*.idsig
+*.apk.bak
+# 103 MiB base APK: above GitHub's 100 MiB hard limit, so only the split ships.
+apk/PokemonGO-0.429.2-base.apk
+
+# --- OS / editors -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

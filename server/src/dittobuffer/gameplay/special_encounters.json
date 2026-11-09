@@ -1,0 +1,507 @@
+{
+  "format": 1,
+  "client": "0.429.2",
+  "wire_encounter_type": 4,
+  "encounters": {
+    "diancie_research": {
+      "encounter_id": "diancie_research",
+      "species": 719,
+      "shiny_selector": "either",
+      "cinematic": "native_diancie",
+      "controller": "DiancieEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 110517,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "9fe6602e559ac48929bc6931bfe66a93",
+        "70a1a3e48d3a24917af555e62a084bf5"
+      ],
+      "resource_aliases": {
+        "9fe6602e559ac48929bc6931bfe66a93": [
+          "DiancieEncounterMusic"
+        ],
+        "70a1a3e48d3a24917af555e62a084bf5": [
+          "DiancieScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "shaymin_research": {
+      "encounter_id": "shaymin_research",
+      "species": 492,
+      "shiny_selector": "either",
+      "cinematic": "native_shaymin",
+      "controller": "ShayminEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 110522,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "89d5e1e00f62945b3880741c2029ae83",
+        "aed2cb4cf304346cc8f3844251cdb56f",
+        "482baee3a7f9244729066a0391546a6a",
+        "e76c0e18289e14ae5ac7b8db24d1d3f5",
+        "20d371a1492074c7f82ea9e228049a31",
+        "86efdc6b1b1b94861a234a7ce895c812",
+        "19cdab8f2f6bb4daa88ddc2cdd8826db"
+      ],
+      "resource_aliases": {
+        "89d5e1e00f62945b3880741c2029ae83": [
+          "ShayminEncounterMusic"
+        ],
+        "aed2cb4cf304346cc8f3844251cdb56f": [
+          "ShayminScene"
+        ],
+        "482baee3a7f9244729066a0391546a6a": [
+          "ShaminLandIntro"
+        ],
+        "e76c0e18289e14ae5ac7b8db24d1d3f5": [
+          "ShaminLandIntroEmote"
+        ],
+        "20d371a1492074c7f82ea9e228049a31": [
+          "ShayminSkyIntro"
+        ],
+        "86efdc6b1b1b94861a234a7ce895c812": [
+          "ShaminSkyIntroEmote"
+        ],
+        "19cdab8f2f6bb4daa88ddc2cdd8826db": [
+          "ShayminSkyFormeEncounterMusic"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "shiny_keldeo_research": {
+      "encounter_id": "shiny_keldeo_research",
+      "species": 647,
+      "shiny_selector": "shiny",
+      "cinematic": "native_shinykeldeo",
+      "controller": "ShinyKeldeoEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 110530,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "9477ebdf6ad234be39be366d6f4af81a"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "9477ebdf6ad234be39be366d6f4af81a": [
+          "KeldeoScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "marshadow_research": {
+      "encounter_id": "marshadow_research",
+      "species": 802,
+      "shiny_selector": "either",
+      "cinematic": "native_marshadow",
+      "controller": "MarshadowEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 110534,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "5fa560acdf02646e6b20a26a485d5eaa",
+        "e416d3b83ffb540a3af8614d0988e22e"
+      ],
+      "resource_aliases": {
+        "5fa560acdf02646e6b20a26a485d5eaa": [
+          "ShinyJirachiEncounterMusic"
+        ],
+        "e416d3b83ffb540a3af8614d0988e22e": [
+          "MarshadowScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "jirachi_research": {
+      "encounter_id": "jirachi_research",
+      "species": 385,
+      "shiny_selector": "normal",
+      "cinematic": "native_jirachi",
+      "controller": "JirachiEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 114333,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "21c27dd1dad1d44a680cacf34d88cfcf"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "meloetta_research": {
+      "encounter_id": "meloetta_research",
+      "species": 648,
+      "shiny_selector": "either",
+      "cinematic": "native_meloetta",
+      "controller": "MeloettaEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 114334,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "aab77c605ee0a43b9a543685b7e2c721",
+        "b9cb70a01fc6342959f826a6c6670220",
+        "9317ffd2c416c4f0bb6aee26454fbc7c",
+        "cc71f805050384ab4863335ae2ed04ef",
+        "7d689bf17ba0b4392beaff397fc5b59a",
+        "94de49a5f3fd4470c84b1c7116577a95",
+        "bdb705a06306c4086a0968ef493ed4a8"
+      ],
+      "resource_aliases": {
+        "aab77c605ee0a43b9a543685b7e2c721": [
+          "Meloetta_Aria_Encounter_Music"
+        ],
+        "b9cb70a01fc6342959f826a6c6670220": [
+          "MeloettaEncounterStage_Aria"
+        ],
+        "9317ffd2c416c4f0bb6aee26454fbc7c": [
+          "MeloettaEncounter_aria_performance"
+        ],
+        "cc71f805050384ab4863335ae2ed04ef": [
+          "MeloettaEncounter_aria_finale"
+        ],
+        "7d689bf17ba0b4392beaff397fc5b59a": [
+          "MeloettaEncounter_pirouette_performance"
+        ],
+        "94de49a5f3fd4470c84b1c7116577a95": [
+          "MeloettaEncounter_pirouette_finale"
+        ],
+        "bdb705a06306c4086a0968ef493ed4a8": [
+          "Meloetta_Pirouette_Encounter_Music"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "mew_research": {
+      "encounter_id": "mew_research",
+      "species": 151,
+      "shiny_selector": "either",
+      "cinematic": "native_mew",
+      "controller": "MewEncounter",
+      "classification": "SCRIPTED_ENCOUNTER_WITHOUT_CINEMATIC",
+      "embedded_prefab_object": 120312,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "21c27dd1dad1d44a680cacf34d88cfcf"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "celebi_research": {
+      "encounter_id": "celebi_research",
+      "species": 251,
+      "shiny_selector": "either",
+      "cinematic": "native_celebi",
+      "controller": "CelebiEncounter",
+      "classification": "SCRIPTED_ENCOUNTER_WITHOUT_CINEMATIC",
+      "embedded_prefab_object": 122513,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "21c27dd1dad1d44a680cacf34d88cfcf"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "shiny_jirachi_research": {
+      "encounter_id": "shiny_jirachi_research",
+      "species": 385,
+      "shiny_selector": "shiny",
+      "cinematic": "native_shinyjirachi",
+      "controller": "ShinyJirachiEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 129369,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "5fa560acdf02646e6b20a26a485d5eaa",
+        "90507307108e74303a3ba9c9c1f415dc"
+      ],
+      "resource_aliases": {
+        "5fa560acdf02646e6b20a26a485d5eaa": [
+          "ShinyJirachiEncounterMusic"
+        ],
+        "90507307108e74303a3ba9c9c1f415dc": [
+          "ShinyJirachiScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "volcanion_research": {
+      "encounter_id": "volcanion_research",
+      "species": 721,
+      "shiny_selector": "either",
+      "cinematic": "native_volcanion",
+      "controller": "VolcanionEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 135365,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "8f8369e2466a04c038989be7c3def070"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "8f8369e2466a04c038989be7c3def070": [
+          "VolcanionScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "zeraora_research": {
+      "encounter_id": "zeraora_research",
+      "species": 807,
+      "shiny_selector": "either",
+      "cinematic": "native_zeraora",
+      "controller": "ZeraoraEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 141962,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "1b7e26bb8efd94131b9150538fb87323"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "1b7e26bb8efd94131b9150538fb87323": [
+          "ZeraoraScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4
+      ]
+    },
+    "victini_research": {
+      "encounter_id": "victini_research",
+      "species": 494,
+      "shiny_selector": "either",
+      "cinematic": "native_victini",
+      "controller": "VictiniEncounter",
+      "classification": "UNIQUE_NATIVE_CINEMATIC",
+      "embedded_prefab_object": 153107,
+      "required_client": "0.429.2-arm64",
+      "required_resources": [
+        "84657f52d2ec6459aafd6ed2f5ce5e56",
+        "f283a9fe463b8413ebf001af652012ae"
+      ],
+      "resource_aliases": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "f283a9fe463b8413ebf001af652012ae": [
+          "VictiniScene"
+        ]
+      },
+      "capture_rules": {
+        "ball": 1,
+        "uses_inventory": false,
+        "berries": false,
+        "non_fleeing": true,
+        "final_hit_guaranteed": true,
+        "scripted_escapes": "native_prefab"
+      },
+      "evidence": {
+        "dispatch_rva": "0x8709A24",
+        "research_setup_rva": "0x870BEB8",
+        "prefab_source": "sharedassets1.assets"
+      },
+      "encounter_types": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ]
+    }
+  }
+}

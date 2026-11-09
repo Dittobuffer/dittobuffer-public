@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-seed="violet">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Dittobuffer platform administration">
+<meta name="theme-color" content="#6750a4">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Dittobuffer Platform</title>
+<link rel="manifest" href="/assets/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icon-192.png">
+<link rel="apple-touch-icon" href="/assets/icon-192.png">
+<link rel="stylesheet" href="/assets/app.css">
+<script src="/assets/core.js" defer></script>
+<script src="/assets/app.js" defer></script>
+<script src="/assets/pages.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#view">Skip to content</a>
+<div class="app-shell">
+  <aside class="rail" id="rail" aria-label="Sections">
+    <div class="brand" title="Dittobuffer Admin Studio">
+      <div class="brand-mark">D</div>
+      <div class="brand-text"><strong>Dittobuffer</strong><span>Admin Studio</span></div>
+    </div>
+    <nav class="rail-nav" id="rail-nav"></nav>
+    <div class="rail-foot">
+      <button class="rail-action" id="theme-button" title="Appearance">
+        <span class="nav-icon" data-icon="palette"></span><span class="nav-label">Theme</span>
+      </button>
+      <span class="version-tag">v1.2</span>
+    </div>
+  </aside>
+
+  <div class="content-column">
+    <header class="topbar">
+      <button class="icon-button menu-button" id="menu-button" title="Sections" aria-label="Open sections">
+        <span data-icon="menu"></span>
+      </button>
+      <div class="crumbs"><span class="crumb-root">Platform</span><span class="crumb-sep">/</span><strong id="crumb">Overview</strong></div>
+      <div class="topbar-spacer"></div>
+      <span class="status-chip" id="server-chip" title="Game server state"><span class="dot"></span><span>Checking</span></span>
+      <span class="status-chip quiet" id="db-chip" title="Active database"><span data-icon="database"></span><span>Database</span></span>
+      <button class="topbar-jump" id="palette-button" type="button" title="Jump to section or file (Ctrl+K)" aria-label="Jump to section or file">
+        <span data-icon="search"></span><span class="jump-text">Jump to…</span><kbd class="kbd-hint">Ctrl K</kbd>
+      </button>
+      <button class="icon-button" id="refresh-button" title="Refresh current page" aria-label="Refresh"><span data-icon="refresh"></span></button>
+    </header>
+    <main id="view" tabindex="-1" aria-live="polite"></main>
+    <footer class="app-footer">
+      <span id="workspace-path"></span>
+    </footer>
+  </div>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<dialog id="dialog" class="dialog"></dialog>
+<div class="snackbar" id="snackbar" role="status"></div>
+<noscript><div class="noscript">The Dittobuffer Admin Studio needs JavaScript. The platform API is still available.</div></noscript>
+</body>
+</html>

@@ -1,0 +1,161 @@
+{
+  "scope": "Explicit non-costume defaults established by the accepted M11/M11.1 model plan. Only unset legacy gameplay defaults are changed; existing owned records remain untouched.",
+  "game_master_sha256": "4448320df824f1457a3c6238ebb5e59fe9b07aa7020d36a284c873f65deb3d98",
+  "evidence": {
+    "plan": "builds/m111-integration-plan.json",
+    "sha256": "104e420fcec0dc0017d606b6309aa158a005bb592cdaed6164fc6ae7c94afecf",
+    "report": "docs/MILESTONE_11_1.md"
+  },
+  "mappings": [
+    {
+      "species": 327,
+      "form": 37,
+      "model_address": "pm327.f00"
+    },
+    {
+      "species": 412,
+      "form": 118,
+      "model_address": "pm412.fBURMY_PLANT"
+    },
+    {
+      "species": 421,
+      "form": 94,
+      "model_address": "pm421.fOVERCAST"
+    },
+    {
+      "species": 422,
+      "form": 96,
+      "model_address": "pm422.fWEST_SEA"
+    },
+    {
+      "species": 423,
+      "form": 98,
+      "model_address": "pm423.fWEST_SEA"
+    },
+    {
+      "species": 487,
+      "form": 90,
+      "model_address": "pm487.fALTERED"
+    },
+    {
+      "species": 550,
+      "form": 136,
+      "model_address": "pm550.fRED_STRIPED"
+    },
+    {
+      "species": 555,
+      "form": 138,
+      "model_address": "pm555.fSTANDARD"
+    },
+    {
+      "species": 585,
+      "form": 585,
+      "model_address": "pm585.fSPRING"
+    },
+    {
+      "species": 642,
+      "form": 142,
+      "model_address": "pm642.fINCARNATE"
+    },
+    {
+      "species": 647,
+      "form": 149,
+      "model_address": "pm647.fORDINARY"
+    },
+    {
+      "species": 648,
+      "form": 151,
+      "model_address": "pm648.fARIA"
+    },
+    {
+      "species": 670,
+      "form": 2619,
+      "model_address": "pm670.fRED"
+    },
+    {
+      "species": 676,
+      "form": 2629,
+      "model_address": "pm676.fNATURAL"
+    },
+    {
+      "species": 681,
+      "form": 2639,
+      "model_address": "pm681.fSHIELD"
+    },
+    {
+      "species": 710,
+      "form": 2641,
+      "model_address": "pm710.fSMALL"
+    },
+    {
+      "species": 711,
+      "form": 2645,
+      "model_address": "pm711.fSMALL"
+    },
+    {
+      "species": 720,
+      "form": 2651,
+      "model_address": "pm720.fCONFINED"
+    },
+    {
+      "species": 745,
+      "form": 2684,
+      "model_address": "pm745.fMIDDAY"
+    },
+    {
+      "species": 778,
+      "form": 2716,
+      "model_address": "pm778.fDISGUISED"
+    },
+    {
+      "species": 849,
+      "form": 2463,
+      "model_address": "pm849.fLOW_KEY"
+    },
+    {
+      "species": 855,
+      "form": 2480,
+      "model_address": "pm855.fPHONY"
+    },
+    {
+      "species": 877,
+      "form": 2544,
+      "model_address": "pm877.fFULL_BELLY"
+    },
+    {
+      "species": 888,
+      "form": 2577,
+      "model_address": "pm888.fHERO"
+    },
+    {
+      "species": 905,
+      "form": 2802,
+      "model_address": "pm905.fINCARNATE"
+    },
+    {
+      "species": 925,
+      "form": 2983,
+      "model_address": "pm925.fFAMILY_OF_THREE"
+    },
+    {
+      "species": 978,
+      "form": 2991,
+      "model_address": "pm978.fCURLY"
+    },
+    {
+      "species": 982,
+      "form": 2994,
+      "model_address": "pm982.fTWO"
+    },
+    {
+      "species": 1012,
+      "form": 2871,
+      "model_address": "pm1012.fCOUNTERFEIT"
+    },
+    {
+      "species": 1013,
+      "form": 2873,
+      "model_address": "pm1013.fUNREMARKABLE"
+    }
+  ]
+}

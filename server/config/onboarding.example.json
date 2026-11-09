@@ -1,0 +1,8 @@
+{
+  "onboarding": {
+    "enabled": true,
+    "starter_species": [1, 4, 7, 25],
+    "starter_level": 1,
+    "starter_iv": 10
+  }
+}

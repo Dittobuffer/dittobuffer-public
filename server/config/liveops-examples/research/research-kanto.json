@@ -1,0 +1,76 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "research",
+  "metadata": {
+    "name": "Kanto Discovery",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "Kanto Discovery",
+      "description": "Native collection of curated Kanto encounters.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-06T17:00:00+00:00",
+      "end": "2026-12-11T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "collection",
+      "event_only": false,
+      "entries": [
+        {
+          "species": 1,
+          "methods": [
+            "catch"
+          ]
+        },
+        {
+          "species": 4,
+          "methods": [
+            "catch"
+          ]
+        },
+        {
+          "species": 7,
+          "methods": [
+            "catch"
+          ]
+        },
+        {
+          "species": 16,
+          "methods": [
+            "catch"
+          ]
+        },
+        {
+          "species": 19,
+          "methods": [
+            "catch"
+          ]
+        },
+        {
+          "species": 25,
+          "methods": [
+            "catch"
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "type": "xp",
+          "amount": 1000
+        },
+        {
+          "type": "item",
+          "item": 1,
+          "amount": 10
+        }
+      ],
+      "id": "bundle-ce649417261930b70b071233"
+    }
+  ],
+  "regions": []
+}

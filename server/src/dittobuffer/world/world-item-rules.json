@@ -1,0 +1,108 @@
+{
+  "source": "builds/m7-public-gamemaster.json",
+  "sha256": "5c947ac64d1de8859bea1b3bf044609d74b6e8429d53f8cb1aa30a72a46dce84",
+  "policy": "Local configurable weights and three-item spins; minimum levels from the pinned GM, not official drop probabilities",
+  "items": [
+    {
+      "id": 2,
+      "name": "ITEM_GREAT_BALL",
+      "minimum_level": 12,
+      "weight": 6,
+      "source_template": "ITEM_GREAT_BALL"
+    },
+    {
+      "id": 703,
+      "name": "ITEM_NANAB_BERRY",
+      "minimum_level": 4,
+      "weight": 2,
+      "source_template": "ITEM_NANAB_BERRY",
+      "food": {
+        "itemEffect": [
+          "ITEM_EFFECT_CAP_TARGET_SLOW"
+        ],
+        "itemEffectPercent": [
+          0.0
+        ],
+        "growthPercent": 0.1,
+        "berryMultiplier": 1.25,
+        "remoteBerryMultiplier": 0.3125,
+        "numBuddyAffectionPoints": 1,
+        "mapDurationMs": "3600000",
+        "timeFullDurationMs": "3600000",
+        "numBuddyHungerPoints": 2
+      }
+    },
+    {
+      "id": 705,
+      "name": "ITEM_PINAP_BERRY",
+      "minimum_level": 18,
+      "weight": 2,
+      "source_template": "ITEM_PINAP_BERRY",
+      "food": {
+        "itemEffect": [
+          "ITEM_EFFECT_CANDY_AWARD"
+        ],
+        "itemEffectPercent": [
+          2.0
+        ],
+        "growthPercent": 0.1,
+        "berryMultiplier": 1.0,
+        "remoteBerryMultiplier": 0.25,
+        "numBuddyAffectionPoints": 1,
+        "mapDurationMs": "3600000",
+        "timeFullDurationMs": "3600000",
+        "numBuddyHungerPoints": 2
+      }
+    },
+    {
+      "id": 1,
+      "name": "ITEM_POKE_BALL",
+      "minimum_level": 1,
+      "weight": 16,
+      "source_template": "ITEM_POKE_BALL"
+    },
+    {
+      "id": 101,
+      "name": "ITEM_POTION",
+      "minimum_level": 5,
+      "weight": 3,
+      "source_template": "ITEM_POTION"
+    },
+    {
+      "id": 701,
+      "name": "ITEM_RAZZ_BERRY",
+      "minimum_level": 8,
+      "weight": 4,
+      "source_template": "ITEM_RAZZ_BERRY",
+      "food": {
+        "itemEffect": [
+          "ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW"
+        ],
+        "itemEffectPercent": [
+          1.5
+        ],
+        "growthPercent": 0.1,
+        "berryMultiplier": 1.0,
+        "remoteBerryMultiplier": 0.25,
+        "numBuddyAffectionPoints": 1,
+        "mapDurationMs": "3600000",
+        "timeFullDurationMs": "3600000",
+        "numBuddyHungerPoints": 2
+      }
+    },
+    {
+      "id": 201,
+      "name": "ITEM_REVIVE",
+      "minimum_level": 5,
+      "weight": 2,
+      "source_template": "ITEM_REVIVE"
+    },
+    {
+      "id": 3,
+      "name": "ITEM_ULTRA_BALL",
+      "minimum_level": 20,
+      "weight": 2,
+      "source_template": "ITEM_ULTRA_BALL"
+    }
+  ]
+}

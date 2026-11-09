@@ -1,0 +1,72 @@
+// The debug channel between the Rust stub and tools/devserver.py.
+//
+// This is *not* the game's protocol, and it is deliberately not derived from it. The game's
+// payload schemas live in tools/vbase.proto, which stays on the server: the stub forwards
+// bodies it cannot interpret, so compiling 3351 messages into a library injected into the
+// game process would buy nothing and cost a great deal of size and build time.
+//
+// What this file does own is the envelope, and it exists mainly to delete a redundancy. The
+// JSON encoding it replaces carried each body as base64 plus a separate `size` field, which
+// meant a body could be described two ways that disagreed -- the dev server had to check for
+// exactly that and warn. `bytes` is length-prefixed, so the disagreement is unrepresentable.
+
+syntax = "proto3";
+
+package devrpc;
+
+// One request from the game, forwarded verbatim.
+message RpcItem {
+  // The id the game used. Not resolvable here -- see tools/methods.json, generated from
+  // vbase.proto on the server side.
+  int32 method = 1;
+  // Opaque to the stub. May be empty, which is normal and distinct from absent.
+  bytes body = 2;
+}
+
+message RpcRequest {
+  // The id the stub generated and keyed its callback on.
+  int32 rpc_id = 1;
+  // How long the game will wait, straight from the ABI. Recorded rather than acted on.
+  int32 timeout_ms = 2;
+  int32 retry_delay_ms = 3;
+  repeated RpcItem requests = 4;
+}
+
+// One response payload.
+message RpcPayload {
+  // Echoed so a payload can be labelled in the log. The ABI does *not* carry this back to
+  // the game: payloads are paired with requests positionally, so this is for our benefit
+  // only and the stub discards it.
+  int32 method = 1;
+  bytes payload = 2;
+}
+
+message RpcResponse {
+  // Optional so "the server did not say" stays distinguishable from a real 0 on the stub
+  // side, where the id is matched against the one the callback is keyed on.
+  optional int32 rpc_id = 1;
+  // An `RpcStatus` (Success = 1), not an `ApiError`. Optional for the same reason.
+  optional int32 status = 2;
+  // One per request, in request order.
+  repeated RpcPayload payloads = 3;
+}
+
+message AuthRequest {
+  string auth_id = 1;
+  bytes token = 2;
+  bool prevent_account_creation = 3;
+}
+
+message AuthResponse {
+  optional string ticket = 1;
+}
+
+// `N2ServerSendMapQueryRequest` is fire-and-forget -- the ABI gives it no callback, so the
+// reply exists only to be logged and the status is the whole of it.
+message MapQueryRequest {
+  bytes body = 1;
+}
+
+message MapQueryResponse {
+  optional int32 status = 1;
+}

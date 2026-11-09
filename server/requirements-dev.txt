@@ -1,0 +1,7 @@
+-r requirements.txt
+pytest==8.4.2
+grpcio-tools==1.84.0
+pyelftools==0.33
+androguard==4.1.4
+frida==17.5.1
+capstone==5.0.9

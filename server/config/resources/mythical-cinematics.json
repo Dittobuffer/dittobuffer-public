@@ -1,0 +1,2090 @@
+{
+  "format": 1,
+  "kind": "native_research_scene_inventory",
+  "client": "0.429.2-arm64",
+  "source_catalog_version": 952,
+  "source_catalog_sha256": "aa9c98c36dfae8096e43fbfc2f77cf3c2b6102a9938f57c0c3327ae5340e027d",
+  "derived_catalog_sha256": "984af473b5db3b74247a1c264fc4bcb86070b3c48d65203a4f6d6c071d5a81f9",
+  "android_verification": "NATIVE_INVENTORY_VERIFIED_WITH_LIMITATIONS",
+  "android_coverage": {
+    "device": "Generic arm64 test device / client 0.429.2",
+    "native_controllers_exercised": 12,
+    "scripted_research_captures": 19,
+    "ordinary_research_captures": 1,
+    "ordinary_wild_captures": 1,
+    "ordinary_raid_captures": 1,
+    "shiny_species_exercised": [151, 251, 385, 492, 647, 719],
+    "alternate_forms_exercised": [
+      {"species": 492, "form": 92, "name": "Sky"},
+      {"species": 648, "form": 152, "name": "Pirouette"}
+    ],
+    "all_22_captures_survived_app_and_server_restart": true,
+    "interrupted_marshadow_recovered_without_reroll": true,
+    "audio": "UNVERIFIED: operator unavailable; recordings are silent",
+    "live_camera_ar_background": "UNVERIFIED",
+    "celebi_teleport_effect": "NOT_POSITIVELY_OBSERVED",
+    "research_claim_button_refresh": "REQUIRES_REOPEN; presentation issue remains",
+    "report": "release verification summary"
+  },
+  "redistribution": "Metadata only; operator-supplied proprietary payloads are excluded",
+  "encounters": {
+    "diancie_research": {
+      "controller": "DiancieEncounter",
+      "species": 719,
+      "resources": {
+        "9fe6602e559ac48929bc6931bfe66a93": [
+          "DiancieEncounterMusic"
+        ],
+        "70a1a3e48d3a24917af555e62a084bf5": [
+          "DiancieScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gofest2023_assets_all_d493270062084bf344d6783152aa0ccc.bundle",
+        "gofest2023_shared_assets_all_b841efc41ad137fff63c18f1ec9011d4.bundle",
+        "mapmusic_assets_all_a67b965243f0e57e0cb9b3dee12b923c.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedshaders_assets_brdf-customenvironment-transparent_6503b5e917786f0389019544d972be29.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_brdf-matcap_f14e37e6c9936122a2103c5575f4e86c.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_unlit-colortexture_c890ea2c722f6ddeb85c94497d1e3503.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "shaymin_research": {
+      "controller": "ShayminEncounter",
+      "species": 492,
+      "resources": {
+        "89d5e1e00f62945b3880741c2029ae83": [
+          "ShayminEncounterMusic"
+        ],
+        "aed2cb4cf304346cc8f3844251cdb56f": [
+          "ShayminScene"
+        ],
+        "482baee3a7f9244729066a0391546a6a": [
+          "ShaminLandIntro"
+        ],
+        "e76c0e18289e14ae5ac7b8db24d1d3f5": [
+          "ShaminLandIntroEmote"
+        ],
+        "20d371a1492074c7f82ea9e228049a31": [
+          "ShayminSkyIntro"
+        ],
+        "86efdc6b1b1b94861a234a7ce895c812": [
+          "ShaminSkyIntroEmote"
+        ],
+        "19cdab8f2f6bb4daa88ddc2cdd8826db": [
+          "ShayminSkyFormeEncounterMusic"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gofest2022_assets_all_231d8429d13cea58a9f15de2cfe9b098.bundle",
+        "mapmusic_assets_all_a67b965243f0e57e0cb9b3dee12b923c.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_brdf_mask_soft_rimsharp_3d20951acaf4a7fa6d8d8886755960a9.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle",
+        "sharedmapeffects_assets_all_882fe94c677a27393cd1b9a54b2b288f.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_grasssceneshader_6c5b4d0162709500fae7c3f96d8fcb1f.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_holo-brdf_33261fc85ac8af99ef993a31c52d4ad4.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_windmap_fe31561a2e19038f6597daa94196eb4a.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "shiny_keldeo_research": {
+      "controller": "ShinyKeldeoEncounter",
+      "species": 647,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "9477ebdf6ad234be39be366d6f4af81a": [
+          "KeldeoScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "s20_2025_assets_all_a3a6cbdf68303ab4579c8a8465a74d37.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_particlesunlit_fb1fd00c408d45fac25cc49121486b36.bundle",
+        "sharedtextures_assets_noisewater_f0ad88707f132d188fd491a99cae764b.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle"
+      ]
+    },
+    "marshadow_research": {
+      "controller": "MarshadowEncounter",
+      "species": 802,
+      "resources": {
+        "5fa560acdf02646e6b20a26a485d5eaa": [
+          "ShinyJirachiEncounterMusic"
+        ],
+        "e416d3b83ffb540a3af8614d0988e22e": [
+          "MarshadowScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gofest2024_assets_all_84ed6d793da9a028b25de167ed4a5637.bundle",
+        "gotour2023_assets_all_d08fb2321f65fd2ddb6a7a0b74f709f1.bundle",
+        "mapmusic_assets_all_a67b965243f0e57e0cb9b3dee12b923c.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_brdf_mask_soft_5da82528c007d6663643c2098af2dc20.bundle",
+        "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+        "sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_fx_preloader_flare_cone_a0b7534ee3854bcfdfa7e2390e2091ed.bundle",
+        "sharedfx_assets_fx_preloader_point_f5ce66215642d5d97d854de4d7192e9a.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedfx_assets_glow_preloader_f020892f56adec75db0db8865a77318b.bundle",
+        "sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle",
+        "sharedshaders_assets_brdf-customenvironment-transparent_6503b5e917786f0389019544d972be29.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "jirachi_research": {
+      "controller": "JirachiEncounter",
+      "species": 385,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "parkscenes_assets_defaultparkscene_275b83c53382292d742f29056b39729f.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "meloetta_research": {
+      "controller": "MeloettaEncounter",
+      "species": 648,
+      "resources": {
+        "aab77c605ee0a43b9a543685b7e2c721": [
+          "Meloetta_Aria_Encounter_Music"
+        ],
+        "b9cb70a01fc6342959f826a6c6670220": [
+          "MeloettaEncounterStage_Aria"
+        ],
+        "9317ffd2c416c4f0bb6aee26454fbc7c": [
+          "MeloettaEncounter_aria_performance"
+        ],
+        "cc71f805050384ab4863335ae2ed04ef": [
+          "MeloettaEncounter_aria_finale"
+        ],
+        "7d689bf17ba0b4392beaff397fc5b59a": [
+          "MeloettaEncounter_pirouette_performance"
+        ],
+        "94de49a5f3fd4470c84b1c7116577a95": [
+          "MeloettaEncounter_pirouette_finale"
+        ],
+        "bdb705a06306c4086a0968ef493ed4a8": [
+          "Meloetta_Pirouette_Encounter_Music"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "gofest2021_assets_all_2bcd4e675db92c22d1e36abc028f6536.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle",
+        "sharedshaders_assets_fx-additive_e0660a2eb0dae946a3a80eee43c47a43.bundle",
+        "sharedshaders_assets_unlit-color_e4f981cd27bd49792b04ed9756dd52ee.bundle",
+        "sharedshaders_assets_unlit-coloralphatexture_24dbc0d78d90bfbfeace94cf7603ff92.bundle",
+        "sharedshaders_assets_unlit-colortexture_c890ea2c722f6ddeb85c94497d1e3503.bundle"
+      ]
+    },
+    "mew_research": {
+      "controller": "MewEncounter",
+      "species": 151,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "parkscenes_assets_defaultparkscene_275b83c53382292d742f29056b39729f.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "celebi_research": {
+      "controller": "CelebiEncounter",
+      "species": 251,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "21c27dd1dad1d44a680cacf34d88cfcf": [
+          "DefaultParkScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "parkscenes_assets_defaultparkscene_275b83c53382292d742f29056b39729f.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "shiny_jirachi_research": {
+      "controller": "ShinyJirachiEncounter",
+      "species": 385,
+      "resources": {
+        "5fa560acdf02646e6b20a26a485d5eaa": [
+          "ShinyJirachiEncounterMusic"
+        ],
+        "90507307108e74303a3ba9c9c1f415dc": [
+          "ShinyJirachiScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gotour2023_assets_all_d08fb2321f65fd2ddb6a7a0b74f709f1.bundle",
+        "mapmusic_assets_all_a67b965243f0e57e0cb9b3dee12b923c.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_brdf_mask_soft_5da82528c007d6663643c2098af2dc20.bundle",
+        "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+        "sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle",
+        "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_fx_preloader_flare_cone_a0b7534ee3854bcfdfa7e2390e2091ed.bundle",
+        "sharedfx_assets_fx_preloader_point_f5ce66215642d5d97d854de4d7192e9a.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedfx_assets_glow_preloader_f020892f56adec75db0db8865a77318b.bundle",
+        "sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle",
+        "sharedshaders_assets_brdf-customenvironment-transparent_6503b5e917786f0389019544d972be29.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "volcanion_research": {
+      "controller": "VolcanionEncounter",
+      "species": 721,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "8f8369e2466a04c038989be7c3def070": [
+          "VolcanionScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gofest2025_assets_all_f54a91ea27aa1d3a5be3c601d69b51f9.bundle",
+        "halloween_shared_assets_all_7aecc089f0a457a536d9e8d9ee98471f.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_smoke_soft_1bc0790b673ce3eac8956a54cdeafb3b.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_noiseclouds_8aa66d7a22271ca283b7054a6ab141c5.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_windmap_fe31561a2e19038f6597daa94196eb4a.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vista_shared_local_assets_beach_islandbig.bundle",
+        "vista_shared_local_assets_beach_largegroundrocksmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_largewaterrocksfarmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_largewaterrocksmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_mediumbushmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_pebble.bundle",
+        "vista_shared_local_assets_beach_plantsmedium.bundle",
+        "vista_shared_local_assets_beach_plantssmall.bundle",
+        "vista_shared_local_assets_beach_rocks_ground.bundle",
+        "vista_shared_local_assets_beach_rocks_water.bundle",
+        "vista_shared_local_assets_beach_rocks_water_small.bundle",
+        "vista_shared_local_assets_beach_seashell.bundle",
+        "vista_shared_local_assets_beach_seashellsmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_smallgrassmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_smallpebblesmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beach_waterislandfarmoisturespawnpoolconfig.bundle",
+        "vista_shared_local_assets_beachgenericecosystemmoistureconfig.bundle",
+        "vista_shared_local_assets_bush_dome_forest_largeflowers.bundle",
+        "vista_shared_local_assets_bush_dome_forest_simpleflowers.bundle",
+        "vista_shared_local_assets_defaultencounterpaletteconfig.bundle",
+        "vista_shared_local_assets_fern.bundle",
+        "vista_shared_local_assets_forestgrassgroundspawnpoolconfig.bundle",
+        "vista_shared_local_assets_grass.bundle",
+        "vista_shared_local_assets_grass_forest.bundle",
+        "vista_shared_local_assets_grass_waterfront.bundle",
+        "vista_shared_local_assets_island.bundle",
+        "vista_shared_local_assets_rock_forest.bundle",
+        "vista_shared_local_assets_rock_smallwaterfront.bundle",
+        "vista_shared_local_assets_rock_waterfront.bundle",
+        "vistafall_shared_assets_all_46dcdb41e5453f01cd08fc9e3904895f.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_beach_750a68e7be798ddcf60e51937ba42f62.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "zeraora_research": {
+      "controller": "ZeraoraEncounter",
+      "species": 807,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "1b7e26bb8efd94131b9150538fb87323": [
+          "ZeraoraScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+        "gofest2026_assets_all_da058593eff7284770e40bfaee775c2e.bundle",
+        "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+        "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+        "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_circle_516c9b3aad52160a610d04d69ce4dce1.bundle",
+        "sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_fx-colorized-blend_52a0ca5a5dc095df0741baf5214d2b23.bundle",
+        "sharedshaders_assets_fx-transparent-panning_dcd6504a7b7ecc256db0c24d06d3365b.bundle",
+        "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+        "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+        "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+        "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+        "sharedtextures_assets_electric_power_b8b1a9dd70a71b0166369c6cefb41a9f.bundle",
+        "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+        "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+        "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+        "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+        "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+        "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+        "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+        "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+        "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+        "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+        "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+        "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+        "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+        "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+        "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+        "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle"
+      ]
+    },
+    "victini_research": {
+      "controller": "VictiniEncounter",
+      "species": 494,
+      "resources": {
+        "84657f52d2ec6459aafd6ed2f5ce5e56": [
+          "MythicalEncounterMusic"
+        ],
+        "f283a9fe463b8413ebf001af652012ae": [
+          "VictiniScene"
+        ]
+      },
+      "required_bundles": [
+        "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+        "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+        "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+        "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+        "gotour2025_assets_all_0a3f8731d304675440631260035e9674.bundle",
+        "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+        "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+        "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+        "sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle",
+        "sharedmapeffects_assets_all_882fe94c677a27393cd1b9a54b2b288f.bundle",
+        "sharedshaders_assets_brdf-customenvironment-transparent_6503b5e917786f0389019544d972be29.bundle",
+        "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+        "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+        "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+        "sharedshaders_assets_fx-additive_e0660a2eb0dae946a3a80eee43c47a43.bundle",
+        "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle"
+      ]
+    }
+  },
+  "bundles": [
+    {
+      "name": "contextualmusic_assets_123_mythical_capture_323ec5ff6c65879a57884b442a72b848.bundle",
+      "source_sha256": "c05a066a213592f194e6c4f8b83e323cfe59d80833bfd35f6d25676f502ad397",
+      "sha256": "e21b62aa3d74518756e076835ec3f2efafe85ef29c1ce839ecad886fa6ef4807",
+      "bytes": 701239,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "323ec5ff6c65879a57884b442a72b848",
+      "source_cache_name": "33300c84e07c47082a57db534b358f29",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "contextualmusic_assets_mythicalencountermusic_33ae24bb559846ff614f5c31b5aa0a0e.bundle",
+      "source_sha256": "1726543161738bdb471ba840264494e35d7f93b03612b5311eee380c09c5c992",
+      "sha256": "43c90d1651f2dd6cbaeea16af24ee848cab1dd24201094e175d4942a71930ad7",
+      "bytes": 1748,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "33ae24bb559846ff614f5c31b5aa0a0e",
+      "source_cache_name": "aa0582489f0d5c02c78078322a95e91a",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "encounter_shared_assets_all_8ea785ebd7739f1206f4310107c696f1.bundle",
+      "source_sha256": "92ae9ebd455eff56f3365075c0a0c7e2cb68b26181f8b171dd679b5e16a85d4d",
+      "sha256": "1e41ffd197bc774e5b4c62853244498bd6baea34d07489831deb3ecc8cc6c86f",
+      "bytes": 107980,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "8ea785ebd7739f1206f4310107c696f1",
+      "source_cache_name": "5f4a8e47cdfb448fe26bb670ab41e027",
+      "shader_identities_isolated": 3
+    },
+    {
+      "name": "gofest2021_assets_all_2bcd4e675db92c22d1e36abc028f6536.bundle",
+      "source_sha256": "5dee60cb9f34fe84c95cae5aeb8c488fb94d77fd795d20ad973d5cd5656f73cd",
+      "sha256": "7a8beb2a1219433f8ae59539f79aaf5fc4fc7bb0d1b5c8d1f79d91bf257ecea8",
+      "bytes": 1279883,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "2bcd4e675db92c22d1e36abc028f6536",
+      "source_cache_name": "79b1b701a813d7269fa52fb8a898ff25",
+      "shader_identities_isolated": 2
+    },
+    {
+      "name": "gofest2022_assets_all_231d8429d13cea58a9f15de2cfe9b098.bundle",
+      "source_sha256": "0cb01b0d7c3f98f6c0ade9e3289230303bfe2dd76b6e278d0ca17d462465c24f",
+      "sha256": "e5da91432318eb0cce3c8303f6faf1abc8dbde2709b7431db7191bbd627a7e18",
+      "bytes": 1727283,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "231d8429d13cea58a9f15de2cfe9b098",
+      "source_cache_name": "a4602b9644d6b36988ca42cc9567e5da",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "gofest2023_assets_all_d493270062084bf344d6783152aa0ccc.bundle",
+      "source_sha256": "119717ecadc325327a6d786981f7dc3d45f22fc11f7f18e9cb0d130ec17c887b",
+      "sha256": "d22ad723e1a17da95bc90cdbd1a8abfb98fb6ea3ff7b6af08a364c8f0c1ea068",
+      "bytes": 447353,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "d493270062084bf344d6783152aa0ccc",
+      "source_cache_name": "f16bf21202e0a2acdf20803f470f8e1c",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "gofest2023_shared_assets_all_b841efc41ad137fff63c18f1ec9011d4.bundle",
+      "source_sha256": "9562955347eb937965978adedf0930cc84f9f5df336347ff7bd2ce36bd2061b9",
+      "sha256": "2716697137d066a8cbcdb6415571151c68ffd83e7e311985b8bf5f96d994fd42",
+      "bytes": 6654,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "b841efc41ad137fff63c18f1ec9011d4",
+      "source_cache_name": "4ab582ba23075faf42b3801368a45b9d",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "gofest2024_assets_all_84ed6d793da9a028b25de167ed4a5637.bundle",
+      "source_sha256": "9f1a636649716f5a3e5b43027bb202906e20bd00442853619ed3c742d13d355a",
+      "sha256": "0a9f59673c55ea098a35543a4933542fda6bb8387d61fb2d149d48cc85bc2a21",
+      "bytes": 411408,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "84ed6d793da9a028b25de167ed4a5637",
+      "source_cache_name": "1dcec96e9abaeb80d7a92b26f5fab1cf",
+      "shader_identities_isolated": 3
+    },
+    {
+      "name": "gofest2025_assets_all_f54a91ea27aa1d3a5be3c601d69b51f9.bundle",
+      "source_sha256": "0a2f9ddd0cae2d5fd9ae7b45d25b5a1984969e9246ba4ac798c95a59b7a94531",
+      "sha256": "fe33e7788696ed5c159fb97fdac091e83c0af066806bf407964e0eaf4113e2f6",
+      "bytes": 1670834,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f54a91ea27aa1d3a5be3c601d69b51f9",
+      "source_cache_name": "47e40fde78e29e20dc3925bef170ffb1",
+      "shader_identities_isolated": 5
+    },
+    {
+      "name": "gofest2026_assets_all_da058593eff7284770e40bfaee775c2e.bundle",
+      "source_sha256": "d7597338bbd9b6697e2b11cb581f4c4629514040c4959480ca98bc5a5e2f35c1",
+      "sha256": "f8f19e418536d31e267e30d333eae51a8af760f06389363e4af029fd7eb12513",
+      "bytes": 1003826,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "da058593eff7284770e40bfaee775c2e",
+      "source_cache_name": "0b262e69fc6d5d5ce9091fa63ad147da",
+      "shader_identities_isolated": 9
+    },
+    {
+      "name": "gotour2023_assets_all_d08fb2321f65fd2ddb6a7a0b74f709f1.bundle",
+      "source_sha256": "fc4df60cfe00ea4ddb11ebee0f0f914cb81e243a6c05f496d7d80d0cc275eff6",
+      "sha256": "6f53093ee06fc01c5b592ca8921f3aa212b9186838f47cab13febd3bcf63f313",
+      "bytes": 589401,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "d08fb2321f65fd2ddb6a7a0b74f709f1",
+      "source_cache_name": "38a9630852028352cab04edab9412fab",
+      "shader_identities_isolated": 2
+    },
+    {
+      "name": "gotour2025_assets_all_0a3f8731d304675440631260035e9674.bundle",
+      "source_sha256": "3de17b69111ab3a18c28876c00be2270868b9ee0cabe12d1456029d2feb48165",
+      "sha256": "deb47f7ecc56099ec2eb36cf437627da4e04ae53638625c7e63ff7a9a09c6fb2",
+      "bytes": 2225985,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "0a3f8731d304675440631260035e9674",
+      "source_cache_name": "a4b4ec3e5d48930a791cc50a6496a500",
+      "shader_identities_isolated": 5
+    },
+    {
+      "name": "halloween_shared_assets_all_7aecc089f0a457a536d9e8d9ee98471f.bundle",
+      "source_sha256": "6519c5563766eaa794d01846f220b5254b61382027640d15903bfaaf0f956441",
+      "sha256": "09858ec6d7a54b1a9b94f06aa29c3c536e34839e713352f7c6cd849590d87d09",
+      "bytes": 53619,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "7aecc089f0a457a536d9e8d9ee98471f",
+      "source_cache_name": "ef3943d81d41e800e3725e3c4554bfa4",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "mapmusic_assets_all_a67b965243f0e57e0cb9b3dee12b923c.bundle",
+      "source_sha256": "96673ff651903baf778a28d306a1dfeded2fa8c823f52d5fb0683010658a58ae",
+      "sha256": "2ac9a847f2cea0dc8c9d07d1c280dc0ee719fae67f91d7a3e7d07aae1a83829a",
+      "bytes": 7815444,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "a67b965243f0e57e0cb9b3dee12b923c",
+      "source_cache_name": "8bfe6955cb1b048616c09ff445b37bfb",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "mapvisual_shared_assets_all_09dc509ac67d7cb908130dbc9584d391.bundle",
+      "source_sha256": "8d78802dffa8d09793ae951932f0d2072f64c96548305de29c6749f9702032c0",
+      "sha256": "79129afe56133502b789e4eef7a01fd10576b88ba1529852148b3597dc7960f7",
+      "bytes": 74803,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "09dc509ac67d7cb908130dbc9584d391",
+      "source_cache_name": "2a416e3758f1a6c68232afc7cd48a094",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+      "source_sha256": "d9710d3ecd13b8b8d08419f0d2005e90fea007596c6c1958f510abe33d18d9cc",
+      "sha256": "0586de68821666ff444ce727c70bbf02f24928af6b00a2f0cb2373d616ed55f9",
+      "bytes": 3302,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6ed57255545aa826e36b10276d5b8a7a",
+      "source_cache_name": "4d7fcb0ceca6e12f43d1d1220a2534f0",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "parkscenes_assets_defaultparkscene_275b83c53382292d742f29056b39729f.bundle",
+      "source_sha256": "37da08d4fa79811f71dfd4baf0bb0aa408d0e614293f61d6b5e4da23542dd605",
+      "sha256": "62a45543c8d6371aa1cdfcefdc3550a3e7f004cefa3000411dbb286a72b797ce",
+      "bytes": 191646,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "275b83c53382292d742f29056b39729f",
+      "source_cache_name": "83b3a44e90704bd43fbcd165123d2bee",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "s20_2025_assets_all_a3a6cbdf68303ab4579c8a8465a74d37.bundle",
+      "source_sha256": "892d19f483264ffe966c46f3b44b7a87d0e07b2f15771dbd584d77be5398cb3f",
+      "sha256": "5ed89a1b1af9beefba3f6b8701b622bb4570c46cb3b1f8b1920155845ee00046",
+      "bytes": 3238065,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "a3a6cbdf68303ab4579c8a8465a74d37",
+      "source_cache_name": "fd595eb6c2bb79a207bb8bc0628e0822",
+      "shader_identities_isolated": 8
+    },
+    {
+      "name": "sharedencounterstates_assets_all_4137d52045c328ed7ef41b03a8f35290.bundle",
+      "source_sha256": "2a3fd1f1603cf81cd3ee2eb19b7dcac852a84d2bc6336e336cce225463414e0c",
+      "sha256": "e8f049ae7f60e40575b0a1db373b27fbdd4e4f7ae5c01e7a51ca5f6cca52fdf6",
+      "bytes": 9963,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "4137d52045c328ed7ef41b03a8f35290",
+      "source_cache_name": "387e8daf31f0e1309572509321903002",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_brdf_mask_soft_5da82528c007d6663643c2098af2dc20.bundle",
+      "source_sha256": "0bfc6f3223ed2ce130d60c614d51fc18679f5314946ee94a27ff0c8e71e33850",
+      "sha256": "4587d7a83a9985b048eecf73f893ff5843929e7eb2b5d4a90959e6a2be74c8ee",
+      "bytes": 5186,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "5da82528c007d6663643c2098af2dc20",
+      "source_cache_name": "c6c93955ce1f4520a0920b14c299c5d8",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_brdf_mask_soft_rimsharp_3d20951acaf4a7fa6d8d8886755960a9.bundle",
+      "source_sha256": "5103ec7233ae26c0b66850c7a60ae75b0ea2319d89ab7b1899feca2c33533582",
+      "sha256": "c60a6e7762b400caef409f1aac7ada187144686df5b70bdf30578112dd7702d7",
+      "bytes": 4205,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "3d20951acaf4a7fa6d8d8886755960a9",
+      "source_cache_name": "23da9a4ff19a51250b523162e587f1b3",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_circle_516c9b3aad52160a610d04d69ce4dce1.bundle",
+      "source_sha256": "8258f07797034a72c60735d99068883f4ea8ffca302940e31f1e936f2c3b2cd0",
+      "sha256": "733dce90246587ea6b5aab26630e186f68e5d54f351fe68c24d00be252cbc75b",
+      "bytes": 4028,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "516c9b3aad52160a610d04d69ce4dce1",
+      "source_cache_name": "f6399027ee5ecfd613e7b43d438e0b29",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+      "source_sha256": "58918b7ce9439cce82fbba8017e129ed44706bcff47edb16b34591e1ecde220e",
+      "sha256": "c839c405d02dc54f96e7b56b3d3d91c0b892060f4ab2d87e4859ae4cbb25e287",
+      "bytes": 21036,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "a92388889ab7db8f2c35616923f49a98",
+      "source_cache_name": "1ae22b0b23ed5078e44a6c8e3df684e6",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+      "source_sha256": "2bc237638cadc8295938343536d1dc20fb1fc1804744cf4b793ce09fab61102e",
+      "sha256": "17bc65e272434bd8bb595279424d0c4ae28705d426b69e041f2e7fcc4af3f126",
+      "bytes": 2713,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "29cc724476613846d784a102afcc1263",
+      "source_cache_name": "ae9e9fdb7e2073b132abeda1f74179ae",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle",
+      "source_sha256": "d4771b935fb9368f928e71ffcc4c866348d4e7ec1699c4f2d6c0c4ffeeefd4d2",
+      "sha256": "b2c23a33bd6a4c2a8040c8a702c541df66959f75b1f4db490ca0a7679bfd3d8e",
+      "bytes": 2713,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "53599b5c202922e22fb3fda545205150",
+      "source_cache_name": "a60fe2c323a19d1adbecdfb2e231cef6",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+      "source_sha256": "db38c824ce9a2592e8d3a915c3a1e11bfde35f5c8db1c0b876f1de2558c32c01",
+      "sha256": "1ceaaf87e586b63d7467b16236291e2f09b12b3e39a91cd14d728717ecd17bec",
+      "bytes": 2637,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "43f1a7277ac7fa2def850acc57216841",
+      "source_cache_name": "840b8349326e75bfbd4724a3482304c3",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_fx_preloader_flare_cone_a0b7534ee3854bcfdfa7e2390e2091ed.bundle",
+      "source_sha256": "abf96d1413ae7f5787120fa7a068bb4760fa41e95b9f4194c860144b267f7ed5",
+      "sha256": "b3d5ac608425da9aa8758aded33e562669cbfbc8c6c697b62314c525db3e07c2",
+      "bytes": 2688,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "a0b7534ee3854bcfdfa7e2390e2091ed",
+      "source_cache_name": "3fe93df63096088ea103aa120ea4653a",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_fx_preloader_point_f5ce66215642d5d97d854de4d7192e9a.bundle",
+      "source_sha256": "4dc94122f1873bbcbf85a23a1692a986297990286d6f31047db719b2b25ce104",
+      "sha256": "698064532c63619896a644244e74e56b09ff3d504c4c2f921062f18fcc171e3c",
+      "bytes": 2766,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f5ce66215642d5d97d854de4d7192e9a",
+      "source_cache_name": "32fbf76619d01338f99d1601ef883654",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+      "source_sha256": "6e02c3da881b2e9a4d4c26ab0b65b0472b1038a99a1931f21efac91bf15b6c44",
+      "sha256": "67a057fdf9e92154c6c953ca820367e9b46c72518ecc6c8a3395414c1d8bc887",
+      "bytes": 7221,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "629e9034cc31110ba71bd381932a634c",
+      "source_cache_name": "2cbb1d06c26d2d3829dace05499be891",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_glow_preloader_f020892f56adec75db0db8865a77318b.bundle",
+      "source_sha256": "6405d759747a13e1734ea011da0a4b1c2833ebfe74c9564bc80f304457bdf877",
+      "sha256": "f9af7dfb3f4c3c6557278a62dab2176a1b6c334c3bae4bc41d9482943d17ef77",
+      "bytes": 9744,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f020892f56adec75db0db8865a77318b",
+      "source_cache_name": "8d562380b021ea16e3d0a46e36092ea5",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle",
+      "source_sha256": "d27b79713a5d57aef2d761d667713f195830254cdff9d1f05f15880a7f461f46",
+      "sha256": "ffa0e0718340fc226cc4a60c2699d8189d70041c270c7e592137aba108741ecb",
+      "bytes": 7873,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "9ca8328f5e7707b7dcb1179a1232c664",
+      "source_cache_name": "8715b48bc98b798d0a0db1ceb0d65fe8",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_smoke_soft_1bc0790b673ce3eac8956a54cdeafb3b.bundle",
+      "source_sha256": "16a89db452ce45cf0940871bd80fbae304ccd0686bfb304188794da5a868285c",
+      "sha256": "9e4ea7eec0b3ad146fb46c9068fb620dc93e48a806f075917317eec04ecbf43e",
+      "bytes": 9936,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "1bc0790b673ce3eac8956a54cdeafb3b",
+      "source_cache_name": "cd2bd52d3f7c3dd128906e9c69d7fe7f",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle",
+      "source_sha256": "cb0b13bbaeddb6fd770104142b0dd060ad47779761b16a0ddea2d67532875585",
+      "sha256": "85fe00948fcc36d7b4688212f88911484236276de4241ef0c0558f7d3e695c5e",
+      "bytes": 8057,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "ef94ea2af614761c5fe1d77decc47957",
+      "source_cache_name": "fcca285775432513db690ebb3c453fd2",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedmapeffects_assets_all_882fe94c677a27393cd1b9a54b2b288f.bundle",
+      "source_sha256": "e417b0296133c985a60b122d4d6fd4b79da3f4c1457bae97ebbc14f3c22425fa",
+      "sha256": "9ec2f0304018c13e74205d8063078e38dc1f9cbfaca046273a8172b434c66502",
+      "bytes": 37079,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "882fe94c677a27393cd1b9a54b2b288f",
+      "source_cache_name": "91c5c132ce07d40a26b8856dda8d781b",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_brdf-customenvironment_b18e79edf7b657b9e7eef4fa1add30bc.bundle",
+      "source_sha256": "3e409438c88b32a1adca93a87f9632f42544a17550cce4134537920aea953722",
+      "sha256": "98a5ab38191c917aa408a503f07877e802b2bac994cc718061438881f7eb405b",
+      "bytes": 21241,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "b18e79edf7b657b9e7eef4fa1add30bc",
+      "source_cache_name": "6af1faff4c5e6e91fd605f9e8cd8968c",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_brdf-customenvironment-transparent_6503b5e917786f0389019544d972be29.bundle",
+      "source_sha256": "28dd986eb89850898c29631d4129e0f92e4179121d800d09d73912be6e9c08c2",
+      "sha256": "bbb835e585ff04f1116fec52123f394db5f1292f96fc1613bb7af8f54b49fc04",
+      "bytes": 21490,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6503b5e917786f0389019544d972be29",
+      "source_cache_name": "85f4bf6d0c94c7b8f60caa5abcdd05bf",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_brdf-matcap_f14e37e6c9936122a2103c5575f4e86c.bundle",
+      "source_sha256": "c03704746af6d728f03c2233cbee6c71dddb0285e78d9d123bc7a99fd7201e1b",
+      "sha256": "91c841c6c278aff6a470025986d8893fa8487e00adb67fc38fb4c30372f9da59",
+      "bytes": 20038,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f14e37e6c9936122a2103c5575f4e86c",
+      "source_cache_name": "12464836c94391a32666f4aa75b83e8e",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+      "source_sha256": "42e7160d5585f2dcb2701a65736a4cac8c426c2b01c4d6833bb41b5fba3fb8a4",
+      "sha256": "e13bb81a593ef459ef855db42cdde6b68157edde2a3e156afc512710473a5012",
+      "bytes": 17875,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "37d280a5618d1834fdc8bb2c2d9fe229",
+      "source_cache_name": "5d509afe3e1057f18ab281ac1312b174",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+      "source_sha256": "6b814f868580beab3d383b037deac16ffbb7f7481d9c295a96c65d78c4695609",
+      "sha256": "61f16712cdb5c53846e9960d3e7f7abff79aa1dde17083ed6c2969bdbbbce31c",
+      "bytes": 17250,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f4bb9492f40ac24c35c0de728426607a",
+      "source_cache_name": "adf2cc14fb26fdbe456eee64f3fd7921",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_fx-additive_e0660a2eb0dae946a3a80eee43c47a43.bundle",
+      "source_sha256": "c2cb01822e26edbf4804a7cafcc2eafa7330b970299946fc2504ab94baec5f77",
+      "sha256": "ffa6b6f08513e0b466193c4a148d310ea06f10a45d9a5f94220a1c6be60ec9d9",
+      "bytes": 18043,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "e0660a2eb0dae946a3a80eee43c47a43",
+      "source_cache_name": "187ac46d1a6648191918124ebb355b32",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_fx-colorized-blend_52a0ca5a5dc095df0741baf5214d2b23.bundle",
+      "source_sha256": "9724477f41788e1e909bddff313c5bd8a86f39193ee0d8d996075fc3c1c33a30",
+      "sha256": "86dae22a7667a8d4d258db99f9bbc2de502464b05a50f864286c8ae8b20f1acf",
+      "bytes": 18234,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "52a0ca5a5dc095df0741baf5214d2b23",
+      "source_cache_name": "a988fc2da69c510298b790dfa8c4fe69",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_fx-transparent-panning_dcd6504a7b7ecc256db0c24d06d3365b.bundle",
+      "source_sha256": "3c4bbbcc320ae47fdc20a86b8c056a5d5afd385194ca978546e65f56764b61ab",
+      "sha256": "4cdfeacfef6b7ee6aef65ae73828276578cdf4cc9935ccd1c2ef5973cc287dcf",
+      "bytes": 18371,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "dcd6504a7b7ecc256db0c24d06d3365b",
+      "source_cache_name": "d9fe23b58435ca1531d5b2b55f991a4f",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_grasssceneshader_6c5b4d0162709500fae7c3f96d8fcb1f.bundle",
+      "source_sha256": "c17ad20fc1f78eac089cb37a97d0ce4c406b4ce248ba7583efa8bd0dfa959bda",
+      "sha256": "6434b02cedd0cecd62b68ad5049aaa9fd13542a2a2c476b91526db3cd25f8e84",
+      "bytes": 20513,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6c5b4d0162709500fae7c3f96d8fcb1f",
+      "source_cache_name": "dd1dfe6a1bb1de1fdd86713e0efd414a",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_ground_91fc48958493cbad3549877ef639124d.bundle",
+      "source_sha256": "41e74d3e7371c02b95089e922616bf150ee8bb994ff38deab950616c096d17ee",
+      "sha256": "fc157b847b8835c46dededdfc6cb2f18397aaa3cc74565f2118774423935f599",
+      "bytes": 31752,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "91fc48958493cbad3549877ef639124d",
+      "source_cache_name": "c8e0069597605d40a3b5ff9b1f359258",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_holo-brdf_33261fc85ac8af99ef993a31c52d4ad4.bundle",
+      "source_sha256": "ce5405970e8d706f2478e64f6c79bc63d31104b1881cd7df2222388fd519998c",
+      "sha256": "daa2747121a81cf7fa47888f0fd66b0eb34c3e59123ae850c4c12c50c15ed9af",
+      "bytes": 19452,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "33261fc85ac8af99ef993a31c52d4ad4",
+      "source_cache_name": "d61993df9f33b7a5d75fde7f59cd647c",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+      "source_sha256": "9527c80755a83af23117258823b4c3f33a51662d1d048806cc7eb93514944fc4",
+      "sha256": "8400c246cc43e57294d6b09f9efde866066b7916aee755371b27b91fec7b263e",
+      "bytes": 35164,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "7c645bed598062a1af960bb5a8f3406d",
+      "source_cache_name": "9847905881b2eaa09cef7beaed1256f0",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_particlesunlit_fb1fd00c408d45fac25cc49121486b36.bundle",
+      "source_sha256": "cc8b01a761ef7e46d8e60a3a2c2e6dfa77b153c5f63a2729e8bb09a4791610ef",
+      "sha256": "3a936e05510bd66031f43d56b97f6c57482eab77bd21d60e2d7464bd0d26aa6a",
+      "bytes": 24460,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "fb1fd00c408d45fac25cc49121486b36",
+      "source_cache_name": "ad9c75f6b531a2f94e2a3e30cc90f8b4",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+      "source_sha256": "7b1f0b7e70a6ce3888237285a533c122b611ffb269b0b818650f70891fb3b83b",
+      "sha256": "684ba52d6536d09d5f751f828a72ba6f5e22b54e21486701223eed8e32717316",
+      "bytes": 18343,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "2d9cd43553a243b24e4fe3e3662e4286",
+      "source_cache_name": "83dac6e0f655040f8ac30638e4958b40",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_unlit-color_e4f981cd27bd49792b04ed9756dd52ee.bundle",
+      "source_sha256": "8aadca681f36b86de43d89056496802c24c5c8167d6a3f5e8516035cb26e3beb",
+      "sha256": "382526f2ec86f72c360a216254c0c811e3d076e612052fd13418e0ba7e6cf39b",
+      "bytes": 18023,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "e4f981cd27bd49792b04ed9756dd52ee",
+      "source_cache_name": "3047997f70f473d718871fa07a7941a3",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_unlit-coloralphatexture_24dbc0d78d90bfbfeace94cf7603ff92.bundle",
+      "source_sha256": "db975f6492dcd6a4e8fe8be397206312fb5fdcba5b555a951667205bbe25d2a3",
+      "sha256": "c1e71564b05bcfb6a786f2359f0186d30cededb085407b0998e5568342610fa2",
+      "bytes": 18255,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "24dbc0d78d90bfbfeace94cf7603ff92",
+      "source_cache_name": "9faa59ebef885d64c274b8868d812bd7",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_unlit-colortexture_c890ea2c722f6ddeb85c94497d1e3503.bundle",
+      "source_sha256": "eeddae7e6443a143fc89a7f72076c2d3526d31b82a9009ad4f0a30b5bfdddcf4",
+      "sha256": "6b4afeb8b581b07b26bc659bba4fab5da7541658e3972473be9e0b41778d4c6d",
+      "bytes": 17998,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "c890ea2c722f6ddeb85c94497d1e3503",
+      "source_cache_name": "7c1e6abd842dc32f085ad1ecef03cd42",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_water_fc488a5d8d0a53a8f9d920c080a1d821.bundle",
+      "source_sha256": "fadbdb5425eee388e795e91b0b4d639bb369a6ad778e612bacc8bb01e424e0f5",
+      "sha256": "eda960dbe84893f45c1ba51870e5c9daab9f21687d855b7e58ca19b658763a14",
+      "bytes": 24087,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "fc488a5d8d0a53a8f9d920c080a1d821",
+      "source_cache_name": "2334e46c6ace50a8a473aae9e30d4e26",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedshaders_assets_waterborder_2e40a2e16d06919c604f3be86f9a3077.bundle",
+      "source_sha256": "09266c95f17dd5a5cfcc14358fd7733eaca902c9272892de9e3d75cc54bec3b7",
+      "sha256": "8a810131bf1ec1bac8e9d900dce2f6f4faddd829b629852e644d0e0bba8ffa94",
+      "bytes": 18911,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "2e40a2e16d06919c604f3be86f9a3077",
+      "source_cache_name": "c9c5e5c281376e54005f38225c37220e",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "sharedtextures_assets_electric_power_b8b1a9dd70a71b0166369c6cefb41a9f.bundle",
+      "source_sha256": "9df7ddbeeb06729b7246c60d0963b0c49306f9542c4d95a87d18a5b3fa72ef48",
+      "sha256": "43636a30ac7f171242344d6bc58592ee062abb8db9c883c8059b17a778d4003b",
+      "bytes": 7485,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "b8b1a9dd70a71b0166369c6cefb41a9f",
+      "source_cache_name": "292bf51a3b63391cfebfb286ed89a0b8",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+      "source_sha256": "5d2dba1ce807bb1bc123a5746fca3d931809e634008ab4f9798a430c09140c3a",
+      "sha256": "0d1e70f8f641cc02c31c6332e1ded6d0e32f4e220f6580f3dc44e9a8f3342e9e",
+      "bytes": 2305,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "8158b350ec0c44f250bc290f8efd8306",
+      "source_cache_name": "6c6dcbb07cef450d19fe2abced50ccd2",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+      "source_sha256": "fc4899ad7321c637f6a376f0b436a4a44502d2ab0eb65d9159ddae7cd8fbcc15",
+      "sha256": "7f65393ba756b1e5139a9cde59aac81f57a981cdd5b0f53b579309f5c4179aa2",
+      "bytes": 3919,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "0ddd27dece17d7bf67487058c9005598",
+      "source_cache_name": "efcac763b61308a94986ab70ce119552",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_noiseclouds_8aa66d7a22271ca283b7054a6ab141c5.bundle",
+      "source_sha256": "bc5fa62b0c8d4fc726f23a920facc911b1fef21f9344e8e0188f6ed79ce383c4",
+      "sha256": "44f8ac03496ef4f62761af8d91028b39cec09f8510b12138fbf23a1dd77c1c84",
+      "bytes": 9732,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "8aa66d7a22271ca283b7054a6ab141c5",
+      "source_cache_name": "fa179ba9e40909e7bbf85931aedc687c",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_noisewater_f0ad88707f132d188fd491a99cae764b.bundle",
+      "source_sha256": "da2dd1c88d19487b1fb16b67019606224762e3f7054d3e5e494e072ed35d2eb8",
+      "sha256": "2e8c068f5ef58bbed1cd2d03a71ea0ddfb23bfde6aad8e9ee9e79b603218a915",
+      "bytes": 12488,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "f0ad88707f132d188fd491a99cae764b",
+      "source_cache_name": "000cd2edfeb737a2eefadfd22b06c318",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+      "source_sha256": "cbd5b29a94942be9b778adad70ab2887647b521705d4b58de8900ec4b928cf13",
+      "sha256": "d077a36b0cb0322da2f31fe3855f6e12cfc4a06dd0d721db14a75ff477bb683a",
+      "bytes": 11279,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "590bda661036d0cc2343065143305f19",
+      "source_cache_name": "3be39e970de35088dc5b9cbb3a3948c4",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_windmap_fe31561a2e19038f6597daa94196eb4a.bundle",
+      "source_sha256": "ab06794684cae737752c6aff9b000aa1064902a6812e94209c642663613a9915",
+      "sha256": "29e4b5b5633c7ec639687f46e9c13db93e1e1f99b762bfbbd7c8d2ec0050e108",
+      "bytes": 2509,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "fe31561a2e19038f6597daa94196eb4a",
+      "source_cache_name": "ee65832794a118ae890a8bd72ffbb45d",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+      "source_sha256": "333b91459f652f0497ac2ced34eb78e7086397e46db632fdfc30db7c6a93f7cd",
+      "sha256": "0d014322a2d04dab15c714d4c963b0198d9d4e67ffdbd94d64e0b66be80d0811",
+      "bytes": 12433,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "091e117d87c55c910e7388472d5c7503",
+      "source_cache_name": "592e9beb42840d47fcdd4eecd8c4d6d9",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistafall_shared_assets_all_46dcdb41e5453f01cd08fc9e3904895f.bundle",
+      "source_sha256": "8febaf26bf493aca03aa516ee128d17cdbbf23769d3e56377fbe86f96f70c82b",
+      "sha256": "cda28358d26d8a062387253ad023fd75660480e39d03bc45cc338f1edde9dc23",
+      "bytes": 625589,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "46dcdb41e5453f01cd08fc9e3904895f",
+      "source_cache_name": "bbe09e8555801a78c86bbf9e64f57efd",
+      "shader_identities_isolated": 3
+    },
+    {
+      "name": "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+      "source_sha256": "048c314a90f9df4465cfc419cc28623581b6967728203fa09ef8a42d1b873386",
+      "sha256": "3b96c337efad7f55799f1a13a26c5c1ed36803b8e6bf38df8ae33e90de92f73c",
+      "bytes": 162805,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "2e6a90424db5a4c2d3b5a1363264c813",
+      "source_cache_name": "d98632a5ba01178299e40a74c527d1cf",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistashaders_shared_assets_brdf-ecosystem_building_6fd009a6e9058992801f16d73c066367.bundle",
+      "source_sha256": "fa09c4467dc343e13269da1e6727ffd98918e0c7c093f8d3f6527cfc5827b98d",
+      "sha256": "4ddc91c20faaca32abaf416f55eaf0987f8d743ed5d62cba6d2ba56c1bb186c9",
+      "bytes": 21951,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6fd009a6e9058992801f16d73c066367",
+      "source_cache_name": "03a5d2bd044b1ee6d97cbfb5259afa68",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_brdf-ecosystem_grass_308166b1e6cf27415fc1cb3c598b4050.bundle",
+      "source_sha256": "892f320bedc5047148aa25274d3ca72e59b2d5af81ece1dc5006ba1106614311",
+      "sha256": "e3b00693da0c1e6e7e95763abb35ba0192222b27f5c241f24f2c76f1ea9213dc",
+      "bytes": 26785,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "308166b1e6cf27415fc1cb3c598b4050",
+      "source_cache_name": "a692ddfcdf061e983487f38b67c138e3",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_brdf-ecosystem_ground_0232d0049f8aca874e6d332190cbf1fb.bundle",
+      "source_sha256": "5afc6b561f41471bcd29f44e39506221ba15cb43a9874be22e07171da281b97a",
+      "sha256": "2d6713a3aea94d8476c36d6a633acf607d734690f3fd9283375cd64ca8959290",
+      "bytes": 31975,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "0232d0049f8aca874e6d332190cbf1fb",
+      "source_cache_name": "20fa4cca326c3cf3a2a841dc03265e0c",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+      "source_sha256": "d8f656ad140943772c39a1c2a9d13df5ca787ba32a130b1eae1fd85917bf6851",
+      "sha256": "32e557b811605d49456f3f52afdbc6ccd771a5e235c8916b29305eaeca89e5bf",
+      "bytes": 25733,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "dd2df89fcc87120524659a3d6730055d",
+      "source_cache_name": "937aca8af484633dc2283f429e466b4b",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_brdf-ecosystem_transparent_30193e8eed7f12caf17c269a8f469e89.bundle",
+      "source_sha256": "1a07a67e58fe04fc97b01b2a08fab763f9708e82309ae46aa10c5b4f112f3eca",
+      "sha256": "280a33c8c7c008f4163fc1bdebfcd9779db984daba2417cc4d640704f62de0e7",
+      "bytes": 23640,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "30193e8eed7f12caf17c269a8f469e89",
+      "source_cache_name": "3ab8c98fec6cb5e58a0d2e06cd581a98",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_ecosystem_backgroundcard_6a8010a56032c0b1116ec8310faad3c3.bundle",
+      "source_sha256": "162947cfe6a408af9cc9ffc92a3d7e9749b076d53b4fc29dfce24a2f9b73e84c",
+      "sha256": "d6004278b2d5e7729f9820c8cdee1bc2b79978aa34d158ec9ea796accfdf433a",
+      "bytes": 23763,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6a8010a56032c0b1116ec8310faad3c3",
+      "source_cache_name": "93225ad2950a1c55bb7467b19f1942a6",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_ecosystem_water_c2a24c54a52477bc3ae3a21efda640fc.bundle",
+      "source_sha256": "c183a172416879fa3a61e08336c25d17be527216601d369c68d8a6ded63885e9",
+      "sha256": "a34049d5c0024c5ea46edf8a96356f93680b37eaa564f5a58c5a238a47e9fae0",
+      "bytes": 23587,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "c2a24c54a52477bc3ae3a21efda640fc",
+      "source_cache_name": "344e119068247bbf91b13e9db14dad3f",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_ecosystem_waterripple_b4d68d15c03c4dee487107eeaf33a6e4.bundle",
+      "source_sha256": "c03472dbd59d5eebbc9b3c673a0978015918d766f1569640a81ad8124b548aa2",
+      "sha256": "91dbb936318d542dea510199213d74dc7c5b14421f539ed99348b5fd285f96f0",
+      "bytes": 18967,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "b4d68d15c03c4dee487107eeaf33a6e4",
+      "source_cache_name": "18aa828388a6fa0097fd5839b3242ffc",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_encounterstreeshader_6ebaff9297066275c4071e49f8b194c8.bundle",
+      "source_sha256": "416d35a5dbf4db5d024f56efd4190859b658b18c6354ac80d2f6be4901afd800",
+      "sha256": "9c28ac0c2773759bbac5bdf1d453a558e4099d70adf1e5dc7a5c2e796b3da4bb",
+      "bytes": 26646,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6ebaff9297066275c4071e49f8b194c8",
+      "source_cache_name": "6a4ad00dba4cff00b26ce243268ca528",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_transparent-vertical-gradient_418b5232aed3ef239f67d71e38a33120.bundle",
+      "source_sha256": "0f2828b0688eac6a91a05d22dc5a56c2796e82a451d7aa55f96be2de4e156ec2",
+      "sha256": "a24c1f95979ca215b79197ad1de314043706f6192aab5576c325d8a641408f21",
+      "bytes": 18553,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "418b5232aed3ef239f67d71e38a33120",
+      "source_cache_name": "f7e3e3d6b5a3d34f880e35ac12490163",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistashaders_shared_assets_waterwaves_eaa6d0db20572868aa750866c2e8b65e.bundle",
+      "source_sha256": "0545b829f563caa31b5d7041ab29e55dd3b94b8344e8d98bdee273d3ce805d67",
+      "sha256": "93e5bdc0099a860bb45dd3f23d90399beb3fdf5fae60fed334807efde50163fc",
+      "bytes": 25201,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "eaa6d0db20572868aa750866c2e8b65e",
+      "source_cache_name": "88071ad6bbac4aac15ac924970d4f9b8",
+      "shader_identities_isolated": 1
+    },
+    {
+      "name": "vistasharedassets_assets_vista_beach_750a68e7be798ddcf60e51937ba42f62.bundle",
+      "source_sha256": "059860f196c85eaaa93b3b005c217003bea1df78284576a3d23e8680e3479978",
+      "sha256": "26afac2a9885de64bbcd3efd3c85a269a214e9218ef1f24a61bbd1662c84530b",
+      "bytes": 228899,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "750a68e7be798ddcf60e51937ba42f62",
+      "source_cache_name": "4af4b68b023c7cf5cf16ccc63cd0d2ad",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistasharedassets_assets_vista_default_8fbb726f28ecd39a0410c1594578d538.bundle",
+      "source_sha256": "3ac21086ac2b09db0da40320f1507197f5dca5a4b090576a345969bb85ecbb75",
+      "sha256": "6ca51ceae9075f3aa29f06a1a792961b807030bf86d7092162d6de4a06e5035a",
+      "bytes": 2033062,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "8fbb726f28ecd39a0410c1594578d538",
+      "source_cache_name": "9ae5c3c4c53c32122a295019a11d8768",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistasharedassets_assets_vista_forest_81c220c902bc970bc818eea5487048f1.bundle",
+      "source_sha256": "31cb8f2c3c5addb4ac379dba8ece7c14e36326635855205a39f60418c0a08d4e",
+      "sha256": "469d4e165ca5e707ed6152e3f42ec32ccdedaf3dc25dfa1eb790a6729e76469d",
+      "bytes": 210861,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "81c220c902bc970bc818eea5487048f1",
+      "source_cache_name": "434d2e09e70fe8a541f4c7a703b7cfed",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistasharedassets_assets_vista_waterfront_6de3d52c50d76f5afc122228b4db795e.bundle",
+      "source_sha256": "4e9a62d9eda39ce111b0045801cfba36bfd8cde28c805a1b3a9139f1783c200f",
+      "sha256": "94e6ca76dbf889a2662805ed28c1c94fe765646a7420089b6ceedb7c0ee57e9e",
+      "bytes": 223896,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "6de3d52c50d76f5afc122228b4db795e",
+      "source_cache_name": "9a91d17e7ffb26de4affece63b0d5899",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vistasharedmaterials_assets_vista_default_b9c54f5ae54c8ec20bb3503e65e93587.bundle",
+      "source_sha256": "317409b3e2270be7e5cb5010a1293502f944be71d1516cde45e8699e8f39a134",
+      "sha256": "9017bfb528166596828c40d69cf8d22137ee9ab36c486a3459cbf2c092d4520f",
+      "bytes": 43506,
+      "unity_versions": [
+        "6000.3.21f1"
+      ],
+      "source_cache_hash": "b9c54f5ae54c8ec20bb3503e65e93587",
+      "source_cache_name": "a1c1021e3e3335bb54d226b148696a5e",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "a76ddee18b2c5b84377431e62512bd34_monoscripts.bundle",
+      "source_sha256": "08be517d6a6c473bd8879498d2ee50585473f710d3b6491644ad6025831240d5",
+      "sha256": "d1423721cc84a551318f09c2ccdffe1287fe2608272d089a700f983dcf892464",
+      "bytes": 14251,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "a76ddee18b2c5b84377431e62512bd34_monoscripts",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets.bundle",
+      "source_sha256": "fcb363b942f417db151f6228852f261db05ecd41da2f7de89ecd9aa36ac6f401",
+      "sha256": "87c6de41c605d04dede3c023a1ad0be733c206a973b9b653f53bd715a73d9e16",
+      "bytes": 154985,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "a76ddee18b2c5b84377431e62512bd34_unitybuiltinassets",
+      "shader_identities_isolated": 25
+    },
+    {
+      "name": "runtimesfx_local_shared_assets_seq_se_sys_024.bundle",
+      "source_sha256": "79bf26c2f006a6510d7669a859bc86d528a049ba2ec8c0219eaeb0b5fbb89117",
+      "sha256": "67a4571643e4f64b4a1dee07f1a5b65d925e21f0c71e6bba132773d37f96009e",
+      "bytes": 7924,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "bb305aee33a81c741e7d7544b77a16cd",
+      "source_cache_name": "89464ad3880f79b260e85223947a424c",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_islandbig.bundle",
+      "source_sha256": "e947bbf8141df4679338bc15cf25828a1eb1bd6f76f836cfeaec20e1240136da",
+      "sha256": "c206f7bf875e12c303bd8307b68f8fe9ed146051c0578758d0d4dae0d128fde2",
+      "bytes": 2720,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "b847418ba27cf5be58d21489fa0e4c92",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_largegroundrocksmoisturespawnpoolconfig.bundle",
+      "source_sha256": "713606774a9f6a40ccfa51e6ce660c500f2916e38b3b4ea02ea43708725d79a5",
+      "sha256": "7f60818d0c8de8cb14b4a5969e4e00573db54263add00ec1564d9d7e5050c4b7",
+      "bytes": 2138,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "e646a352793d88e936762d9bf611b7df",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_largewaterrocksfarmoisturespawnpoolconfig.bundle",
+      "source_sha256": "c2c5d31ea586ab2d89fdd69e50582c67139599cc668fdec2328afe75a114a3dc",
+      "sha256": "10efb8d06208685fe462fdbdd1c0f86da6df021cc50a93ca87c4d84c6c6b653a",
+      "bytes": 2447,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "0ddf1aa741b8792c659e422f22e436b6",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_largewaterrocksmoisturespawnpoolconfig.bundle",
+      "source_sha256": "e9e148be1f19cfa8953f695608e0fd7c42a54633f45f84b8d1732d79c023ec8d",
+      "sha256": "d37501de46a54cfffa4f6959dace78e2ee569b6271ef4b5f5cd2133a1c33ce67",
+      "bytes": 3431,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "c53891b51687869021d3b622abda2f6a",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_mediumbushmoisturespawnpoolconfig.bundle",
+      "source_sha256": "657488b441fc70ed33b1f7f02fb8af78ad2d03594b4f4a9af43745eef7650971",
+      "sha256": "f8ba34df07fed2eeb676b3438a00ce2fd6b272e831eec8fd4e2704a8a8c3ca52",
+      "bytes": 4524,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "1a54fd5c0e42b0b638d724564cb4005f",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_pebble.bundle",
+      "source_sha256": "14503001fa90504b82c120cec044ae8c42931753891b05f6970b1db8446d12f0",
+      "sha256": "eaa9fa61359754005c628315ee3fbfdaa240a3747e094999b649710c3c4e3b61",
+      "bytes": 2729,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "9eea2d2b1e9294bfc1f1de305d04b520",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_plantsmedium.bundle",
+      "source_sha256": "ebd7bbd273d3ffb30598354a3cbcb2025c8ac3ad71f1c967c760656bcff6293a",
+      "sha256": "63571d84142db1668ce84da01a06d1ea27598fdecc9bcbb192803858b6bd9d0c",
+      "bytes": 2726,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "d0109981f6917cd39679a2303c155483",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_plantssmall.bundle",
+      "source_sha256": "b476da0bd6997293715c22b3b5f21827a3455ae961fc5fb2519ea9838cbcb31f",
+      "sha256": "612e70f0b9f4df80a40e758e11b899a52fdab974da598fba2c00692c92f81dc5",
+      "bytes": 2752,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "691d0597d33bc9c5f86c7201752f7611",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_rocks_ground.bundle",
+      "source_sha256": "f1c963b6faf5f1538f390d29dd47c0b9a1618594f5364b86cec20b76d12771e6",
+      "sha256": "0ea5e8b1e5347ce11a7d87c7ec608bb394908aabfdc2636082218afe8e95dd3a",
+      "bytes": 2751,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "dc56c7447de6b7e72f226d7493135f7b",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_rocks_water.bundle",
+      "source_sha256": "cdd85bf4d4fde72cc9eaac4ebf402639e9f31693a6278693aecac444556c2963",
+      "sha256": "fc6aefa089d524d8f143213ddadf82b7b59d9b9fdbd1f570cd19345f20231b5c",
+      "bytes": 2745,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "93dedf6a380687469d34c17b9db93bc2",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_rocks_water_small.bundle",
+      "source_sha256": "06b5633d834d196005ffb38bd6ea4c9a643cfcb2150b176b9b72969aac86bace",
+      "sha256": "04c7b0a89839727c4d708bde5f26d1845f842c02378ea5dd7abef04cfc87c762",
+      "bytes": 2744,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "41aaafb5e974373991326af802d513e1",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_seashell.bundle",
+      "source_sha256": "86443e2eb3b71f170b3712c5b5894c28112242437fc727d72c21e122d9f4f8b1",
+      "sha256": "3e9cefb78e6d37524f89a6c82c59c9851c90bb2a4a9d5cbd116f5090afc5600c",
+      "bytes": 2726,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "586c8d5e45848d5b987b80bae9dcfbbf",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_seashellsmoisturespawnpoolconfig.bundle",
+      "source_sha256": "28ae28f8e5f498d538b13e25cb70d205f69771e47dfdbdf170ce18dbec65b6cb",
+      "sha256": "edd25ceed8c9ceb0147e9302c1266710bb2076e13cdfc568a2f8ee86092a9b87",
+      "bytes": 6221,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "41ac7b9f3c42acf5e79efa8bc195d09a",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_smallgrassmoisturespawnpoolconfig.bundle",
+      "source_sha256": "c095e82a87b0479f58e3c4e2b6e3c289029af30d0a2a6a5a69f05ba53ccafc06",
+      "sha256": "40e9809938fbfeb86fc14a301e834019bf9c9e2f460a3b728e565a0b8fa41084",
+      "bytes": 4242,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "e62e0964dee20c1466087bd0f0a60728",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_smallpebblesmoisturespawnpoolconfig.bundle",
+      "source_sha256": "7bb525c742577515eb26a6f5c775514b8d35fa16d4e92012e781168bb861be71",
+      "sha256": "0bf88319d1f67b40a3badf7e6af1ca61808ed3ea97d5bc78e03a0e01d4a1de18",
+      "bytes": 12021,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "e26cbf5cd7725a4ae35cb8e3bbb84f61",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beach_waterislandfarmoisturespawnpoolconfig.bundle",
+      "source_sha256": "b25b1493227820212c156e44856b095c01cae86061a15282b6cf5333b6641b39",
+      "sha256": "56a6718354721f045ec324ec200aba5a38842467b9f34c82902d76c394ee7197",
+      "bytes": 2782,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "f3cca0d7073e917fcc42792c2b0b64bc",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_beachgenericecosystemmoistureconfig.bundle",
+      "source_sha256": "b78059465d64aaadfe68dbbb4316bb9960bc7d01707f24f8bb7809a63ece5f46",
+      "sha256": "93b2552cfad94c6fff5a0173a6f3dcc9922d6b0592da83147caa5fc6aa34458b",
+      "bytes": 3213,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "a602943c0d307f37ce387ce5f4bab7c1",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_bush_dome_forest_largeflowers.bundle",
+      "source_sha256": "da58d763e10598e319c3f8ebda43cb67b1a6c6d549cd8cd26450158992c5b1e6",
+      "sha256": "6b3db7da2b4da55cf93e43021bbe7911e497e6817fefcb7773230e74ef10d366",
+      "bytes": 2764,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "74dd2fb7325e1b4812171280589b45dd",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_bush_dome_forest_simpleflowers.bundle",
+      "source_sha256": "1082a10e6d97e3f428dd7c30a76140396edfc1a7e79624e4e3cc31384ede5c9d",
+      "sha256": "5b7b0c4b57db83794ff06a78fd764f4fa8e86a52f6f2e9156922eee88d934d66",
+      "bytes": 2739,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "05f3482d837bee80cc556593733b276d",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_defaultencounterpaletteconfig.bundle",
+      "source_sha256": "c127d0439dbcd235819c5623880d60a07b3fbdc0bea250447262db19c3e412a9",
+      "sha256": "2092b2be6a13e4effc6590e163f20d7ff24fe58927d3b3438c6af623cefc0ea8",
+      "bytes": 4159,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "38138a3dc60a920a55b68d07efdbf206",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_fern.bundle",
+      "source_sha256": "93be8db057ee3843fddf8e3bff7254c9892b8cc9cb0ad2e0a47130de571c8c6d",
+      "sha256": "61a82af8d188c321867726aff13206a37e3f4520c0720c24e9b491736d3bfa8e",
+      "bytes": 2707,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "eb86418f28187ca9d7992caf34eff578",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_forestgrassgroundspawnpoolconfig.bundle",
+      "source_sha256": "0dba17999b5feb29f65bf49fbb3ecc0abe59df9ec5cf01b1cda40f046ccd9fb3",
+      "sha256": "ba5bafe584ffe8fd0a6f57502a16b510975fa4737a9054ed82c078ffd0dd2c81",
+      "bytes": 8846,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "64c650ef3278ff03148ecafd92e38840",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_grass.bundle",
+      "source_sha256": "0364f6232a50fe099fd1a0ebb98835526cb52ea63def96938d7b198eef103553",
+      "sha256": "3bdb37b9dc8ce6ad718871191aec7fd9a7c54a55ba1eddee70c5e3994e6e85f5",
+      "bytes": 2884,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "218f5f5b74888869b6c106920449b83a",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_grass_forest.bundle",
+      "source_sha256": "f5bb7892ee8854d670fa7558713b4fde9aab3ff6912979384196b606780e7f21",
+      "sha256": "ac5a2ad5f0bc85237dee394009dfde13434743fb6fdbed6fad6320ee09b75676",
+      "bytes": 2804,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "2c565ca08a0245479890659f32c2d6b1",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_grass_waterfront.bundle",
+      "source_sha256": "3c7e0253732fa56afdc8cadc20fc1332cfa2b6d842e41a0ae4e53ffd3d865085",
+      "sha256": "d1b5073a6bf944db32c1ccb791d4d1d767d1a59437122364048e2fd434b000ff",
+      "bytes": 2769,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "0c9452aaa66b20ca9029bf87e4da46fa",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_island.bundle",
+      "source_sha256": "0b0131006f2e3db28a2adefb3f794ba1b4fb24cae4951270cfc576eb9a5bac27",
+      "sha256": "ed637603dea2aadd3967b184f88de4554491f95bce7b05b2200240aa6945caf6",
+      "bytes": 2796,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "21f06884822405682e06d30f70db4bd6",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_rock_forest.bundle",
+      "source_sha256": "1fbb89e05159ad6b4b28aba0a45cb40f9e439331e0abe00fbafaad2911d92e66",
+      "sha256": "fc0961db82dc84e91c53845f1812d0bfdd8ef3a2175a4bed07193b664a8eec5f",
+      "bytes": 3069,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "cd0745b3299b622367e29f9933341aab",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_rock_smallwaterfront.bundle",
+      "source_sha256": "925991e659d41f5dc63443ee08bc269e72b3728046eeb663e66c1c2d997395e7",
+      "sha256": "396dc8838fe9458d18ec7b030d50c2bca4bb26a190eee2629fdde3bde1237f2c",
+      "bytes": 2849,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "4341381d4b7cb938e27dd69da3b616f4",
+      "shader_identities_isolated": 0
+    },
+    {
+      "name": "vista_shared_local_assets_rock_waterfront.bundle",
+      "source_sha256": "764a9cf1da446add3379312ce4b317514da6065a6da32d8a5a38922c4baefa9e",
+      "sha256": "3e47c721c29ad8513a955e53a2e4962a93a45eb8c38616c606d95cc83283e227",
+      "bytes": 2869,
+      "unity_versions": [
+        "6000.3.22f1"
+      ],
+      "source_cache_hash": "",
+      "source_cache_name": "1a316f3809dc255f7bb98017de9be2f7",
+      "shader_identities_isolated": 0
+    }
+  ],
+  "preservation": {
+    "accepted_keys": 19043,
+    "unrelated_changes": [],
+    "preserved_default_park_aliases": [
+      "DefaultParkScene",
+      "21c27dd1dad1d44a680cacf34d88cfcf"
+    ],
+    "selected_override_keys": [
+      "19cdab8f2f6bb4daa88ddc2cdd8826db",
+      "1b7e26bb8efd94131b9150538fb87323",
+      "20d371a1492074c7f82ea9e228049a31",
+      "482baee3a7f9244729066a0391546a6a",
+      "5fa560acdf02646e6b20a26a485d5eaa",
+      "70a1a3e48d3a24917af555e62a084bf5",
+      "7d689bf17ba0b4392beaff397fc5b59a",
+      "84657f52d2ec6459aafd6ed2f5ce5e56",
+      "86efdc6b1b1b94861a234a7ce895c812",
+      "89d5e1e00f62945b3880741c2029ae83",
+      "8f8369e2466a04c038989be7c3def070",
+      "90507307108e74303a3ba9c9c1f415dc",
+      "9317ffd2c416c4f0bb6aee26454fbc7c",
+      "9477ebdf6ad234be39be366d6f4af81a",
+      "94de49a5f3fd4470c84b1c7116577a95",
+      "9fe6602e559ac48929bc6931bfe66a93",
+      "DiancieEncounterMusic",
+      "DiancieScene",
+      "KeldeoScene",
+      "MarshadowScene",
+      "MeloettaEncounterStage_Aria",
+      "MeloettaEncounter_aria_finale",
+      "MeloettaEncounter_aria_performance",
+      "MeloettaEncounter_pirouette_finale",
+      "MeloettaEncounter_pirouette_performance",
+      "Meloetta_Aria_Encounter_Music",
+      "Meloetta_Pirouette_Encounter_Music",
+      "MythicalEncounterMusic",
+      "ShaminLandIntro",
+      "ShaminLandIntroEmote",
+      "ShaminSkyIntroEmote",
+      "ShayminEncounterMusic",
+      "ShayminScene",
+      "ShayminSkyFormeEncounterMusic",
+      "ShayminSkyIntro",
+      "ShinyJirachiEncounterMusic",
+      "ShinyJirachiScene",
+      "VictiniScene",
+      "VolcanionScene",
+      "ZeraoraScene",
+      "aab77c605ee0a43b9a543685b7e2c721",
+      "aed2cb4cf304346cc8f3844251cdb56f",
+      "b9cb70a01fc6342959f826a6c6670220",
+      "bdb705a06306c4086a0968ef493ed4a8",
+      "cc71f805050384ab4863335ae2ed04ef",
+      "e416d3b83ffb540a3af8614d0988e22e",
+      "e76c0e18289e14ae5ac7b8db24d1d3f5",
+      "f283a9fe463b8413ebf001af652012ae"
+    ]
+  },
+  "baseline_default_park": "Retain the existing complete accepted DefaultParkScene/GUID graph; its newer source copy is inventoried but not selected."
+}

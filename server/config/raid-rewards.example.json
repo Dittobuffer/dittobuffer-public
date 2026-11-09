@@ -1,0 +1,11 @@
+{
+  "raids": {
+    "premier_balls": 6,
+    "ball_bonuses": {
+      "provenance": "Explicit private-server tuning. Bonus categories follow the supported client/official mechanics; these numeric thresholds are configurable and are not claimed as the official server table.",
+      "gym_ownership": 2,
+      "damage": [{"minimum_fraction": 0.5, "balls": 3}],
+      "speed": [{"maximum_fraction": 0.5, "balls": 4}, {"maximum_fraction": 1, "balls": 2}]
+    }
+  }
+}

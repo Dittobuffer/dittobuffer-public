@@ -1,0 +1,5 @@
+{
+  "placeholder": "src/dittobuffer/resources/photo-unavailable.png",
+  "automatic_acquisition": false,
+  "reason": "Source-only checkout uses the project-owned placeholder. Keep your own permitted images in local configuration."
+}

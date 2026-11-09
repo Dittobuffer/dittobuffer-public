@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: pytest (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt -r requirements-dev.txt
+          python scripts/setup-checkout.py
+
+      - name: Tracked files stay under 100 MiB
+        run: python scripts/check-large-files.py
+
+      - name: Tests
+        run: python -m pytest -q
+
+  client:
+    name: client regressions (Node 24)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: All client suites
+        run: |
+          node scripts/test-client-ui.js
+          node scripts/test-client-raids.js
+          node scripts/test-client-family.js
+          node scripts/test-client-world.js
+
+  guard:
+    name: repository guard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: No tracked file above 100 MiB
+        run: python scripts/check-large-files.py
+
+      - name: Content policy holds
+        run: |
+          set -eu
+          # Pokémon artwork, player saves and world snapshots must never be tracked.
+          if git ls-files --error-unmatch assets/pokemon >/dev/null 2>&1; then
+            echo "::error::assets/pokemon must not be tracked"; exit 1
+          fi
+          if git ls-files '*.sqlite3' | grep -v '^data/world/power-spots.sqlite3$'; then
+            echo "::error::only data/world/power-spots.sqlite3 may be tracked"; exit 1
+          fi
+          echo "content policy OK"

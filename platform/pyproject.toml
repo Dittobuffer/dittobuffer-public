@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dittobuffer-platform"
+version = "1.1.0"
+description = "Lightweight signed HiveMQ rooms for Dittobuffer servers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Dittobuffer contributors"}]
+dependencies = []
+
+[project.scripts]
+dittobuffer-platform = "dittobuffer_platform.cli:main"
+
+[tool.setuptools]
+packages = ["dittobuffer_platform"]
+
+[tool.setuptools.package-data]
+dittobuffer_platform = ["static/*.html", "static/*.css", "static/*.js", "static/*.webmanifest", "static/*.png"]

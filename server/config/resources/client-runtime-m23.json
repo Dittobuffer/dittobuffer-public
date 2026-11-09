@@ -1,0 +1,1947 @@
+{
+  "format": 1,
+  "source": "Previously restored M23 v6 local runtime; metadata only. Supply authorized resources independently.",
+  "catalog_sha256": "984af473b5db3b74247a1c264fc4bcb86070b3c48d65203a4f6d6c071d5a81f9",
+  "files": {
+    "catalog_926.json": {
+      "file": "assets/pokemon/local/mythical/catalog_926.json",
+      "bytes": 4909417,
+      "sha256": "984af473b5db3b74247a1c264fc4bcb86070b3c48d65203a4f6d6c071d5a81f9"
+    },
+    "catalog_926.hash": {
+      "file": "assets/pokemon/local/mythical/catalog_926.hash",
+      "bytes": 32,
+      "sha256": "b289fd1ca237e6f33e19422e3da324d659035a072d3d0f721aedaa5f82c20b02"
+    },
+    "3ditems_assets_all_e2fe543efc0dcb9b0b3bbe1aa32b06e5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/3ditems_assets_all_e2fe543efc0dcb9b0b3bbe1aa32b06e5.bundle",
+      "bytes": 288509,
+      "sha256": "5edbca474d29cd79ddd532559dc0dbf320ccbc146e8ea6a9bd2226c88a067db5"
+    },
+    "adventureeffectactivation_assets_all_b5e50b97d5aba95e36329a45660d3375.bundle": {
+      "file": "assets/pokemon/local/client-runtime/adventureeffectactivation_assets_all_b5e50b97d5aba95e36329a45660d3375.bundle",
+      "bytes": 1490216,
+      "sha256": "972ce06e73b5ca80816debf38826d650a47f17c138336492ae84a1d1aeda3aaa"
+    },
+    "arassets_shared_assets_all_3051f9af0b08e82996869e4647ba7e23.bundle": {
+      "file": "assets/pokemon/local/client-runtime/arassets_shared_assets_all_3051f9af0b08e82996869e4647ba7e23.bundle",
+      "bytes": 187748,
+      "sha256": "15744726cd26b6ab1b61a710595ea5e9e1ab7e9e05067d6ea5db55c8b314bf42"
+    },
+    "arassets_single_assets_pokemoniconformoverridedata_81cf3a9157816d60607b1dc148ab251b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/arassets_single_assets_pokemoniconformoverridedata_81cf3a9157816d60607b1dc148ab251b.bundle",
+      "bytes": 1899,
+      "sha256": "d6f74f19794acd5e6f7f54200daa6566022e799b6c2cdf364edff7026faefdfb"
+    },
+    "arassets_single_assets_snap_logo_en-us_7c6078f5cac9804f22181867302c0bbf.bundle": {
+      "file": "assets/pokemon/local/client-runtime/arassets_single_assets_snap_logo_en-us_7c6078f5cac9804f22181867302c0bbf.bundle",
+      "bytes": 57260,
+      "sha256": "80027eef5d2fc8b802209e4251ae71d1b6028c7932290ae616fc44fa5fcf3699"
+    },
+    "artutorials_assets_all_063aab54ef8fa40d95a1b5fd36786c68.bundle": {
+      "file": "assets/pokemon/local/client-runtime/artutorials_assets_all_063aab54ef8fa40d95a1b5fd36786c68.bundle",
+      "bytes": 196906,
+      "sha256": "3c5263e7ce75a6803e131129bdf8925b9a7d2850951cba10e9e2e765b0627004"
+    },
+    "avatarstyleshop_assets_all_7179af1067aa8660a3704b2e45761ed7.bundle": {
+      "file": "assets/pokemon/local/client-runtime/avatarstyleshop_assets_all_7179af1067aa8660a3704b2e45761ed7.bundle",
+      "bytes": 50150,
+      "sha256": "f84db6cb547e4fbf77cc56a9f08cf470f9eb3952d11f95043ef40b28abb5f93e"
+    },
+    "berryfx_assets_all_d937698feae88979d01b80fc6e1e1362.bundle": {
+      "file": "assets/pokemon/local/client-runtime/berryfx_assets_all_d937698feae88979d01b80fc6e1e1362.bundle",
+      "bytes": 102687,
+      "sha256": "69e929ccbe1d80367a1c08f5f7778961d88f19053453c2664d80d82807fae34c"
+    },
+    "breadbattlefx_assets_all_689c36aafaba80ddfa69cc0a421cacaf.bundle": {
+      "file": "assets/pokemon/local/client-runtime/breadbattlefx_assets_all_689c36aafaba80ddfa69cc0a421cacaf.bundle",
+      "bytes": 498059,
+      "sha256": "d34d81433fa53ec42f1190ee7b0a257444ce654688c212c5c19bd9a2b9ff87d0"
+    },
+    "buddyemotions_assets_all_3916e6a93db34bb956adf6b999225c30.bundle": {
+      "file": "assets/pokemon/local/client-runtime/buddyemotions_assets_all_3916e6a93db34bb956adf6b999225c30.bundle",
+      "bytes": 21969,
+      "sha256": "23b21a92824c024ed44b5b1e01b494a5d4b7ff61e33cbb45898c21c3610cf023"
+    },
+    "buddygiftwrap_assets_all_1ec8109784e84aa7f1696fabc276bcdc.bundle": {
+      "file": "assets/pokemon/local/client-runtime/buddygiftwrap_assets_all_1ec8109784e84aa7f1696fabc276bcdc.bundle",
+      "bytes": 300712,
+      "sha256": "1f9be1ad0e6c4ec31ac997a791cffc960b15bfcecfd73df28145923f0dc11c90"
+    },
+    "buddytutorials_assets_all_38b19cba4aac7a8156499750ddd7a051.bundle": {
+      "file": "assets/pokemon/local/client-runtime/buddytutorials_assets_all_38b19cba4aac7a8156499750ddd7a051.bundle",
+      "bytes": 45902,
+      "sha256": "5e238fda4326c10459dd66c74edfbb387edb4b31cdb64b9f987f771e094dcfeb"
+    },
+    "combatmusic_assets_all_bb661f790dff1c09c8836666e99bad54.bundle": {
+      "file": "assets/pokemon/local/client-runtime/combatmusic_assets_all_bb661f790dff1c09c8836666e99bad54.bundle",
+      "bytes": 5277802,
+      "sha256": "28ee420d5575be7d30131b97d03513ab45eddc2482c3d83f1e580c27ff4a691b"
+    },
+    "contextualmusic_assets_buddymusic_d3c5756ed226cc894829a01e018bc4ea.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_buddymusic_d3c5756ed226cc894829a01e018bc4ea.bundle",
+      "bytes": 417257,
+      "sha256": "52bef9f7ddaa6fa8cfdb5e935e245f32fe3bd83048e11b06ec829ade203ceadf"
+    },
+    "contextualmusic_assets_dayencountermusic_5df6106664a2f9cc1db5fb2fed89a38b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_dayencountermusic_5df6106664a2f9cc1db5fb2fed89a38b.bundle",
+      "bytes": 458265,
+      "sha256": "ccdbf1d2edab59345a86ee7d7cdf6949cb260a1219d808e29e5de6b8bc7fbef3"
+    },
+    "contextualmusic_assets_evolutioncompletionme_ef15ea9f0146e52ed1d9ed4778636088.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_evolutioncompletionme_ef15ea9f0146e52ed1d9ed4778636088.bundle",
+      "bytes": 94355,
+      "sha256": "b31dc6758707525c8ad417d2a19cc13169d35cacbcdb920437b220e952d56031"
+    },
+    "contextualmusic_assets_evolvemusic_fda3bbee992fe2cafb0bc6ec4b848160.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_evolvemusic_fda3bbee992fe2cafb0bc6ec4b848160.bundle",
+      "bytes": 264044,
+      "sha256": "95373301f2fec7461c69c6942b6cda1b3af1a73219b46e6a24086b9bc6f1a41d"
+    },
+    "contextualmusic_assets_gotchamusiceffect_099de175a014fcbeeca47676ccf8d288.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_gotchamusiceffect_099de175a014fcbeeca47676ccf8d288.bundle",
+      "bytes": 93782,
+      "sha256": "fe5e25c7de8168e78f3dfc6633c93a44cfdce9b1f81ddab97fb01c3ad7e6861d"
+    },
+    "contextualmusic_assets_gotchamusiceffectmetamon_7b481dd94bbbb4074285c2840c0753d5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_gotchamusiceffectmetamon_7b481dd94bbbb4074285c2840c0753d5.bundle",
+      "bytes": 264053,
+      "sha256": "79c0f9fa2daa932cad8d826165fbf26b0a6893188c167ab0b47536e8ce21b545"
+    },
+    "contextualmusic_assets_gotchamusiceffectrare_511df48c8acbe928a8e0b9d75e6fd6b1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_gotchamusiceffectrare_511df48c8acbe928a8e0b9d75e6fd6b1.bundle",
+      "bytes": 142155,
+      "sha256": "929fd8ce691066d7b08f3cd4df64ce6e15b352e5ed66f1bd9175a4108d4c8728"
+    },
+    "contextualmusic_assets_gotchamusicloop_c2e1b32af5dac52625da91492c130e71.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_gotchamusicloop_c2e1b32af5dac52625da91492c130e71.bundle",
+      "bytes": 270571,
+      "sha256": "2fadfe97f9435356b3f14c7cdfa05b85fa794a695b97e4c97c3bcfa5e8f544be"
+    },
+    "contextualmusic_assets_levelupmusic_b39d02911711f8ca35a0911564618f2b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_levelupmusic_b39d02911711f8ca35a0911564618f2b.bundle",
+      "bytes": 39749,
+      "sha256": "8960ae99e37837257b3ab3f86dd22da5d1919c39fed5dcb5666fdb99a1fcb047"
+    },
+    "contextualmusic_assets_levelupv3_levelup_base_0c8facaf3c772236a697a5bf288b66f4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_levelupv3_levelup_base_0c8facaf3c772236a697a5bf288b66f4.bundle",
+      "bytes": 131410,
+      "sha256": "e0ab3898e0c9cc403507239cfa9219d5eef7fabbbc63b1459e10b7f67e090a76"
+    },
+    "contextualmusic_assets_levelupv3_levelup_max_47857a35224feed31d75cfd3b1ea2bba.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_levelupv3_levelup_max_47857a35224feed31d75cfd3b1ea2bba.bundle",
+      "bytes": 162745,
+      "sha256": "f490f83a6f39b36b6b2f476137eda3da72f170a40deb4e4b45d38bccf6991432"
+    },
+    "contextualmusic_assets_nightencountermusic_97042bc1609e94d784f35cc56e17f8e3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_nightencountermusic_97042bc1609e94d784f35cc56e17f8e3.bundle",
+      "bytes": 404569,
+      "sha256": "b83b9d5c3bb36dc8c001f6327010b62ad2ddba1b5d51b82dc5633ba9fad289e1"
+    },
+    "contextualmusic_assets_questmusic_2aa20bf105da0a294e4f9ed6a512681a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_questmusic_2aa20bf105da0a294e4f9ed6a512681a.bundle",
+      "bytes": 1235273,
+      "sha256": "999090cbe940f937e50c5909701a23ab93298d25b0b4ed8d7bec7b698cd51042"
+    },
+    "contextualmusic_assets_titlemusic_9abba11b15b7297877fd5d62feff5f4f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/contextualmusic_assets_titlemusic_9abba11b15b7297877fd5d62feff5f4f.bundle",
+      "bytes": 162508,
+      "sha256": "9ec5c220e3efb3f1d58049d97d7550c59153c4d10fa04efeabbeea9e0a77cd31"
+    },
+    "coordinatedraids_assets_raidlevelgradientcolors_coordinatedraid1_666481148ff826bea559933a7f6f0443.bundle": {
+      "file": "assets/pokemon/local/client-runtime/coordinatedraids_assets_raidlevelgradientcolors_coordinatedraid1_666481148ff826bea559933a7f6f0443.bundle",
+      "bytes": 2598,
+      "sha256": "6691ba00514ce06f4411d92bbb51b800efefcb076da56368842b0e90a8fe31d7"
+    },
+    "coordinatedraids_assets_raidlevelgradientcolors_coordinatedraid2_216e67ffea5d8652da520af8dc946013.bundle": {
+      "file": "assets/pokemon/local/client-runtime/coordinatedraids_assets_raidlevelgradientcolors_coordinatedraid2_216e67ffea5d8652da520af8dc946013.bundle",
+      "bytes": 2583,
+      "sha256": "9650e0938babe61c12da3b9bb10f35dc18b90d9a22614a479913a94cf78b102d"
+    },
+    "customattackanimoverride_assets_all_0988795f6e0096c5c7f867eb769a57d8.bundle": {
+      "file": "assets/pokemon/local/client-runtime/customattackanimoverride_assets_all_0988795f6e0096c5c7f867eb769a57d8.bundle",
+      "bytes": 2493,
+      "sha256": "c49f42864a865a1086c80041bd7a7a9e20cead67c2fbd2208a124fd92c504296"
+    },
+    "encounter_shared_assets_all_5989804a93cebcd71ea3b39a0ac45a2d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/encounter_shared_assets_all_5989804a93cebcd71ea3b39a0ac45a2d.bundle",
+      "bytes": 113756,
+      "sha256": "d04002953c4a187faacff6c18c133222d76212128893aa5ff76873cbc4589d8c"
+    },
+    "eventpass_assets_all_54e5f4988253010f5536c1bcd5b641df.bundle": {
+      "file": "assets/pokemon/local/client-runtime/eventpass_assets_all_54e5f4988253010f5536c1bcd5b641df.bundle",
+      "bytes": 647710,
+      "sha256": "dc19c0769bd8eb42a1ea9de541e771a3cab243723ff9cdf9f391aebfa453eebb"
+    },
+    "formchangebanners_assets_all_4e74d5e687f06f2e3f795563cb0390c2.bundle": {
+      "file": "assets/pokemon/local/client-runtime/formchangebanners_assets_all_4e74d5e687f06f2e3f795563cb0390c2.bundle",
+      "bytes": 80186,
+      "sha256": "fe23b4349431eae4df29330b8764ae259e2c04b545b2aba7df2af6777529e2c9"
+    },
+    "genericicons_assets_all_7e9e540babfaa5ccf2db7fa191508e0c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/genericicons_assets_all_7e9e540babfaa5ccf2db7fa191508e0c.bundle",
+      "bytes": 127696,
+      "sha256": "4fbcac620dce9840f3eef97852c7bac397baf80db09a190cb966303250188c70"
+    },
+    "hypertraining_assets_all_7cd216e9663bb2ec40537c72f364ec82.bundle": {
+      "file": "assets/pokemon/local/client-runtime/hypertraining_assets_all_7cd216e9663bb2ec40537c72f364ec82.bundle",
+      "bytes": 225665,
+      "sha256": "2ff0f12669bdaeb6c361609c3eb1ee3077cc317cdc669141fa2469fe47fc0fb0"
+    },
+    "hypertrainingui_assets_all_01b5723153ae78928372d53d68e68fdb.bundle": {
+      "file": "assets/pokemon/local/client-runtime/hypertrainingui_assets_all_01b5723153ae78928372d53d68e68fdb.bundle",
+      "bytes": 20451,
+      "sha256": "d91ac86c463b5050a4a97ac1bc73d7a3c4878540a3856691cb8c28fe0145f6d3"
+    },
+    "incense_assets_all_721b04f092311927cbf57a2b922bca82.bundle": {
+      "file": "assets/pokemon/local/client-runtime/incense_assets_all_721b04f092311927cbf57a2b922bca82.bundle",
+      "bytes": 58654,
+      "sha256": "8e44beffd49774ecf8b772683276025d08f76b456dc56404d43500eb8330ee0e"
+    },
+    "items_assets_all_d66f9eaf8741b78357a5bcbe88075ea6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/items_assets_all_d66f9eaf8741b78357a5bcbe88075ea6.bundle",
+      "bytes": 3166238,
+      "sha256": "2eb0f0d8122f7301249bf2f719beb0245c5e8dab5a889099b87c7c43d47d31d0"
+    },
+    "levelupguis_assets_all_a5a80e117eed4816fd76301163741523.bundle": {
+      "file": "assets/pokemon/local/client-runtime/levelupguis_assets_all_a5a80e117eed4816fd76301163741523.bundle",
+      "bytes": 686652,
+      "sha256": "621c8b7aa9de190124a23fc5e78fd77693aa0c135dbcd0cae5137c6e3a8a4f18"
+    },
+    "loadingscreen_assets_all_432ad5649686c90cdf38eebeac2107e4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/loadingscreen_assets_all_432ad5649686c90cdf38eebeac2107e4.bundle",
+      "bytes": 445179,
+      "sha256": "1847132df4939be9d55fd0b3d6d232f72c288acf000cb00a3cf5fa2e41bd32ba"
+    },
+    "lures_assets_all_998cc231298a2194abf522193de07861.bundle": {
+      "file": "assets/pokemon/local/client-runtime/lures_assets_all_998cc231298a2194abf522193de07861.bundle",
+      "bytes": 312825,
+      "sha256": "d32c112973cb88f473c6204dfa557a7b406530591de4b43d4d738d6f9d9d51ca"
+    },
+    "mapeffects_assets_level_up_avatar_base_26e2ad6ff9a6b2bd596be19d87ed6e93.bundle": {
+      "file": "assets/pokemon/local/client-runtime/mapeffects_assets_level_up_avatar_base_26e2ad6ff9a6b2bd596be19d87ed6e93.bundle",
+      "bytes": 58258,
+      "sha256": "b1440ed0557f6df64ff141fdb7d276b859596c227326206914d29abf5dad8c1e"
+    },
+    "mapeffects_assets_level_up_avatar_max_41e3b77a12f4a6c96870782247b000d5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/mapeffects_assets_level_up_avatar_max_41e3b77a12f4a6c96870782247b000d5.bundle",
+      "bytes": 55884,
+      "sha256": "828f0ed971ee32d60f3ef0cabcd8bfc9bde5bd5dd1b4f839ad2eaaca475fcbc7"
+    },
+    "mapmusic_assets_all_988d769f383e6c42fbc172cd35088cba.bundle": {
+      "file": "assets/pokemon/local/client-runtime/mapmusic_assets_all_988d769f383e6c42fbc172cd35088cba.bundle",
+      "bytes": 7815823,
+      "sha256": "85ccac7595eb33311378e65d2f4b28e43aefc6828976e49ed8127661d4884952"
+    },
+    "mapvisual_shared_assets_all_556012ff14a26c0909a5ea7d3c611015.bundle": {
+      "file": "assets/pokemon/local/client-runtime/mapvisual_shared_assets_all_556012ff14a26c0909a5ea7d3c611015.bundle",
+      "bytes": 73973,
+      "sha256": "3c73f63c72d84ef7af1ed94e7dbb23a99c3c5453eca0354e10e2449f948631ec"
+    },
+    "materials_shared_assets_defaultimport_ed56fa9265987bbc9eaa8cf182935584.bundle": {
+      "file": "assets/pokemon/local/client-runtime/materials_shared_assets_defaultimport_ed56fa9265987bbc9eaa8cf182935584.bundle",
+      "bytes": 19404,
+      "sha256": "823e8a16b81cd12616bb3bedaa90575a00c5534350b7349524cd09e450c32c95"
+    },
+    "materials_shared_assets_lit_mat_fa8f963e5ea1db9a68a4e04753a159bb.bundle": {
+      "file": "assets/pokemon/local/client-runtime/materials_shared_assets_lit_mat_fa8f963e5ea1db9a68a4e04753a159bb.bundle",
+      "bytes": 3180,
+      "sha256": "0107b4ad24b5bae875001b85ea17af3722577339df3c0ce9f41a5bcec165bc71"
+    },
+    "mega_assets_all_8497feed3b37a181eef95871f8a05275.bundle": {
+      "file": "assets/pokemon/local/client-runtime/mega_assets_all_8497feed3b37a181eef95871f8a05275.bundle",
+      "bytes": 1275215,
+      "sha256": "9fc2b31814ae2fc70ff6460fa7e701daa4a5a1a211da35a3a7a7eba746b827aa"
+    },
+    "megacandymaterials_assets_all_e3a6585a5cfdf125019480a41b2a020d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/megacandymaterials_assets_all_e3a6585a5cfdf125019480a41b2a020d.bundle",
+      "bytes": 76351,
+      "sha256": "dded0245d8400534d0ab7748f861d3e0946eda8dcf370870ae401e0b54574b71"
+    },
+    "naturalartcommonassets_assets_all_b1b8a9cf9ba275b8aef1d0b0d2698b69.bundle": {
+      "file": "assets/pokemon/local/client-runtime/naturalartcommonassets_assets_all_b1b8a9cf9ba275b8aef1d0b0d2698b69.bundle",
+      "bytes": 104786,
+      "sha256": "8bdfe826ee3651611f06a3386635731c01a951c557b574e7c0467b0851a2142f"
+    },
+    "naturalartmap_assets_all_49442c884d7da7e2a05b94ba8c762f32.bundle": {
+      "file": "assets/pokemon/local/client-runtime/naturalartmap_assets_all_49442c884d7da7e2a05b94ba8c762f32.bundle",
+      "bytes": 147452,
+      "sha256": "cc3e618e775ed8c17baa16e0981e5815993a1434fc8e72e1a420fa05ac77b14d"
+    },
+    "npcavatars_assets_professor_14461ff154dda57d769a26af1f045aff.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcavatars_assets_professor_14461ff154dda57d769a26af1f045aff.bundle",
+      "bytes": 32594,
+      "sha256": "3f16604ce6d2b1e9e3bcf74cbda20208d7b4a6cc8655b926e3cdea93c14a5e63"
+    },
+    "npccommonanimations_assets_all_e306d5029a3422f85012da85333f96f3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npccommonanimations_assets_all_e306d5029a3422f85012da85333f96f3.bundle",
+      "bytes": 14185,
+      "sha256": "84e37c682e4274b68dce4b7e30f01fa6c101064ee0dc47cc8224b5097c7d9d8a"
+    },
+    "npcicons_assets_professor_willow_a62233c56611656ea02ed6d1c79f81f0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcicons_assets_professor_willow_a62233c56611656ea02ed6d1c79f81f0.bundle",
+      "bytes": 10235,
+      "sha256": "06e82ded0e31b2499570b1bb4e6edf038240dc00b990263a851c8d4a8c20596e"
+    },
+    "npcwillow_shared_assets_all_6b95e3666d89f6d976c087ea9b93c0e7.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcwillow_shared_assets_all_6b95e3666d89f6d976c087ea9b93c0e7.bundle",
+      "bytes": 1243185,
+      "sha256": "746faf6edbcb64542f0c08db92ffb7b10bfcd01a9cd04381c4453903679ce243"
+    },
+    "parkscenes_assets_defaultparkscene_9dd643f532e04c8f3d7689647dee7896.bundle": {
+      "file": "assets/pokemon/local/client-runtime/parkscenes_assets_defaultparkscene_9dd643f532e04c8f3d7689647dee7896.bundle",
+      "bytes": 191073,
+      "sha256": "d77f0c8623e533b55dbe276aead69ae999686828720978800a4ccc5378f4825c"
+    },
+    "partyplay_assets_all_4f769fb994b461a3303250dfbc75cf0d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/partyplay_assets_all_4f769fb994b461a3303250dfbc75cf0d.bundle",
+      "bytes": 207948,
+      "sha256": "02b2d288a86a323be4ffd03115e184f544d9d50dd74bba40d72ff6e86aac1f9e"
+    },
+    "partyplayadditionalactivityicons_assets_all_bd35129b1fb93a0cc2a6c02e2384ee13.bundle": {
+      "file": "assets/pokemon/local/client-runtime/partyplayadditionalactivityicons_assets_all_bd35129b1fb93a0cc2a6c02e2384ee13.bundle",
+      "bytes": 13116,
+      "sha256": "97e07e04dde2e4cb767713d359e12bcdc94abfa6eee42eda5d4b67040d76df70"
+    },
+    "pokeball_shared_assets_all_3ae4de10d5c67699f32998ffe0021a5f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokeball_shared_assets_all_3ae4de10d5c67699f32998ffe0021a5f.bundle",
+      "bytes": 170217,
+      "sha256": "0fd23fc574f2eec1b1af1aa6635f01848c00fed7369584878c9121d81fa21c24"
+    },
+    "pokeballfx_assets_all_58fe8e540af1f4e39d88d4b7c1975289.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokeballfx_assets_all_58fe8e540af1f4e39d88d4b7c1975289.bundle",
+      "bytes": 149444,
+      "sha256": "e1cb5a5f494320450e99164cd63c532d3408f86567d20cf9a2eabc796b267d62"
+    },
+    "pokeballs_assets_all_45c35eaf8cefce1154fac74f97efcf1e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokeballs_assets_all_45c35eaf8cefce1154fac74f97efcf1e.bundle",
+      "bytes": 337223,
+      "sha256": "50e4bd1fb2671afbc1980d05a28e9890df3aeb740645aae7d79531e8a9deb350"
+    },
+    "pokeballsbg_assets_all_71b02b4686e42b07be1ca12b00135361.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokeballsbg_assets_all_71b02b4686e42b07be1ca12b00135361.bundle",
+      "bytes": 16677,
+      "sha256": "d8bb69cc9784ab3133da240b7ce77e005804f568dc859e069a20ecba5f977bd6"
+    },
+    "pokedexmultiformdata_assets_all_c0a8ccc2d981ae32f957353fa6225a00.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokedexmultiformdata_assets_all_c0a8ccc2d981ae32f957353fa6225a00.bundle",
+      "bytes": 4760,
+      "sha256": "b81153130fc1912a7820e947f4b21445aeb1f0505892153414d8583c67ece674"
+    },
+    "pokedexregionbuttons_assets_all_42c91a1ef175ade8294b609ad296ffc3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokedexregionbuttons_assets_all_42c91a1ef175ade8294b609ad296ffc3.bundle",
+      "bytes": 501920,
+      "sha256": "ecddbf80b0888cacdd252472cb862524aa25c2189ad4c60fbdd5487a51694a4d"
+    },
+    "pokemondata_assets_pokemoncandycolordata_5e45f8f70cf904642445a631b4dec9b2.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokemondata_assets_pokemoncandycolordata_5e45f8f70cf904642445a631b4dec9b2.bundle",
+      "bytes": 13217,
+      "sha256": "f0618dda7daa2b31d7793b21b077db1667c98d71e9749c372b13612d6269ae22"
+    },
+    "pokemoninventoryui_assets_all_b1b2004429609b44f6289b6256eb0eb9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokemoninventoryui_assets_all_b1b2004429609b44f6289b6256eb0eb9.bundle",
+      "bytes": 21067,
+      "sha256": "c47166dec36968ba16638f58b7f675f08e9d11682d59a182e827b39b430114af"
+    },
+    "pokemontypebackgrounds_assets_all_78a383eb076844f4f6785d777dfee74f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokemontypebackgrounds_assets_all_78a383eb076844f4f6785d777dfee74f.bundle",
+      "bytes": 636632,
+      "sha256": "71ef683672e629b1aaeed9e6380314e03c72f9ed354df3acd077d8f16818e814"
+    },
+    "pokestopshowcase_assets_all_9dbcca30f7382ad958e1567ca90e86ad.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokestopshowcase_assets_all_9dbcca30f7382ad958e1567ca90e86ad.bundle",
+      "bytes": 155934,
+      "sha256": "81f053141a8ba1cad38a6744507d7ce6c81006cc6797a31a9b2a2a985f7fa223"
+    },
+    "questdialogue_assets_background_professor_willow_ec8e2e919ef3c080ccb3b24c99e39992.bundle": {
+      "file": "assets/pokemon/local/client-runtime/questdialogue_assets_background_professor_willow_ec8e2e919ef3c080ccb3b24c99e39992.bundle",
+      "bytes": 114421,
+      "sha256": "1874534bcb310e06ad5c9e6d7f5d8d1524567eb9c455d602d0a095d50f39ff2e"
+    },
+    "questdialogue_assets_foreground_professor_willow_e7fc10417c94dccfe0c83c3120b88351.bundle": {
+      "file": "assets/pokemon/local/client-runtime/questdialogue_assets_foreground_professor_willow_e7fc10417c94dccfe0c83c3120b88351.bundle",
+      "bytes": 56887,
+      "sha256": "bca6ff4aa4f7563db078e63b0277cf79829f69e00dd44b70839ef44cc0a10af7"
+    },
+    "questicons_assets_all_be5e24b97190d5aefc89e182d41f0325.bundle": {
+      "file": "assets/pokemon/local/client-runtime/questicons_assets_all_be5e24b97190d5aefc89e182d41f0325.bundle",
+      "bytes": 48918,
+      "sha256": "4925475908e595bcc76247103aef5e8b8baaccd72eab1ea137ac829ef20ba554"
+    },
+    "questlistgui_assets_all_350c57335d00e5db4b2cbf79fdb64e1f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/questlistgui_assets_all_350c57335d00e5db4b2cbf79fdb64e1f.bundle",
+      "bytes": 320038,
+      "sha256": "4f564c3c44123aeaf90accf0a02bc0808dfd159c70aa121446367b0585de18d6"
+    },
+    "raid_assets_all_d38539c5045548e4dd3f10515d89305b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/raid_assets_all_d38539c5045548e4dd3f10515d89305b.bundle",
+      "bytes": 2137548,
+      "sha256": "60d2a1d094f823e760313adaa81569f3c64b52f33dc15895b3a25256e90320da"
+    },
+    "raideggs_assets_all_5b64bc8f9444e5a82bd8037ad979ba9a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/raideggs_assets_all_5b64bc8f9444e5a82bd8037ad979ba9a.bundle",
+      "bytes": 1205048,
+      "sha256": "f86d6ea9a70549601e6b76be3ddeb78014cdf04a96f7790a42ead946d18fc748"
+    },
+    "raidmusic_assets_all_bc4ecdf1b897498c2624bd7cce67c5d4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/raidmusic_assets_all_bc4ecdf1b897498c2624bd7cce67c5d4.bundle",
+      "bytes": 7069760,
+      "sha256": "d5f13dd42fdc797c89cb28eb751043b99105b38264bc2152eea55e2b9b924ac4"
+    },
+    "remotetrade_assets_all_947d7026e49c609fc157dc48086a44f1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/remotetrade_assets_all_947d7026e49c609fc157dc48086a44f1.bundle",
+      "bytes": 687389,
+      "sha256": "20ee505d3694231de8e9190601dba9cbb4cfcf9a9a8fb393385427579959f3bb"
+    },
+    "sharedaudio_assets_se_go_sys_select_f4c2fe258d30d34596a2b7f8b1389ca0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedaudio_assets_se_go_sys_select_f4c2fe258d30d34596a2b7f8b1389ca0.bundle",
+      "bytes": 6509,
+      "sha256": "f48c891b3392c0b8813bb7c4d740dcae97f3cd55ed15acc77714d516bb22ea40"
+    },
+    "sharedfx_assets_brdf_mask_gloss_9433838567007ec6d2787d1492e45821.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_brdf_mask_gloss_9433838567007ec6d2787d1492e45821.bundle",
+      "bytes": 4767,
+      "sha256": "600d0eae9ab8d6837bfae9749ed2995c3ca212fa0b89110a3911c94a12b59711"
+    },
+    "sharedfx_assets_brdf_mask_soft_5da82528c007d6663643c2098af2dc20.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_brdf_mask_soft_5da82528c007d6663643c2098af2dc20.bundle",
+      "bytes": 5177,
+      "sha256": "684b287199011ebcba98574214055968e96ffb59b50a2f6cdfb1725555d7760b"
+    },
+    "sharedfx_assets_brdf_mask_soft_rimsharp_3d20951acaf4a7fa6d8d8886755960a9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_brdf_mask_soft_rimsharp_3d20951acaf4a7fa6d8d8886755960a9.bundle",
+      "bytes": 4189,
+      "sha256": "0193dfceae7a272fa645bc3bd89bf5f5db990db94fb9c9c844c78367a3053794"
+    },
+    "sharedfx_assets_circle_516c9b3aad52160a610d04d69ce4dce1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_circle_516c9b3aad52160a610d04d69ce4dce1.bundle",
+      "bytes": 4010,
+      "sha256": "8d46d8cb0c4e7fdf045ed8ae894d76a3e84bfa6d305108c13bdad77b3ec66fe8"
+    },
+    "sharedfx_assets_cloudnoise_045244dc9337ff75dd3e8afebf87575f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_cloudnoise_045244dc9337ff75dd3e8afebf87575f.bundle",
+      "bytes": 12158,
+      "sha256": "53fbe4c66f46d8dd6df7211d61a0083ce7d9236854776b294dd94dd3967900b6"
+    },
+    "sharedfx_assets_clouds_3a3f15d7a474c1d0ffc69170a8c2a6a9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_clouds_3a3f15d7a474c1d0ffc69170a8c2a6a9.bundle",
+      "bytes": 31060,
+      "sha256": "a745413d965d55f25dd86d9136d65a5d44e67cdc07f158961f257bc58a78ac69"
+    },
+    "sharedfx_assets_distortion_bubbles_4aa40627cd8b460d9973bf2f9a5b42ee.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_distortion_bubbles_4aa40627cd8b460d9973bf2f9a5b42ee.bundle",
+      "bytes": 12218,
+      "sha256": "e193b684ede7106433a3f8922021e7a631e6a7d43d642d5f2fd1d16317417779"
+    },
+    "sharedfx_assets_flare_6_point_white_22b758081bef281bbb6d325d0b6b7991.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_flare_6_point_white_22b758081bef281bbb6d325d0b6b7991.bundle",
+      "bytes": 4454,
+      "sha256": "ccf18a88a8742b1aa5540614b74bd9ed8aafbce4dd39e8d90847613dd97b0cbe"
+    },
+    "sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_flare_cone_a92388889ab7db8f2c35616923f49a98.bundle",
+      "bytes": 20993,
+      "sha256": "2786d35cb8405600a467373ef1e66aa779ac3ec31bb53f00ea4ce1d1ad37bf41"
+    },
+    "sharedfx_assets_fx_flare_6_point_2_28ab966c653489f3a76c0cfa3a9fa00e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_flare_6_point_2_28ab966c653489f3a76c0cfa3a9fa00e.bundle",
+      "bytes": 2654,
+      "sha256": "0181812a79c021040ef1b2232aac5d9b64ab5403ad6c5912992729ff69ad54c2"
+    },
+    "sharedfx_assets_fx_glow_add_62fb0537a2b200c8df2f2dcb4510b8d1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_glow_add_62fb0537a2b200c8df2f2dcb4510b8d1.bundle",
+      "bytes": 2647,
+      "sha256": "37919f043a0f352c20a3fcd1a3d36d27ce9e234a4a5a0efb93687c2a09b8f4e9"
+    },
+    "sharedfx_assets_fx_glow2_add_9034c472725a4180049788ea1628e731.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_glow2_add_9034c472725a4180049788ea1628e731.bundle",
+      "bytes": 2650,
+      "sha256": "8827a30db6ee737bc168005199766ca4eb5a4b8a486cc343e380c6f62631b6ee"
+    },
+    "sharedfx_assets_fx_point_add_bf8f2943e63feb79188ae9d4a6ea66dc.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_point_add_bf8f2943e63feb79188ae9d4a6ea66dc.bundle",
+      "bytes": 2601,
+      "sha256": "60f0602718bc252700589dfc94709c17f791b28d2caf8b981bb619401287c277"
+    },
+    "sharedfx_assets_fx_preloader_flare_cone_1efd3b423fecc722e375b06b80914bbf.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_preloader_flare_cone_1efd3b423fecc722e375b06b80914bbf.bundle",
+      "bytes": 2628,
+      "sha256": "216430440125c4da16ff0a5da70b22e87eee784e8c96221c63305f70a4dd0491"
+    },
+    "sharedfx_assets_fx_preloader_point_de32b833ee42ded04e766c8bcad2e916.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_preloader_point_de32b833ee42ded04e766c8bcad2e916.bundle",
+      "bytes": 2703,
+      "sha256": "c22f5c6adb500c5e6529d80c96932dc981b70b49736c97d43040d850fcb13acf"
+    },
+    "sharedfx_assets_fx_ring_spike_blend_sharp_9c113ac70d8dee5f6dce2df410d0dac5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_ring_spike_blend_sharp_9c113ac70d8dee5f6dce2df410d0dac5.bundle",
+      "bytes": 2969,
+      "sha256": "94d70bc2d738e9f56585e2a3d81f8e34d134b791ba1c1a321f29009acf562a49"
+    },
+    "sharedfx_assets_fx_ring_thin_add_68fdd6e45aeecaa82a3060cbb0c728aa.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_ring_thin_add_68fdd6e45aeecaa82a3060cbb0c728aa.bundle",
+      "bytes": 2652,
+      "sha256": "7943f259bc2af8c13315f0e1362684748b67aeed3325e858618251a934f86aa8"
+    },
+    "sharedfx_assets_fx_sparkle_3948e70504758c83f2e486ed369584de.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_sparkle_3948e70504758c83f2e486ed369584de.bundle",
+      "bytes": 2613,
+      "sha256": "554bc96fea136974c81453a46609cab31b0c5931405d8f3769293af26256c16d"
+    },
+    "sharedfx_assets_fx_ui_snowflake_599ed2daf15a202dc090283ced7024f6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_ui_snowflake_599ed2daf15a202dc090283ced7024f6.bundle",
+      "bytes": 2715,
+      "sha256": "8628d2ea0a9dd3350785a095cb3f6d3760bbe8023a6d3689ec1a3f0e6d15ba64"
+    },
+    "sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_glow_629e9034cc31110ba71bd381932a634c.bundle",
+      "bytes": 7206,
+      "sha256": "38629264be83eef356dbd569cc8d778c26a44a8090cd74c4da918c5c45e14596"
+    },
+    "sharedfx_assets_glow_dot_791d13d765ef40fe87592d0d51c05bc0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_glow_dot_791d13d765ef40fe87592d0d51c05bc0.bundle",
+      "bytes": 9323,
+      "sha256": "8d3b04be056d4bcf13990a7746f4d34f7e4da5ca135c8adf6f6e09ed8a808107"
+    },
+    "sharedfx_assets_glow_preloader_f020892f56adec75db0db8865a77318b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_glow_preloader_f020892f56adec75db0db8865a77318b.bundle",
+      "bytes": 9727,
+      "sha256": "e0723298bf6ae840568d19a4ca76545d7f9b2f7b9e0e2c60f1d999e90a2fd6e7"
+    },
+    "sharedfx_assets_mesh_half_sphere_aura_569ab9c4bc2a2eea0da04e7244438278.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_half_sphere_aura_569ab9c4bc2a2eea0da04e7244438278.bundle",
+      "bytes": 22752,
+      "sha256": "7d19cec955084594373fb554c58cc84fec21c803db6b2e6c84f383d328ba8e8e"
+    },
+    "sharedfx_assets_mesh_razorshell_4d0d9ef874e4d2f8e7ce98fddb630520.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_razorshell_4d0d9ef874e4d2f8e7ce98fddb630520.bundle",
+      "bytes": 7576,
+      "sha256": "687aebac44c531dc366f86faa27f1c0ab4d46ec17ba7f98ef02d0dbc1694bc39"
+    },
+    "sharedfx_assets_mesh_ring_outward_short_2b8ced48f116ba7b16a5b5f1d780f446.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_ring_outward_short_2b8ced48f116ba7b16a5b5f1d780f446.bundle",
+      "bytes": 8359,
+      "sha256": "f43dfe3e554e0f4e3f198b54fc57432b8f62a427915d41c32824886b6161ff19"
+    },
+    "sharedfx_assets_mesh_slash_e2ee95c54f62850601b22a94129d95cc.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_slash_e2ee95c54f62850601b22a94129d95cc.bundle",
+      "bytes": 11353,
+      "sha256": "a5ff9ddc7c2441a1e3c748493e9706461d7a0da1570d45d2cadff978e71b51bc"
+    },
+    "sharedfx_assets_mesh_sphere_35cfee019603da65038ba6c689ffa2c5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_sphere_35cfee019603da65038ba6c689ffa2c5.bundle",
+      "bytes": 10329,
+      "sha256": "393b4ff0c2ada9ba1b13e7e255c968e49ba5b6e7ff99f095df9b450a85c66cf3"
+    },
+    "sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_pokeballglow_9ca8328f5e7707b7dcb1179a1232c664.bundle",
+      "bytes": 7857,
+      "sha256": "e293fdd265bf86497970cd0f82e60afb28ea16171af8e7d73d5af4d1ac18fd87"
+    },
+    "sharedfx_assets_projectorfx_cone_0236195300f415619e960e2be762ce34.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_projectorfx_cone_0236195300f415619e960e2be762ce34.bundle",
+      "bytes": 2722,
+      "sha256": "eaa9b9a0f7c50ee8320f61e279dbb0ece2d65052b5fbfeb15e23b570a7733c98"
+    },
+    "sharedfx_assets_ring_spike_sharp_95152b0c1468e1b5c617d912f5304d5e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_ring_spike_sharp_95152b0c1468e1b5c617d912f5304d5e.bundle",
+      "bytes": 3864,
+      "sha256": "2adc0fc147ffe20b005173b77419d703c29184fbde61cb4296eb6b8d86424ccf"
+    },
+    "sharedfx_assets_smoke_soft_1bc0790b673ce3eac8956a54cdeafb3b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_smoke_soft_1bc0790b673ce3eac8956a54cdeafb3b.bundle",
+      "bytes": 9922,
+      "sha256": "bffeb41ac39f9fc9d81da6243a4fbab64a1c6505d527898615198fd4b3319212"
+    },
+    "sharedfx_assets_snowflake_83ceafed27853015a5ebb964a85c21fe.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_snowflake_83ceafed27853015a5ebb964a85c21fe.bundle",
+      "bytes": 4527,
+      "sha256": "e64f1a47142477d8b8f2fef3f1d32c1bab5d3d498e594ba44928660cc992467d"
+    },
+    "sharedfx_assets_sparkle_7423da37bbe9ec4211d8cf460723cbe6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_sparkle_7423da37bbe9ec4211d8cf460723cbe6.bundle",
+      "bytes": 2569,
+      "sha256": "93f9721c8b0f059a4edeb60e29e7e27b5ea1410050cd7a84b1280ef589b40611"
+    },
+    "sharedfx_assets_sparkles1_fe2d28fec3c822cbc51fbef8fc8e8f2f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_sparkles1_fe2d28fec3c822cbc51fbef8fc8e8f2f.bundle",
+      "bytes": 2405,
+      "sha256": "7536a6ab24d090fc6d1fd8b55b8cd7e8ce4299a0b392de7243304443ba810897"
+    },
+    "sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_star02_ef94ea2af614761c5fe1d77decc47957.bundle",
+      "bytes": 8042,
+      "sha256": "404bff6d28547c327e28516292bab481f0c85108e91f62c12e97ad0ac9b9a92a"
+    },
+    "sharedfx_assets_tx_spritesheet_confetti_d28972e77bc2addb44af59a307d7b06f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_tx_spritesheet_confetti_d28972e77bc2addb44af59a307d7b06f.bundle",
+      "bytes": 5237,
+      "sha256": "c3bcfbae7e2cbe1bb9c747ceeffc3e0c88a4c6fd30a9800d499633131bdd3d9a"
+    },
+    "sharedicons_assets_recent_clock_icon_white_bf4767e2b5a0d4166760c4627a7cc79f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedicons_assets_recent_clock_icon_white_bf4767e2b5a0d4166760c4627a7cc79f.bundle",
+      "bytes": 9116,
+      "sha256": "af32115cf068166cfade608677b54d641f616ca37a8f84a65ed61f96879cc150"
+    },
+    "sharedicons_assets_spr_pokemon_buddy_crown_badge_icon_small_a722863f914e0145eb40f9560db3ae6d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedicons_assets_spr_pokemon_buddy_crown_badge_icon_small_a722863f914e0145eb40f9560db3ae6d.bundle",
+      "bytes": 5106,
+      "sha256": "6ae4f5762f87bee70dc0746d84291b9fee2eb6c3f308bb07f0618d3f7495686e"
+    },
+    "sharedicons_assets_spr_pokemon_buddy_traded_icon_f9b71e11aab4f974c349a66cf1a9265e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedicons_assets_spr_pokemon_buddy_traded_icon_f9b71e11aab4f974c349a66cf1a9265e.bundle",
+      "bytes": 6000,
+      "sha256": "74eba2b486eb142555b61dcfa21b170dc29133048b06bc0d80fb263c679414b3"
+    },
+    "sharedshaders_assets_brdf-customenvironment_5cf32401467a0fa7592c4bdaf1e189f1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_brdf-customenvironment_5cf32401467a0fa7592c4bdaf1e189f1.bundle",
+      "bytes": 20930,
+      "sha256": "1888951533bfa5decd3039a7a7c322ce6d4c94929350dbdb8da360f203abdecb"
+    },
+    "sharedshaders_assets_fallbackerror_1d2d0dd5c824a0cb4f4a3169d5c654f5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fallbackerror_1d2d0dd5c824a0cb4f4a3169d5c654f5.bundle",
+      "bytes": 17687,
+      "sha256": "e9f238035c9f5b0d6ba2ec4c2aa983a2b4043dcf677e7a32d816786d985c87ae"
+    },
+    "sharedshaders_assets_fallbackshader_7fa298364b150af8bf6210f0f3103cb9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fallbackshader_7fa298364b150af8bf6210f0f3103cb9.bundle",
+      "bytes": 17108,
+      "sha256": "511d0397db624e15920c69a6c73581b6054acf384b1cdc9017512f806c80002d"
+    },
+    "sharedshaders_assets_fx-additive_4b008e5464b16b86793e3aa3f1621487.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-additive_4b008e5464b16b86793e3aa3f1621487.bundle",
+      "bytes": 17886,
+      "sha256": "bdad549a92a361e4041fe4645253023c08e988322478ae750e1423fee07b78f1"
+    },
+    "sharedshaders_assets_fx-colorized-blend_b731135f510e94ce831930fb742391b5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-colorized-blend_b731135f510e94ce831930fb742391b5.bundle",
+      "bytes": 18074,
+      "sha256": "a596b91e29ae8696913c7f858069c2b4591f9adf676928ac19076a9e2e53d433"
+    },
+    "sharedshaders_assets_fx-stepped-distortion_82108bc7ba0947854618213fcbcb5f16.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-stepped-distortion_82108bc7ba0947854618213fcbcb5f16.bundle",
+      "bytes": 18451,
+      "sha256": "21b63a9d449497d3e8b86a76a3d2209779bea46a66af45dfaba5c6db832749b5"
+    },
+    "sharedshaders_assets_fx-transparent-panning_5b6eb11f77f3fb8f8f9d147af721ee13.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-transparent-panning_5b6eb11f77f3fb8f8f9d147af721ee13.bundle",
+      "bytes": 18218,
+      "sha256": "82ba4fa627e1592417bf886eda94f06e83565a787e6a133ee7bd4822e0f8dbe9"
+    },
+    "sharedshaders_assets_gofest2021_ringbase_e4cd8d55dca4e12237b1ffcc01800ebe.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_gofest2021_ringbase_e4cd8d55dca4e12237b1ffcc01800ebe.bundle",
+      "bytes": 19397,
+      "sha256": "458f13fdd435b45e696eec9d895458a69891bb6b2943eeb6bf16656c7bfb5da4"
+    },
+    "sharedshaders_assets_gofest2021_ringcenter_48fbdec2d699fef25f480654432714bc.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_gofest2021_ringcenter_48fbdec2d699fef25f480654432714bc.bundle",
+      "bytes": 19324,
+      "sha256": "b3790252426d2878dc5557be6ed389a40c7259ab2bd251c27e88f570571adaa2"
+    },
+    "sharedshaders_assets_gofest2021_ringglow_42d314d5a2395ff27b4f595496792e12.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_gofest2021_ringglow_42d314d5a2395ff27b4f595496792e12.bundle",
+      "bytes": 18430,
+      "sha256": "f0dbbed2850e5def4c27d6fcb8110e6a893c376197610d3b93e9611363f1778d"
+    },
+    "sharedshaders_assets_ground_6c15e3fb5642d3f2da153f17202dc616.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_ground_6c15e3fb5642d3f2da153f17202dc616.bundle",
+      "bytes": 31584,
+      "sha256": "1138e98bf1167c8b9852936fb9bd4ace1c4add5e9cbebff2e67132c86d62d626"
+    },
+    "sharedshaders_assets_holo-brdf_5b4f17b472520aa63d181233b8b505c3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_holo-brdf_5b4f17b472520aa63d181233b8b505c3.bundle",
+      "bytes": 19292,
+      "sha256": "eda3ab948a82dd23f634a23f8fc73622a67c113ac42ef648ff3e5c3f7704d37e"
+    },
+    "sharedshaders_assets_holocloudscape_cdcaa8deeb073a08d3ea376a0877fd76.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_holocloudscape_cdcaa8deeb073a08d3ea376a0877fd76.bundle",
+      "bytes": 18329,
+      "sha256": "ef829a011d0e7efeaf51f45bcbe399881f971728ca0b1218d60af6c6c867b595"
+    },
+    "sharedshaders_assets_item-glass_simple_c5a8f6e244e680f956bbe338f6a3af3f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_item-glass_simple_c5a8f6e244e680f956bbe338f6a3af3f.bundle",
+      "bytes": 19137,
+      "sha256": "052257a815c488ec76e07d6d1172a6f5e1d2178431405cc0c51dad076ba023af"
+    },
+    "sharedshaders_assets_lit_shader_16ff70494b527249c94d3090016ed290.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_lit_shader_16ff70494b527249c94d3090016ed290.bundle",
+      "bytes": 34827,
+      "sha256": "b2b8b16b6d1c4c26115f92347ee88d0b31dec577823bfc58ad65458c3f906599"
+    },
+    "sharedshaders_assets_milkyway_bac9dd8a472b958c229235737ea4a1ca.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_milkyway_bac9dd8a472b958c229235737ea4a1ca.bundle",
+      "bytes": 18357,
+      "sha256": "80f2a08214683c2b3279f8366f2f69001de39e78d4856614360183e664ef8a44"
+    },
+    "sharedshaders_assets_moon_56af2029252853d8dfd57d98aceac363.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_moon_56af2029252853d8dfd57d98aceac363.bundle",
+      "bytes": 19849,
+      "sha256": "42bb233fdbabdb3bc7782eeeb1caee042f4544bad4b227f77e3bec0783ac4a95"
+    },
+    "sharedshaders_assets_particlesunlit_dadcc38a88fa58b7ce570c69c8177f67.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_particlesunlit_dadcc38a88fa58b7ce570c69c8177f67.bundle",
+      "bytes": 24198,
+      "sha256": "7ffc00f098e2e1ca9c5bf66397b36f779787c147fb642c3f56771c1d0cec7052"
+    },
+    "sharedshaders_assets_pokeball_aabf138a20032c4857fdaaf32c6970d5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_pokeball_aabf138a20032c4857fdaaf32c6970d5.bundle",
+      "bytes": 23496,
+      "sha256": "c3efcf71d53bcc39c1aafa326e97eebdaf05195d15030e6a9c5e190d132fe9c6"
+    },
+    "sharedshaders_assets_pokemon-fx-stencil-additive_c67a1a7eb3b9a2fb60fc3931346642ca.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_pokemon-fx-stencil-additive_c67a1a7eb3b9a2fb60fc3931346642ca.bundle",
+      "bytes": 18187,
+      "sha256": "1866c0ad9d54106953ed2ac5bd9903a80df9a9ba267df28eb02d3e925ab2e0d8"
+    },
+    "sharedshaders_assets_stars_795d4cacb5d1b237b9d6265f47f35e16.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_stars_795d4cacb5d1b237b9d6265f47f35e16.bundle",
+      "bytes": 18521,
+      "sha256": "6f351f67c201b6b68cd017b7d01203b310f8c3bd5015956c3928a0166852eba0"
+    },
+    "sharedshaders_assets_unlit-color_fa989db89e34c096035e9995663fb47a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_unlit-color_fa989db89e34c096035e9995663fb47a.bundle",
+      "bytes": 17868,
+      "sha256": "fa179c3bea96c8f865bff57187972dd6e4c21ec416702de4e671064bf14d5d8e"
+    },
+    "sharedshaders_assets_unlit-colortexture_e2d6cc524acf984f27c4fc09631c44f6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_unlit-colortexture_e2d6cc524acf984f27c4fc09631c44f6.bundle",
+      "bytes": 17849,
+      "sha256": "aa97483e57b600f6501ac212bad0d6c2db83a88b58872ddde1d90042040a5bec"
+    },
+    "sharedshaders_assets_unlit-double-sided_142d2c0e5aa371e71bbb4955132733c0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_unlit-double-sided_142d2c0e5aa371e71bbb4955132733c0.bundle",
+      "bytes": 17736,
+      "sha256": "aafaf39aef4a6d79517633d036dae87e05b35b357e63c800021a44b9c12d6d02"
+    },
+    "sharedshaders_assets_water_053579869be157d16f0c3e3d86f3eb9e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_water_053579869be157d16f0c3e3d86f3eb9e.bundle",
+      "bytes": 23908,
+      "sha256": "eb98037ccc42130e4bafeb11225afa14fa397b05e5457bad470b25367745eec4"
+    },
+    "sharedshaders_assets_waterborder_1220efdc5a60c2e9a9353485030ffca8.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_waterborder_1220efdc5a60c2e9a9353485030ffca8.bundle",
+      "bytes": 18751,
+      "sha256": "91436087c5988cb8feaeb565f7cbf3f6dc0c5208922bb85ec6f1164b56fe5e37"
+    },
+    "sharedsky_assets_all_21fbba2371514d1aa09fcf84d3cef79d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedsky_assets_all_21fbba2371514d1aa09fcf84d3cef79d.bundle",
+      "bytes": 322145,
+      "sha256": "9fe3d30d3e6b4fd22c3b74dd36c0047ab87b6830cb939527d73ef8c0cdaec747"
+    },
+    "sharedtextures_assets_electric_power_b8b1a9dd70a71b0166369c6cefb41a9f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_electric_power_b8b1a9dd70a71b0166369c6cefb41a9f.bundle",
+      "bytes": 7463,
+      "sha256": "f85d4dd0273555590cd935f458fe7952ee9a9389a2acadba0c826f545b4e19cc"
+    },
+    "sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_gradient_8158b350ec0c44f250bc290f8efd8306.bundle",
+      "bytes": 2298,
+      "sha256": "c00ecfc2ffd40791e0ba0a33f80f73865d970884719f58a27d429b088f8c3e6b"
+    },
+    "sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_jirachimosswithalphatex_0ddd27dece17d7bf67487058c9005598.bundle",
+      "bytes": 3911,
+      "sha256": "58690ccf7486d3daee2c8971ec7892a81f596c0585315a523bf42af52f79c367"
+    },
+    "sharedtextures_assets_noiseclouds_8aa66d7a22271ca283b7054a6ab141c5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_noiseclouds_8aa66d7a22271ca283b7054a6ab141c5.bundle",
+      "bytes": 9720,
+      "sha256": "81cbd5574e7bc94d5202b1ccdfca76de16fc59e4feb4011ac3671085563efb6d"
+    },
+    "sharedtextures_assets_ring_thin_92e2aea88ccfa4cd77e026414d7ba41c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_ring_thin_92e2aea88ccfa4cd77e026414d7ba41c.bundle",
+      "bytes": 17127,
+      "sha256": "b6a1af65ce97e572d0343de32ae4a51ae6465499591ba98395767108cebda940"
+    },
+    "sharedtextures_assets_star04_7cf4aa2b3b538d797b28bc5cd0b19da4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_star04_7cf4aa2b3b538d797b28bc5cd0b19da4.bundle",
+      "bytes": 9411,
+      "sha256": "95cf36fb5b5ff030d27101770a6681673fccaf1a72ab9c5c9092ed75249a7ac5"
+    },
+    "sharedtextures_assets_triangle_arrow_713c4eeaf0d85af5bb58dc2504f4e3f4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_triangle_arrow_713c4eeaf0d85af5bb58dc2504f4e3f4.bundle",
+      "bytes": 4593,
+      "sha256": "4df19f2b035115f0f1355d2ca4f1e18c19c264a0fcd1ebc627a5a0949ebc591f"
+    },
+    "sharedtextures_assets_tx_glow_ring_quarter_de730e989eb91bfa5143885b489ad3ed.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_tx_glow_ring_quarter_de730e989eb91bfa5143885b489ad3ed.bundle",
+      "bytes": 7539,
+      "sha256": "cf322f812a08aded187c540e529a392ba7400108fcb1d6a13530e89866220f6e"
+    },
+    "sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_water_590bda661036d0cc2343065143305f19.bundle",
+      "bytes": 11269,
+      "sha256": "31480cf42f295dbf7da25a9bcda053308b63d6e3fc760487e5f73848341e8c28"
+    },
+    "sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtextures_assets_worldcloudnoise_091e117d87c55c910e7388472d5c7503.bundle",
+      "bytes": 12422,
+      "sha256": "de2967a45f07ae153e181414e1bf72a73ca4047cab04b0b15668e14c0456e383"
+    },
+    "sharedtmpfonts_assets_all_821fd065ba7c3e023f67ba9a93fbf914.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedtmpfonts_assets_all_821fd065ba7c3e023f67ba9a93fbf914.bundle",
+      "bytes": 27645672,
+      "sha256": "cfb3185cb1fad867bb489cdd1a91f67bd6d569077697b4db3d873cb3f1184214"
+    },
+    "sharedui_assets_all_ae6eb2361f8f5b01dcbe13939269f709.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedui_assets_all_ae6eb2361f8f5b01dcbe13939269f709.bundle",
+      "bytes": 161239,
+      "sha256": "166195d33478ad8957a1742a8a1de996989f9e3c0436039d977ff17995a7afb5"
+    },
+    "sky_assets_skydome_7b342731d827608ae3e5cad27cc66882.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sky_assets_skydome_7b342731d827608ae3e5cad27cc66882.bundle",
+      "bytes": 28730,
+      "sha256": "887f94d3340163d1afab0d4b1e746d86cced5260e89601bf756f0dc2609b5bf7"
+    },
+    "sleep_assets_all_7ed146c732f07ca8cf1f462fd14cbbe6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sleep_assets_all_7ed146c732f07ca8cf1f462fd14cbbe6.bundle",
+      "bytes": 7035,
+      "sha256": "ad51c6de43c3510e3962a70b491923ff77d6ac9053e4ad6387979c4ffcbcf47c"
+    },
+    "smores_assets_all_f3b6f87e9584dfe6d8177bab02935183.bundle": {
+      "file": "assets/pokemon/local/client-runtime/smores_assets_all_f3b6f87e9584dfe6d8177bab02935183.bundle",
+      "bytes": 1369625,
+      "sha256": "2d40145d310d50ba57fe31a3e5d16d04a8e6eea369c77848727450059db8dff2"
+    },
+    "softsfida_assets_all_f33bbb76244ae32a0af217a9decaad6f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/softsfida_assets_all_f33bbb76244ae32a0af217a9decaad6f.bundle",
+      "bytes": 58231,
+      "sha256": "f2323590abc53f9967deb38df50809e779c932fdf74cb94f74c017748cd99752"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_bread_6c564d6347356d69d636151f632a9e28.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_bread_6c564d6347356d69d636151f632a9e28.bundle",
+      "bytes": 2243,
+      "sha256": "df3590722f1688063f6f637e64cd0ef231f74f92ab325edd9044d0294ff65754"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_breadball_5390e42193b574aafa290ca0d3b1ba60.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_breadball_5390e42193b574aafa290ca0d3b1ba60.bundle",
+      "bytes": 2191,
+      "sha256": "336e719d74f465e8534e52ed2f8cedcd93309fb038be7b9d938e6de3ab0294b6"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_buddyaudio_9f17baa7267795c6a90324d73c76fbb4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_buddyaudio_9f17baa7267795c6a90324d73c76fbb4.bundle",
+      "bytes": 2317,
+      "sha256": "d0265bae6b452f43df64c243ef28013bdfc7ddc9541b720c5e480ebada9a03ec"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_exclusiveincense_da071c89c606a029833531f96df2a045.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_exclusiveincense_da071c89c606a029833531f96df2a045.bundle",
+      "bytes": 2090,
+      "sha256": "de29f516d35f5b5a3d5fdc21262b1fd0f36c11f2f9c4a0572f637678d11522d0"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_fc_e805f635bd062982c84c84cbf3834d68.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_fc_e805f635bd062982c84c84cbf3834d68.bundle",
+      "bytes": 2074,
+      "sha256": "14521e178ce3c9d5748f8e1117eb131ce8a40a2e7f3a89e6ee36f717fa7455e6"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_gmaxmovesounds_da88fc99b30d9f98eefda81da56dace1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_gmaxmovesounds_da88fc99b30d9f98eefda81da56dace1.bundle",
+      "bytes": 2368,
+      "sha256": "1dfc5c268ccfd443ed77cd409d23cb6aa51a11f9636f9bb4d7b0ac9754fbe43c"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_gofest2023_b8fa68cba78d61d66f4f5851d31769c1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_gofest2023_b8fa68cba78d61d66f4f5851d31769c1.bundle",
+      "bytes": 2061,
+      "sha256": "628c184c58cec770e360ad52019f910b5d40b12749bf1611ab32fefdb7141978"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_gofest2024_20923b25236c5f83c72b7e2d49ef7867.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_gofest2024_20923b25236c5f83c72b7e2d49ef7867.bundle",
+      "bytes": 2066,
+      "sha256": "f9da8f9c59d29f48aa042a74c3c28ebc973536403a7f4b624302695816517355"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_hideout_5af4cbd18f7e9ce4ee257c4da3b57a25.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_hideout_5af4cbd18f7e9ce4ee257c4da3b57a25.bundle",
+      "bytes": 2066,
+      "sha256": "092121a1808c0a72647028b4905a1f9fea4b41d0542c6f58b352427682e71cef"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_irisassets_2c61044fc2eaa7ac02bb8192b3974b11.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_irisassets_2c61044fc2eaa7ac02bb8192b3974b11.bundle",
+      "bytes": 2095,
+      "sha256": "4399e26b5a018be90ffd5ee63a4fec3cdf001e224d673c8e661522f718c246c3"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_maxmovesounds_5b3f5b9d503cbc6fa6d95b52d486a39d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_maxmovesounds_5b3f5b9d503cbc6fa6d95b52d486a39d.bundle",
+      "bytes": 2428,
+      "sha256": "ae37444880833feffca06110b2abc6b90dce4a4e91beb8046e260d6af478962b"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_megaaudio_0c6964733a80670949c1395c10fb70ee.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_megaaudio_0c6964733a80670949c1395c10fb70ee.bundle",
+      "bytes": 2074,
+      "sha256": "5e552df7b6d10db2f4380a19a999ab849b5aff3aa37d692057152d6970d5ab47"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_movesounds_e2fb2d38e57f1855089335e9917395a9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_movesounds_e2fb2d38e57f1855089335e9917395a9.bundle",
+      "bytes": 7239,
+      "sha256": "fbb76467b44147222db6a3bbbc703ee6d115ac83886a6fedfaed83d1791478ac"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_pokemoncries_bd4b2599b0f48dcb23a40d32c77048f9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_pokemoncries_bd4b2599b0f48dcb23a40d32c77048f9.bundle",
+      "bytes": 14028,
+      "sha256": "4e7d816987f7bdbbd112458964816b8894c401a9acdbbb4647f896e039897a12"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_raideggs_78e3848c5f4ea10a8b990adcfeb56590.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_raideggs_78e3848c5f4ea10a8b990adcfeb56590.bundle",
+      "bytes": 2269,
+      "sha256": "11d44f8681172f48928c9724149f43e728968cfdbfc2e18a231a633a900c8e5f"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_s20_2025_fb9f3def4b934c13836220d9b3df0cc0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_s20_2025_fb9f3def4b934c13836220d9b3df0cc0.bundle",
+      "bytes": 2050,
+      "sha256": "36f72b9c8678602cd3fe109e426693761cfdedb82ebb5f23218ce382605c0d39"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_sharedaudio_681d4f814adcc9609ea3cfc7f19eae21.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_sharedaudio_681d4f814adcc9609ea3cfc7f19eae21.bundle",
+      "bytes": 2064,
+      "sha256": "6f7e633b3a045cd0bc77fc4e7ab2bf6105e626df5208e92bf2fbae124257bbaa"
+    },
+    "soundfxgroups_remote_assets_sfxgroup_smores_19cb1e9844fbf17cb87e5a8db0e21965.bundle": {
+      "file": "assets/pokemon/local/client-runtime/soundfxgroups_remote_assets_sfxgroup_smores_19cb1e9844fbf17cb87e5a8db0e21965.bundle",
+      "bytes": 2082,
+      "sha256": "5b6ef8dd12d5c75c5c66ae020d86225e54b137ec73bc3f001afdfc28db952224"
+    },
+    "specialbackgroundfx_assets_locationcardtransition_07d149525de18c97ea1c1cba7a63ed6b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/specialbackgroundfx_assets_locationcardtransition_07d149525de18c97ea1c1cba7a63ed6b.bundle",
+      "bytes": 14408,
+      "sha256": "0ed3a4983d2a89ec317af922e210d8ccb075e65ff90b3a95581d21be668124af"
+    },
+    "specialbackgroundfx_assets_seasonbackgroundtransition_ae33278b57297a0eec36475dbb7487af.bundle": {
+      "file": "assets/pokemon/local/client-runtime/specialbackgroundfx_assets_seasonbackgroundtransition_ae33278b57297a0eec36475dbb7487af.bundle",
+      "bytes": 31362,
+      "sha256": "0e5d2b540ed80e4b8964d3eeba25c8f8112b8850c617087463a8bf214920d171"
+    },
+    "stampuiicon_assets_all_b2d09cbed845d3f7157b47d1ecabfb12.bundle": {
+      "file": "assets/pokemon/local/client-runtime/stampuiicon_assets_all_b2d09cbed845d3f7157b47d1ecabfb12.bundle",
+      "bytes": 102467,
+      "sha256": "43b64ab372a203e2ac3e726cb2b8f6c6d9386eaa5506c800d538203355a2ad72"
+    },
+    "stickerui_assets_all_8f1217808f2d505b77e53516fe6691f5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/stickerui_assets_all_8f1217808f2d505b77e53516fe6691f5.bundle",
+      "bytes": 20321,
+      "sha256": "efe647a9482a5fdc15f1af8ef0260dd696abbccdc998078515137db9504651eb"
+    },
+    "tappabletutorials_assets_all_d019ac0c5ea581356b0e118abad6ee5a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/tappabletutorials_assets_all_d019ac0c5ea581356b0e118abad6ee5a.bundle",
+      "bytes": 25095,
+      "sha256": "b93a97718d184c5435dba8a4be1a658ae98366d49dbdb912efc1a1075e3585db"
+    },
+    "todayviewicons_assets_all_2c1078815e345837abc72d343db2cf6b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/todayviewicons_assets_all_2c1078815e345837abc72d343db2cf6b.bundle",
+      "bytes": 172486,
+      "sha256": "5ad9b572e2af55fd0cc77531b22378f359b9ba037fb69105a94245259bf392f3"
+    },
+    "tutorials_assets_all_cebdb44810c47ec986418d22809408b2.bundle": {
+      "file": "assets/pokemon/local/client-runtime/tutorials_assets_all_cebdb44810c47ec986418d22809408b2.bundle",
+      "bytes": 1085139,
+      "sha256": "132ce2935a94e9418768072da89902a02585e17e50e9ceefc75d7502431fcf35"
+    },
+    "typeicons_assets_all_49e5dc517aed6848a807136ab2418d2d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/typeicons_assets_all_49e5dc517aed6848a807136ab2418d2d.bundle",
+      "bytes": 179586,
+      "sha256": "980347dc2da43cc9ff973957e0a7eaace05ebc0972350a757203bad02b6515fe"
+    },
+    "vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistalandcover_shared_assets_all_2e6a90424db5a4c2d3b5a1363264c813.bundle",
+      "bytes": 162787,
+      "sha256": "fe530bb051c7b9013f11157f32a56d4397037b8454c1f447c998eb6e44d0bd25"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_building_09c99de378db06912991f5b4d0e48467.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_building_09c99de378db06912991f5b4d0e48467.bundle",
+      "bytes": 21778,
+      "sha256": "e4714b3047c8afa40b1cb1931d8f5481c23da11b575e10768825cbf06f23ba11"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_grass_fcf9cfd23c299f3992710e787493012f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_grass_fcf9cfd23c299f3992710e787493012f.bundle",
+      "bytes": 26607,
+      "sha256": "b5b29f4dfd84451867cd0324c91d3405628dc28cf016a28c904e1a915b98cb6d"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_ground_aba476fd624de837dbe6e96dc8b90e23.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_ground_aba476fd624de837dbe6e96dc8b90e23.bundle",
+      "bytes": 31649,
+      "sha256": "232e8ec701400a6b022460907f01235f3c0798e16c92aec00a16dfa83824eade"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_standard_a46dd01cb1a2a85b801f32d9e4255bd2.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_standard_a46dd01cb1a2a85b801f32d9e4255bd2.bundle",
+      "bytes": 25583,
+      "sha256": "74644045f9fb3ce34836ae1d66c8b61bfe2ca5c6096dc19886a4b76aaa23c303"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_transparent_361b75b79df9bd389b697cc2486a354f.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_transparent_361b75b79df9bd389b697cc2486a354f.bundle",
+      "bytes": 23478,
+      "sha256": "06690d4ccac177b3dd39d1a35f4a535090d710bf18084eabf66c02a7976c84ec"
+    },
+    "vistashaders_shared_assets_ecosystem_backgroundcard_f1620247711235dcbb1fc40a5f12d510.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_ecosystem_backgroundcard_f1620247711235dcbb1fc40a5f12d510.bundle",
+      "bytes": 23458,
+      "sha256": "5c12e3af9650d9063124f27f6ab94a9c16426fc837213e2d9adb9f7b9958af72"
+    },
+    "vistashaders_shared_assets_ecosystem_water_44864e53823dceec2f79c1b01f42e7b0.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_ecosystem_water_44864e53823dceec2f79c1b01f42e7b0.bundle",
+      "bytes": 23430,
+      "sha256": "b6333288b9486e1a1fbd053860294ae6917e13244555cb4cb75b7f3204b09160"
+    },
+    "vistashaders_shared_assets_ecosystem_waterripple_12eb97c5d5d6c46d4d93971c9063369b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_ecosystem_waterripple_12eb97c5d5d6c46d4d93971c9063369b.bundle",
+      "bytes": 18800,
+      "sha256": "2b754ecb4f40d8df01b9e031abf309c4f646962b0743da8342a11f78f5e60c93"
+    },
+    "vistashaders_shared_assets_encounterstreeshader_ab57376bcd0c5884d48fba9f8f1550c5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_encounterstreeshader_ab57376bcd0c5884d48fba9f8f1550c5.bundle",
+      "bytes": 26465,
+      "sha256": "11f2963c91aa853030704b8ff79410b1c2eb252713a7952bd488e64521e2f20c"
+    },
+    "vistashaders_shared_assets_transparent-vertical-gradient_38c0a577349c7bf7a1f1f9d1fb57acb9.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_transparent-vertical-gradient_38c0a577349c7bf7a1f1f9d1fb57acb9.bundle",
+      "bytes": 18375,
+      "sha256": "ee3c06c82c67dc4aa8664d29c92e6133c52842061abbd29afdba80f65869d47f"
+    },
+    "vistashaders_shared_assets_waterwaves_f97bebf2ec8e680b8f2d4c278efa8da6.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_waterwaves_f97bebf2ec8e680b8f2d4c278efa8da6.bundle",
+      "bytes": 25042,
+      "sha256": "a25fd1744ecf08c3d97756434269feca8364570d23bf49ca97ef35e2508ebb7d"
+    },
+    "vistasharedassets_assets_vista_default_c1eb5e84fbf4e48876a84f9f499148b5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistasharedassets_assets_vista_default_c1eb5e84fbf4e48876a84f9f499148b5.bundle",
+      "bytes": 2030128,
+      "sha256": "24fd264a59c17e68b68f390f134ef7a240bfd529adc230242604f8091814467a"
+    },
+    "vistasharedassets_assets_vista_forest_b40bfa1c380723a229c20a2306a3e76e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistasharedassets_assets_vista_forest_b40bfa1c380723a229c20a2306a3e76e.bundle",
+      "bytes": 210056,
+      "sha256": "09c33000d99e2021e9976c07fc829c4ede2ae8e702737d003f33787791951fca"
+    },
+    "vistasharedassets_assets_vista_waterfront_24041ccd8c8be72f732d63acc5f2487c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistasharedassets_assets_vista_waterfront_24041ccd8c8be72f732d63acc5f2487c.bundle",
+      "bytes": 223069,
+      "sha256": "9fd6ce6eeda187a7f7b0a9473ff5419969400ac3eb81e7879ab95908329a3b47"
+    },
+    "vistasharedmaterials_assets_vista_default_8409823ef661b5e588c589f824815de1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistasharedmaterials_assets_vista_default_8409823ef661b5e588c589f824815de1.bundle",
+      "bytes": 43183,
+      "sha256": "67fc6185d972131495f775fe66d5c9d0084d4327df3429461e832c8ee12aa801"
+    },
+    "warningscreens_assets_all_3bccb05ecf6c0c6617cde940e133ab3b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/warningscreens_assets_all_3bccb05ecf6c0c6617cde940e133ab3b.bundle",
+      "bytes": 30754,
+      "sha256": "782721523c7df1d493d798780973a366bd4d267c5562f2bfcb0d258686e98645"
+    },
+    "weather_assets_all_a486858ee614872fb04503d0f7ecd5ff.bundle": {
+      "file": "assets/pokemon/local/client-runtime/weather_assets_all_a486858ee614872fb04503d0f7ecd5ff.bundle",
+      "bytes": 322139,
+      "sha256": "5476ccad9c4d153821fddd9860bc2bd2a4c4fd7a217cfe9ab72c3f34f7b2fd3d"
+    },
+    "weeklychallenges_assets_all_b706fb5c54d6f17135cc305930d4d0e5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/weeklychallenges_assets_all_b706fb5c54d6f17135cc305930d4d0e5.bundle",
+      "bytes": 452571,
+      "sha256": "284298007280ff99baf3e944affde4f14708b018ae5a8930b44702ec938aa333"
+    },
+    "gifts_assets_all_0f4dd15606bcc83ce94dfa402e82d532.bundle": {
+      "file": "assets/pokemon/local/client-runtime/gifts_assets_all_0f4dd15606bcc83ce94dfa402e82d532.bundle",
+      "bytes": 24630,
+      "sha256": "09c3f45197b6c18a88e9ee474eb05426a9e3b6ab5a37355f910dd116064b7b59"
+    },
+    "luckyfriend_assets_all_b06f968f6d312f1eb4cafb111871b4b5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/luckyfriend_assets_all_b06f968f6d312f1eb4cafb111871b4b5.bundle",
+      "bytes": 10015,
+      "sha256": "35b6c18b0f50609ee253b860f3412563de7a3a6b046e32c729f401566fba765f"
+    },
+    "sharedfx_assets_balloon_shadow_22467de4949d77f4e61c0a6e4a2b1ebe.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_balloon_shadow_22467de4949d77f4e61c0a6e4a2b1ebe.bundle",
+      "bytes": 2639,
+      "sha256": "c21428f1586ce40ae859c2296a53529f9b524006836842ed6237ebcfa7723cbc"
+    },
+    "sharedfx_assets_tex_horizontal_gradient_b3dfe1f5ffc74fc92ed6e8269554b24e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_tex_horizontal_gradient_b3dfe1f5ffc74fc92ed6e8269554b24e.bundle",
+      "bytes": 2350,
+      "sha256": "efd5a67939f7ea2a23e6f24702c18be033e99087e756180c2c0e3db50b59091f"
+    },
+    "tradetutorials_assets_all_d623ebc8c340f6dbd7632e739c38fb5c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/tradetutorials_assets_all_d623ebc8c340f6dbd7632e739c38fb5c.bundle",
+      "bytes": 60636,
+      "sha256": "4f5c899a4c86c8c98fa474b94ee2f0cae0abd84559a921b5279e9dff26516c51"
+    },
+    "postcardcollection_assets_all_6f7547dd7602a726dd2109e9198e0637.bundle": {
+      "file": "assets/pokemon/local/client-runtime/postcardcollection_assets_all_6f7547dd7602a726dd2109e9198e0637.bundle",
+      "bytes": 33395,
+      "sha256": "480f38f42bb817155676863bfcd2ac5d1d549225bde51458e25b472b2d98eb83"
+    },
+    "levelunlocks_assets_all_493c55ec767ed6f5440f1371c0fadd0d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/levelunlocks_assets_all_493c55ec767ed6f5440f1371c0fadd0d.bundle",
+      "bytes": 168621,
+      "sha256": "775c3c5a28ee145b55384794a7f6b7695e59f077c8072bffd656c82e1bdd20db"
+    },
+    "npcicons_assets_team_gorocket_d5119f30fcd68890fa5b32a63e917758.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcicons_assets_team_gorocket_d5119f30fcd68890fa5b32a63e917758.bundle",
+      "bytes": 9400,
+      "sha256": "f7be5fcdfe73a696e530444083f01b9dbebd5103660ecca74a211da36990b043"
+    },
+    "npcmalegrunt_shared_assets_all_8210bb70d41156fd0d3711ee0b86849c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcmalegrunt_shared_assets_all_8210bb70d41156fd0d3711ee0b86849c.bundle",
+      "bytes": 505209,
+      "sha256": "4dd1607485db94cc305e7677cc988f4f109cc36921f4582931037966bf88dc1c"
+    },
+    "sharedicons_assets_ic_xxl_d1170f7ecaa3d6ce891867bd59922979.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedicons_assets_ic_xxl_d1170f7ecaa3d6ce891867bd59922979.bundle",
+      "bytes": 5913,
+      "sha256": "1242f4d758e5ffa393d608351a6f0285cb09396476f7f6e9105587110ac6c1aa"
+    },
+    "sharedicons_assets_ic_xxs_67485a9e1da6da41a008ae7d7af1873c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedicons_assets_ic_xxs_67485a9e1da6da41a008ae7d7af1873c.bundle",
+      "bytes": 5705,
+      "sha256": "646e28cd0e4a399da58734b4eb36dfaeb0b65c0f89ce9b984f997a2ae0299f0b"
+    },
+    "librenlp_grunt_5a3a360d9f3e316e75af2230fdd4312c.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_5a3a360d9f3e316e75af2230fdd4312c.bundle",
+      "bytes": 871390,
+      "sha256": "a332e920a3cf24975d2efa9e5b3da329869372a7472116ed4793aa1cc42cf049"
+    },
+    "sharedshaders_assets_unlit-colortexture_c890ea2c722f6ddeb85c94497d1e3503.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_unlit-colortexture_c890ea2c722f6ddeb85c94497d1e3503.bundle",
+      "bytes": 17895,
+      "sha256": "eeddae7e6443a143fc89a7f72076c2d3526d31b82a9009ad4f0a30b5bfdddcf4"
+    },
+    "librenlp_grunt_131ac0e823e84bb6abc3f8666e00401e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_131ac0e823e84bb6abc3f8666e00401e.bundle",
+      "bytes": 566539,
+      "sha256": "398ddbad5b03254f0b5b52a5cadcb9e382ccc86834363517e75155f035b631cc"
+    },
+    "materials_shared_assets_defaultimport_3d01c153c44f7a14e502b6c15b700f83.bundle": {
+      "file": "assets/pokemon/local/client-runtime/materials_shared_assets_defaultimport_3d01c153c44f7a14e502b6c15b700f83.bundle",
+      "bytes": 19466,
+      "sha256": "9a5071d2ac1ebf0d3de8ca2b7ace053a084b34b82733b90457596154f7365423"
+    },
+    "librenlp_grunt_b41de4133ca99520671bbd9a29632f23.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_b41de4133ca99520671bbd9a29632f23.bundle",
+      "bytes": 480783,
+      "sha256": "0500084bff07e1e7492aed518032a96a67535cfe0135d759c95f5b4d55427abd"
+    },
+    "librenlp_grunt_00a920801100d6182394397184bb00b3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_00a920801100d6182394397184bb00b3.bundle",
+      "bytes": 401382,
+      "sha256": "86ce95a63964410f0b9366cd7fa9d3a1f549804647ea91b58c9f53278840cc28"
+    },
+    "librenlp_grunt_e467ad664da6143af7c8724352889aea.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_e467ad664da6143af7c8724352889aea.bundle",
+      "bytes": 241979,
+      "sha256": "d43876ec8b382c43028f1a6d2bac90aa909d5ed760842752933de714ea60fd43"
+    },
+    "librenlp_grunt_de4669e9c1ccdccd364057b8a0acf179.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_de4669e9c1ccdccd364057b8a0acf179.bundle",
+      "bytes": 1200170,
+      "sha256": "bb845ff77eda44301bc0a7599f5b2252741e6a01eff1ce447356cd96b1d69595"
+    },
+    "npcexecblue_shared_assets_all_084096360a2c43aeadfd1d7dc12db61d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcexecblue_shared_assets_all_084096360a2c43aeadfd1d7dc12db61d.bundle",
+      "bytes": 825453,
+      "sha256": "1dab818872cf0d160200c3040e8d1dfa15173d046d6580d98b85f4bdbea29640"
+    },
+    "npcexecred_shared_assets_all_35f29fdd6ecb2c190fa9189d227fa7d7.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcexecred_shared_assets_all_35f29fdd6ecb2c190fa9189d227fa7d7.bundle",
+      "bytes": 841465,
+      "sha256": "a47bc5eff2da6cb7ec4eaff353f1d615866c2d35bb904120e765784c1d50842a"
+    },
+    "npcexecyellow_shared_assets_all_7df1d55a7108106018c601977fd2d08a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcexecyellow_shared_assets_all_7df1d55a7108106018c601977fd2d08a.bundle",
+      "bytes": 932453,
+      "sha256": "d98541a18cce24679c5a7a101d1cc9a40928520a1ba816bba7ba40195960f3b4"
+    },
+    "sharedfx_assets_attackring_0a39e7741f367f0db93aebaa0d26f65d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_attackring_0a39e7741f367f0db93aebaa0d26f65d.bundle",
+      "bytes": 15440,
+      "sha256": "7b3ec218006aff9a4176b7f0e22b7a300405db88c12edeab2c4f0496293d0bdc"
+    },
+    "sharedfx_assets_mesh_ring_outward_short_0336329aba7fb3c35d6d47ee1c5d72aa.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_mesh_ring_outward_short_0336329aba7fb3c35d6d47ee1c5d72aa.bundle",
+      "bytes": 8651,
+      "sha256": "3a8a43feaa6195f4ff015d4eb914dfde502d877cb4084b99536527304af98d2c"
+    },
+    "sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fallbackerror_37d280a5618d1834fdc8bb2c2d9fe229.bundle",
+      "bytes": 17742,
+      "sha256": "42e7160d5585f2dcb2701a65736a4cac8c426c2b01c4d6833bb41b5fba3fb8a4"
+    },
+    "sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fallbackshader_f4bb9492f40ac24c35c0de728426607a.bundle",
+      "bytes": 17152,
+      "sha256": "6b814f868580beab3d383b037deac16ffbb7f7481d9c295a96c65d78c4695609"
+    },
+    "sharedshaders_assets_fx-colorized-blend_52a0ca5a5dc095df0741baf5214d2b23.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-colorized-blend_52a0ca5a5dc095df0741baf5214d2b23.bundle",
+      "bytes": 18130,
+      "sha256": "9724477f41788e1e909bddff313c5bd8a86f39193ee0d8d996075fc3c1c33a30"
+    },
+    "sharedshaders_assets_grounded_blob_shadow_2fee0c893da205da0873f9dc55bce690.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_grounded_blob_shadow_2fee0c893da205da0873f9dc55bce690.bundle",
+      "bytes": 18157,
+      "sha256": "6406edbe8b3259a8c7c1a3ad79fd106673271857760ec4ac45c342cd02a688d0"
+    },
+    "sharedshaders_assets_item-glass_simple_669b93e3c5d0899fc9e161d29039283d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_item-glass_simple_669b93e3c5d0899fc9e161d29039283d.bundle",
+      "bytes": 19188,
+      "sha256": "b6563b812d9622dbd40c7b1b46ae9b54f66a93a255c9e6d1f80131c1a0025a0f"
+    },
+    "sharedshaders_assets_particlesunlit_fb1fd00c408d45fac25cc49121486b36.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_particlesunlit_fb1fd00c408d45fac25cc49121486b36.bundle",
+      "bytes": 24285,
+      "sha256": "cc8b01a761ef7e46d8e60a3a2c2e6dfa77b153c5f63a2729e8bb09a4791610ef"
+    },
+    "librenlp_grunt_d5f22782a48c16c9749c56f99511209a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_d5f22782a48c16c9749c56f99511209a.bundle",
+      "bytes": 2047336,
+      "sha256": "80f4d34e010933e6fe7e259dcc9bc0fc804cee6f07090df9b8d90137c0101610"
+    },
+    "breadtutorial_assets_all_96fcab7d4c9b2c68bb8477c509f9c9c4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/breadtutorial_assets_all_96fcab7d4c9b2c68bb8477c509f9c9c4.bundle",
+      "bytes": 352893,
+      "sha256": "85da1635a8ed844e619ec179f6f4f7ce5aedde3cd0dedfd454804107fee66110"
+    },
+    "sharedfx_assets_fx_flare_6_point_2_85dd14cef50efee61af1438e51ef98a3.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_flare_6_point_2_85dd14cef50efee61af1438e51ef98a3.bundle",
+      "bytes": 2654,
+      "sha256": "5f956492d429a49467e07ecb00ba685f30670464b15f0d6ba68bd5a6d701c663"
+    },
+    "sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_glow_add_29cc724476613846d784a102afcc1263.bundle",
+      "bytes": 2647,
+      "sha256": "2bc237638cadc8295938343536d1dc20fb1fc1804744cf4b793ce09fab61102e"
+    },
+    "sharedshaders_assets_fx-additive_e0660a2eb0dae946a3a80eee43c47a43.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_fx-additive_e0660a2eb0dae946a3a80eee43c47a43.bundle",
+      "bytes": 17940,
+      "sha256": "c2cb01822e26edbf4804a7cafcc2eafa7330b970299946fc2504ab94baec5f77"
+    },
+    "sharedshaders_assets_holo-brdf_33261fc85ac8af99ef993a31c52d4ad4.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_holo-brdf_33261fc85ac8af99ef993a31c52d4ad4.bundle",
+      "bytes": 19342,
+      "sha256": "ce5405970e8d706f2478e64f6c79bc63d31104b1881cd7df2222388fd519998c"
+    },
+    "sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_pokemon-fx-stencil-additive_2d9cd43553a243b24e4fe3e3662e4286.bundle",
+      "bytes": 18237,
+      "sha256": "7b1f0b7e70a6ce3888237285a533c122b611ffb269b0b818650f70891fb3b83b"
+    },
+    "sharedshaders_assets_unlit-color_e4f981cd27bd49792b04ed9756dd52ee.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_unlit-color_e4f981cd27bd49792b04ed9756dd52ee.bundle",
+      "bytes": 17916,
+      "sha256": "8aadca681f36b86de43d89056496802c24c5c8167d6a3f5e8516035cb26e3beb"
+    },
+    "vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/vistashaders_shared_assets_brdf-ecosystem_standard_dd2df89fcc87120524659a3d6730055d.bundle",
+      "bytes": 25628,
+      "sha256": "d8f656ad140943772c39a1c2a9d13df5ca787ba32a130b1eae1fd85917bf6851"
+    },
+    "librenlp_grunt_783863264c30c66e4d8275a40851a188.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_783863264c30c66e4d8275a40851a188.bundle",
+      "bytes": 153529,
+      "sha256": "090a6743078d79b38d40cb1bf3d2e19ff1d229a6ee9589b89a518154b280424c"
+    },
+    "librenlp_gmax_charizard_747d9d46aa8d72eded21561ad6ce6631.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_gmax_charizard_747d9d46aa8d72eded21561ad6ce6631.bundle",
+      "bytes": 4798371,
+      "sha256": "79fff5fa8df02c9a208fb707bdbf37f357e957f896159f221615b5e4dfc4cc68"
+    },
+    "librenlp_max_canonical_shaders_ca741187cf7d36215ddcdc3b19795109.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_max_canonical_shaders_ca741187cf7d36215ddcdc3b19795109.bundle",
+      "bytes": 2047267,
+      "sha256": "4e93b91811c70d7d6128f827f664b41dca0721bbedeb700b709389cb52909bdd"
+    },
+    "librenlp_wildfire_native_shaders_8247d0a6298412d8cb0c4f9c080ef2e5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_wildfire_native_shaders_8247d0a6298412d8cb0c4f9c080ef2e5.bundle",
+      "bytes": 4798446,
+      "sha256": "165e3151d13fc6b18e2acd6cd4ea532a16059edd51498f99d1539e7160713ede"
+    },
+    "librenlp_grunt_fa54fbf7bc9a62a6698fcac4de528974.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_fa54fbf7bc9a62a6698fcac4de528974.bundle",
+      "bytes": 749912,
+      "sha256": "0ef3919133b2dbed6dde8c6d4bc7dfe3a1ecfcb5843c95b7e5ad9bf4fafc2b40"
+    },
+    "materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/materials_shared_assets_lit_mat_6ed57255545aa826e36b10276d5b8a7a.bundle",
+      "bytes": 3204,
+      "sha256": "d9710d3ecd13b8b8d08419f0d2005e90fea007596c6c1958f510abe33d18d9cc"
+    },
+    "pokeball_shared_assets_all_4579c03cf28e517916f43f58a00e9670.bundle": {
+      "file": "assets/pokemon/local/client-runtime/pokeball_shared_assets_all_4579c03cf28e517916f43f58a00e9670.bundle",
+      "bytes": 169803,
+      "sha256": "8c7452b1df45f6ba069af35dfbc35447628bdf3330e158373027738428148206"
+    },
+    "sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_glow2_add_53599b5c202922e22fb3fda545205150.bundle",
+      "bytes": 2650,
+      "sha256": "d4771b935fb9368f928e71ffcc4c866348d4e7ec1699c4f2d6c0c4ffeeefd4d2"
+    },
+    "sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_point_add_43f1a7277ac7fa2def850acc57216841.bundle",
+      "bytes": 2601,
+      "sha256": "db38c824ce9a2592e8d3a915c3a1e11bfde35f5c8db1c0b876f1de2558c32c01"
+    },
+    "sharedfx_assets_fx_sparkle_d15022fbaef679d4f3be8e905e706071.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedfx_assets_fx_sparkle_d15022fbaef679d4f3be8e905e706071.bundle",
+      "bytes": 2611,
+      "sha256": "2f59f78f380c8e665008ac4b56afd973636f45b8374681cd54154b5fd99b74da"
+    },
+    "sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_lit_shader_7c645bed598062a1af960bb5a8f3406d.bundle",
+      "bytes": 34972,
+      "sha256": "9527c80755a83af23117258823b4c3f33a51662d1d048806cc7eb93514944fc4"
+    },
+    "sharedshaders_assets_pokeball_394206da2ca77e7633ca77c0bfdb1f97.bundle": {
+      "file": "assets/pokemon/local/client-runtime/sharedshaders_assets_pokeball_394206da2ca77e7633ca77c0bfdb1f97.bundle",
+      "bytes": 23545,
+      "sha256": "bd19f504f537b5428521c8f792a2f64250f54a3242026e56eeb7e8750777a9a9"
+    },
+    "librenlp_max_ball_native_e6cb543248724f74279219330210db95.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_max_ball_native_e6cb543248724f74279219330210db95.bundle",
+      "bytes": 749921,
+      "sha256": "efd62810263fb62262ace4c73d7ae6824be90b6ddc9ca29e2082e3374c0a0ee6"
+    },
+    "a76ddee18b2c5b84377431e62512bd34_unitybuiltinshaders.bundle": {
+      "file": "assets/pokemon/local/client-runtime/a76ddee18b2c5b84377431e62512bd34_unitybuiltinshaders.bundle",
+      "bytes": 154462,
+      "sha256": "05917635e46bdc97a2a68d139a85450b656413611920369552b0d2aab603b346"
+    },
+    "librenlp_grunt_438303495530a8ae0f600fe551739903.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_438303495530a8ae0f600fe551739903.bundle",
+      "bytes": 234576,
+      "sha256": "890474841887f8435e4bd0b91914f72c3f86cab141d3e372ab09e0be680c837f"
+    },
+    "librenlp_grunt_21463b11342c404b549c719384bf8885.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_21463b11342c404b549c719384bf8885.bundle",
+      "bytes": 212211,
+      "sha256": "4ec810c19ee4901b12591a3298d1c4bed1a917418f0901e8a40bc249a3d54ad6"
+    },
+    "librenlp_grunt_1222d01d6726ec4d8cc89bc7136d1cd5.bundle": {
+      "file": "assets/pokemon/local/client-runtime/librenlp_grunt_1222d01d6726ec4d8cc89bc7136d1cd5.bundle",
+      "bytes": 302339,
+      "sha256": "26fb7ea46893248900edd9f1dd8d439f0ba286062ea6f2b3b2f17bd5fd91d1f3"
+    },
+    "npcblanche_shared_assets_all_ba80e602ca5a0f5457ccace40a22a0ec.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcblanche_shared_assets_all_ba80e602ca5a0f5457ccace40a22a0ec.bundle",
+      "bytes": 750639,
+      "sha256": "216ea044bfe7495a0b8b6183248dd54478363bc7dc2bca831b5642174a0813fc"
+    },
+    "npccandela_shared_assets_all_15848589313f46e65209e48a787506f1.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npccandela_shared_assets_all_15848589313f46e65209e48a787506f1.bundle",
+      "bytes": 932664,
+      "sha256": "29956d1a24b49a9d52b3b120676e852398882482f161a0f8313712654f26378e"
+    },
+    "npcspark_shared_assets_all_b52135a949caf3157208a487c96cb350.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcspark_shared_assets_all_b52135a949caf3157208a487c96cb350.bundle",
+      "bytes": 1044767,
+      "sha256": "14afdd8d737af3dab9175f3e11c2ae0ac5b2815e208c5209a27c46025838c532"
+    },
+    "routetutorials_assets_all_4196ae231400d0a2b61f792734254070.bundle": {
+      "file": "assets/pokemon/local/client-runtime/routetutorials_assets_all_4196ae231400d0a2b61f792734254070.bundle",
+      "bytes": 334253,
+      "sha256": "5b1638d2729e2881dbf27d9bd47bd79a8dc3b758d9f7ee4b97ae9526dda37634"
+    },
+    "npcicons_assets_mateo_3ae2e5bfa88535b1a8f08aa238c0c911.bundle": {
+      "file": "assets/pokemon/local/client-runtime/npcicons_assets_mateo_3ae2e5bfa88535b1a8f08aa238c0c911.bundle",
+      "bytes": 9870,
+      "sha256": "9894976ad5dcf1fc808330ab473891491262f97dea8a80327a84341f966d7d5d"
+    },
+    "routestampsheet_assets_all_e32a990afc03f6bd38ef73fa9393906a.bundle": {
+      "file": "assets/pokemon/local/client-runtime/routestampsheet_assets_all_e32a990afc03f6bd38ef73fa9393906a.bundle",
+      "bytes": 162623,
+      "sha256": "bc1a9847e97c1c81e2632264b793612d14fa42d4829561e80e37241e7c453a4d"
+    },
+    "982e1007bce148ad15d9e00782cf58cf57c9ec7be1fe375e0f0951798315f091.bundle": {
+      "file": "assets/pokemon/local/client-runtime/982e1007bce148ad15d9e00782cf58cf57c9ec7be1fe375e0f0951798315f091.bundle",
+      "bytes": 19588,
+      "sha256": "982e1007bce148ad15d9e00782cf58cf57c9ec7be1fe375e0f0951798315f091"
+    },
+    "318fec1f731464f1053b63aec8756a138ca53e139b9a4cffd618ec84a563fc50.bundle": {
+      "file": "assets/pokemon/local/client-runtime/318fec1f731464f1053b63aec8756a138ca53e139b9a4cffd618ec84a563fc50.bundle",
+      "bytes": 18275,
+      "sha256": "318fec1f731464f1053b63aec8756a138ca53e139b9a4cffd618ec84a563fc50"
+    },
+    "ed3abee0a67a2b9df4a27581437c82f38b08ec22d136915892f752314995f204.bundle": {
+      "file": "assets/pokemon/local/client-runtime/ed3abee0a67a2b9df4a27581437c82f38b08ec22d136915892f752314995f204.bundle",
+      "bytes": 166351,
+      "sha256": "ed3abee0a67a2b9df4a27581437c82f38b08ec22d136915892f752314995f204"
+    },
+    "8c59f5be0a2d59162ffd9cc41cebd707cd6e0b8e9bb014eb81bec48ab1309404.bundle": {
+      "file": "assets/pokemon/local/client-runtime/8c59f5be0a2d59162ffd9cc41cebd707cd6e0b8e9bb014eb81bec48ab1309404.bundle",
+      "bytes": 14431,
+      "sha256": "8c59f5be0a2d59162ffd9cc41cebd707cd6e0b8e9bb014eb81bec48ab1309404"
+    },
+    "4da818aabe01077bf12059e77c08effe5505d359567914d68917f8c413f9be76.bundle": {
+      "file": "assets/pokemon/local/client-runtime/4da818aabe01077bf12059e77c08effe5505d359567914d68917f8c413f9be76.bundle",
+      "bytes": 507874,
+      "sha256": "4da818aabe01077bf12059e77c08effe5505d359567914d68917f8c413f9be76"
+    },
+    "c2c3c966782a582a74d2d1aa3b515bc16a27501956fa9ba9d72c9cb186f38c47.bundle": {
+      "file": "assets/pokemon/local/client-runtime/c2c3c966782a582a74d2d1aa3b515bc16a27501956fa9ba9d72c9cb186f38c47.bundle",
+      "bytes": 1101807,
+      "sha256": "c2c3c966782a582a74d2d1aa3b515bc16a27501956fa9ba9d72c9cb186f38c47"
+    },
+    "c15dfa237e87f6aed7d6abff609f81556bead0ac8e348d855a232849c8391d84.bundle": {
+      "file": "assets/pokemon/local/client-runtime/c15dfa237e87f6aed7d6abff609f81556bead0ac8e348d855a232849c8391d84.bundle",
+      "bytes": 17998,
+      "sha256": "c15dfa237e87f6aed7d6abff609f81556bead0ac8e348d855a232849c8391d84"
+    },
+    "c387b4bff323204c7fa5f30f6bbc042e1374ab17e0dfda2c0ab8aa688cdfb73b.bundle": {
+      "file": "assets/pokemon/local/client-runtime/c387b4bff323204c7fa5f30f6bbc042e1374ab17e0dfda2c0ab8aa688cdfb73b.bundle",
+      "bytes": 609455,
+      "sha256": "c387b4bff323204c7fa5f30f6bbc042e1374ab17e0dfda2c0ab8aa688cdfb73b"
+    },
+    "99439639413494e7a8ba73f6f9bd353cbf3b0ddbfd1ffab44e2699404ea3638e.bundle": {
+      "file": "assets/pokemon/local/client-runtime/99439639413494e7a8ba73f6f9bd353cbf3b0ddbfd1ffab44e2699404ea3638e.bundle",
+      "bytes": 14251,
+      "sha256": "99439639413494e7a8ba73f6f9bd353cbf3b0ddbfd1ffab44e2699404ea3638e"
+    },
+    "e21b62aa3d74518756e076835ec3f2efafe85ef29c1ce839ecad886fa6ef4807.bundle": {
+      "file": "assets/pokemon/local/mythical/e21b62aa3d74518756e076835ec3f2efafe85ef29c1ce839ecad886fa6ef4807.bundle",
+      "bytes": 701239,
+      "sha256": "e21b62aa3d74518756e076835ec3f2efafe85ef29c1ce839ecad886fa6ef4807"
+    },
+    "43c90d1651f2dd6cbaeea16af24ee848cab1dd24201094e175d4942a71930ad7.bundle": {
+      "file": "assets/pokemon/local/mythical/43c90d1651f2dd6cbaeea16af24ee848cab1dd24201094e175d4942a71930ad7.bundle",
+      "bytes": 1748,
+      "sha256": "43c90d1651f2dd6cbaeea16af24ee848cab1dd24201094e175d4942a71930ad7"
+    },
+    "1e41ffd197bc774e5b4c62853244498bd6baea34d07489831deb3ecc8cc6c86f.bundle": {
+      "file": "assets/pokemon/local/mythical/1e41ffd197bc774e5b4c62853244498bd6baea34d07489831deb3ecc8cc6c86f.bundle",
+      "bytes": 107980,
+      "sha256": "1e41ffd197bc774e5b4c62853244498bd6baea34d07489831deb3ecc8cc6c86f"
+    },
+    "7a8beb2a1219433f8ae59539f79aaf5fc4fc7bb0d1b5c8d1f79d91bf257ecea8.bundle": {
+      "file": "assets/pokemon/local/mythical/7a8beb2a1219433f8ae59539f79aaf5fc4fc7bb0d1b5c8d1f79d91bf257ecea8.bundle",
+      "bytes": 1279883,
+      "sha256": "7a8beb2a1219433f8ae59539f79aaf5fc4fc7bb0d1b5c8d1f79d91bf257ecea8"
+    },
+    "e5da91432318eb0cce3c8303f6faf1abc8dbde2709b7431db7191bbd627a7e18.bundle": {
+      "file": "assets/pokemon/local/mythical/e5da91432318eb0cce3c8303f6faf1abc8dbde2709b7431db7191bbd627a7e18.bundle",
+      "bytes": 1727283,
+      "sha256": "e5da91432318eb0cce3c8303f6faf1abc8dbde2709b7431db7191bbd627a7e18"
+    },
+    "d22ad723e1a17da95bc90cdbd1a8abfb98fb6ea3ff7b6af08a364c8f0c1ea068.bundle": {
+      "file": "assets/pokemon/local/mythical/d22ad723e1a17da95bc90cdbd1a8abfb98fb6ea3ff7b6af08a364c8f0c1ea068.bundle",
+      "bytes": 447353,
+      "sha256": "d22ad723e1a17da95bc90cdbd1a8abfb98fb6ea3ff7b6af08a364c8f0c1ea068"
+    },
+    "2716697137d066a8cbcdb6415571151c68ffd83e7e311985b8bf5f96d994fd42.bundle": {
+      "file": "assets/pokemon/local/mythical/2716697137d066a8cbcdb6415571151c68ffd83e7e311985b8bf5f96d994fd42.bundle",
+      "bytes": 6654,
+      "sha256": "2716697137d066a8cbcdb6415571151c68ffd83e7e311985b8bf5f96d994fd42"
+    },
+    "0a9f59673c55ea098a35543a4933542fda6bb8387d61fb2d149d48cc85bc2a21.bundle": {
+      "file": "assets/pokemon/local/mythical/0a9f59673c55ea098a35543a4933542fda6bb8387d61fb2d149d48cc85bc2a21.bundle",
+      "bytes": 411408,
+      "sha256": "0a9f59673c55ea098a35543a4933542fda6bb8387d61fb2d149d48cc85bc2a21"
+    },
+    "fe33e7788696ed5c159fb97fdac091e83c0af066806bf407964e0eaf4113e2f6.bundle": {
+      "file": "assets/pokemon/local/mythical/fe33e7788696ed5c159fb97fdac091e83c0af066806bf407964e0eaf4113e2f6.bundle",
+      "bytes": 1670834,
+      "sha256": "fe33e7788696ed5c159fb97fdac091e83c0af066806bf407964e0eaf4113e2f6"
+    },
+    "f8f19e418536d31e267e30d333eae51a8af760f06389363e4af029fd7eb12513.bundle": {
+      "file": "assets/pokemon/local/mythical/f8f19e418536d31e267e30d333eae51a8af760f06389363e4af029fd7eb12513.bundle",
+      "bytes": 1003826,
+      "sha256": "f8f19e418536d31e267e30d333eae51a8af760f06389363e4af029fd7eb12513"
+    },
+    "6f53093ee06fc01c5b592ca8921f3aa212b9186838f47cab13febd3bcf63f313.bundle": {
+      "file": "assets/pokemon/local/mythical/6f53093ee06fc01c5b592ca8921f3aa212b9186838f47cab13febd3bcf63f313.bundle",
+      "bytes": 589401,
+      "sha256": "6f53093ee06fc01c5b592ca8921f3aa212b9186838f47cab13febd3bcf63f313"
+    },
+    "deb47f7ecc56099ec2eb36cf437627da4e04ae53638625c7e63ff7a9a09c6fb2.bundle": {
+      "file": "assets/pokemon/local/mythical/deb47f7ecc56099ec2eb36cf437627da4e04ae53638625c7e63ff7a9a09c6fb2.bundle",
+      "bytes": 2225985,
+      "sha256": "deb47f7ecc56099ec2eb36cf437627da4e04ae53638625c7e63ff7a9a09c6fb2"
+    },
+    "09858ec6d7a54b1a9b94f06aa29c3c536e34839e713352f7c6cd849590d87d09.bundle": {
+      "file": "assets/pokemon/local/mythical/09858ec6d7a54b1a9b94f06aa29c3c536e34839e713352f7c6cd849590d87d09.bundle",
+      "bytes": 53619,
+      "sha256": "09858ec6d7a54b1a9b94f06aa29c3c536e34839e713352f7c6cd849590d87d09"
+    },
+    "2ac9a847f2cea0dc8c9d07d1c280dc0ee719fae67f91d7a3e7d07aae1a83829a.bundle": {
+      "file": "assets/pokemon/local/mythical/2ac9a847f2cea0dc8c9d07d1c280dc0ee719fae67f91d7a3e7d07aae1a83829a.bundle",
+      "bytes": 7815444,
+      "sha256": "2ac9a847f2cea0dc8c9d07d1c280dc0ee719fae67f91d7a3e7d07aae1a83829a"
+    },
+    "79129afe56133502b789e4eef7a01fd10576b88ba1529852148b3597dc7960f7.bundle": {
+      "file": "assets/pokemon/local/mythical/79129afe56133502b789e4eef7a01fd10576b88ba1529852148b3597dc7960f7.bundle",
+      "bytes": 74803,
+      "sha256": "79129afe56133502b789e4eef7a01fd10576b88ba1529852148b3597dc7960f7"
+    },
+    "0586de68821666ff444ce727c70bbf02f24928af6b00a2f0cb2373d616ed55f9.bundle": {
+      "file": "assets/pokemon/local/mythical/0586de68821666ff444ce727c70bbf02f24928af6b00a2f0cb2373d616ed55f9.bundle",
+      "bytes": 3302,
+      "sha256": "0586de68821666ff444ce727c70bbf02f24928af6b00a2f0cb2373d616ed55f9"
+    },
+    "62a45543c8d6371aa1cdfcefdc3550a3e7f004cefa3000411dbb286a72b797ce.bundle": {
+      "file": "assets/pokemon/local/mythical/62a45543c8d6371aa1cdfcefdc3550a3e7f004cefa3000411dbb286a72b797ce.bundle",
+      "bytes": 191646,
+      "sha256": "62a45543c8d6371aa1cdfcefdc3550a3e7f004cefa3000411dbb286a72b797ce"
+    },
+    "5ed89a1b1af9beefba3f6b8701b622bb4570c46cb3b1f8b1920155845ee00046.bundle": {
+      "file": "assets/pokemon/local/mythical/5ed89a1b1af9beefba3f6b8701b622bb4570c46cb3b1f8b1920155845ee00046.bundle",
+      "bytes": 3238065,
+      "sha256": "5ed89a1b1af9beefba3f6b8701b622bb4570c46cb3b1f8b1920155845ee00046"
+    },
+    "e8f049ae7f60e40575b0a1db373b27fbdd4e4f7ae5c01e7a51ca5f6cca52fdf6.bundle": {
+      "file": "assets/pokemon/local/mythical/e8f049ae7f60e40575b0a1db373b27fbdd4e4f7ae5c01e7a51ca5f6cca52fdf6.bundle",
+      "bytes": 9963,
+      "sha256": "e8f049ae7f60e40575b0a1db373b27fbdd4e4f7ae5c01e7a51ca5f6cca52fdf6"
+    },
+    "4587d7a83a9985b048eecf73f893ff5843929e7eb2b5d4a90959e6a2be74c8ee.bundle": {
+      "file": "assets/pokemon/local/mythical/4587d7a83a9985b048eecf73f893ff5843929e7eb2b5d4a90959e6a2be74c8ee.bundle",
+      "bytes": 5186,
+      "sha256": "4587d7a83a9985b048eecf73f893ff5843929e7eb2b5d4a90959e6a2be74c8ee"
+    },
+    "c60a6e7762b400caef409f1aac7ada187144686df5b70bdf30578112dd7702d7.bundle": {
+      "file": "assets/pokemon/local/mythical/c60a6e7762b400caef409f1aac7ada187144686df5b70bdf30578112dd7702d7.bundle",
+      "bytes": 4205,
+      "sha256": "c60a6e7762b400caef409f1aac7ada187144686df5b70bdf30578112dd7702d7"
+    },
+    "733dce90246587ea6b5aab26630e186f68e5d54f351fe68c24d00be252cbc75b.bundle": {
+      "file": "assets/pokemon/local/mythical/733dce90246587ea6b5aab26630e186f68e5d54f351fe68c24d00be252cbc75b.bundle",
+      "bytes": 4028,
+      "sha256": "733dce90246587ea6b5aab26630e186f68e5d54f351fe68c24d00be252cbc75b"
+    },
+    "c839c405d02dc54f96e7b56b3d3d91c0b892060f4ab2d87e4859ae4cbb25e287.bundle": {
+      "file": "assets/pokemon/local/mythical/c839c405d02dc54f96e7b56b3d3d91c0b892060f4ab2d87e4859ae4cbb25e287.bundle",
+      "bytes": 21036,
+      "sha256": "c839c405d02dc54f96e7b56b3d3d91c0b892060f4ab2d87e4859ae4cbb25e287"
+    },
+    "17bc65e272434bd8bb595279424d0c4ae28705d426b69e041f2e7fcc4af3f126.bundle": {
+      "file": "assets/pokemon/local/mythical/17bc65e272434bd8bb595279424d0c4ae28705d426b69e041f2e7fcc4af3f126.bundle",
+      "bytes": 2713,
+      "sha256": "17bc65e272434bd8bb595279424d0c4ae28705d426b69e041f2e7fcc4af3f126"
+    },
+    "b2c23a33bd6a4c2a8040c8a702c541df66959f75b1f4db490ca0a7679bfd3d8e.bundle": {
+      "file": "assets/pokemon/local/mythical/b2c23a33bd6a4c2a8040c8a702c541df66959f75b1f4db490ca0a7679bfd3d8e.bundle",
+      "bytes": 2713,
+      "sha256": "b2c23a33bd6a4c2a8040c8a702c541df66959f75b1f4db490ca0a7679bfd3d8e"
+    },
+    "1ceaaf87e586b63d7467b16236291e2f09b12b3e39a91cd14d728717ecd17bec.bundle": {
+      "file": "assets/pokemon/local/mythical/1ceaaf87e586b63d7467b16236291e2f09b12b3e39a91cd14d728717ecd17bec.bundle",
+      "bytes": 2637,
+      "sha256": "1ceaaf87e586b63d7467b16236291e2f09b12b3e39a91cd14d728717ecd17bec"
+    },
+    "b3d5ac608425da9aa8758aded33e562669cbfbc8c6c697b62314c525db3e07c2.bundle": {
+      "file": "assets/pokemon/local/mythical/b3d5ac608425da9aa8758aded33e562669cbfbc8c6c697b62314c525db3e07c2.bundle",
+      "bytes": 2688,
+      "sha256": "b3d5ac608425da9aa8758aded33e562669cbfbc8c6c697b62314c525db3e07c2"
+    },
+    "698064532c63619896a644244e74e56b09ff3d504c4c2f921062f18fcc171e3c.bundle": {
+      "file": "assets/pokemon/local/mythical/698064532c63619896a644244e74e56b09ff3d504c4c2f921062f18fcc171e3c.bundle",
+      "bytes": 2766,
+      "sha256": "698064532c63619896a644244e74e56b09ff3d504c4c2f921062f18fcc171e3c"
+    },
+    "67a057fdf9e92154c6c953ca820367e9b46c72518ecc6c8a3395414c1d8bc887.bundle": {
+      "file": "assets/pokemon/local/mythical/67a057fdf9e92154c6c953ca820367e9b46c72518ecc6c8a3395414c1d8bc887.bundle",
+      "bytes": 7221,
+      "sha256": "67a057fdf9e92154c6c953ca820367e9b46c72518ecc6c8a3395414c1d8bc887"
+    },
+    "f9af7dfb3f4c3c6557278a62dab2176a1b6c334c3bae4bc41d9482943d17ef77.bundle": {
+      "file": "assets/pokemon/local/mythical/f9af7dfb3f4c3c6557278a62dab2176a1b6c334c3bae4bc41d9482943d17ef77.bundle",
+      "bytes": 9744,
+      "sha256": "f9af7dfb3f4c3c6557278a62dab2176a1b6c334c3bae4bc41d9482943d17ef77"
+    },
+    "ffa0e0718340fc226cc4a60c2699d8189d70041c270c7e592137aba108741ecb.bundle": {
+      "file": "assets/pokemon/local/mythical/ffa0e0718340fc226cc4a60c2699d8189d70041c270c7e592137aba108741ecb.bundle",
+      "bytes": 7873,
+      "sha256": "ffa0e0718340fc226cc4a60c2699d8189d70041c270c7e592137aba108741ecb"
+    },
+    "9e4ea7eec0b3ad146fb46c9068fb620dc93e48a806f075917317eec04ecbf43e.bundle": {
+      "file": "assets/pokemon/local/mythical/9e4ea7eec0b3ad146fb46c9068fb620dc93e48a806f075917317eec04ecbf43e.bundle",
+      "bytes": 9936,
+      "sha256": "9e4ea7eec0b3ad146fb46c9068fb620dc93e48a806f075917317eec04ecbf43e"
+    },
+    "85fe00948fcc36d7b4688212f88911484236276de4241ef0c0558f7d3e695c5e.bundle": {
+      "file": "assets/pokemon/local/mythical/85fe00948fcc36d7b4688212f88911484236276de4241ef0c0558f7d3e695c5e.bundle",
+      "bytes": 8057,
+      "sha256": "85fe00948fcc36d7b4688212f88911484236276de4241ef0c0558f7d3e695c5e"
+    },
+    "9ec2f0304018c13e74205d8063078e38dc1f9cbfaca046273a8172b434c66502.bundle": {
+      "file": "assets/pokemon/local/mythical/9ec2f0304018c13e74205d8063078e38dc1f9cbfaca046273a8172b434c66502.bundle",
+      "bytes": 37079,
+      "sha256": "9ec2f0304018c13e74205d8063078e38dc1f9cbfaca046273a8172b434c66502"
+    },
+    "98a5ab38191c917aa408a503f07877e802b2bac994cc718061438881f7eb405b.bundle": {
+      "file": "assets/pokemon/local/mythical/98a5ab38191c917aa408a503f07877e802b2bac994cc718061438881f7eb405b.bundle",
+      "bytes": 21241,
+      "sha256": "98a5ab38191c917aa408a503f07877e802b2bac994cc718061438881f7eb405b"
+    },
+    "bbb835e585ff04f1116fec52123f394db5f1292f96fc1613bb7af8f54b49fc04.bundle": {
+      "file": "assets/pokemon/local/mythical/bbb835e585ff04f1116fec52123f394db5f1292f96fc1613bb7af8f54b49fc04.bundle",
+      "bytes": 21490,
+      "sha256": "bbb835e585ff04f1116fec52123f394db5f1292f96fc1613bb7af8f54b49fc04"
+    },
+    "91c841c6c278aff6a470025986d8893fa8487e00adb67fc38fb4c30372f9da59.bundle": {
+      "file": "assets/pokemon/local/mythical/91c841c6c278aff6a470025986d8893fa8487e00adb67fc38fb4c30372f9da59.bundle",
+      "bytes": 20038,
+      "sha256": "91c841c6c278aff6a470025986d8893fa8487e00adb67fc38fb4c30372f9da59"
+    },
+    "e13bb81a593ef459ef855db42cdde6b68157edde2a3e156afc512710473a5012.bundle": {
+      "file": "assets/pokemon/local/mythical/e13bb81a593ef459ef855db42cdde6b68157edde2a3e156afc512710473a5012.bundle",
+      "bytes": 17875,
+      "sha256": "e13bb81a593ef459ef855db42cdde6b68157edde2a3e156afc512710473a5012"
+    },
+    "61f16712cdb5c53846e9960d3e7f7abff79aa1dde17083ed6c2969bdbbbce31c.bundle": {
+      "file": "assets/pokemon/local/mythical/61f16712cdb5c53846e9960d3e7f7abff79aa1dde17083ed6c2969bdbbbce31c.bundle",
+      "bytes": 17250,
+      "sha256": "61f16712cdb5c53846e9960d3e7f7abff79aa1dde17083ed6c2969bdbbbce31c"
+    },
+    "ffa6b6f08513e0b466193c4a148d310ea06f10a45d9a5f94220a1c6be60ec9d9.bundle": {
+      "file": "assets/pokemon/local/mythical/ffa6b6f08513e0b466193c4a148d310ea06f10a45d9a5f94220a1c6be60ec9d9.bundle",
+      "bytes": 18043,
+      "sha256": "ffa6b6f08513e0b466193c4a148d310ea06f10a45d9a5f94220a1c6be60ec9d9"
+    },
+    "86dae22a7667a8d4d258db99f9bbc2de502464b05a50f864286c8ae8b20f1acf.bundle": {
+      "file": "assets/pokemon/local/mythical/86dae22a7667a8d4d258db99f9bbc2de502464b05a50f864286c8ae8b20f1acf.bundle",
+      "bytes": 18234,
+      "sha256": "86dae22a7667a8d4d258db99f9bbc2de502464b05a50f864286c8ae8b20f1acf"
+    },
+    "4cdfeacfef6b7ee6aef65ae73828276578cdf4cc9935ccd1c2ef5973cc287dcf.bundle": {
+      "file": "assets/pokemon/local/mythical/4cdfeacfef6b7ee6aef65ae73828276578cdf4cc9935ccd1c2ef5973cc287dcf.bundle",
+      "bytes": 18371,
+      "sha256": "4cdfeacfef6b7ee6aef65ae73828276578cdf4cc9935ccd1c2ef5973cc287dcf"
+    },
+    "6434b02cedd0cecd62b68ad5049aaa9fd13542a2a2c476b91526db3cd25f8e84.bundle": {
+      "file": "assets/pokemon/local/mythical/6434b02cedd0cecd62b68ad5049aaa9fd13542a2a2c476b91526db3cd25f8e84.bundle",
+      "bytes": 20513,
+      "sha256": "6434b02cedd0cecd62b68ad5049aaa9fd13542a2a2c476b91526db3cd25f8e84"
+    },
+    "fc157b847b8835c46dededdfc6cb2f18397aaa3cc74565f2118774423935f599.bundle": {
+      "file": "assets/pokemon/local/mythical/fc157b847b8835c46dededdfc6cb2f18397aaa3cc74565f2118774423935f599.bundle",
+      "bytes": 31752,
+      "sha256": "fc157b847b8835c46dededdfc6cb2f18397aaa3cc74565f2118774423935f599"
+    },
+    "daa2747121a81cf7fa47888f0fd66b0eb34c3e59123ae850c4c12c50c15ed9af.bundle": {
+      "file": "assets/pokemon/local/mythical/daa2747121a81cf7fa47888f0fd66b0eb34c3e59123ae850c4c12c50c15ed9af.bundle",
+      "bytes": 19452,
+      "sha256": "daa2747121a81cf7fa47888f0fd66b0eb34c3e59123ae850c4c12c50c15ed9af"
+    },
+    "8400c246cc43e57294d6b09f9efde866066b7916aee755371b27b91fec7b263e.bundle": {
+      "file": "assets/pokemon/local/mythical/8400c246cc43e57294d6b09f9efde866066b7916aee755371b27b91fec7b263e.bundle",
+      "bytes": 35164,
+      "sha256": "8400c246cc43e57294d6b09f9efde866066b7916aee755371b27b91fec7b263e"
+    },
+    "3a936e05510bd66031f43d56b97f6c57482eab77bd21d60e2d7464bd0d26aa6a.bundle": {
+      "file": "assets/pokemon/local/mythical/3a936e05510bd66031f43d56b97f6c57482eab77bd21d60e2d7464bd0d26aa6a.bundle",
+      "bytes": 24460,
+      "sha256": "3a936e05510bd66031f43d56b97f6c57482eab77bd21d60e2d7464bd0d26aa6a"
+    },
+    "684ba52d6536d09d5f751f828a72ba6f5e22b54e21486701223eed8e32717316.bundle": {
+      "file": "assets/pokemon/local/mythical/684ba52d6536d09d5f751f828a72ba6f5e22b54e21486701223eed8e32717316.bundle",
+      "bytes": 18343,
+      "sha256": "684ba52d6536d09d5f751f828a72ba6f5e22b54e21486701223eed8e32717316"
+    },
+    "382526f2ec86f72c360a216254c0c811e3d076e612052fd13418e0ba7e6cf39b.bundle": {
+      "file": "assets/pokemon/local/mythical/382526f2ec86f72c360a216254c0c811e3d076e612052fd13418e0ba7e6cf39b.bundle",
+      "bytes": 18023,
+      "sha256": "382526f2ec86f72c360a216254c0c811e3d076e612052fd13418e0ba7e6cf39b"
+    },
+    "c1e71564b05bcfb6a786f2359f0186d30cededb085407b0998e5568342610fa2.bundle": {
+      "file": "assets/pokemon/local/mythical/c1e71564b05bcfb6a786f2359f0186d30cededb085407b0998e5568342610fa2.bundle",
+      "bytes": 18255,
+      "sha256": "c1e71564b05bcfb6a786f2359f0186d30cededb085407b0998e5568342610fa2"
+    },
+    "6b4afeb8b581b07b26bc659bba4fab5da7541658e3972473be9e0b41778d4c6d.bundle": {
+      "file": "assets/pokemon/local/mythical/6b4afeb8b581b07b26bc659bba4fab5da7541658e3972473be9e0b41778d4c6d.bundle",
+      "bytes": 17998,
+      "sha256": "6b4afeb8b581b07b26bc659bba4fab5da7541658e3972473be9e0b41778d4c6d"
+    },
+    "eda960dbe84893f45c1ba51870e5c9daab9f21687d855b7e58ca19b658763a14.bundle": {
+      "file": "assets/pokemon/local/mythical/eda960dbe84893f45c1ba51870e5c9daab9f21687d855b7e58ca19b658763a14.bundle",
+      "bytes": 24087,
+      "sha256": "eda960dbe84893f45c1ba51870e5c9daab9f21687d855b7e58ca19b658763a14"
+    },
+    "8a810131bf1ec1bac8e9d900dce2f6f4faddd829b629852e644d0e0bba8ffa94.bundle": {
+      "file": "assets/pokemon/local/mythical/8a810131bf1ec1bac8e9d900dce2f6f4faddd829b629852e644d0e0bba8ffa94.bundle",
+      "bytes": 18911,
+      "sha256": "8a810131bf1ec1bac8e9d900dce2f6f4faddd829b629852e644d0e0bba8ffa94"
+    },
+    "43636a30ac7f171242344d6bc58592ee062abb8db9c883c8059b17a778d4003b.bundle": {
+      "file": "assets/pokemon/local/mythical/43636a30ac7f171242344d6bc58592ee062abb8db9c883c8059b17a778d4003b.bundle",
+      "bytes": 7485,
+      "sha256": "43636a30ac7f171242344d6bc58592ee062abb8db9c883c8059b17a778d4003b"
+    },
+    "0d1e70f8f641cc02c31c6332e1ded6d0e32f4e220f6580f3dc44e9a8f3342e9e.bundle": {
+      "file": "assets/pokemon/local/mythical/0d1e70f8f641cc02c31c6332e1ded6d0e32f4e220f6580f3dc44e9a8f3342e9e.bundle",
+      "bytes": 2305,
+      "sha256": "0d1e70f8f641cc02c31c6332e1ded6d0e32f4e220f6580f3dc44e9a8f3342e9e"
+    },
+    "7f65393ba756b1e5139a9cde59aac81f57a981cdd5b0f53b579309f5c4179aa2.bundle": {
+      "file": "assets/pokemon/local/mythical/7f65393ba756b1e5139a9cde59aac81f57a981cdd5b0f53b579309f5c4179aa2.bundle",
+      "bytes": 3919,
+      "sha256": "7f65393ba756b1e5139a9cde59aac81f57a981cdd5b0f53b579309f5c4179aa2"
+    },
+    "44f8ac03496ef4f62761af8d91028b39cec09f8510b12138fbf23a1dd77c1c84.bundle": {
+      "file": "assets/pokemon/local/mythical/44f8ac03496ef4f62761af8d91028b39cec09f8510b12138fbf23a1dd77c1c84.bundle",
+      "bytes": 9732,
+      "sha256": "44f8ac03496ef4f62761af8d91028b39cec09f8510b12138fbf23a1dd77c1c84"
+    },
+    "2e8c068f5ef58bbed1cd2d03a71ea0ddfb23bfde6aad8e9ee9e79b603218a915.bundle": {
+      "file": "assets/pokemon/local/mythical/2e8c068f5ef58bbed1cd2d03a71ea0ddfb23bfde6aad8e9ee9e79b603218a915.bundle",
+      "bytes": 12488,
+      "sha256": "2e8c068f5ef58bbed1cd2d03a71ea0ddfb23bfde6aad8e9ee9e79b603218a915"
+    },
+    "d077a36b0cb0322da2f31fe3855f6e12cfc4a06dd0d721db14a75ff477bb683a.bundle": {
+      "file": "assets/pokemon/local/mythical/d077a36b0cb0322da2f31fe3855f6e12cfc4a06dd0d721db14a75ff477bb683a.bundle",
+      "bytes": 11279,
+      "sha256": "d077a36b0cb0322da2f31fe3855f6e12cfc4a06dd0d721db14a75ff477bb683a"
+    },
+    "29e4b5b5633c7ec639687f46e9c13db93e1e1f99b762bfbbd7c8d2ec0050e108.bundle": {
+      "file": "assets/pokemon/local/mythical/29e4b5b5633c7ec639687f46e9c13db93e1e1f99b762bfbbd7c8d2ec0050e108.bundle",
+      "bytes": 2509,
+      "sha256": "29e4b5b5633c7ec639687f46e9c13db93e1e1f99b762bfbbd7c8d2ec0050e108"
+    },
+    "0d014322a2d04dab15c714d4c963b0198d9d4e67ffdbd94d64e0b66be80d0811.bundle": {
+      "file": "assets/pokemon/local/mythical/0d014322a2d04dab15c714d4c963b0198d9d4e67ffdbd94d64e0b66be80d0811.bundle",
+      "bytes": 12433,
+      "sha256": "0d014322a2d04dab15c714d4c963b0198d9d4e67ffdbd94d64e0b66be80d0811"
+    },
+    "cda28358d26d8a062387253ad023fd75660480e39d03bc45cc338f1edde9dc23.bundle": {
+      "file": "assets/pokemon/local/mythical/cda28358d26d8a062387253ad023fd75660480e39d03bc45cc338f1edde9dc23.bundle",
+      "bytes": 625589,
+      "sha256": "cda28358d26d8a062387253ad023fd75660480e39d03bc45cc338f1edde9dc23"
+    },
+    "3b96c337efad7f55799f1a13a26c5c1ed36803b8e6bf38df8ae33e90de92f73c.bundle": {
+      "file": "assets/pokemon/local/mythical/3b96c337efad7f55799f1a13a26c5c1ed36803b8e6bf38df8ae33e90de92f73c.bundle",
+      "bytes": 162805,
+      "sha256": "3b96c337efad7f55799f1a13a26c5c1ed36803b8e6bf38df8ae33e90de92f73c"
+    },
+    "4ddc91c20faaca32abaf416f55eaf0987f8d743ed5d62cba6d2ba56c1bb186c9.bundle": {
+      "file": "assets/pokemon/local/mythical/4ddc91c20faaca32abaf416f55eaf0987f8d743ed5d62cba6d2ba56c1bb186c9.bundle",
+      "bytes": 21951,
+      "sha256": "4ddc91c20faaca32abaf416f55eaf0987f8d743ed5d62cba6d2ba56c1bb186c9"
+    },
+    "e3b00693da0c1e6e7e95763abb35ba0192222b27f5c241f24f2c76f1ea9213dc.bundle": {
+      "file": "assets/pokemon/local/mythical/e3b00693da0c1e6e7e95763abb35ba0192222b27f5c241f24f2c76f1ea9213dc.bundle",
+      "bytes": 26785,
+      "sha256": "e3b00693da0c1e6e7e95763abb35ba0192222b27f5c241f24f2c76f1ea9213dc"
+    },
+    "2d6713a3aea94d8476c36d6a633acf607d734690f3fd9283375cd64ca8959290.bundle": {
+      "file": "assets/pokemon/local/mythical/2d6713a3aea94d8476c36d6a633acf607d734690f3fd9283375cd64ca8959290.bundle",
+      "bytes": 31975,
+      "sha256": "2d6713a3aea94d8476c36d6a633acf607d734690f3fd9283375cd64ca8959290"
+    },
+    "32e557b811605d49456f3f52afdbc6ccd771a5e235c8916b29305eaeca89e5bf.bundle": {
+      "file": "assets/pokemon/local/mythical/32e557b811605d49456f3f52afdbc6ccd771a5e235c8916b29305eaeca89e5bf.bundle",
+      "bytes": 25733,
+      "sha256": "32e557b811605d49456f3f52afdbc6ccd771a5e235c8916b29305eaeca89e5bf"
+    },
+    "280a33c8c7c008f4163fc1bdebfcd9779db984daba2417cc4d640704f62de0e7.bundle": {
+      "file": "assets/pokemon/local/mythical/280a33c8c7c008f4163fc1bdebfcd9779db984daba2417cc4d640704f62de0e7.bundle",
+      "bytes": 23640,
+      "sha256": "280a33c8c7c008f4163fc1bdebfcd9779db984daba2417cc4d640704f62de0e7"
+    },
+    "d6004278b2d5e7729f9820c8cdee1bc2b79978aa34d158ec9ea796accfdf433a.bundle": {
+      "file": "assets/pokemon/local/mythical/d6004278b2d5e7729f9820c8cdee1bc2b79978aa34d158ec9ea796accfdf433a.bundle",
+      "bytes": 23763,
+      "sha256": "d6004278b2d5e7729f9820c8cdee1bc2b79978aa34d158ec9ea796accfdf433a"
+    },
+    "a34049d5c0024c5ea46edf8a96356f93680b37eaa564f5a58c5a238a47e9fae0.bundle": {
+      "file": "assets/pokemon/local/mythical/a34049d5c0024c5ea46edf8a96356f93680b37eaa564f5a58c5a238a47e9fae0.bundle",
+      "bytes": 23587,
+      "sha256": "a34049d5c0024c5ea46edf8a96356f93680b37eaa564f5a58c5a238a47e9fae0"
+    },
+    "91dbb936318d542dea510199213d74dc7c5b14421f539ed99348b5fd285f96f0.bundle": {
+      "file": "assets/pokemon/local/mythical/91dbb936318d542dea510199213d74dc7c5b14421f539ed99348b5fd285f96f0.bundle",
+      "bytes": 18967,
+      "sha256": "91dbb936318d542dea510199213d74dc7c5b14421f539ed99348b5fd285f96f0"
+    },
+    "9c28ac0c2773759bbac5bdf1d453a558e4099d70adf1e5dc7a5c2e796b3da4bb.bundle": {
+      "file": "assets/pokemon/local/mythical/9c28ac0c2773759bbac5bdf1d453a558e4099d70adf1e5dc7a5c2e796b3da4bb.bundle",
+      "bytes": 26646,
+      "sha256": "9c28ac0c2773759bbac5bdf1d453a558e4099d70adf1e5dc7a5c2e796b3da4bb"
+    },
+    "a24c1f95979ca215b79197ad1de314043706f6192aab5576c325d8a641408f21.bundle": {
+      "file": "assets/pokemon/local/mythical/a24c1f95979ca215b79197ad1de314043706f6192aab5576c325d8a641408f21.bundle",
+      "bytes": 18553,
+      "sha256": "a24c1f95979ca215b79197ad1de314043706f6192aab5576c325d8a641408f21"
+    },
+    "93e5bdc0099a860bb45dd3f23d90399beb3fdf5fae60fed334807efde50163fc.bundle": {
+      "file": "assets/pokemon/local/mythical/93e5bdc0099a860bb45dd3f23d90399beb3fdf5fae60fed334807efde50163fc.bundle",
+      "bytes": 25201,
+      "sha256": "93e5bdc0099a860bb45dd3f23d90399beb3fdf5fae60fed334807efde50163fc"
+    },
+    "26afac2a9885de64bbcd3efd3c85a269a214e9218ef1f24a61bbd1662c84530b.bundle": {
+      "file": "assets/pokemon/local/mythical/26afac2a9885de64bbcd3efd3c85a269a214e9218ef1f24a61bbd1662c84530b.bundle",
+      "bytes": 228899,
+      "sha256": "26afac2a9885de64bbcd3efd3c85a269a214e9218ef1f24a61bbd1662c84530b"
+    },
+    "6ca51ceae9075f3aa29f06a1a792961b807030bf86d7092162d6de4a06e5035a.bundle": {
+      "file": "assets/pokemon/local/mythical/6ca51ceae9075f3aa29f06a1a792961b807030bf86d7092162d6de4a06e5035a.bundle",
+      "bytes": 2033062,
+      "sha256": "6ca51ceae9075f3aa29f06a1a792961b807030bf86d7092162d6de4a06e5035a"
+    },
+    "469d4e165ca5e707ed6152e3f42ec32ccdedaf3dc25dfa1eb790a6729e76469d.bundle": {
+      "file": "assets/pokemon/local/mythical/469d4e165ca5e707ed6152e3f42ec32ccdedaf3dc25dfa1eb790a6729e76469d.bundle",
+      "bytes": 210861,
+      "sha256": "469d4e165ca5e707ed6152e3f42ec32ccdedaf3dc25dfa1eb790a6729e76469d"
+    },
+    "94e6ca76dbf889a2662805ed28c1c94fe765646a7420089b6ceedb7c0ee57e9e.bundle": {
+      "file": "assets/pokemon/local/mythical/94e6ca76dbf889a2662805ed28c1c94fe765646a7420089b6ceedb7c0ee57e9e.bundle",
+      "bytes": 223896,
+      "sha256": "94e6ca76dbf889a2662805ed28c1c94fe765646a7420089b6ceedb7c0ee57e9e"
+    },
+    "9017bfb528166596828c40d69cf8d22137ee9ab36c486a3459cbf2c092d4520f.bundle": {
+      "file": "assets/pokemon/local/mythical/9017bfb528166596828c40d69cf8d22137ee9ab36c486a3459cbf2c092d4520f.bundle",
+      "bytes": 43506,
+      "sha256": "9017bfb528166596828c40d69cf8d22137ee9ab36c486a3459cbf2c092d4520f"
+    },
+    "d1423721cc84a551318f09c2ccdffe1287fe2608272d089a700f983dcf892464.bundle": {
+      "file": "assets/pokemon/local/mythical/d1423721cc84a551318f09c2ccdffe1287fe2608272d089a700f983dcf892464.bundle",
+      "bytes": 14251,
+      "sha256": "d1423721cc84a551318f09c2ccdffe1287fe2608272d089a700f983dcf892464"
+    },
+    "87c6de41c605d04dede3c023a1ad0be733c206a973b9b653f53bd715a73d9e16.bundle": {
+      "file": "assets/pokemon/local/mythical/87c6de41c605d04dede3c023a1ad0be733c206a973b9b653f53bd715a73d9e16.bundle",
+      "bytes": 154985,
+      "sha256": "87c6de41c605d04dede3c023a1ad0be733c206a973b9b653f53bd715a73d9e16"
+    },
+    "67a4571643e4f64b4a1dee07f1a5b65d925e21f0c71e6bba132773d37f96009e.bundle": {
+      "file": "assets/pokemon/local/mythical/67a4571643e4f64b4a1dee07f1a5b65d925e21f0c71e6bba132773d37f96009e.bundle",
+      "bytes": 7924,
+      "sha256": "67a4571643e4f64b4a1dee07f1a5b65d925e21f0c71e6bba132773d37f96009e"
+    },
+    "c206f7bf875e12c303bd8307b68f8fe9ed146051c0578758d0d4dae0d128fde2.bundle": {
+      "file": "assets/pokemon/local/mythical/c206f7bf875e12c303bd8307b68f8fe9ed146051c0578758d0d4dae0d128fde2.bundle",
+      "bytes": 2720,
+      "sha256": "c206f7bf875e12c303bd8307b68f8fe9ed146051c0578758d0d4dae0d128fde2"
+    },
+    "7f60818d0c8de8cb14b4a5969e4e00573db54263add00ec1564d9d7e5050c4b7.bundle": {
+      "file": "assets/pokemon/local/mythical/7f60818d0c8de8cb14b4a5969e4e00573db54263add00ec1564d9d7e5050c4b7.bundle",
+      "bytes": 2138,
+      "sha256": "7f60818d0c8de8cb14b4a5969e4e00573db54263add00ec1564d9d7e5050c4b7"
+    },
+    "10efb8d06208685fe462fdbdd1c0f86da6df021cc50a93ca87c4d84c6c6b653a.bundle": {
+      "file": "assets/pokemon/local/mythical/10efb8d06208685fe462fdbdd1c0f86da6df021cc50a93ca87c4d84c6c6b653a.bundle",
+      "bytes": 2447,
+      "sha256": "10efb8d06208685fe462fdbdd1c0f86da6df021cc50a93ca87c4d84c6c6b653a"
+    },
+    "d37501de46a54cfffa4f6959dace78e2ee569b6271ef4b5f5cd2133a1c33ce67.bundle": {
+      "file": "assets/pokemon/local/mythical/d37501de46a54cfffa4f6959dace78e2ee569b6271ef4b5f5cd2133a1c33ce67.bundle",
+      "bytes": 3431,
+      "sha256": "d37501de46a54cfffa4f6959dace78e2ee569b6271ef4b5f5cd2133a1c33ce67"
+    },
+    "f8ba34df07fed2eeb676b3438a00ce2fd6b272e831eec8fd4e2704a8a8c3ca52.bundle": {
+      "file": "assets/pokemon/local/mythical/f8ba34df07fed2eeb676b3438a00ce2fd6b272e831eec8fd4e2704a8a8c3ca52.bundle",
+      "bytes": 4524,
+      "sha256": "f8ba34df07fed2eeb676b3438a00ce2fd6b272e831eec8fd4e2704a8a8c3ca52"
+    },
+    "eaa9fa61359754005c628315ee3fbfdaa240a3747e094999b649710c3c4e3b61.bundle": {
+      "file": "assets/pokemon/local/mythical/eaa9fa61359754005c628315ee3fbfdaa240a3747e094999b649710c3c4e3b61.bundle",
+      "bytes": 2729,
+      "sha256": "eaa9fa61359754005c628315ee3fbfdaa240a3747e094999b649710c3c4e3b61"
+    },
+    "63571d84142db1668ce84da01a06d1ea27598fdecc9bcbb192803858b6bd9d0c.bundle": {
+      "file": "assets/pokemon/local/mythical/63571d84142db1668ce84da01a06d1ea27598fdecc9bcbb192803858b6bd9d0c.bundle",
+      "bytes": 2726,
+      "sha256": "63571d84142db1668ce84da01a06d1ea27598fdecc9bcbb192803858b6bd9d0c"
+    },
+    "612e70f0b9f4df80a40e758e11b899a52fdab974da598fba2c00692c92f81dc5.bundle": {
+      "file": "assets/pokemon/local/mythical/612e70f0b9f4df80a40e758e11b899a52fdab974da598fba2c00692c92f81dc5.bundle",
+      "bytes": 2752,
+      "sha256": "612e70f0b9f4df80a40e758e11b899a52fdab974da598fba2c00692c92f81dc5"
+    },
+    "0ea5e8b1e5347ce11a7d87c7ec608bb394908aabfdc2636082218afe8e95dd3a.bundle": {
+      "file": "assets/pokemon/local/mythical/0ea5e8b1e5347ce11a7d87c7ec608bb394908aabfdc2636082218afe8e95dd3a.bundle",
+      "bytes": 2751,
+      "sha256": "0ea5e8b1e5347ce11a7d87c7ec608bb394908aabfdc2636082218afe8e95dd3a"
+    },
+    "fc6aefa089d524d8f143213ddadf82b7b59d9b9fdbd1f570cd19345f20231b5c.bundle": {
+      "file": "assets/pokemon/local/mythical/fc6aefa089d524d8f143213ddadf82b7b59d9b9fdbd1f570cd19345f20231b5c.bundle",
+      "bytes": 2745,
+      "sha256": "fc6aefa089d524d8f143213ddadf82b7b59d9b9fdbd1f570cd19345f20231b5c"
+    },
+    "04c7b0a89839727c4d708bde5f26d1845f842c02378ea5dd7abef04cfc87c762.bundle": {
+      "file": "assets/pokemon/local/mythical/04c7b0a89839727c4d708bde5f26d1845f842c02378ea5dd7abef04cfc87c762.bundle",
+      "bytes": 2744,
+      "sha256": "04c7b0a89839727c4d708bde5f26d1845f842c02378ea5dd7abef04cfc87c762"
+    },
+    "3e9cefb78e6d37524f89a6c82c59c9851c90bb2a4a9d5cbd116f5090afc5600c.bundle": {
+      "file": "assets/pokemon/local/mythical/3e9cefb78e6d37524f89a6c82c59c9851c90bb2a4a9d5cbd116f5090afc5600c.bundle",
+      "bytes": 2726,
+      "sha256": "3e9cefb78e6d37524f89a6c82c59c9851c90bb2a4a9d5cbd116f5090afc5600c"
+    },
+    "edd25ceed8c9ceb0147e9302c1266710bb2076e13cdfc568a2f8ee86092a9b87.bundle": {
+      "file": "assets/pokemon/local/mythical/edd25ceed8c9ceb0147e9302c1266710bb2076e13cdfc568a2f8ee86092a9b87.bundle",
+      "bytes": 6221,
+      "sha256": "edd25ceed8c9ceb0147e9302c1266710bb2076e13cdfc568a2f8ee86092a9b87"
+    },
+    "40e9809938fbfeb86fc14a301e834019bf9c9e2f460a3b728e565a0b8fa41084.bundle": {
+      "file": "assets/pokemon/local/mythical/40e9809938fbfeb86fc14a301e834019bf9c9e2f460a3b728e565a0b8fa41084.bundle",
+      "bytes": 4242,
+      "sha256": "40e9809938fbfeb86fc14a301e834019bf9c9e2f460a3b728e565a0b8fa41084"
+    },
+    "0bf88319d1f67b40a3badf7e6af1ca61808ed3ea97d5bc78e03a0e01d4a1de18.bundle": {
+      "file": "assets/pokemon/local/mythical/0bf88319d1f67b40a3badf7e6af1ca61808ed3ea97d5bc78e03a0e01d4a1de18.bundle",
+      "bytes": 12021,
+      "sha256": "0bf88319d1f67b40a3badf7e6af1ca61808ed3ea97d5bc78e03a0e01d4a1de18"
+    },
+    "56a6718354721f045ec324ec200aba5a38842467b9f34c82902d76c394ee7197.bundle": {
+      "file": "assets/pokemon/local/mythical/56a6718354721f045ec324ec200aba5a38842467b9f34c82902d76c394ee7197.bundle",
+      "bytes": 2782,
+      "sha256": "56a6718354721f045ec324ec200aba5a38842467b9f34c82902d76c394ee7197"
+    },
+    "93b2552cfad94c6fff5a0173a6f3dcc9922d6b0592da83147caa5fc6aa34458b.bundle": {
+      "file": "assets/pokemon/local/mythical/93b2552cfad94c6fff5a0173a6f3dcc9922d6b0592da83147caa5fc6aa34458b.bundle",
+      "bytes": 3213,
+      "sha256": "93b2552cfad94c6fff5a0173a6f3dcc9922d6b0592da83147caa5fc6aa34458b"
+    },
+    "6b3db7da2b4da55cf93e43021bbe7911e497e6817fefcb7773230e74ef10d366.bundle": {
+      "file": "assets/pokemon/local/mythical/6b3db7da2b4da55cf93e43021bbe7911e497e6817fefcb7773230e74ef10d366.bundle",
+      "bytes": 2764,
+      "sha256": "6b3db7da2b4da55cf93e43021bbe7911e497e6817fefcb7773230e74ef10d366"
+    },
+    "5b7b0c4b57db83794ff06a78fd764f4fa8e86a52f6f2e9156922eee88d934d66.bundle": {
+      "file": "assets/pokemon/local/mythical/5b7b0c4b57db83794ff06a78fd764f4fa8e86a52f6f2e9156922eee88d934d66.bundle",
+      "bytes": 2739,
+      "sha256": "5b7b0c4b57db83794ff06a78fd764f4fa8e86a52f6f2e9156922eee88d934d66"
+    },
+    "2092b2be6a13e4effc6590e163f20d7ff24fe58927d3b3438c6af623cefc0ea8.bundle": {
+      "file": "assets/pokemon/local/mythical/2092b2be6a13e4effc6590e163f20d7ff24fe58927d3b3438c6af623cefc0ea8.bundle",
+      "bytes": 4159,
+      "sha256": "2092b2be6a13e4effc6590e163f20d7ff24fe58927d3b3438c6af623cefc0ea8"
+    },
+    "61a82af8d188c321867726aff13206a37e3f4520c0720c24e9b491736d3bfa8e.bundle": {
+      "file": "assets/pokemon/local/mythical/61a82af8d188c321867726aff13206a37e3f4520c0720c24e9b491736d3bfa8e.bundle",
+      "bytes": 2707,
+      "sha256": "61a82af8d188c321867726aff13206a37e3f4520c0720c24e9b491736d3bfa8e"
+    },
+    "ba5bafe584ffe8fd0a6f57502a16b510975fa4737a9054ed82c078ffd0dd2c81.bundle": {
+      "file": "assets/pokemon/local/mythical/ba5bafe584ffe8fd0a6f57502a16b510975fa4737a9054ed82c078ffd0dd2c81.bundle",
+      "bytes": 8846,
+      "sha256": "ba5bafe584ffe8fd0a6f57502a16b510975fa4737a9054ed82c078ffd0dd2c81"
+    },
+    "3bdb37b9dc8ce6ad718871191aec7fd9a7c54a55ba1eddee70c5e3994e6e85f5.bundle": {
+      "file": "assets/pokemon/local/mythical/3bdb37b9dc8ce6ad718871191aec7fd9a7c54a55ba1eddee70c5e3994e6e85f5.bundle",
+      "bytes": 2884,
+      "sha256": "3bdb37b9dc8ce6ad718871191aec7fd9a7c54a55ba1eddee70c5e3994e6e85f5"
+    },
+    "ac5a2ad5f0bc85237dee394009dfde13434743fb6fdbed6fad6320ee09b75676.bundle": {
+      "file": "assets/pokemon/local/mythical/ac5a2ad5f0bc85237dee394009dfde13434743fb6fdbed6fad6320ee09b75676.bundle",
+      "bytes": 2804,
+      "sha256": "ac5a2ad5f0bc85237dee394009dfde13434743fb6fdbed6fad6320ee09b75676"
+    },
+    "d1b5073a6bf944db32c1ccb791d4d1d767d1a59437122364048e2fd434b000ff.bundle": {
+      "file": "assets/pokemon/local/mythical/d1b5073a6bf944db32c1ccb791d4d1d767d1a59437122364048e2fd434b000ff.bundle",
+      "bytes": 2769,
+      "sha256": "d1b5073a6bf944db32c1ccb791d4d1d767d1a59437122364048e2fd434b000ff"
+    },
+    "ed637603dea2aadd3967b184f88de4554491f95bce7b05b2200240aa6945caf6.bundle": {
+      "file": "assets/pokemon/local/mythical/ed637603dea2aadd3967b184f88de4554491f95bce7b05b2200240aa6945caf6.bundle",
+      "bytes": 2796,
+      "sha256": "ed637603dea2aadd3967b184f88de4554491f95bce7b05b2200240aa6945caf6"
+    },
+    "fc0961db82dc84e91c53845f1812d0bfdd8ef3a2175a4bed07193b664a8eec5f.bundle": {
+      "file": "assets/pokemon/local/mythical/fc0961db82dc84e91c53845f1812d0bfdd8ef3a2175a4bed07193b664a8eec5f.bundle",
+      "bytes": 3069,
+      "sha256": "fc0961db82dc84e91c53845f1812d0bfdd8ef3a2175a4bed07193b664a8eec5f"
+    },
+    "396dc8838fe9458d18ec7b030d50c2bca4bb26a190eee2629fdde3bde1237f2c.bundle": {
+      "file": "assets/pokemon/local/mythical/396dc8838fe9458d18ec7b030d50c2bca4bb26a190eee2629fdde3bde1237f2c.bundle",
+      "bytes": 2849,
+      "sha256": "396dc8838fe9458d18ec7b030d50c2bca4bb26a190eee2629fdde3bde1237f2c"
+    },
+    "3e47c721c29ad8513a955e53a2e4962a93a45eb8c38616c606d95cc83283e227.bundle": {
+      "file": "assets/pokemon/local/mythical/3e47c721c29ad8513a955e53a2e4962a93a45eb8c38616c606d95cc83283e227.bundle",
+      "bytes": 2869,
+      "sha256": "3e47c721c29ad8513a955e53a2e4962a93a45eb8c38616c606d95cc83283e227"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'com.chaquo.python'
+}
+
+def defaultPython = System.getProperty('os.name').toLowerCase().contains('windows') ? 'python' : 'python3'
+def buildPythonPath = System.getenv('BUILD_PYTHON') ?: defaultPython
+
+android {
+    namespace 'org.dittobuffer.mobile'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'org.dittobuffer.mobile'
+        minSdk 26
+        targetSdk 35
+        versionCode 6
+        versionName '1.0.5'
+        ndk {
+            // The phone is arm64. One ABI keeps the APK and the Python runtime small.
+            abiFilters 'arm64-v8a'
+        }
+        python {
+            buildPython buildPythonPath
+            // Studio's Draft 2020-12 validator uses universal Python wheels.
+            // Fail rather than attempting unsupported native dependency builds.
+            pip {
+                options "--only-binary", ":all:"
+                install "-r", "requirements-studio.txt"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+
+    androidResources {
+        // The payload parts are already stored archives; never recompress them.
+        noCompress += ['zip']
+    }
+
+    androidResources {
+        // Game payloads are already packed: store them, never re-compress GiBs.
+        noCompress 'zip', 'apk'
+    }
+
+    sourceSets {
+        main {
+            // The server itself is NOT compiled in: it is extracted from
+            // assets/server-bootstrap.zip on first run and can be replaced with
+            // `adb push` afterwards. Only the Android bootstrap lives here.
+            python.srcDirs = ['src/main/python']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'com.google.android.material:material:1.12.0'
+}

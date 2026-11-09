@@ -1,0 +1,10 @@
+{
+  "policy": "M14 conservative public-access rules; local gameplay distribution, not official Wayspots",
+  "walkable_distance_m": 70,
+  "minimum_spacing_m": 50,
+  "same_subject_spacing_m": 130,
+  "gym_spacing_m": 700,
+  "gym_sample_denominator": 5,
+  "gym_district_lat_degrees": 0.018,
+  "gym_district_lng_degrees": 0.029
+}

@@ -1,0 +1,444 @@
+{
+  "host": "127.0.0.1",
+  "port": 8445,
+  "database": "data/server.sqlite3",
+  "player_name": "Trainer",
+  "pokemon_capacity": 300,
+  "item_capacity": 350,
+  "spawn_duration_seconds": 180,
+  "encounter_duration_seconds": 300,
+  "catch_probability": 0.8,
+  "catch_xp": 100,
+  "catch_stardust": 100,
+  "catch_candy": 3,
+  "interaction_range_meters": 100,
+  "fort_cooldown_seconds": 300,
+  "spawn_species": [
+    1
+  ],
+  "spawn_pools": [
+    {
+      "name": "verified-common",
+      "species": [
+        {
+          "id": 1,
+          "weight": 2
+        },
+        {
+          "id": 4,
+          "weight": 1
+        },
+        {
+          "id": 7,
+          "weight": 1
+        },
+        {
+          "id": 10,
+          "weight": 2
+        },
+        {
+          "id": 16,
+          "weight": 2
+        },
+        {
+          "id": 25,
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "spawn_points_per_tile": 6,
+  "spawn_level_range": [
+    5,
+    10
+  ],
+  "spawn_iv_range": [
+    0,
+    15
+  ],
+  "shiny_rate": 0.001953125,
+  "spawn_generation": 5,
+  "power_up_candy_cost": 1,
+  "power_up_stardust_cost": 100,
+  "power_up_levels_above_player": 10,
+  "evolution_xp": 500,
+  "level_up_rewards": {
+    "2": {
+      "1": 10
+    },
+    "3": {
+      "1": 13,
+      "101": 2,
+      "201": 1
+    },
+    "4": {
+      "1": 14,
+      "101": 2,
+      "201": 1
+    },
+    "5": {
+      "1": 15,
+      "101": 2,
+      "201": 1
+    },
+    "6": {
+      "1": 16,
+      "101": 2,
+      "201": 1
+    },
+    "7": {
+      "1": 17,
+      "101": 2,
+      "201": 1
+    },
+    "8": {
+      "1": 18,
+      "101": 2,
+      "201": 1
+    },
+    "9": {
+      "1": 19,
+      "101": 2,
+      "201": 1
+    },
+    "10": {
+      "1": 20,
+      "101": 2,
+      "201": 1
+    },
+    "11": {
+      "1": 21,
+      "101": 2,
+      "201": 1
+    },
+    "12": {
+      "1": 22,
+      "101": 2,
+      "201": 1
+    },
+    "13": {
+      "1": 23,
+      "101": 2,
+      "201": 1
+    },
+    "14": {
+      "1": 24,
+      "101": 2,
+      "201": 1
+    },
+    "15": {
+      "1": 25,
+      "101": 2,
+      "201": 1
+    },
+    "16": {
+      "1": 26,
+      "101": 2,
+      "201": 1
+    },
+    "17": {
+      "1": 27,
+      "101": 2,
+      "201": 1
+    },
+    "18": {
+      "1": 28,
+      "101": 2,
+      "201": 1
+    },
+    "19": {
+      "1": 29,
+      "101": 2,
+      "201": 1
+    },
+    "20": {
+      "1": 30,
+      "101": 2,
+      "201": 1
+    },
+    "21": {
+      "1": 31,
+      "101": 2,
+      "201": 1
+    },
+    "22": {
+      "1": 32,
+      "101": 2,
+      "201": 1
+    },
+    "23": {
+      "1": 33,
+      "101": 2,
+      "201": 1
+    },
+    "24": {
+      "1": 34,
+      "101": 2,
+      "201": 1
+    },
+    "25": {
+      "1": 35,
+      "101": 2,
+      "201": 1
+    },
+    "26": {
+      "1": 36,
+      "101": 2,
+      "201": 1
+    },
+    "27": {
+      "1": 37,
+      "101": 2,
+      "201": 1
+    },
+    "28": {
+      "1": 38,
+      "101": 2,
+      "201": 1
+    },
+    "29": {
+      "1": 39,
+      "101": 2,
+      "201": 1
+    },
+    "30": {
+      "1": 40,
+      "101": 2,
+      "201": 1
+    },
+    "31": {
+      "1": 41,
+      "101": 2,
+      "201": 1
+    },
+    "32": {
+      "1": 42,
+      "101": 2,
+      "201": 1
+    },
+    "33": {
+      "1": 43,
+      "101": 2,
+      "201": 1
+    },
+    "34": {
+      "1": 44,
+      "101": 2,
+      "201": 1
+    },
+    "35": {
+      "1": 45,
+      "101": 2,
+      "201": 1
+    },
+    "36": {
+      "1": 46,
+      "101": 2,
+      "201": 1
+    },
+    "37": {
+      "1": 47,
+      "101": 2,
+      "201": 1
+    },
+    "38": {
+      "1": 48,
+      "101": 2,
+      "201": 1
+    },
+    "39": {
+      "1": 49,
+      "101": 2,
+      "201": 1
+    },
+    "40": {
+      "1": 50,
+      "101": 2,
+      "201": 1
+    }
+  },
+  "initial_items": {
+    "1": 100,
+    "2": 30,
+    "3": 10,
+    "101": 10,
+    "201": 5,
+    "701": 10
+  },
+  "level_requirements": [
+    0,
+    1000,
+    1000,
+    2000,
+    3000,
+    4000,
+    5000,
+    6000,
+    7000,
+    8000,
+    9000,
+    10000,
+    11000,
+    12000,
+    13000,
+    14000,
+    15000,
+    16000,
+    17000,
+    18000,
+    19000,
+    20000,
+    21000,
+    22000,
+    23000,
+    24000,
+    25000,
+    26000,
+    27000,
+    28000,
+    29000,
+    30000,
+    31000,
+    32000,
+    33000,
+    34000,
+    35000,
+    36000,
+    37000,
+    38000
+  ],
+  "fort_xp": 50,
+  "spawn_neighbor_tiles": 1,
+  "eggs": {
+    "capacity": 9,
+    "stop_drop_probability": 0.5,
+    "pools": [
+      {
+        "km": 2,
+        "weight": 3,
+        "species": [
+          10,
+          16
+        ]
+      },
+      {
+        "km": 5,
+        "weight": 2,
+        "species": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "km": 10,
+        "weight": 1,
+        "species": [
+          25
+        ]
+      }
+    ],
+    "xp": 200,
+    "stardust": 100,
+    "candy": 5,
+    "initial_limited_incubators": 1
+  },
+  "walking": {
+    "max_accuracy_m": 25,
+    "max_speed_mps": 2.8,
+    "allow_debug_fixture": false
+  },
+  "research": {
+    "enabled": true
+  },
+  "pokemon_assets": {
+    "enabled": false
+  },
+  "avatar_assets": {
+    "enabled": false
+  },
+  "buddy_perks": {
+    "gifts": true,
+    "souvenirs": true,
+    "ribbon": true,
+    "catch_assist": true
+  },
+  "profile": "release",
+  "world": {
+    "enabled": true,
+    "palette": "src/dittobuffer/world/world-palette.json",
+    "osm_download": true,
+    "osm_download_radius_m": 1200,
+    "osm_expand": true,
+    "osm_expand_ring_max": 2,
+    "osm_request_interval_s": 10.0,
+    "osm_expand_focus": {
+      "lat": 51.5074,
+      "lng": -0.1278
+    },
+    "map_tiles_base": "http://127.0.0.1:8081/map/tiles",
+    "map_tiles_port": 8081
+  },
+  "random_spawns": {
+    "enabled": false,
+    "refresh_seconds": 1800,
+    "level_range": [
+      5,
+      35
+    ],
+    "iv_range": [
+      0,
+      15
+    ],
+    "shiny_rate": 0.015625,
+    "special_weight": 0.05,
+    "points_per_tile": 10
+  },
+  "liveops": {
+    "enabled": true,
+    "shiny_rates": {},
+    "spawn_weights": {},
+    "spawn_allow": [],
+    "raid_tier_weights": {
+      "1": 50,
+      "3": 30,
+      "5": 20,
+      "6": 0
+    },
+    "raid_boss_weights": {},
+    "events": [],
+    "community_days": [],
+    "shadow_overrides": {}
+  },
+  "platform": {
+    "mode": "local",
+    "enabled": false,
+    "room": "",
+    "domain": "",
+    "url": "",
+    "manage_token": "",
+    "title": "Dittobuffer Release",
+    "description": "",
+    "publish_seconds": 60
+  },
+  "shadow": {
+    "enabled": true,
+    "purify_stardust_cost": 1000,
+    "purify_candy_cost": 25,
+    "shadow_third_move_stardust_multiplier": 1.2,
+    "shadow_third_move_candy_multiplier": 1.2,
+    "purified_third_move_stardust_multiplier": 0.8,
+    "purified_third_move_candy_multiplier": 0.8
+  },
+  "routes": {
+    "enabled": true,
+    "minimum_level": 1
+  },
+  "network": {
+    "mode": "loopback"
+  },
+  "authentication": {
+    "mode": "local",
+    "registration": "open"
+  }
+}

@@ -1,0 +1,1150 @@
+{
+  "source": "builds/m7-public-gamemaster.json",
+  "source_sha256": "5c947ac64d1de8859bea1b3bf044609d74b6e8429d53f8cb1aa30a72a46dce84",
+  "medals": [
+    {
+      "id": "BADGE_BERRIES_FED",
+      "badge": 42,
+      "targets": [
+        10,
+        100,
+        1000,
+        15000
+      ],
+      "ranks": 5,
+      "counter": "berries"
+    },
+    {
+      "id": "BADGE_BUDDY_BEST",
+      "badge": 60,
+      "targets": [
+        1,
+        10,
+        100,
+        200
+      ],
+      "ranks": 5,
+      "counter": "best_buddies"
+    },
+    {
+      "id": "BADGE_CAPTURE_TOTAL",
+      "badge": 3,
+      "targets": [
+        30,
+        500,
+        2000,
+        50000
+      ],
+      "ranks": 5,
+      "counter": "captures"
+    },
+    {
+      "id": "BADGE_CHALLENGE_QUESTS",
+      "badge": 46,
+      "targets": [
+        10,
+        100,
+        1000,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "research"
+    },
+    {
+      "id": "BADGE_EVOLVED_TOTAL",
+      "badge": 5,
+      "targets": [
+        3,
+        20,
+        200,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "evolutions"
+    },
+    {
+      "id": "BADGE_HATCHED_TOTAL",
+      "badge": 6,
+      "targets": [
+        10,
+        100,
+        500,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "hatches"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES",
+      "badge": 2,
+      "targets": [
+        5,
+        50,
+        100,
+        151
+      ],
+      "ranks": 5,
+      "counter": "dex"
+    },
+    {
+      "id": "BADGE_POKESTOPS_VISITED",
+      "badge": 8,
+      "targets": [
+        100,
+        1000,
+        2000,
+        50000
+      ],
+      "ranks": 5,
+      "counter": "stops"
+    },
+    {
+      "id": "BADGE_TRAVEL_KM",
+      "badge": 1,
+      "targets": [
+        10,
+        100,
+        1000,
+        10000
+      ],
+      "ranks": 5,
+      "counter": "walking"
+    },
+    {
+      "id": "BADGE_TYPE_BUG",
+      "badge": 24,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:BUG"
+    },
+    {
+      "id": "BADGE_TYPE_DARK",
+      "badge": 34,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:DARK"
+    },
+    {
+      "id": "BADGE_TYPE_DRAGON",
+      "badge": 33,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:DRAGON"
+    },
+    {
+      "id": "BADGE_TYPE_ELECTRIC",
+      "badge": 30,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:ELECTRIC"
+    },
+    {
+      "id": "BADGE_TYPE_FAIRY",
+      "badge": 35,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:FAIRY"
+    },
+    {
+      "id": "BADGE_TYPE_FIGHTING",
+      "badge": 19,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:FIGHTING"
+    },
+    {
+      "id": "BADGE_TYPE_FIRE",
+      "badge": 27,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:FIRE"
+    },
+    {
+      "id": "BADGE_TYPE_FLYING",
+      "badge": 20,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:FLYING"
+    },
+    {
+      "id": "BADGE_TYPE_GHOST",
+      "badge": 25,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:GHOST"
+    },
+    {
+      "id": "BADGE_TYPE_GRASS",
+      "badge": 29,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:GRASS"
+    },
+    {
+      "id": "BADGE_TYPE_GROUND",
+      "badge": 22,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:GROUND"
+    },
+    {
+      "id": "BADGE_TYPE_ICE",
+      "badge": 32,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:ICE"
+    },
+    {
+      "id": "BADGE_TYPE_NORMAL",
+      "badge": 18,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:NORMAL"
+    },
+    {
+      "id": "BADGE_TYPE_POISON",
+      "badge": 21,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:POISON"
+    },
+    {
+      "id": "BADGE_TYPE_PSYCHIC",
+      "badge": 31,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:PSYCHIC"
+    },
+    {
+      "id": "BADGE_TYPE_ROCK",
+      "badge": 23,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:ROCK"
+    },
+    {
+      "id": "BADGE_TYPE_STEEL",
+      "badge": 26,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:STEEL"
+    },
+    {
+      "id": "BADGE_TYPE_WATER",
+      "badge": 28,
+      "targets": [
+        10,
+        50,
+        200,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "type:WATER"
+    },
+    {
+      "id": "BADGE_BATTLE_ATTACK_WON",
+      "badge": 13,
+      "targets": [
+        10,
+        100,
+        1000,
+        4000
+      ],
+      "ranks": 5,
+      "counter": "gym_wins"
+    },
+    {
+      "id": "BADGE_LEGENDARY_BATTLE_WON",
+      "badge": 41,
+      "targets": [
+        10,
+        100,
+        1000,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "legendary_wins"
+    },
+    {
+      "id": "BADGE_RAID_BATTLE_WON",
+      "badge": 40,
+      "targets": [
+        10,
+        100,
+        1000,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "raid_wins"
+    }
+  ],
+  "buddy": {
+    "BUDDY_CATEGORY_BATTLE": {
+      "templateId": "BUDDY_CATEGORY_BATTLE",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_BATTLE",
+        "maxPointsPerDay": 3
+      }
+    },
+    "BUDDY_CATEGORY_BONUS": {
+      "templateId": "BUDDY_CATEGORY_BONUS",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_BONUS",
+        "maxPointsPerDay": 6
+      }
+    },
+    "BUDDY_CATEGORY_CARE": {
+      "templateId": "BUDDY_CATEGORY_CARE",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_CARE",
+        "maxPointsPerDay": 1
+      }
+    },
+    "BUDDY_CATEGORY_EXPLORE": {
+      "templateId": "BUDDY_CATEGORY_EXPLORE",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_EXPLORE",
+        "maxPointsPerDay": 1
+      }
+    },
+    "BUDDY_CATEGORY_FEED": {
+      "templateId": "BUDDY_CATEGORY_FEED",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_FEED",
+        "maxPointsPerDay": 3
+      }
+    },
+    "BUDDY_CATEGORY_ROUTE": {
+      "templateId": "BUDDY_CATEGORY_ROUTE",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_ROUTE",
+        "maxPointsPerDay": 1
+      }
+    },
+    "BUDDY_CATEGORY_SNAPSHOT": {
+      "templateId": "BUDDY_CATEGORY_SNAPSHOT",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_SNAPSHOT",
+        "maxPointsPerDay": 1
+      }
+    },
+    "BUDDY_CATEGORY_WALK": {
+      "templateId": "BUDDY_CATEGORY_WALK",
+      "buddyActivityCategorySettings": {
+        "activityCategory": "BUDDY_CATEGORY_WALK",
+        "maxPointsPerDay": 3
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_0": {
+      "templateId": "BUDDY_EMOTION_LEVEL_0",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_0",
+        "emotionAnimation": "BUDDY_ANIMATION_HATE"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_1": {
+      "templateId": "BUDDY_EMOTION_LEVEL_1",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_1",
+        "minEmotionPointsRequired": 1,
+        "emotionAnimation": "BUDDY_ANIMATION_HATE"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_2": {
+      "templateId": "BUDDY_EMOTION_LEVEL_2",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_2",
+        "minEmotionPointsRequired": 2,
+        "emotionAnimation": "BUDDY_ANIMATION_HAPPY"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_3": {
+      "templateId": "BUDDY_EMOTION_LEVEL_3",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_3",
+        "minEmotionPointsRequired": 4,
+        "emotionAnimation": "BUDDY_ANIMATION_HAPPY"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_4": {
+      "templateId": "BUDDY_EMOTION_LEVEL_4",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_4",
+        "minEmotionPointsRequired": 8,
+        "emotionAnimation": "BUDDY_ANIMATION_HAPPY"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_5": {
+      "templateId": "BUDDY_EMOTION_LEVEL_5",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_5",
+        "minEmotionPointsRequired": 16,
+        "emotionAnimation": "BUDDY_ANIMATION_HAPPY"
+      }
+    },
+    "BUDDY_EMOTION_LEVEL_6": {
+      "templateId": "BUDDY_EMOTION_LEVEL_6",
+      "buddyEmotionLevelSettings": {
+        "emotionLevel": "BUDDY_EMOTION_LEVEL_6",
+        "minEmotionPointsRequired": 32,
+        "emotionAnimation": "BUDDY_ANIMATION_HAPPY"
+      }
+    },
+    "BUDDY_ENCOUNTER_CAMEO_SETTINGS": {
+      "templateId": "BUDDY_ENCOUNTER_CAMEO_SETTINGS",
+      "buddyEncounterCameoSettings": {
+        "buddyWildEncounterCameoChancePercent": 0.2,
+        "buddyQuestEncounterCameoChancePercent": 0.2,
+        "buddyRaidEncounterCameoChancePercent": 0.2,
+        "buddyInvasionEncounterCameoChancePercent": 0.2
+      }
+    },
+    "BUDDY_HUNGER_SETTINGS": {
+      "templateId": "BUDDY_HUNGER_SETTINGS",
+      "buddyHungerSettings": {
+        "numHungerPointsRequiredForFull": 6,
+        "decayPointsPerBucket": 2,
+        "millisecondsPerBucket": "3600000",
+        "cooldownDurationMs": "3600000",
+        "decayDurationAfterFullMs": "86400000"
+      }
+    },
+    "BUDDY_INTERACTION_SETTINGS": {
+      "templateId": "BUDDY_INTERACTION_SETTINGS",
+      "buddyInteractionSettings": {
+        "feedItemWhitelist": [
+          "ITEM_RAZZ_BERRY",
+          "ITEM_NANAB_BERRY",
+          "ITEM_PINAP_BERRY",
+          "ITEM_GOLDEN_RAZZ_BERRY",
+          "ITEM_GOLDEN_PINAP_BERRY",
+          "ITEM_POFFIN"
+        ]
+      }
+    },
+    "BUDDY_LEVEL_0": {
+      "templateId": "BUDDY_LEVEL_0",
+      "buddyLevelSettings": {
+        "level": "BUDDY_LEVEL_0"
+      }
+    },
+    "BUDDY_LEVEL_1": {
+      "templateId": "BUDDY_LEVEL_1",
+      "buddyLevelSettings": {
+        "level": "BUDDY_LEVEL_1",
+        "minNonCumulativePointsRequired": 1,
+        "unlockedTraits": [
+          "MAP_DEPLOY",
+          "EMOTION_INDICATOR",
+          "TRAINING"
+        ]
+      }
+    },
+    "BUDDY_LEVEL_2": {
+      "templateId": "BUDDY_LEVEL_2",
+      "buddyLevelSettings": {
+        "level": "BUDDY_LEVEL_2",
+        "minNonCumulativePointsRequired": 70,
+        "unlockedTraits": [
+          "MAP_DEPLOY",
+          "EMOTION_INDICATOR",
+          "ENCOUNTER_CAMEO",
+          "PICK_UP_CONSUMABLES",
+          "TRAINING"
+        ]
+      }
+    },
+    "BUDDY_LEVEL_3": {
+      "templateId": "BUDDY_LEVEL_3",
+      "buddyLevelSettings": {
+        "level": "BUDDY_LEVEL_3",
+        "minNonCumulativePointsRequired": 150,
+        "unlockedTraits": [
+          "MAP_DEPLOY",
+          "EMOTION_INDICATOR",
+          "ENCOUNTER_CAMEO",
+          "PICK_UP_CONSUMABLES",
+          "PICK_UP_SOUVENIRS",
+          "FIND_ATTRACTIVE_POIS",
+          "TRAINING"
+        ]
+      }
+    },
+    "BUDDY_LEVEL_4": {
+      "templateId": "BUDDY_LEVEL_4",
+      "buddyLevelSettings": {
+        "level": "BUDDY_LEVEL_4",
+        "minNonCumulativePointsRequired": 300,
+        "unlockedTraits": [
+          "MAP_DEPLOY",
+          "EMOTION_INDICATOR",
+          "ENCOUNTER_CAMEO",
+          "PICK_UP_CONSUMABLES",
+          "PICK_UP_SOUVENIRS",
+          "FIND_ATTRACTIVE_POIS",
+          "BEST_BUDDY_ASSET",
+          "CP_BOOST",
+          "TRAINING"
+        ]
+      }
+    },
+    "BUDDY_SWAP_SETTINGS": {
+      "templateId": "BUDDY_SWAP_SETTINGS",
+      "buddySwapSettings": {
+        "maxSwapsPerDay": 20,
+        "enableSwapFreeEvolution": true,
+        "enableQuickSwap": true
+      }
+    },
+    "BUDDY_WALK_SETTINGS": {
+      "templateId": "BUDDY_WALK_SETTINGS",
+      "buddyWalkSettings": {
+        "kmRequiredPerAffectionPoint": 2.0
+      }
+    }
+  },
+  "levels": {
+    "templateId": "PLAYER_LEVEL_SETTINGS",
+    "playerLevel": {
+      "rankNum": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "requiredExperience": [
+        0,
+        2500,
+        5500,
+        9000,
+        13000,
+        18000,
+        24000,
+        31000,
+        39000,
+        48000,
+        58000,
+        70000,
+        84000,
+        100000,
+        118000,
+        139000,
+        163500,
+        191500,
+        223000,
+        258000,
+        300000,
+        349000,
+        405000,
+        468000,
+        538000,
+        621000,
+        717000,
+        826000,
+        948000,
+        1083000,
+        1241000,
+        1422000,
+        1626000,
+        1853000,
+        2103000,
+        2393000,
+        2723000,
+        3093000,
+        3503000,
+        3953000,
+        4473000,
+        5063000,
+        5723000,
+        6453000,
+        7253000,
+        8153000,
+        9153000,
+        10253000,
+        11453000,
+        12753000,
+        14193000,
+        15773000,
+        17493000,
+        19353000,
+        21353000,
+        23553000,
+        25953000,
+        28553000,
+        31353000,
+        34353000,
+        37703000,
+        41403000,
+        45453000,
+        49853000,
+        54603000,
+        59853000,
+        65603000,
+        71853000,
+        78603000,
+        85853000,
+        93853000,
+        102603000,
+        112103000,
+        122353000,
+        133353000,
+        145353000,
+        158353000,
+        172353000,
+        187353000,
+        203353000
+      ],
+      "cpMultiplier": [
+        0.094,
+        0.16639787,
+        0.21573247,
+        0.25572005,
+        0.29024988,
+        0.3210876,
+        0.34921268,
+        0.3752356,
+        0.39956728,
+        0.4225,
+        0.44310755,
+        0.4627984,
+        0.48168495,
+        0.49985844,
+        0.51739395,
+        0.5343543,
+        0.5507927,
+        0.5667545,
+        0.5822789,
+        0.5974,
+        0.6121573,
+        0.6265671,
+        0.64065295,
+        0.65443563,
+        0.667934,
+        0.6811649,
+        0.69414365,
+        0.7068842,
+        0.7193991,
+        0.7317,
+        0.7377695,
+        0.74378943,
+        0.74976104,
+        0.7556855,
+        0.76156384,
+        0.76739717,
+        0.7731865,
+        0.77893275,
+        0.784637,
+        0.7903,
+        0.7953,
+        0.8003,
+        0.8053,
+        0.8103,
+        0.8153,
+        0.8203,
+        0.8253,
+        0.8303,
+        0.8353,
+        0.8403,
+        0.8453,
+        0.8503,
+        0.8553,
+        0.8603,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653,
+        0.8653
+      ],
+      "maxEggPlayerLevel": 20,
+      "maxEncounterPlayerLevel": 30,
+      "maxQuestEncounterPlayerLevel": 15,
+      "defaultLevelCap": 70,
+      "milestoneLevels": [
+        10,
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80
+      ],
+      "xpRewardV2Thresholds": [
+        {
+          "source": "RAID",
+          "threshold": 10000
+        },
+        {
+          "source": "MAX_BATTLE",
+          "threshold": 15000
+        },
+        {
+          "source": "UNLOCK_MAX_MOVE",
+          "threshold": 8000
+        },
+        {
+          "source": "CATCH_POKEMON",
+          "threshold": 30000
+        },
+        {
+          "source": "HATCH_EGG",
+          "threshold": 10000
+        },
+        {
+          "source": "FRIENDSHIP_MILESTONE",
+          "threshold": 10000
+        },
+        {
+          "source": "QUEST_PAGE",
+          "threshold": 5000
+        },
+        {
+          "source": "QUEST_STAMPS",
+          "threshold": 3000
+        },
+        {
+          "source": "COMPLETE_ROUTE",
+          "threshold": 8000
+        },
+        {
+          "source": "FORT_SEARCH",
+          "threshold": 6000
+        },
+        {
+          "source": "EVENT_PASS",
+          "threshold": 10000
+        }
+      ],
+      "nextLevelPreviewIntervalS": 2592000,
+      "smoreFtueImageUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Smores_Launch_KeyArt_v8_1024x512_ingame.jpg"
+    }
+  },
+  "buddy_food": {
+    "ITEM_GOLDEN_PINAP_BERRY": {
+      "itemEffect": [
+        "ITEM_EFFECT_CANDY_AWARD",
+        "ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW"
+      ],
+      "itemEffectPercent": [
+        2.3334,
+        1.8
+      ],
+      "growthPercent": 0.1,
+      "berryMultiplier": 2.0,
+      "remoteBerryMultiplier": 0.5,
+      "numBuddyAffectionPoints": 2,
+      "mapDurationMs": "10800000",
+      "timeFullDurationMs": "10800000",
+      "numBuddyHungerPoints": 6
+    },
+    "ITEM_GOLDEN_RAZZ_BERRY": {
+      "itemEffect": [
+        "ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW",
+        "ITEM_EFFECT_FULL_MOTIVATION"
+      ],
+      "itemEffectPercent": [
+        2.5,
+        1.0
+      ],
+      "growthPercent": 0.1,
+      "berryMultiplier": 1.0,
+      "remoteBerryMultiplier": 1.0,
+      "numBuddyAffectionPoints": 2,
+      "mapDurationMs": "10800000",
+      "timeFullDurationMs": "10800000",
+      "numBuddyHungerPoints": 6
+    },
+    "ITEM_NANAB_BERRY": {
+      "itemEffect": [
+        "ITEM_EFFECT_CAP_TARGET_SLOW"
+      ],
+      "itemEffectPercent": [
+        0.0
+      ],
+      "growthPercent": 0.1,
+      "berryMultiplier": 1.25,
+      "remoteBerryMultiplier": 0.3125,
+      "numBuddyAffectionPoints": 1,
+      "mapDurationMs": "3600000",
+      "timeFullDurationMs": "3600000",
+      "numBuddyHungerPoints": 2
+    },
+    "ITEM_PINAP_BERRY": {
+      "itemEffect": [
+        "ITEM_EFFECT_CANDY_AWARD"
+      ],
+      "itemEffectPercent": [
+        2.0
+      ],
+      "growthPercent": 0.1,
+      "berryMultiplier": 1.0,
+      "remoteBerryMultiplier": 0.25,
+      "numBuddyAffectionPoints": 1,
+      "mapDurationMs": "3600000",
+      "timeFullDurationMs": "3600000",
+      "numBuddyHungerPoints": 2
+    },
+    "ITEM_POFFIN": {
+      "numBuddyAffectionPoints": 1,
+      "mapDurationMs": "21600000",
+      "timeFullDurationMs": "21600000",
+      "numBuddyHungerPoints": 6
+    },
+    "ITEM_RAZZ_BERRY": {
+      "itemEffect": [
+        "ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW"
+      ],
+      "itemEffectPercent": [
+        1.5
+      ],
+      "growthPercent": 0.1,
+      "berryMultiplier": 1.0,
+      "remoteBerryMultiplier": 0.25,
+      "numBuddyAffectionPoints": 1,
+      "mapDurationMs": "3600000",
+      "timeFullDurationMs": "3600000",
+      "numBuddyHungerPoints": 2
+    }
+  },
+  "map_buddy": [],
+  "appearance_displays": {
+    "n_gradient_eye_0": {
+      "iconAddress": "n_gradient_eye_0_icon"
+    },
+    "n_gradient_eye_1": {
+      "iconAddress": "n_gradient_eye_1_icon"
+    },
+    "n_gradient_eye_10": {
+      "iconAddress": "n_gradient_eye_10_icon"
+    },
+    "n_gradient_eye_11": {
+      "iconAddress": "n_gradient_eye_11_icon"
+    },
+    "n_gradient_eye_12": {
+      "iconAddress": "n_gradient_eye_12_icon"
+    },
+    "n_gradient_eye_13": {
+      "iconAddress": "n_gradient_eye_13_icon"
+    },
+    "n_gradient_eye_14": {
+      "iconAddress": "n_gradient_eye_14_icon"
+    },
+    "n_gradient_eye_15": {
+      "iconAddress": "n_gradient_eye_15_icon"
+    },
+    "n_gradient_eye_16": {
+      "iconAddress": "n_gradient_eye_16_icon"
+    },
+    "n_gradient_eye_17": {
+      "iconAddress": "n_gradient_eye_17_icon"
+    },
+    "n_gradient_eye_18": {
+      "iconAddress": "n_gradient_eye_18_icon"
+    },
+    "n_gradient_eye_19": {
+      "iconAddress": "n_gradient_eye_19_icon"
+    },
+    "n_gradient_eye_2": {
+      "iconAddress": "n_gradient_eye_2_icon"
+    },
+    "n_gradient_eye_3": {
+      "iconAddress": "n_gradient_eye_3_icon"
+    },
+    "n_gradient_eye_4": {
+      "iconAddress": "n_gradient_eye_4_icon"
+    },
+    "n_gradient_eye_5": {
+      "iconAddress": "n_gradient_eye_5_icon"
+    },
+    "n_gradient_eye_6": {
+      "iconAddress": "n_gradient_eye_6_icon"
+    },
+    "n_gradient_eye_7": {
+      "iconAddress": "n_gradient_eye_7_icon"
+    },
+    "n_gradient_eye_8": {
+      "iconAddress": "n_gradient_eye_8_icon"
+    },
+    "n_gradient_eye_9": {
+      "iconAddress": "n_gradient_eye_9_icon"
+    },
+    "n_gradient_hair_0": {
+      "iconAddress": "n_gradient_hair_0_icon"
+    },
+    "n_gradient_hair_1": {
+      "iconAddress": "n_gradient_hair_1_icon"
+    },
+    "n_gradient_hair_10": {
+      "iconAddress": "n_gradient_hair_10_icon"
+    },
+    "n_gradient_hair_11": {
+      "iconAddress": "n_gradient_hair_11_icon"
+    },
+    "n_gradient_hair_12": {
+      "iconAddress": "n_gradient_hair_12_icon"
+    },
+    "n_gradient_hair_13": {
+      "iconAddress": "n_gradient_hair_13_icon"
+    },
+    "n_gradient_hair_14": {
+      "iconAddress": "n_gradient_hair_14_icon"
+    },
+    "n_gradient_hair_15": {
+      "iconAddress": "n_gradient_hair_15_icon"
+    },
+    "n_gradient_hair_16": {
+      "iconAddress": "n_gradient_hair_16_icon"
+    },
+    "n_gradient_hair_17": {
+      "iconAddress": "n_gradient_hair_17_icon"
+    },
+    "n_gradient_hair_18": {
+      "iconAddress": "n_gradient_hair_18_icon"
+    },
+    "n_gradient_hair_19": {
+      "iconAddress": "n_gradient_hair_19_icon"
+    },
+    "n_gradient_hair_2": {
+      "iconAddress": "n_gradient_hair_2_icon"
+    },
+    "n_gradient_hair_20": {
+      "iconAddress": "n_gradient_hair_20_icon"
+    },
+    "n_gradient_hair_21": {
+      "iconAddress": "n_gradient_hair_21_icon"
+    },
+    "n_gradient_hair_22": {
+      "iconAddress": "n_gradient_hair_22_icon"
+    },
+    "n_gradient_hair_23": {
+      "iconAddress": "n_gradient_hair_23_icon"
+    },
+    "n_gradient_hair_24": {
+      "iconAddress": "n_gradient_hair_24_icon"
+    },
+    "n_gradient_hair_25": {
+      "iconAddress": "n_gradient_hair_25_icon"
+    },
+    "n_gradient_hair_26": {
+      "iconAddress": "n_gradient_hair_26_icon"
+    },
+    "n_gradient_hair_27": {
+      "iconAddress": "n_gradient_hair_27_icon"
+    },
+    "n_gradient_hair_28": {
+      "iconAddress": "n_gradient_hair_28_icon"
+    },
+    "n_gradient_hair_29": {
+      "iconAddress": "n_gradient_hair_29_icon"
+    },
+    "n_gradient_hair_3": {
+      "iconAddress": "n_gradient_hair_3_icon"
+    },
+    "n_gradient_hair_30": {
+      "iconAddress": "n_gradient_hair_30_icon"
+    },
+    "n_gradient_hair_31": {
+      "iconAddress": "n_gradient_hair_31_icon"
+    },
+    "n_gradient_hair_4": {
+      "iconAddress": "n_gradient_hair_4_icon"
+    },
+    "n_gradient_hair_5": {
+      "iconAddress": "n_gradient_hair_5_icon"
+    },
+    "n_gradient_hair_6": {
+      "iconAddress": "n_gradient_hair_6_icon"
+    },
+    "n_gradient_hair_7": {
+      "iconAddress": "n_gradient_hair_7_icon"
+    },
+    "n_gradient_hair_8": {
+      "iconAddress": "n_gradient_hair_8_icon"
+    },
+    "n_gradient_hair_9": {
+      "iconAddress": "n_gradient_hair_9_icon"
+    }
+  }
+}

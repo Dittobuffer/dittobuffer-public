@@ -1,0 +1,6 @@
+{
+  "name": "netherlands-readable-roads-v1",
+  "description": "Relative to the installed native RoadBuilder widths; no claimed real-world metre scale. Existing native materials and lighting are retained.",
+  "outline_scale": 0.3333333333,
+  "width_scales": {"21": 1, "28": 0.9, "30": 0.8, "35": 0.6666666667, "36": 0.6666666667}
+}

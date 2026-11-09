@@ -1,0 +1,8 @@
+{
+  "interaction": {
+    "type": "script",
+    "path": "/data/local/tmp/my-agent.js",
+    "on_change": "reload"
+  },
+  "runtime": "qjs"
+}

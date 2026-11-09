@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.ruff_cache
+assets
+data
+apk
+builds
+logs
+run
+.private
+docs
+tests/legacy

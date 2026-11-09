@@ -1,0 +1,62 @@
+name: dittobuffer-family
+
+services:
+  server:
+    build: ./server
+    image: dittobuffer/server:1.1.0
+    container_name: dittobuffer-server
+    command: ["python", "-m", "dittobuffer.runtime.http", "--config", "config/server.json"]
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8445:8445"
+      - "127.0.0.1:8081:8081"
+    volumes:
+      - ./server/config:/app/config:ro
+      - ./server/protocol:/app/protocol:ro
+      - ./server/data:/app/data
+      - ./server/logs:/app/logs
+    environment:
+      TZ: Europe/Amsterdam
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket;s=socket.create_connection(('127.0.0.1',8445),3);s.close()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+
+  platform:
+    build:
+      context: .
+      dockerfile: platform/Dockerfile.release
+    image: dittobuffer/platform:1.1.0
+    container_name: dittobuffer-platform
+    restart: unless-stopped
+    depends_on:
+      server:
+        condition: service_started
+    ports:
+      - "127.0.0.1:8780:8780"
+    volumes:
+      - ./platform/docker-data:/data
+      - ./server:/workspace
+    environment:
+      TZ: Europe/Amsterdam
+    command:
+      - python
+      - run.py
+      - --config
+      - /data/config.json
+      - --data
+      - /data/platform.json
+      - --key
+      - /data/platform-key.json
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8780"
+      - --server-root
+      - /workspace
+      - --room-address
+      - "${ROOM_ADDRESS:-my-room}"
+      - --public-url
+      - "${PUBLIC_URL:-http://127.0.0.1:8780}"

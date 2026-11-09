@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "thresholds": [3, 9, 15],
+  "own_daily_limit": 2,
+  "level": 20,
+  "shiny_rate": 0
+}

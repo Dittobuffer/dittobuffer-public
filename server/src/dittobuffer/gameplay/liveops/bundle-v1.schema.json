@@ -1,0 +1,1718 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Dittobuffer/dittobuffer/liveops-bundle-v1.schema.json",
+  "title": "DittoBuffer LiveOps bundle v1",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "dittobuffer.liveops.bundle"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "bundle_type": {
+      "enum": [
+        "season",
+        "event",
+        "research",
+        "collection"
+      ]
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "content": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/document"
+      },
+      "maxItems": 100,
+      "minItems": 1
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scope"
+      },
+      "maxItems": 100
+    },
+    "dependencies": {
+      "$ref": "#/$defs/dependencies"
+    }
+  },
+  "required": [
+    "format",
+    "schema_version",
+    "bundle_type",
+    "metadata",
+    "content"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "json": {
+      "oneOf": [
+        {
+          "type": [
+            "null",
+            "boolean",
+            "number",
+            "string"
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/json"
+          },
+          "maxItems": 400
+        },
+        {
+          "type": "object",
+          "maxProperties": 100,
+          "additionalProperties": {
+            "$ref": "#/$defs/json"
+          }
+        }
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "author": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "generator": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "seed": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "settings": {
+          "$ref": "#/$defs/json"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "point": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "Polygon"
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/point"
+                },
+                "maxItems": 20000,
+                "minItems": 4
+              },
+              "maxItems": 100
+            }
+          },
+          "required": [
+            "type",
+            "coordinates"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "MultiPolygon"
+            },
+            "coordinates": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/point"
+                  },
+                  "maxItems": 20000,
+                  "minItems": 4
+                },
+                "maxItems": 100
+              },
+              "maxItems": 100
+            }
+          },
+          "required": [
+            "type",
+            "coordinates"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "global",
+            "region",
+            "biome",
+            "polygon"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "biome": {
+          "enum": [
+            "forest",
+            "park",
+            "urban",
+            "water",
+            "beach",
+            "mountain",
+            "grassland"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/point"
+          },
+          "maxItems": 500
+        },
+        "geometry": {
+          "$ref": "#/$defs/geometry"
+        },
+        "source": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "license": {
+          "type": "string",
+          "maxLength": 160
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "spawn": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "form": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          ]
+        },
+        "shiny_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 100000
+        },
+        "level_range": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 40
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "allow_special": {
+          "type": "boolean"
+        },
+        "time": {
+          "enum": [
+            "",
+            "day",
+            "night"
+          ]
+        },
+        "biome": {
+          "enum": [
+            "",
+            "forest",
+            "park",
+            "urban",
+            "water",
+            "beach",
+            "mountain",
+            "grassland"
+          ]
+        },
+        "weather": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 7
+          },
+          "maxItems": 7
+        }
+      },
+      "required": [
+        "species"
+      ],
+      "additionalProperties": false
+    },
+    "raid": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "form": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          ]
+        },
+        "shiny_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 100000
+        },
+        "tier": {
+          "enum": [
+            1,
+            3,
+            5,
+            6
+          ]
+        },
+        "hp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "cp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "mega_evolution": {
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        },
+        "reward_policy": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "mega_energy_rewards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "max_seconds": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3600
+              },
+              "amount": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "max_seconds",
+              "amount"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 20
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        },
+        "xp": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "dust": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000
+        }
+      },
+      "required": [
+        "species",
+        "tier",
+        "hp",
+        "cp"
+      ],
+      "additionalProperties": false
+    },
+    "egg": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "form": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          ]
+        },
+        "shiny_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "km": {
+          "enum": [
+            2,
+            5,
+            10
+          ]
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 100000
+        }
+      },
+      "required": [
+        "species",
+        "km"
+      ],
+      "additionalProperties": false
+    },
+    "max": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "form": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          ]
+        },
+        "shiny_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "mode": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.0001,
+          "maximum": 100000
+        },
+        "tier": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "hp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "cp": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        },
+        "attack": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "defense": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "stamina": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "move_1": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "move_2": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 160
+        }
+      },
+      "required": [
+        "species",
+        "mode"
+      ],
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "spawns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/spawn"
+          },
+          "maxItems": 300
+        },
+        "raids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/raid"
+          },
+          "maxItems": 300
+        },
+        "eggs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/egg"
+          },
+          "maxItems": 300
+        },
+        "max": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/max"
+          },
+          "maxItems": 300
+        },
+        "research": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          },
+          "maxItems": 100
+        },
+        "bonuses": {
+          "type": "object",
+          "properties": {
+            "catch_xp": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "catch_dust": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "catch_candy": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "transfer_candy": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "evolve_xp": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "bonus_policy": {
+          "enum": [
+            "max",
+            "replace",
+            "multiply"
+          ]
+        },
+        "rocket": {
+          "type": "object",
+          "properties": {
+            "balloon_period_seconds": {
+              "type": "integer",
+              "minimum": 1200,
+              "maximum": 86400
+            },
+            "hideout_probability": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "balloon_themes": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1000
+              },
+              "maxItems": 100
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "reward": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "item",
+            "xp",
+            "stardust",
+            "encounter",
+            "candy",
+            "xl_candy",
+            "mega_energy"
+          ]
+        },
+        "amount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100000
+        },
+        "item": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "species": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1025
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          ]
+        },
+        "form": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            }
+          ]
+        },
+        "shiny_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 40
+        },
+        "special_encounter": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "max_mode": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "mega_evolution": {
+          "enum": [
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "encounter"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "species"
+            ]
+          },
+          "else": {
+            "required": [
+              "amount"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "item"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "item"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "candy",
+                  "xl_candy",
+                  "mega_energy"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "species"
+            ]
+          }
+        }
+      ]
+    },
+    "objective": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "enum": [
+            "hatch",
+            "evolve",
+            "buddy_candy",
+            "power_up",
+            "transfer",
+            "gift_send",
+            "gift_open",
+            "postcard_pin",
+            "catch",
+            "spin",
+            "throw",
+            "raid",
+            "route",
+            "rocket_grunt",
+            "rocket_leader",
+            "rocket_boss",
+            "shadow_catch",
+            "purify",
+            "radar_assemble",
+            "max_collect",
+            "max_loot",
+            "max_win",
+            "max_unlock",
+            "max_upgrade"
+          ]
+        },
+        "target": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reward"
+          },
+          "maxItems": 5,
+          "minItems": 1
+        },
+        "conditions": {
+          "type": "object",
+          "properties": {
+            "species": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1025
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                ]
+              },
+              "maxItems": 100
+            },
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 18
+              },
+              "maxItems": 18
+            },
+            "shiny": {
+              "type": "boolean"
+            },
+            "ball": {
+              "enum": [
+                1,
+                2,
+                3,
+                5
+              ]
+            },
+            "throw_quality": {
+              "enum": [
+                "",
+                "nice",
+                "great",
+                "excellent"
+              ]
+            },
+            "curveball": {
+              "type": "boolean"
+            },
+            "weather_boosted": {
+              "type": "boolean"
+            },
+            "gender": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "alignment": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "max_mode": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2
+            },
+            "costume": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "form": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100000
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "event",
+        "target",
+        "description",
+        "rewards"
+      ],
+      "additionalProperties": false
+    },
+    "stage": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/objective"
+          },
+          "maxItems": 3,
+          "minItems": 1
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reward"
+          },
+          "maxItems": 5,
+          "minItems": 1
+        },
+        "dialog": {
+          "type": "string",
+          "maxLength": 8000
+        }
+      },
+      "required": [
+        "objectives",
+        "rewards"
+      ],
+      "additionalProperties": false
+    },
+    "week": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "theme": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "rules": {
+          "$ref": "#/$defs/rules"
+        }
+      },
+      "required": [
+        "name",
+        "rules"
+      ],
+      "additionalProperties": false
+    },
+    "rotation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "offset_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 527040
+        },
+        "duration_minutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 527040
+        },
+        "rules": {
+          "$ref": "#/$defs/rules"
+        }
+      },
+      "required": [
+        "id",
+        "offset_minutes",
+        "duration_minutes",
+        "rules"
+      ],
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "kind": {
+          "enum": [
+            "season",
+            "event",
+            "research"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 8000
+        },
+        "timezone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "start": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4102444800000
+            }
+          ]
+        },
+        "end": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4102444800000
+            }
+          ]
+        },
+        "fold": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "season_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "event_type": {
+          "enum": [
+            "custom",
+            "community-day",
+            "spotlight-hour",
+            "raid-hour",
+            "go-fest",
+            "kanto-tour",
+            "johto-tour",
+            "wild-area",
+            "research-day",
+            "hatch-day",
+            "go-battle",
+            "rocket-takeover",
+            "max-weekend"
+          ]
+        },
+        "theme": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "generations": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "maxItems": 9
+        },
+        "generator": {
+          "$ref": "#/$defs/json"
+        },
+        "entitlement": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "maxItems": 30
+        },
+        "rules": {
+          "$ref": "#/$defs/rules"
+        },
+        "weeks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/week"
+          },
+          "maxItems": 52
+        },
+        "rotations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/rotation"
+          },
+          "maxItems": 400
+        },
+        "research_type": {
+          "enum": [
+            "field",
+            "special",
+            "timed",
+            "collection",
+            "branching",
+            "timed_branching",
+            "breakthrough"
+          ]
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/stage"
+          },
+          "maxItems": 100
+        },
+        "minimum_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 80
+        },
+        "prerequisite": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "event_only": {
+          "type": "boolean"
+        },
+        "repeatable": {
+          "const": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "species"
+            ],
+            "properties": {
+              "species": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1025
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                ]
+              },
+              "form": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10000
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  }
+                ]
+              },
+              "methods": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "catch",
+                    "evolve",
+                    "hatch",
+                    "trade",
+                    "raid"
+                  ]
+                },
+                "minItems": 1,
+                "maxItems": 5
+              },
+              "gender": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              },
+              "alignment": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "max_mode": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "costume": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "minItems": 1,
+          "maxItems": 100
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reward"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "encounter_pool": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "enum": [
+                  "item",
+                  "xp",
+                  "stardust",
+                  "encounter",
+                  "candy",
+                  "xl_candy",
+                  "mega_energy"
+                ]
+              },
+              "amount": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000
+              },
+              "item": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1025
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                ]
+              },
+              "species": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1025
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                ]
+              },
+              "form": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10000
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  }
+                ]
+              },
+              "shiny_rate": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 40
+              },
+              "special_encounter": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,100}$"
+              },
+              "max_mode": {
+                "enum": [
+                  1,
+                  2
+                ]
+              },
+              "mega_evolution": {
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "weight": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100000
+              }
+            },
+            "required": [
+              "type"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "encounter"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "species"
+                  ]
+                },
+                "else": {
+                  "required": [
+                    "amount"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "item"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "item"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "candy",
+                        "xl_candy",
+                        "mega_energy"
+                      ]
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "species"
+                  ]
+                }
+              }
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 100
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "stages"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]{1,80}$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 8000
+              },
+              "stages": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/stage"
+                },
+                "minItems": 1,
+                "maxItems": 100
+              },
+              "rewards": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/reward"
+                },
+                "minItems": 0,
+                "maxItems": 5
+              }
+            }
+          },
+          "minItems": 2,
+          "maxItems": 4
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "name",
+        "timezone",
+        "start",
+        "end",
+        "scope"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "research"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "research_type"
+            ],
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "rules"
+                  ]
+                },
+                {
+                  "required": [
+                    "weeks"
+                  ]
+                },
+                {
+                  "required": [
+                    "rotations"
+                  ]
+                }
+              ]
+            }
+          },
+          "else": {
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "research_type"
+                  ]
+                },
+                {
+                  "required": [
+                    "stages"
+                  ]
+                },
+                {
+                  "required": [
+                    "minimum_level"
+                  ]
+                },
+                {
+                  "required": [
+                    "prerequisite"
+                  ]
+                },
+                {
+                  "required": [
+                    "event_only"
+                  ]
+                },
+                {
+                  "required": [
+                    "repeatable"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "dependencies": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          },
+          "maxItems": 100
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "maxItems": 100
+        },
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "species": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1025
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                ]
+              },
+              "form": {
+                "oneOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10000
+                  },
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 120
+                  }
+                ]
+              },
+              "shiny_rate": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            },
+            "required": [
+              "species"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 300
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 1025
+              },
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 100
+              }
+            ]
+          },
+          "maxItems": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+}

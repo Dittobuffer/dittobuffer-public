@@ -1,0 +1,5 @@
+# Draft 2020-12 validation using universal Python wheels on Chaquopy 3.10.
+# jsonschema 4.18+ requires rpds-py, which has no verified Android wheel here.
+jsonschema==4.17.3
+attrs==25.4.0
+pyrsistent==0.20.0

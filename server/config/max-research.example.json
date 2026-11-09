@@ -1,0 +1,11 @@
+{
+  "id": "libre-max-discovery-v1",
+  "title": "A Larger Discovery",
+  "ending": "Your encounter and observations have been saved.",
+  "stages": [{
+    "description": "Investigate the energy gathering at a Power Spot.",
+    "dialog": "There is something unusual about these gathering places. Collect some particles and record what happens.",
+    "objectives": [{"event": "max_collect", "target": 120, "description": "Collect 120 Max Particles", "rewards": [{"type": "xp", "amount": 100}]}],
+    "rewards": [{"type": "encounter", "species": 831, "level": 15, "max_mode": 1}]
+  }]
+}

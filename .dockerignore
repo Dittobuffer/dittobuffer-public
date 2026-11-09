@@ -1,0 +1,13 @@
+.git
+**/__pycache__
+**/*.py[cod]
+server/data
+server/logs
+server/.venv
+server/.private
+platform/data
+platform/docker-data
+platform/config.json
+*.apk
+*.jks
+*.pem

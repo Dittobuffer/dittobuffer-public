@@ -1,0 +1,7 @@
+{
+  "liveops": {
+    "enabled": true,
+    "database": "data/liveops.sqlite3",
+    "admin_auth": false
+  }
+}

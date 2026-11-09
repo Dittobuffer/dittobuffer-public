@@ -1,0 +1,3179 @@
+{
+  "source": "m7-public-gamemaster.json",
+  "source_sha256": "5c947ac64d1de8859bea1b3bf044609d74b6e8429d53f8cb1aa30a72a46dce84",
+  "quests": {
+    "LEVEL_71_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_71_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_71_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_71_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_71_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_71_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_71_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 71
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_71_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_71_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_71_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_71_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_71_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_71_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_71_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_71_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 15
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_71_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_UPGRADE_POKEMON",
+        "questId": "LEVEL_71_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_71_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_LEGENDARY_POKEMON"
+            }
+          ],
+          "target": 20
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_power_up_legendary_plural",
+        "title": "quest_power_up_legendary_plural"
+      }
+    },
+    "LEVEL_71_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_LAND_THROW",
+        "questId": "LEVEL_71_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_71_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_THROW_TYPE",
+              "withThrowType": {
+                "throwType": "ACTIVITY_CATCH_NICE_THROW"
+              }
+            }
+          ],
+          "target": 999
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_land_nice_plural",
+        "title": "quest_land_nice_plural"
+      }
+    },
+    "LEVEL_71_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_CATCH_POKEMON",
+        "questId": "LEVEL_71_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_71_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_SINGLE_DAY"
+            }
+          ],
+          "target": 100
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_catch_in_day_plural",
+        "title": "quest_catch_in_day_plural"
+      }
+    },
+    "LEVEL_72_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_72_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_72_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_72_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_72_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_72_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_72_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 72
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_72_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_72_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_72_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_72_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_72_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_72_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_72_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_72_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 20
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_72_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_ROUTE_COMPLETE",
+        "questId": "LEVEL_72_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_72_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_DAYS_IN_A_ROW"
+            }
+          ],
+          "target": 7
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_complete_routes_days_row_plural",
+        "title": "quest_complete_routes_days_row_plural"
+      }
+    },
+    "LEVEL_72_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_CHARGE_ATTACK",
+        "questId": "LEVEL_72_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_72_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_SUPER_EFFECTIVE_CHARGE"
+            }
+          ],
+          "target": 200
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_supereffective_charge_plural",
+        "title": "quest_supereffective_charge_plural"
+      }
+    },
+    "LEVEL_72_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_GET_STARDUST",
+        "questId": "LEVEL_72_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_72_CAP_SUB_3",
+        "goal": {
+          "target": 1000000
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_stardust_plural",
+        "title": "quest_stardust_plural"
+      }
+    },
+    "LEVEL_73_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_73_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_73_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_73_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_73_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_73_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_73_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 73
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_73_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_73_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_73_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_73_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_73_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_73_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_73_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_73_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 25
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_73_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_PURIFY_POKEMON",
+        "questId": "LEVEL_73_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_73_CAP_SUB_1",
+        "goal": {
+          "target": 100
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_rocket_purify_plural",
+        "title": "quest_rocket_purify_plural"
+      }
+    },
+    "LEVEL_73_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_UPGRADE_POKEMON",
+        "questId": "LEVEL_73_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_73_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_POKEMON_LEVEL",
+              "withPokemonLevel": {
+                "maxLevel": true
+              }
+            }
+          ],
+          "target": 3
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_power_up_max_plural",
+        "title": "quest_power_up_max_plural"
+      }
+    },
+    "LEVEL_73_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_RAID_BATTLE",
+        "questId": "LEVEL_73_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_73_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_WIN_RAID_STATUS"
+            }
+          ],
+          "target": 30
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_win_raid_plural",
+        "title": "quest_win_raid_plural"
+      }
+    },
+    "LEVEL_74_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_74_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_74_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_74_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_74_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_74_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_74_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 74
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_74_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_74_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_74_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_74_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_74_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_74_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_74_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_74_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 30
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_74_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_ENHANCE_BREAD_MOVE",
+        "questId": "LEVEL_74_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_74_CAP_SUB_1",
+        "goal": {
+          "target": 20
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "levelup_max_move_plural",
+        "title": "levelup_max_move_plural"
+      }
+    },
+    "LEVEL_74_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_WALK",
+        "questId": "LEVEL_74_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_74_CAP_SUB_2",
+        "goal": {
+          "target": 200
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_explore_km",
+        "title": "quest_explore_km"
+      }
+    },
+    "LEVEL_74_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_QUEST",
+        "questId": "LEVEL_74_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_74_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_QUEST_CONTEXT",
+              "withQuestContext": {
+                "context": "CHALLENGE_QUEST"
+              }
+            }
+          ],
+          "target": 250
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_field_research_plural",
+        "title": "quest_field_research_plural"
+      }
+    },
+    "LEVEL_75_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_75_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_75_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_75_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_75_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_75_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_75_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 75
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_75_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_75_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_75_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_75_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_75_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_75_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_75_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_75_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 34
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_75_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_HATCH_EGG",
+        "questId": "LEVEL_75_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_75_CAP_SUB_1",
+        "goal": {
+          "target": 75
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_hatch_egg_plural",
+        "title": "quest_hatch_egg_plural"
+      }
+    },
+    "LEVEL_75_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_LAND_THROW",
+        "questId": "LEVEL_75_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_75_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_THROW_TYPE",
+              "withThrowType": {
+                "throwType": "ACTIVITY_CATCH_GREAT_THROW"
+              }
+            }
+          ],
+          "target": 999
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_land_great_plural",
+        "title": "quest_land_great_plural"
+      }
+    },
+    "LEVEL_75_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_SEND_GIFT",
+        "questId": "LEVEL_75_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_75_CAP_SUB_3",
+        "goal": {
+          "target": 500
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_send_gifts_plural",
+        "title": "quest_send_gifts_plural"
+      }
+    },
+    "LEVEL_76_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_76_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_76_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_76_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_76_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_76_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_76_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 76
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_76_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_76_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_76_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_76_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_76_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_76_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_76_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_76_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 38
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_76_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_BATTLE_TEAM_ROCKET",
+        "questId": "LEVEL_76_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_76_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_INVASION_CHARACTER",
+              "withInvasionCharacter": {
+                "characterCategory": [
+                  "GRUNT"
+                ]
+              }
+            },
+            {
+              "type": "WITH_WIN_BATTLE_STATUS"
+            }
+          ],
+          "target": 100
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_rocket_battle_win_plural",
+        "title": "quest_rocket_battle_win_plural"
+      }
+    },
+    "LEVEL_76_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_WALK",
+        "questId": "LEVEL_76_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_76_CAP_SUB_2",
+        "goal": {
+          "target": 300
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_explore_km",
+        "title": "quest_explore_km"
+      }
+    },
+    "LEVEL_76_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_CATCH_POKEMON",
+        "questId": "LEVEL_76_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_76_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_SINGLE_DAY"
+            }
+          ],
+          "target": 200
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_catch_in_day_plural",
+        "title": "quest_catch_in_day_plural"
+      }
+    },
+    "LEVEL_77_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_77_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_77_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_77_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_77_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_77_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_77_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 77
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_77_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_77_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_77_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_77_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_77_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_77_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_77_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_77_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 41
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_77_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_UPGRADE_POKEMON",
+        "questId": "LEVEL_77_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_77_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_POKEMON_LEVEL",
+              "withPokemonLevel": {
+                "maxLevel": true
+              }
+            }
+          ],
+          "target": 7
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_power_up_max_plural",
+        "title": "quest_power_up_max_plural"
+      }
+    },
+    "LEVEL_77_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_BATTLE",
+        "questId": "LEVEL_77_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_77_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_COMBAT_TYPE",
+              "withCombatType": {
+                "combatType": [
+                  "COMBAT_TYPE_DMAX",
+                  "COMBAT_TYPE_GMAX"
+                ]
+              }
+            },
+            {
+              "type": "WITH_WIN_BATTLE_STATUS"
+            }
+          ],
+          "target": 100
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "win_max_battle_plural",
+        "title": "win_max_battle_plural"
+      }
+    },
+    "LEVEL_77_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_TRADE_POKEMON",
+        "questId": "LEVEL_77_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_77_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_DISTANCE",
+              "withDistance": {
+                "distanceKm": 300.0
+              }
+            }
+          ],
+          "target": 10
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_trade_300km_plural",
+        "title": "quest_trade_300km_plural"
+      }
+    },
+    "LEVEL_78_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_78_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_78_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_78_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_78_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_78_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_78_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 78
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_78_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_78_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_78_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_78_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_78_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_78_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_78_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_78_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 44
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_78_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_BUDDY_EARN_AFFECTION_POINTS",
+        "questId": "LEVEL_78_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_78_CAP_SUB_1",
+        "goal": {
+          "target": 400
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "CHALLENGE_BUDDY_AFFECTION_PLURAL",
+        "title": "CHALLENGE_BUDDY_AFFECTION_PLURAL"
+      }
+    },
+    "LEVEL_78_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_WALK",
+        "questId": "LEVEL_78_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_78_CAP_SUB_2",
+        "goal": {
+          "target": 400
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_explore_km",
+        "title": "quest_explore_km"
+      }
+    },
+    "LEVEL_78_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_QUEST",
+        "questId": "LEVEL_78_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_78_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_QUEST_CONTEXT",
+              "withQuestContext": {
+                "context": "CHALLENGE_QUEST"
+              }
+            }
+          ],
+          "target": 500
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_field_research_plural",
+        "title": "quest_field_research_plural"
+      }
+    },
+    "LEVEL_79_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_79_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_79_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_79_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_79_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_79_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_79_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 79
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_79_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_79_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_79_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_79_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_79_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_79_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_79_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_79_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 47
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_79_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_BATTLE_TEAM_ROCKET",
+        "questId": "LEVEL_79_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_79_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_INVASION_CHARACTER",
+              "withInvasionCharacter": {
+                "characterCategory": [
+                  "ARLO",
+                  "CLIFF",
+                  "SIERRA"
+                ]
+              }
+            },
+            {
+              "type": "WITH_WIN_BATTLE_STATUS"
+            }
+          ],
+          "target": 30
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_ROCKETHQ1_leaders_win_plural",
+        "title": "quest_ROCKETHQ1_leaders_win_plural"
+      }
+    },
+    "LEVEL_79_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_HATCH_EGG",
+        "questId": "LEVEL_79_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_79_CAP_SUB_2",
+        "goal": {
+          "target": 100
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_hatch_egg_plural",
+        "title": "quest_hatch_egg_plural"
+      }
+    },
+    "LEVEL_79_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_TRADE_POKEMON",
+        "questId": "LEVEL_79_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_79_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_LUCKY_POKEMON"
+            }
+          ],
+          "target": 50
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_lucky_plural",
+        "title": "quest_lucky_plural"
+      }
+    },
+    "LEVEL_80_CAP": {
+      "quest": {
+        "questType": "QUEST_MULTI_PART",
+        "multiPart": {
+          "subQuests": [
+            {
+              "questId": "LEVEL_80_CAP_SUB_0"
+            },
+            {
+              "questId": "LEVEL_80_CAP_SUB_1"
+            },
+            {
+              "questId": "LEVEL_80_CAP_SUB_2"
+            },
+            {
+              "questId": "LEVEL_80_CAP_SUB_3"
+            }
+          ]
+        },
+        "questId": "LEVEL_80_CAP",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_80_CAP",
+        "questRewards": [
+          {
+            "type": "LEVEL_CAP",
+            "levelCap": 80
+          }
+        ]
+      },
+      "questDisplay": {
+        "title": "title_level_80_cap",
+        "subdisplay": [
+          {
+            "questId": "LEVEL_80_CAP_SUB_0"
+          },
+          {
+            "questId": "LEVEL_80_CAP_SUB_1"
+          },
+          {
+            "questId": "LEVEL_80_CAP_SUB_2"
+          },
+          {
+            "questId": "LEVEL_80_CAP_SUB_3"
+          }
+        ]
+      }
+    },
+    "LEVEL_80_CAP_SUB_0": {
+      "quest": {
+        "questType": "QUEST_BADGE_RANK",
+        "questId": "LEVEL_80_CAP_SUB_0",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_80_CAP_SUB_0",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_BADGE_TYPE",
+              "withBadgeType": {
+                "badgeRank": 4,
+                "badgeTypesToExclude": [
+                  "BADGE_MINI_COLLECTION"
+                ]
+              }
+            }
+          ],
+          "target": 50
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_platinum_medal_plural",
+        "title": "quest_platinum_medal_plural"
+      }
+    },
+    "LEVEL_80_CAP_SUB_1": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_COMBAT",
+        "questId": "LEVEL_80_CAP_SUB_1",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_80_CAP_SUB_1",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_COMBAT_TYPE",
+              "withCombatType": {
+                "combatType": [
+                  "VS_SEEKER"
+                ]
+              }
+            },
+            {
+              "type": "WITH_WIN_BATTLE_STATUS"
+            }
+          ],
+          "target": 80
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_battle_gbl_win_plural",
+        "title": "quest_battle_gbl_win_plural"
+      }
+    },
+    "LEVEL_80_CAP_SUB_2": {
+      "quest": {
+        "questType": "QUEST_LAND_THROW",
+        "questId": "LEVEL_80_CAP_SUB_2",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_80_CAP_SUB_2",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_THROW_TYPE",
+              "withThrowType": {
+                "throwType": "ACTIVITY_CATCH_EXCELLENT_THROW"
+              }
+            }
+          ],
+          "target": 999
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_land_excellent_plural",
+        "title": "quest_land_excellent_plural"
+      }
+    },
+    "LEVEL_80_CAP_SUB_3": {
+      "quest": {
+        "questType": "QUEST_COMPLETE_RAID_BATTLE",
+        "questId": "LEVEL_80_CAP_SUB_3",
+        "questContext": "LEVEL_UP_QUEST",
+        "templateId": "LEVEL_80_CAP_SUB_3",
+        "goal": {
+          "condition": [
+            {
+              "type": "WITH_WIN_RAID_STATUS"
+            }
+          ],
+          "target": 80
+        },
+        "questRewards": [
+          {
+            "type": "EXPERIENCE",
+            "exp": 800
+          }
+        ]
+      },
+      "questDisplay": {
+        "description": "quest_win_raid_plural",
+        "title": "quest_win_raid_plural"
+      }
+    }
+  },
+  "rewards": {
+    "10": {
+      "level": 10,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        25
+      ],
+      "isBackfill": true
+    },
+    "11": {
+      "level": 11,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "12": {
+      "level": 12,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "13": {
+      "level": 13,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_POTION",
+        "ITEM_GOLDEN_RAZZ_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "itemsUnlocked": [
+        "ITEM_GOLDEN_RAZZ_BERRY"
+      ],
+      "featuresUnlocked": [
+        "FEATURE_WEEKLY_CHALLENGES"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "14": {
+      "level": 14,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "itemsUnlocked": [
+        "ITEM_GREAT_BALL"
+      ],
+      "featuresUnlocked": [
+        "FEATURE_TAG"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "15": {
+      "level": 15,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_POTION",
+        "ITEM_REVIVE",
+        "ITEM_STAR_PIECE",
+        "ITEM_INCUBATOR_BASIC",
+        "ITEM_TROY_DISK"
+      ],
+      "itemsCount": [
+        15,
+        3,
+        10,
+        5,
+        1,
+        1,
+        1
+      ],
+      "featuresUnlocked": [
+        "FEATURE_EGG_SPECIAL"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "16": {
+      "level": 16,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_SUPER_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "itemsUnlocked": [
+        "ITEM_SUPER_POTION"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "17": {
+      "level": 17,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "itemsUnlocked": [
+        "ITEM_PINAP_BERRY"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "18": {
+      "level": 18,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_SUPER_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "featuresUnlocked": [
+        "FEATURE_MEGA"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "19": {
+      "level": 19,
+      "items": [
+        "ITEM_GREAT_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_REVIVE",
+        "ITEM_MOVE_REROLL_FAST_ATTACK"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "itemsUnlocked": [
+        "ITEM_MOVE_REROLL_FAST_ATTACK"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "2": {
+      "level": 2,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3
+      ],
+      "itemsUnlocked": [
+        "ITEM_NANAB_BERRY"
+      ],
+      "featuresUnlocked": [
+        "FEATURE_EGG_HATCHING"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "20": {
+      "level": 20,
+      "items": [
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        25
+      ],
+      "isBackfill": true
+    },
+    "21": {
+      "level": 21,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "featuresUnlocked": [
+        "FEATURE_PARTY_PLAY"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "22": {
+      "level": 22,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_HYPER_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "itemsUnlocked": [
+        "ITEM_HYPER_POTION"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "23": {
+      "level": 23,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "itemsUnlocked": [
+        "ITEM_MOVE_REROLL_SPECIAL_ATTACK"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "24": {
+      "level": 24,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_HYPER_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "itemsUnlocked": [
+        "ITEM_GOLDEN_PINAP_BERRY"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "25": {
+      "level": 25,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        25
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_hat_pokeballitems-basic_0",
+          "displayTemplateId": "N_DISPLAY_n_hat_pokeballitems-basic_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "26": {
+      "level": 26,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "27": {
+      "level": 27,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "28": {
+      "level": 28,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "29": {
+      "level": 29,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "3": {
+      "level": 3,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "30": {
+      "level": 30,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        100
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shoes_pokeballitems-basic_0",
+          "displayTemplateId": "N_DISPLAY_n_shoes_pokeballitems-basic_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "31": {
+      "level": 31,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "featuresUnlocked": [
+        "FEATURE_CANDY_XL"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "32": {
+      "level": 32,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "33": {
+      "level": 33,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "34": {
+      "level": 34,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "35": {
+      "level": 35,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shirt_pokeballitems-basic_0",
+          "displayTemplateId": "N_DISPLAY_n_shirt_pokeballitems-basic_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "36": {
+      "level": 36,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "37": {
+      "level": 37,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "38": {
+      "level": 38,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "39": {
+      "level": 39,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "4": {
+      "level": 4,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3
+      ],
+      "itemsUnlocked": [
+        "ITEM_INCENSE_DAILY_ADVENTURE"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "40": {
+      "level": 40,
+      "items": [
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED",
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50,
+        75
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_hat_pokeballitems-great_0",
+          "displayTemplateId": "N_DISPLAY_n_hat_pokeballitems-great_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "41": {
+      "level": 41,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_LUCKY_EGG"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "42": {
+      "level": 42,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        2,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "43": {
+      "level": 43,
+      "items": [
+        "ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        5
+      ],
+      "isBackfill": true
+    },
+    "44": {
+      "level": 44,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCENSE_ORDINARY"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        2,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "45": {
+      "level": 45,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shoes_pokeballitems-great_0",
+          "displayTemplateId": "N_DISPLAY_n_shoes_pokeballitems-great_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "46": {
+      "level": 46,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_STAR_PIECE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "47": {
+      "level": 47,
+      "items": [
+        "ITEM_POSTCARD_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "isBackfill": true
+    },
+    "48": {
+      "level": 48,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "49": {
+      "level": 49,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_TROY_DISK"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "5": {
+      "level": 5,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_POTION",
+        "ITEM_REVIVE",
+        "ITEM_INCENSE_ORDINARY"
+      ],
+      "itemsCount": [
+        15,
+        10,
+        5,
+        1
+      ],
+      "itemsUnlocked": [
+        "ITEM_POTION",
+        "ITEM_REVIVE"
+      ],
+      "featuresUnlocked": [
+        "FEATURE_GYM",
+        "FEATURE_RAID"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "50": {
+      "level": 50,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        75
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shirt_pokeballitems-great_0",
+          "displayTemplateId": "N_DISPLAY_n_shirt_pokeballitems-great_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "51": {
+      "level": 51,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_LUCKY_EGG"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "52": {
+      "level": 52,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "53": {
+      "level": 53,
+      "items": [
+        "ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        5
+      ],
+      "isBackfill": true
+    },
+    "54": {
+      "level": 54,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCENSE_ORDINARY"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "55": {
+      "level": 55,
+      "items": [
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED",
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        25,
+        50
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_hat_pokeballitems-ultra_0",
+          "displayTemplateId": "N_DISPLAY_n_hat_pokeballitems-ultra_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "56": {
+      "level": 56,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_STAR_PIECE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "57": {
+      "level": 57,
+      "items": [
+        "ITEM_POSTCARD_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "isBackfill": true
+    },
+    "58": {
+      "level": 58,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "59": {
+      "level": 59,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_TROY_DISK"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "6": {
+      "level": 6,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_POTION",
+        "ITEM_TROY_DISK"
+      ],
+      "itemsCount": [
+        10,
+        5,
+        1
+      ],
+      "itemsUnlocked": [
+        "ITEM_TROY_DISK"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "60": {
+      "level": 60,
+      "items": [
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED",
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50,
+        75
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shoes_pokeballitems-ultra_0",
+          "displayTemplateId": "N_DISPLAY_n_shoes_pokeballitems-ultra_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "61": {
+      "level": 61,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_LUCKY_EGG"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "62": {
+      "level": 62,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "63": {
+      "level": 63,
+      "items": [
+        "ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        5
+      ],
+      "isBackfill": true
+    },
+    "64": {
+      "level": 64,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_INCENSE_ORDINARY"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "65": {
+      "level": 65,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shirt_pokeballitems-ultra_0",
+          "displayTemplateId": "N_DISPLAY_n_shirt_pokeballitems-ultra_0"
+        }
+      ],
+      "isBackfill": true
+    },
+    "66": {
+      "level": 66,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_STAR_PIECE"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "67": {
+      "level": 67,
+      "items": [
+        "ITEM_POSTCARD_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50
+      ],
+      "isBackfill": true
+    },
+    "68": {
+      "level": 68,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_INCUBATOR_BASIC"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        10,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "69": {
+      "level": 69,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_TROY_DISK"
+      ],
+      "itemsCount": [
+        10,
+        3,
+        5,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "7": {
+      "level": 7,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_NANAB_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3
+      ],
+      "featuresUnlocked": [
+        "FEATURE_ROUTES"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "70": {
+      "level": 70,
+      "items": [
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        75
+      ],
+      "isBackfill": true
+    },
+    "71": {
+      "level": 71,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        20,
+        1,
+        1
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shoes_lvl71-cyberkicks_0",
+          "displayTemplateId": "N_DISPLAY_n_shoes_lvl71-cyberkicks_0"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "72": {
+      "level": 72,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_LUCKY_EGG"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        10,
+        1,
+        1,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "73": {
+      "level": 73,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        20,
+        1,
+        1,
+        5
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_glasses_lvl73-visorspecs_0",
+          "displayTemplateId": "N_DISPLAY_n_glasses_lvl73-visorspecs_0"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "74": {
+      "level": 74,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_INCUBATOR_BASIC",
+        "ITEM_POSTCARD_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        10,
+        1,
+        1,
+        1,
+        50
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "75": {
+      "level": 75,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_MAX_REVIVE",
+        "ITEM_STAR_PIECE",
+        "ITEM_INCUBATOR_SUPER",
+        "ITEM_TROY_DISK",
+        "ITEM_MP_REPLENISH",
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        50,
+        35,
+        30,
+        15,
+        5,
+        2,
+        5,
+        1,
+        25
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_pants_lvl75-techtrousers_0",
+          "displayTemplateId": "N_DISPLAY_n_pants_lvl75-techtrousers_0"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "76": {
+      "level": 76,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_LUCKY_EGG"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        20,
+        1,
+        1,
+        1
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "77": {
+      "level": 77,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_NANAB_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_INCUBATOR_BASIC",
+        "ITEM_POSTCARD_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        10,
+        1,
+        1,
+        1,
+        50
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_pose_lvl77",
+          "displayTemplateId": "N_DISPLAY_n_pose_lvl77"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "78": {
+      "level": 78,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_RAZZ_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY",
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        20,
+        1,
+        1,
+        75
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "79": {
+      "level": 79,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_REVIVE",
+        "ITEM_PAID_RAID_TICKET",
+        "ITEM_XL_RARE_CANDY"
+      ],
+      "itemsCount": [
+        30,
+        25,
+        10,
+        1,
+        1
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_hair_lvl79-synthfade_0",
+          "displayTemplateId": "N_DISPLAY_n_hair_lvl79-synthfade_0"
+        },
+        {
+          "itemTemplateId": "N_AVATAR_n_hair_lvl79-urbanphantom_0",
+          "displayTemplateId": "N_DISPLAY_n_hair_lvl79-urbanphantom_0"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "8": {
+      "level": 8,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_REVIVE"
+      ],
+      "itemsCount": [
+        10,
+        5
+      ],
+      "featuresUnlocked": [
+        "FEATURE_ROCKET"
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "80": {
+      "level": 80,
+      "items": [
+        "ITEM_ULTRA_BALL",
+        "ITEM_PINAP_BERRY",
+        "ITEM_MAX_POTION",
+        "ITEM_MAX_REVIVE",
+        "ITEM_LUCKY_EGG",
+        "ITEM_INCUBATOR_SUPER",
+        "ITEM_INCENSE_ORDINARY",
+        "ITEM_MAX_BOOST",
+        "ITEM_ITEM_STORAGE_UPGRADE_EARNED",
+        "ITEM_POKEMON_STORAGE_UPGRADE_EARNED"
+      ],
+      "itemsCount": [
+        80,
+        70,
+        50,
+        25,
+        7,
+        5,
+        7,
+        1,
+        100,
+        100
+      ],
+      "neutralAvatarItemTemplates": [
+        {
+          "itemTemplateId": "N_AVATAR_n_shirt_lvl80-circuitjacket_0",
+          "displayTemplateId": "N_DISPLAY_n_shirt_lvl80-circuitjacket_0"
+        }
+      ],
+      "clientOverrideDisplayOrder": true
+    },
+    "9": {
+      "level": 9,
+      "items": [
+        "ITEM_POKE_BALL",
+        "ITEM_RAZZ_BERRY"
+      ],
+      "itemsCount": [
+        10,
+        3
+      ],
+      "itemsUnlocked": [
+        "ITEM_RAZZ_BERRY"
+      ],
+      "clientOverrideDisplayOrder": true
+    }
+  },
+  "additional_medals": [
+    {
+      "id": "BADGE_MAX_LEVEL_FRIENDS",
+      "badge": 48,
+      "targets": [
+        1,
+        2,
+        3,
+        20
+      ],
+      "ranks": 5,
+      "counter": "best_friends"
+    },
+    {
+      "id": "BADGE_MINI_COLLECTION",
+      "badge": 1002,
+      "targets": [
+        1
+      ],
+      "ranks": 2,
+      "counter": "collections"
+    },
+    {
+      "id": "BADGE_POKEMON_PURIFIED",
+      "badge": 57,
+      "targets": [
+        5,
+        50,
+        500,
+        1000
+      ],
+      "ranks": 5,
+      "counter": "purified"
+    },
+    {
+      "id": "BADGE_ROCKET_GIOVANNI_DEFEATED",
+      "badge": 59,
+      "targets": [
+        1,
+        5,
+        20,
+        50
+      ],
+      "ranks": 5,
+      "counter": "rocket_bosses"
+    },
+    {
+      "id": "BADGE_ROCKET_GRUNTS_DEFEATED",
+      "badge": 58,
+      "targets": [
+        10,
+        100,
+        1000,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "rocket_grunts"
+    },
+    {
+      "id": "BADGE_TOTAL_ROUTE_PLAY",
+      "badge": 77,
+      "targets": [
+        10,
+        50,
+        200,
+        600
+      ],
+      "ranks": 5,
+      "counter": "routes"
+    },
+    {
+      "id": "BADGE_TRADING",
+      "badge": 49,
+      "targets": [
+        10,
+        100,
+        1000,
+        2500
+      ],
+      "ranks": 5,
+      "counter": "trades"
+    },
+    {
+      "id": "BADGE_BATTLE_TRAINING_WON",
+      "badge": 14,
+      "targets": [
+        10,
+        100,
+        1000,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "training_wins"
+    },
+    {
+      "id": "BADGE_GREAT_LEAGUE",
+      "badge": 52,
+      "targets": [
+        5,
+        50,
+        200,
+        1000
+      ],
+      "ranks": 5,
+      "counter": "league_great"
+    },
+    {
+      "id": "BADGE_MASTER_LEAGUE",
+      "badge": 54,
+      "targets": [
+        5,
+        50,
+        200,
+        1000
+      ],
+      "ranks": 5,
+      "counter": "league_master"
+    },
+    {
+      "id": "BADGE_PIKACHU",
+      "badge": 37,
+      "targets": [
+        3,
+        50,
+        300,
+        1000
+      ],
+      "ranks": 5,
+      "counter": "pikachu"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN2",
+      "badge": 39,
+      "targets": [
+        5,
+        30,
+        70,
+        100
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:2"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN3",
+      "badge": 45,
+      "targets": [
+        5,
+        40,
+        90,
+        135
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:3"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN4",
+      "badge": 51,
+      "targets": [
+        5,
+        30,
+        80,
+        107
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:4"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN5",
+      "badge": 56,
+      "targets": [
+        5,
+        50,
+        100,
+        156
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:5"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN6",
+      "badge": 61,
+      "targets": [
+        5,
+        25,
+        50,
+        72
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:6"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN7",
+      "badge": 62,
+      "targets": [
+        5,
+        25,
+        50,
+        86
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:7"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN8",
+      "badge": 63,
+      "targets": [
+        5,
+        25,
+        50,
+        89
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:8"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN8A",
+      "badge": 79,
+      "targets": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "ranks": 5,
+      "counter": "dex_hisui"
+    },
+    {
+      "id": "BADGE_POKEDEX_ENTRIES_GEN9",
+      "badge": 82,
+      "targets": [
+        5,
+        30,
+        80,
+        103
+      ],
+      "ranks": 5,
+      "counter": "dex_gen:9"
+    },
+    {
+      "id": "BADGE_ULTRA_LEAGUE",
+      "badge": 53,
+      "targets": [
+        5,
+        50,
+        200,
+        1000
+      ],
+      "ranks": 5,
+      "counter": "league_ultra"
+    },
+    {
+      "id": "BADGE_UNIQUE_POKESTOPS",
+      "badge": 9,
+      "targets": [
+        10,
+        100,
+        1000,
+        2000
+      ],
+      "ranks": 5,
+      "counter": "unique_stops"
+    },
+    {
+      "id": "BADGE_UNOWN",
+      "badge": 38,
+      "targets": [
+        3,
+        10,
+        26,
+        28
+      ],
+      "ranks": 5,
+      "counter": "unown"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "event",
+  "metadata": {
+    "name": "Kanto field expedition",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "event",
+      "name": "Kanto field expedition",
+      "description": "Kanto encounters, legendary rotations and an original story.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-11-01T18:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 2,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 3,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 4,
+            "weight": 10,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 5,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 6,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 7,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 8,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 9,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          },
+          {
+            "species": 10,
+            "weight": 1,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0.015625
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "raids": [
+          {
+            "species": 144,
+            "tier": 5,
+            "hp": 2000,
+            "cp": 18000,
+            "weight": 1,
+            "level": 20,
+            "xp": 5000,
+            "dust": 500,
+            "shiny_rate": 0
+          },
+          {
+            "species": 1,
+            "tier": 1,
+            "hp": 600,
+            "cp": 5000,
+            "weight": 1,
+            "level": 20,
+            "xp": 1000,
+            "dust": 500,
+            "shiny_rate": 0
+          }
+        ],
+        "research": [
+          "bundle-bdff4ed6cab8e83008fee79b"
+        ]
+      },
+      "event_type": "kanto-tour",
+      "rotations": [
+        {
+          "id": "habitat-0",
+          "offset_minutes": 0,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 1,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 2,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 3,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-1",
+          "offset_minutes": 60,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 7,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 8,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 9,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-2",
+          "offset_minutes": 120,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 3,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-3",
+          "offset_minutes": 180,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 4,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 5,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 6,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-4",
+          "offset_minutes": 240,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 1,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 2,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 3,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-5",
+          "offset_minutes": 300,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 7,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 8,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 9,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-6",
+          "offset_minutes": 360,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 7,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        },
+        {
+          "id": "habitat-7",
+          "offset_minutes": 420,
+          "duration_minutes": 60,
+          "rules": {
+            "spawns": [
+              {
+                "species": 4,
+                "weight": 10,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 5,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              },
+              {
+                "species": 6,
+                "weight": 1,
+                "level_range": [
+                  5,
+                  25
+                ],
+                "shiny_rate": 0.015625
+              }
+            ]
+          }
+        }
+      ],
+      "id": "bundle-b424f256f692a126faf286d5"
+    },
+    {
+      "kind": "research",
+      "name": "Kanto field expedition field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-12-06T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "special",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "event": "spin",
+              "target": 2,
+              "description": "Spin 2 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        },
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 5,
+              "description": "Catch 5 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "encounter",
+              "species": 1,
+              "level": 10,
+              "shiny_rate": 0
+            }
+          ]
+        }
+      ],
+      "id": "bundle-bdff4ed6cab8e83008fee79b"
+    }
+  ],
+  "regions": []
+}
