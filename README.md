@@ -8,7 +8,6 @@ payloads, player data, world snapshots, TLS private keys, or toolchain binaries.
 
 ## Screenshots
 
-Fresh-account walkthrough captured in order on the Android build.
 
 <table>
   <tr>
