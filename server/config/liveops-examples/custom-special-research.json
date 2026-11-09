@@ -1,0 +1,117 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "research",
+  "metadata": {
+    "name": "A notebook of new beginnings"
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "A notebook of new beginnings",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-12-06T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "special",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "event": "spin",
+              "target": 2,
+              "description": "Spin 2 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        },
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 5,
+              "description": "Catch 5 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "encounter",
+              "species": 25,
+              "level": 10,
+              "shiny_rate": 0
+            }
+          ]
+        },
+        {
+          "name": "Keep exploring",
+          "objectives": [
+            {
+              "event": "spin",
+              "target": 3,
+              "description": "Spin 3 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            },
+            {
+              "event": "evolve",
+              "target": 1,
+              "description": "Evolve 1 times",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "stardust",
+              "amount": 500
+            }
+          ]
+        }
+      ],
+      "id": "original-new-beginnings"
+    }
+  ],
+  "regions": []
+}

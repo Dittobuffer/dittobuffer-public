@@ -1,0 +1,135 @@
+{
+  "activation": "Disabled unless explicitly merged into an isolated Max configuration; not production-balanced.",
+  "native_tier_mapping": {
+    "1:1": "ordinary one-star",
+    "1:3": "ordinary three-star",
+    "1:5": "ordinary five-star",
+    "2:7": "six-star Gigantamax; native DOUGH_LEVEL_1 enum7"
+  },
+  "balance_profiles": {
+    "1:1": {
+      "provenance": "Explicit private draft balance v1, NOT official 0.429.2 combat tuning. Source GM supplies mode/tier/move/fee identities only. HP/damage/rewards/timer here require real preparation and group validation.",
+      "lobby_seconds": 30,
+      "battle_seconds": 900,
+      "boss_hp": 1700,
+      "boss_interval_ms": 4000,
+      "boss_damage_multiplier": 0.35,
+      "meter_goal": 100,
+      "meter_per_attack": 10,
+      "max_attack_power": [
+        200,
+        300,
+        400
+      ],
+      "guard_hp": [
+        20,
+        40,
+        60
+      ],
+      "spirit_fraction": [
+        0.08,
+        0.12,
+        0.16
+      ],
+      "xp": 5000,
+      "dust": 500,
+      "items": {
+        "101": 2
+      },
+      "premier_balls": 12
+    },
+    "1:3": {
+      "provenance": "Explicit private draft balance v1, NOT official 0.429.2 combat tuning. Source GM supplies mode/tier/move/fee identities only. HP/damage/rewards/timer here require real preparation and group validation.",
+      "lobby_seconds": 30,
+      "battle_seconds": 900,
+      "boss_hp": 10000,
+      "boss_interval_ms": 4000,
+      "boss_damage_multiplier": 1,
+      "meter_goal": 100,
+      "meter_per_attack": 10,
+      "max_attack_power": [
+        200,
+        300,
+        400
+      ],
+      "guard_hp": [
+        20,
+        40,
+        60
+      ],
+      "spirit_fraction": [
+        0.08,
+        0.12,
+        0.16
+      ],
+      "xp": 7500,
+      "dust": 1000,
+      "items": {
+        "101": 2
+      },
+      "premier_balls": 12
+    },
+    "1:5": {
+      "provenance": "Explicit private draft balance v1, NOT official 0.429.2 combat tuning. Source GM supplies mode/tier/move/fee identities only. HP/damage/rewards/timer here require real preparation and group validation.",
+      "lobby_seconds": 30,
+      "battle_seconds": 900,
+      "boss_hp": 25000,
+      "boss_interval_ms": 4000,
+      "boss_damage_multiplier": 2,
+      "meter_goal": 100,
+      "meter_per_attack": 10,
+      "max_attack_power": [
+        200,
+        300,
+        400
+      ],
+      "guard_hp": [
+        20,
+        40,
+        60
+      ],
+      "spirit_fraction": [
+        0.08,
+        0.12,
+        0.16
+      ],
+      "xp": 25000,
+      "dust": 2000,
+      "items": {
+        "101": 2
+      },
+      "premier_balls": 12
+    },
+    "2:7": {
+      "provenance": "Explicit private draft balance v1, NOT official 0.429.2 combat tuning. Source GM supplies mode/tier/move/fee identities only. HP/damage/rewards/timer here require real preparation and group validation.",
+      "lobby_seconds": 30,
+      "battle_seconds": 900,
+      "boss_hp": 50000,
+      "boss_interval_ms": 4000,
+      "boss_damage_multiplier": 3,
+      "meter_goal": 100,
+      "meter_per_attack": 10,
+      "max_attack_power": [
+        200,
+        300,
+        400
+      ],
+      "guard_hp": [
+        20,
+        40,
+        60
+      ],
+      "spirit_fraction": [
+        0.08,
+        0.12,
+        0.16
+      ],
+      "xp": 25000,
+      "dust": 2500,
+      "items": {
+        "101": 2
+      },
+      "premier_balls": 12
+    }
+  }
+}

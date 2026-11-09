@@ -1,0 +1,41 @@
+# Copyright (C) Dittobuffer Contributors
+# Copyright (C) chucny
+# Copyright (C) gekkedavi
+#
+# This file is part of Dittobuffer. It is distributed under the GNU General
+# Public License v3.0 (see LICENSE). The copyright notices in this file must
+# be preserved in all copies, forks, and derivative works. Removing or
+# altering these notices violates the license and copyright law.
+
+name: dittobuffer-platform
+
+services:
+  platform:
+    build: .
+    image: dittobuffer/platform:1.1.0
+    container_name: dittobuffer-platform
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8780:8780"
+    volumes:
+      - ./docker-data:/data
+      - ../server:/workspace
+    command:
+      - python
+      - run.py
+      - --config
+      - /data/config.json
+      - --data
+      - /data/platform.json
+      - --key
+      - /data/platform-key.json
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8780"
+      - --server-root
+      - /workspace
+      - --room-address
+      - "${ROOM_ADDRESS:-my-room}"
+      - --public-url
+      - "${PUBLIC_URL:-}"

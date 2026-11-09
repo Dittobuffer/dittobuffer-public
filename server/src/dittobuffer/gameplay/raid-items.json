@@ -1,0 +1,48 @@
+{
+  "source": "https://raw.githubusercontent.com/PokeMiners/game_masters/master/latest/latest.json",
+  "source_sha256": "5c947ac64d1de8859bea1b3bf044609d74b6e8429d53f8cb1aa30a72a46dce84",
+  "retrieved_utc": "2026-10-19",
+  "scope": "Compatible item definitions only. No raid reward quantities, probabilities or official tier balance inferred.",
+  "translation": "Source timeFullDurationMs maps to this APK FoodAttributesProto.ActiveDurationMs (field8).",
+  "items": [
+    {
+      "id": 706,
+      "template_id": "ITEM_GOLDEN_RAZZ_BERRY",
+      "source_settings": {
+        "itemId": "ITEM_GOLDEN_RAZZ_BERRY",
+        "itemType": "ITEM_TYPE_FOOD",
+        "category": "ITEM_CATEGORY_FOOD",
+        "dropTrainerLevel": 10,
+        "food": {
+          "itemEffect": [
+            "ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW",
+            "ITEM_EFFECT_FULL_MOTIVATION"
+          ],
+          "itemEffectPercent": [
+            2.5,
+            1.0
+          ],
+          "growthPercent": 0.1,
+          "berryMultiplier": 1.0,
+          "remoteBerryMultiplier": 1.0,
+          "numBuddyAffectionPoints": 2,
+          "mapDurationMs": "10800000",
+          "timeFullDurationMs": "10800000",
+          "numBuddyHungerPoints": 6
+        }
+      },
+      "template_hex": "0a164954454d5f474f4c44454e5f52415a5a5f42455252591a3808c20510061802280a522d0a04f607f8071208000020400000803f1dcdcccc3d250000803f2d0000803f3002388097930540809793054806"
+    },
+    {
+      "id": 1301,
+      "template_id": "ITEM_RARE_CANDY",
+      "source_settings": {
+        "itemId": "ITEM_RARE_CANDY",
+        "itemType": "ITEM_TYPE_CANDY",
+        "category": "ITEM_CATEGORY_CANDY",
+        "dropTrainerLevel": 5
+      },
+      "template_hex": "0a0f4954454d5f524152455f43414e44591a0908950a100f180e2805"
+    }
+  ]
+}

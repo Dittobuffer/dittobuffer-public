@@ -1,0 +1,41 @@
+{
+  "source": "builds/m161-source/game-master.cache",
+  "source_sha256": "dc68848c8b7b003a7a00aff17849db6b554b3898ab399bbfaa159bafcf34c5d4",
+  "scope": "Numeric move balance only; no proprietary assets or dialogue",
+  "moves": {
+    "322": {
+      "template_id": "V0322_MOVE_FRUSTRATION",
+      "animationId": 5,
+      "type": 1,
+      "power": 10.0,
+      "accuracyChance": 1.0,
+      "criticalChance": 0.0,
+      "staminaLossScalar": 0.009999999776482582,
+      "trainerLevelMin": 1,
+      "trainerLevelMax": 100,
+      "vfxName": "frustration",
+      "durationMs": 2000,
+      "damageWindowStartMs": 1000,
+      "damageWindowEndMs": 1800,
+      "energyDelta": -33,
+      "isLocked": true
+    },
+    "323": {
+      "template_id": "V0323_MOVE_RETURN",
+      "animationId": 5,
+      "type": 1,
+      "power": 25.0,
+      "accuracyChance": 1.0,
+      "criticalChance": 0.0,
+      "staminaLossScalar": 0.009999999776482582,
+      "trainerLevelMin": 1,
+      "trainerLevelMax": 100,
+      "vfxName": "return",
+      "durationMs": 500,
+      "damageWindowStartMs": 0,
+      "damageWindowEndMs": 150,
+      "energyDelta": -33,
+      "isLocked": false
+    }
+  }
+}

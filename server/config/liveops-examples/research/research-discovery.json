@@ -1,0 +1,65 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "research",
+  "metadata": {
+    "name": "Seasonal Discovery",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "Seasonal Discovery",
+      "description": "Frozen seven-stamp Breakthrough rotation.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-06T17:00:00+00:00",
+      "end": "2026-12-11T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "breakthrough",
+      "event_only": false,
+      "rewards": [
+        {
+          "type": "xp",
+          "amount": 3000
+        },
+        {
+          "type": "stardust",
+          "amount": 2000
+        },
+        {
+          "type": "item",
+          "item": 1,
+          "amount": 10
+        }
+      ],
+      "encounter_pool": [
+        {
+          "type": "encounter",
+          "species": 1,
+          "level": 15,
+          "shiny_rate": 0,
+          "weight": 1
+        },
+        {
+          "type": "encounter",
+          "species": 2,
+          "level": 15,
+          "shiny_rate": 0,
+          "weight": 1
+        },
+        {
+          "type": "encounter",
+          "species": 3,
+          "level": 15,
+          "shiny_rate": 0,
+          "weight": 1
+        }
+      ],
+      "id": "bundle-bdf5c5e43ce21fbb67369c4e"
+    }
+  ],
+  "regions": []
+}

@@ -1,0 +1,13 @@
+{
+  "settings.binpb.gz": {
+    "url": "https://asset-cdn-rel.nianticstatic.com/prelogin/settings.binpb.gz",
+    "sha256": "d2636e83eea00f94c3d4be50acb57ee83797d4601f20b5aee714fb6063b32525",
+    "bytes": 1431
+  },
+  "gmts.binpb.gz": {
+    "url": "https://asset-cdn-rel.nianticstatic.com/prelogin/gmts.binpb.gz",
+    "sha256": "4448320df824f1457a3c6238ebb5e59fe9b07aa7020d36a284c873f65deb3d98",
+    "bytes": 313566
+  },
+  "recorded_utc": "2026-10-18T14:57:04.695444+00:00"
+}

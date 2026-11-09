@@ -1,0 +1,784 @@
+[
+  {
+    "variant": {
+      "species": 155,
+      "form": 1127,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm155",
+    "owned_id": 1,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "gym_battle": true
+    },
+    "evidence": [
+      "builds/m95-cyndaquil-catch.json",
+      "builds/m95-cyndaquil-catch-world.png",
+      "builds/m95-cyndaquil-catch-encounter.png",
+      "builds/m95-cyndaquil-catch-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json",
+      "builds/m95-cyndaquil-gym-combat.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 19,
+      "form": 46,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm19.fALOLA",
+    "owned_id": 3,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-alola-rattata.json",
+      "builds/m95-alola-rattata-world.png",
+      "builds/m95-alola-rattata-encounter.png",
+      "builds/m95-alola-rattata-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 79,
+      "form": 2582,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm79.fGALARIAN",
+    "owned_id": 4,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "raid_battle": true
+    },
+    "evidence": [
+      "builds/m95-galar-slowpoke.json",
+      "builds/m95-galar-slowpoke-world.png",
+      "builds/m95-galar-slowpoke-encounter.png",
+      "builds/m95-galar-slowpoke-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json",
+      "builds/m95-raid-combat.json",
+      "builds/m95-raid-start.png",
+      "builds/m95-raid-models.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 100,
+      "form": 2728,
+      "costume": 0,
+      "gender": 3,
+      "shiny": false
+    },
+    "model_address": "pm100.fHISUIAN",
+    "owned_id": 5,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-hisui-voltorb.json",
+      "builds/m95-hisui-voltorb-world.png",
+      "builds/m95-hisui-voltorb-encounter.png",
+      "builds/m95-hisui-voltorb-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 194,
+      "form": 3009,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm194.fPALDEA",
+    "owned_id": 6,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-paldea-wooper.json",
+      "builds/m95-paldea-wooper-world.png",
+      "builds/m95-paldea-wooper-encounter.png",
+      "builds/m95-paldea-wooper-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 6,
+      "form": 178,
+      "costume": 14,
+      "gender": 1,
+      "shiny": true
+    },
+    "model_address": "pm6.cSPRING_2020_NOEVOLVE.s",
+    "owned_id": 7,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-shiny-costume-charizard.json",
+      "builds/m95-shiny-costume-charizard-world.png",
+      "builds/m95-shiny-costume-charizard-encounter.png",
+      "builds/m95-shiny-costume-charizard-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 112,
+      "form": 849,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm112.g2",
+    "owned_id": 8,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "evolution": true
+    },
+    "evidence": [
+      "builds/m95-female-rhydon.json",
+      "builds/m95-female-rhydon-world.png",
+      "builds/m95-female-rhydon-encounter.png",
+      "builds/m95-female-rhydon-summary.png",
+      "builds/m95-batch2-storage-restart.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 1,
+      "form": 163,
+      "costume": 0,
+      "gender": 2,
+      "shiny": true,
+      "height_m": 0.34627166390419006,
+      "weight_kg": 1.5598077774047852
+    },
+    "model_address": "pm1.s",
+    "owned_id": 9,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-xxs-shiny-bulbasaur.json",
+      "builds/m95-xxs-shiny-bulbasaur-world.png",
+      "builds/m95-xxs-shiny-bulbasaur-encounter.png",
+      "builds/m95-xxs-shiny-bulbasaur-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 16,
+      "form": 962,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.22404994070529938,
+      "weight_kg": 0.9633195400238037
+    },
+    "model_address": "pm16",
+    "owned_id": 10,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-xs-pidgey.json",
+      "builds/m95-xs-pidgey-world.png",
+      "builds/m95-xs-pidgey-encounter.png",
+      "builds/m95-xs-pidgey-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 19,
+      "form": 45,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3390997648239136,
+      "weight_kg": 4.358948707580566
+    },
+    "model_address": "pm19",
+    "owned_id": 11,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-medium-rattata.json",
+      "builds/m95-medium-rattata-world.png",
+      "builds/m95-medium-rattata-encounter.png",
+      "builds/m95-medium-rattata-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 52,
+      "form": 63,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.5737737417221069,
+      "weight_kg": 8.989601135253906
+    },
+    "model_address": "pm52",
+    "owned_id": 12,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-xl-meowth.json",
+      "builds/m95-xl-meowth-world.png",
+      "builds/m95-xl-meowth-encounter.png",
+      "builds/m95-xl-meowth-summary.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 155,
+      "form": 1127,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.8558614253997803,
+      "weight_kg": 24.1458740234375
+    },
+    "model_address": "pm155",
+    "owned_id": 13,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-xxl-cyndaquil-namespaced.json",
+      "builds/m95-xxl-cyndaquil-namespaced-world.png",
+      "builds/m95-xxl-cyndaquil-namespaced-encounter.png",
+      "builds/m95-xxl-cyndaquil-namespaced-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 252,
+      "form": 1349,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3877231776714325,
+      "weight_kg": 2.8956918716430664
+    },
+    "model_address": "pm252",
+    "owned_id": 14,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen3-treecko.json",
+      "builds/m95-gen3-treecko-world.png",
+      "builds/m95-gen3-treecko-encounter.png",
+      "builds/m95-gen3-treecko-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 387,
+      "form": 688,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3711085021495819,
+      "weight_kg": 9.311356544494629
+    },
+    "model_address": "pm387",
+    "owned_id": 15,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen4-turtwig-camera-retry.json",
+      "builds/m95-gen4-turtwig-camera-retry-world.png",
+      "builds/m95-gen4-turtwig-camera-retry-encounter.png",
+      "builds/m95-gen4-turtwig-camera-retry-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 495,
+      "form": 1889,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.740466296672821,
+      "weight_kg": 11.871879577636719
+    },
+    "model_address": "pm495",
+    "owned_id": 16,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen5-snivy.json",
+      "builds/m95-gen5-snivy-world.png",
+      "builds/m95-gen5-snivy-encounter.png",
+      "builds/m95-gen5-snivy-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 661,
+      "form": 3033,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3131476938724518,
+      "weight_kg": 1.7600939273834229
+    },
+    "model_address": "pm661",
+    "owned_id": 17,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen6-fletchling.json",
+      "builds/m95-gen6-fletchling-world.png",
+      "builds/m95-gen6-fletchling-encounter.png",
+      "builds/m95-gen6-fletchling-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 731,
+      "form": 3084,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3643949031829834,
+      "weight_kg": 1.9041064977645874
+    },
+    "model_address": "pm731",
+    "owned_id": 18,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen7-pikipek.json",
+      "builds/m95-gen7-pikipek-world.png",
+      "builds/m95-gen7-pikipek-encounter.png",
+      "builds/m95-gen7-pikipek-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 831,
+      "form": 2861,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.3902638852596283,
+      "weight_kg": 2.642540216445923
+    },
+    "model_address": "pm831",
+    "owned_id": 19,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen8-wooloo.json",
+      "builds/m95-gen8-wooloo-world.png",
+      "builds/m95-gen8-wooloo-encounter.png",
+      "builds/m95-gen8-wooloo-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 906,
+      "form": 3222,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.37289026379585266,
+      "weight_kg": 3.5566723346710205
+    },
+    "model_address": "pm906",
+    "owned_id": 20,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-gen9-sprigatito.json",
+      "builds/m95-gen9-sprigatito-world.png",
+      "builds/m95-gen9-sprigatito-encounter.png",
+      "builds/m95-gen9-sprigatito-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 144,
+      "form": 716,
+      "costume": 0,
+      "gender": 3,
+      "shiny": false,
+      "height_m": 0.8634361624717712,
+      "weight_kg": 15.613365173339844
+    },
+    "model_address": "pm144",
+    "owned_id": 21,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-fallback-articuno.json",
+      "builds/m95-fallback-articuno-world.png",
+      "builds/m95-fallback-articuno-encounter.png",
+      "builds/m95-fallback-articuno-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 39,
+      "form": 987,
+      "costume": 74,
+      "gender": 1,
+      "shiny": false,
+      "height_m": 0.6892369389533997,
+      "weight_kg": 10.209691047668457
+    },
+    "model_address": "pm39.cJAN_2024",
+    "owned_id": 22,
+    "scope": "M9.5 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m95-costume-jigglypuff.json",
+      "builds/m95-costume-jigglypuff-world.png",
+      "builds/m95-costume-jigglypuff-encounter.png",
+      "builds/m95-costume-jigglypuff-summary.png",
+      "builds/m95-final-storage-restart-top.png",
+      "builds/m95-final-restart-persistence.json"
+    ],
+    "notes": [
+      "Real native throws; explicit development catch probability 1.",
+      "Size/repeated catches do not create additional identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 464,
+      "form": 852,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm464.g2",
+    "owned_id": 8,
+    "scope": "M9.5 real Sinnoh Stone evolution and raid substitution",
+    "actions": {
+      "render": true,
+      "animation": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "evolution": true,
+      "raid_battle": true
+    },
+    "evidence": [
+      "builds/m95-sinnoh-evolution-state.json",
+      "builds/m95-sinnoh-evolved-summary.png",
+      "builds/m95-sinnoh-stone-animation.png",
+      "builds/m95-final-storage-restart-bottom.png",
+      "builds/m95-final-restart-persistence.json",
+      "builds/m95-raid-result.png",
+      "builds/m95-raid-models-second.json"
+    ],
+    "notes": [
+      "Same owned ID 8; stone 1->0; evolution candy deducted once. Rhyperior itself was evolved, not wild-caught."
+    ]
+  }
+]

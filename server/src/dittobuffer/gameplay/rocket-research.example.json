@@ -1,0 +1,32 @@
+{
+  "id": "clear-skies-original",
+  "title": "Clear Skies",
+  "ending": "Your notes show how careful observation and care can help a Pokemon recover.",
+  "stages": [
+    {
+      "description": "Investigate an unusual PokeStop and help a Shadow Pokemon.",
+      "dialog": "Some local stops have unusual visitors. Record what happens, and look closely at the Pokemon left behind.",
+      "objectives": [
+        {"event":"rocket_grunt","target":1,"description":"Defeat a Rocket Grunt.","rewards":[{"type":"xp","amount":100}]},
+        {"event":"shadow_catch","target":1,"description":"Catch a Shadow Pokemon.","rewards":[{"type":"stardust","amount":100}]},
+        {"event":"purify","target":1,"description":"Purify a Shadow Pokemon.","rewards":[{"type":"item","item":1,"amount":5}]}
+      ],
+      "rewards":[{"type":"xp","amount":500}]
+    },
+    {
+      "description":"Follow the signals to a Rocket Leader hideout.",
+      "dialog":"The components seem connected. Keep a record of their signals before following the trail.",
+      "objectives":[
+        {"event":"radar_assemble","target":1,"description":"Assemble a Rocket Radar.","rewards":[{"type":"xp","amount":200}]},
+        {"event":"rocket_leader","target":1,"description":"Defeat a Rocket Leader.","rewards":[{"type":"stardust","amount":500}]}
+      ],
+      "rewards":[{"type":"item","item":1503,"amount":1}]
+    },
+    {
+      "description":"Complete the investigation and challenge Giovanni.",
+      "dialog":"A final signal stands apart. Prepare carefully and bring back an accurate account of what you find.",
+      "objectives":[{"event":"rocket_boss","target":1,"description":"Defeat Giovanni.","rewards":[{"type":"xp","amount":500}]}],
+      "rewards":[{"type":"stardust","amount":1000}]
+    }
+  ]
+}

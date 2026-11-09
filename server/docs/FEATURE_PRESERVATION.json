@@ -1,0 +1,180 @@
+{
+  "base": "bd2ab84010b8a47cfd72d02d2f0cb275e4817e91",
+  "branch": "integration/workspace-migration-20261027",
+  "subsystems": [
+    {
+      "subsystem": "Accounts and authentication",
+      "source": "latest main + integrated family/security fixes",
+      "destination": "src/dittobuffer/core/accounts.py;core/family_network.py;gameplay/friends.py",
+      "validation": "family account and HTTP tests"
+    },
+    {
+      "subsystem": "SQLite and persistent ownership",
+      "source": "latest main + M23 additive table",
+      "destination": "src/dittobuffer/core/database.py",
+      "validation": "transactions, replay, restart and FK tests"
+    },
+    {
+      "subsystem": "Catching and inventory",
+      "source": "main + integrated + M23 scoped capture/berry fixes",
+      "destination": "src/dittobuffer/gameplay/game.py;items.py",
+      "validation": "ordinary/Research/raid/Max/Rocket isolation tests"
+    },
+    {
+      "subsystem": "Species, forms, shiny and model registrations",
+      "source": "main reference + integrated permitted manifests",
+      "destination": "src/dittobuffer/gameplay/species.py;config/resources/pokemon*.json",
+      "validation": "accepted pins/closure restored; no fresh 958-species Android retest"
+    },
+    {
+      "subsystem": "Storage, evolution, power-up and moves",
+      "source": "main + recovered native Shadow hooks",
+      "destination": "src/dittobuffer/core/management.py;gameplay/pokemon_moves.py",
+      "validation": "management, evolution, XL, TM and Shadow tests"
+    },
+    {
+      "subsystem": "Avatar, wardrobe, medals, buddy, journal",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/avatar.py;wardrobe.py;medals.py;buddy*.py;trainer.py",
+      "validation": "existing regression suites"
+    },
+    {
+      "subsystem": "Pokestops, items and Shop",
+      "source": "main + integrated safety hooks",
+      "destination": "src/dittobuffer/gameplay/game.py;items.py;shop.py",
+      "validation": "inventory/reward/economy tests"
+    },
+    {
+      "subsystem": "Gyms and ordinary raids",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/gyms.py;gym_battle.py;raids.py;raid_transport.py",
+      "validation": "gym/raid/battle regression suites"
+    },
+    {
+      "subsystem": "Family cooperative raids",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/cooperative.py",
+      "validation": "independent ownership, retries and rewards tests"
+    },
+    {
+      "subsystem": "Mega systems",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/mega.py",
+      "validation": "existing evolution/raid tests"
+    },
+    {
+      "subsystem": "Eggs, incubators and walking",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/eggs.py;walking.py",
+      "validation": "persistent distance/hatched reward tests; no physical walk"
+    },
+    {
+      "subsystem": "Field and Special Research",
+      "source": "main + integrated + M23 + Rocket event types",
+      "destination": "src/dittobuffer/gameplay/research.py;stories.py",
+      "validation": "owned claims/progress/replay tests"
+    },
+    {
+      "subsystem": "Mythical native cinematics",
+      "source": "integrated M23 worktree",
+      "destination": "src/dittobuffer/gameplay/special_encounters.py;.json;client/inspect-special-research.js",
+      "validation": "12 registry IDs; previous Pixel evidence remains historical"
+    },
+    {
+      "subsystem": "Rocket native combat and shields",
+      "source": "feature/dynamaxfeature 59635c9 / saved stash 4537d7f",
+      "destination": "src/dittobuffer/gameplay/rocket_native.py;rocket_battle.py",
+      "validation": "42 recovered transaction/defeat/resource tests; actual hit/AI state, not instant-win"
+    },
+    {
+      "subsystem": "Rocket Radars, leaders, Giovanni and balloons",
+      "source": "same recovered branch/stash",
+      "destination": "src/dittobuffer/gameplay/rocket_progression.py;rocket-*.json",
+      "validation": "tickets, ownership, private balloon identities and rewards tests"
+    },
+    {
+      "subsystem": "Shadow purification and Frustration",
+      "source": "same recovered branch/stash + original M17.2 tests",
+      "destination": "src/dittobuffer/gameplay/rocket_shadow.py;core/management.py;gameplay/pokedex.py",
+      "validation": "exactly-once purification, categories and gated TMs"
+    },
+    {
+      "subsystem": "Rocket defeat-resource repair",
+      "source": "original source + saved composer + M23 accepted runtime",
+      "destination": "src/dittobuffer/gameplay/rocket_resources.py;scripts/m172-rocket-defeat-resources.py",
+      "validation": "three exact native coach closures verified locally"
+    },
+    {
+      "subsystem": "Legacy main balloon interface",
+      "source": "latest main retained separately",
+      "destination": "src/dittobuffer/gameplay/rocket.py",
+      "validation": "original tests retained; no schema replacement"
+    },
+    {
+      "subsystem": "Dynamax/Gigantamax and Max Ball",
+      "source": "main + integrated M18.2",
+      "destination": "src/dittobuffer/gameplay/max_*.py;client/local-max*.js",
+      "validation": "M18.2 RPC/ownership + Node Max Ball regressions"
+    },
+    {
+      "subsystem": "PvP, GBL and friend battles",
+      "source": "latest main retained",
+      "destination": "src/dittobuffer/gameplay/pvp*.py;client/local-pvp.js",
+      "validation": "PvP and challenge suites; native Rocket coexists through ID routing"
+    },
+    {
+      "subsystem": "Routes, creator and publication",
+      "source": "integrated M20/M20.1/M20.2 port",
+      "destination": "src/dittobuffer/gameplay/route*.py;client/local-routes.js",
+      "validation": "graph/creator/rewards/protocol tests"
+    },
+    {
+      "subsystem": "Mateo, saved Postcards and Vivillon",
+      "source": "integrated M20.2 port",
+      "destination": "src/dittobuffer/gameplay/route_mateo.py;route_npc_resources.py;world_postcards.py;vivillon.py",
+      "validation": "NPC/Collector/persistence + prior overlay preservation tests"
+    },
+    {
+      "subsystem": "Friends, gifts, trading and social",
+      "source": "main + integrated fixes",
+      "destination": "src/dittobuffer/gameplay/friends.py;gifts.py;trading.py;client/local-social.js",
+      "validation": "existing social and account-isolation tests"
+    },
+    {
+      "subsystem": "Netherlands, roads and world geometry",
+      "source": "main world engine + integrated source + private published snapshot",
+      "destination": "src/dittobuffer/world/;client/local-world.js;local-maps.js",
+      "validation": "world/HTTP/Node tests; published 7 GB snapshot copied privately"
+    },
+    {
+      "subsystem": "Android standalone launcher",
+      "source": "integrated + recovered Rocket adapter",
+      "destination": "client/standalone/org/dittobuffer/launcher/;scripts/build-standalone.py",
+      "validation": "Java/D8/APK build and actual artifact byte checks"
+    },
+    {
+      "subsystem": "Rust transport and native ABI",
+      "source": "latest main source retained byte-for-byte",
+      "destination": "client/native/",
+      "validation": "158 host tests; pinned ARM64 release build; required exports/SONAME"
+    },
+    {
+      "subsystem": "Protocols",
+      "source": "integrated merged main + audited Routes codecs",
+      "destination": "protocol/game.proto;protocol/game_pb2.py",
+      "validation": "native Station field 17 / Routes field 20 retained; 47 recovered Rocket message contracts match"
+    },
+    {
+      "subsystem": "Resource restoration and model tools",
+      "source": "integrated + four recovered original model helpers",
+      "destination": "scripts/restore-local-resources.py;convert-pokemon-fbx.py;retarget-*.py;convert-source-palette.py",
+      "validation": "3073 restoration pins; synthetic motion/palette tests; proprietary inputs stay ignored"
+    },
+    {
+      "subsystem": "Server/admin/CLI/build/CI",
+      "source": "main + integrated source + relocation fixes",
+      "destination": "src/dittobuffer/runtime/;admin/;cli/;scripts/;.github/workflows/ci.yml",
+      "validation": "isolated services, setup, patcher, Python/Node/build validation"
+    }
+  ]
+}

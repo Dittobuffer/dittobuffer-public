@@ -1,0 +1,65 @@
+{
+  "reward_bonuses": {
+    "enabled": true,
+    "timezone": "Europe/Amsterdam",
+    "daily_xp": 1500,
+    "seventh_xp": 6000,
+    "daily_dust": 600,
+    "seventh_dust": 3000,
+    "first_throw_xp": 50,
+    "nice_xp": 20,
+    "great_xp": 100,
+    "excellent_xp": 1000,
+    "curve_xp": 20,
+    "weather_dust_multiplier": 1.25,
+    "spin_daily_items": {
+      "1": 3
+    },
+    "spin_seventh_items": {
+      "1": 15
+    },
+    "species_rewards": {},
+    "events": [],
+    "weekly_enabled": false,
+    "weekly_reset_hour": 9,
+    "weekly_rewards": [
+      {
+        "km": 5,
+        "items": {
+          "1": 20
+        }
+      },
+      {
+        "km": 25,
+        "items": {
+          "1": 20,
+          "2": 10
+        }
+      },
+      {
+        "km": 50,
+        "items": {
+          "1": 20,
+          "2": 10,
+          "3": 5
+        }
+      },
+      {
+        "km": 100,
+        "items": {
+          "1": 20,
+          "2": 10,
+          "3": 5
+        }
+      }
+    ],
+    "weekly_provenance": "Explicit deterministic local table, not the official random egg/dust table; replace with a reviewed operator table. Distance is validated foreground walking; external Health/Google Fit ingestion is not implemented."
+  },
+  "notes": [
+    "Daily and seven-day XP: Pokemon GO GO Beyond update 2020-12-07, https://pokemongo.com/news/gobeyond-level40",
+    "Daily dust and calendar behavior: https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/105-daily-bonuses/ (its XP table predates the GO Beyond update).",
+    "Extra spin item counts are explicit custom local tuning. Species candy/dust bonuses come from supplied Game Master encounter fields10/11.",
+    "Events are bounded start_ms/end_ms with xp,dust,candy factors. Native throw thresholds remain those of existing ENCOUNTER_SETTINGS."
+  ],
+  "pokedex_entry_xp": 1000
+}

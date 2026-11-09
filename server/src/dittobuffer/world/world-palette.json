@@ -1,0 +1,21 @@
+{
+  "name": "native-netherlands-v1",
+  "description": "Select existing client material roles by layer:kind. Geometry stays geographic. RGB and shaders remain client controlled.",
+  "kinds": {
+    "2:63": 63,
+    "4:16": 16,
+    "4:20": 20,
+    "4:33": 33,
+    "4:60": 60,
+    "7:21": 21,
+    "7:28": 28,
+    "7:30": 30,
+    "7:35": 35,
+    "7:36": 36,
+    "9:2": 2,
+    "9:25": 25,
+    "9:32": 32,
+    "9:47": 47,
+    "9:58": 58
+  }
+}

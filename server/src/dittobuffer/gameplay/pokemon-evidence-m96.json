@@ -1,0 +1,724 @@
+[
+  {
+    "variant": {
+      "species": 92,
+      "form": 1038,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm92",
+    "owned_id": 24,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-92.json",
+      "builds/m96-batch-a-clear-92-world.png",
+      "builds/m96-batch-a-clear-92-encounter.png",
+      "builds/m96-batch-a-clear-92-summary.png",
+      "builds/m96-batch-a-clear-92-catch-2.png",
+      "builds/m96-batch-a-clear-92-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 202,
+      "form": 602,
+      "costume": 0,
+      "gender": 2,
+      "shiny": true
+    },
+    "model_address": "pm202.g2.s",
+    "owned_id": 25,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-202.json",
+      "builds/m96-batch-a-clear-202-world.png",
+      "builds/m96-batch-a-clear-202-encounter.png",
+      "builds/m96-batch-a-clear-202-summary.png",
+      "builds/m96-batch-a-clear-202-catch-2.png",
+      "builds/m96-batch-a-clear-202-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 374,
+      "form": 764,
+      "costume": 0,
+      "gender": 3,
+      "shiny": false
+    },
+    "model_address": "pm374",
+    "owned_id": 26,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-374.json",
+      "builds/m96-batch-a-clear-374-world.png",
+      "builds/m96-batch-a-clear-374-encounter.png",
+      "builds/m96-batch-a-clear-374-summary.png",
+      "builds/m96-batch-a-clear-374-catch-1.png",
+      "builds/m96-batch-a-clear-374-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 443,
+      "form": 861,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm443.g2",
+    "owned_id": 27,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-443.json",
+      "builds/m96-batch-a-clear-443-world.png",
+      "builds/m96-batch-a-clear-443-encounter.png",
+      "builds/m96-batch-a-clear-443-summary.png",
+      "builds/m96-batch-a-clear-443-catch-1.png",
+      "builds/m96-batch-a-clear-443-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 582,
+      "form": 2144,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm582",
+    "owned_id": 28,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-582.json",
+      "builds/m96-batch-a-clear-582-world.png",
+      "builds/m96-batch-a-clear-582-encounter.png",
+      "builds/m96-batch-a-clear-582-summary.png",
+      "builds/m96-batch-a-clear-582-catch-1.png",
+      "builds/m96-batch-a-clear-582-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 700,
+      "form": 3062,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm700",
+    "owned_id": 29,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-a-clear-700.json",
+      "builds/m96-batch-a-clear-700-world.png",
+      "builds/m96-batch-a-clear-700-encounter.png",
+      "builds/m96-batch-a-clear-700-summary.png",
+      "builds/m96-batch-a-clear-700-catch-2.png",
+      "builds/m96-batch-a-clear-700-throws.json",
+      "builds/m96-batch-a-restart.json",
+      "builds/m96-batch-a-restarted-storage-clear.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 724,
+      "form": 2809,
+      "costume": 79,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm724.cFALL_2024",
+    "owned_id": 30,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-724.json",
+      "builds/m96-batch-b-724-world.png",
+      "builds/m96-batch-b-724-encounter.png",
+      "builds/m96-batch-b-724-summary.png",
+      "builds/m96-batch-b-724-catch-2.png",
+      "builds/m96-batch-b-724-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 39,
+      "form": 987,
+      "costume": 74,
+      "gender": 2,
+      "shiny": true
+    },
+    "model_address": "pm39.cJAN_2024.s",
+    "owned_id": 31,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-39.json",
+      "builds/m96-batch-b-39-world.png",
+      "builds/m96-batch-b-39-encounter.png",
+      "builds/m96-batch-b-39-summary.png",
+      "builds/m96-batch-b-39-catch-2.png",
+      "builds/m96-batch-b-39-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 901,
+      "form": 2817,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm901",
+    "owned_id": 32,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-901.json",
+      "builds/m96-batch-b-901-world.png",
+      "builds/m96-batch-b-901-encounter.png",
+      "builds/m96-batch-b-901-summary.png",
+      "builds/m96-batch-b-901-catch-1.png",
+      "builds/m96-batch-b-901-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 921,
+      "form": 3236,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm921",
+    "owned_id": 33,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-921.json",
+      "builds/m96-batch-b-921-world.png",
+      "builds/m96-batch-b-921-encounter.png",
+      "builds/m96-batch-b-921-summary.png",
+      "builds/m96-batch-b-921-catch-1.png",
+      "builds/m96-batch-b-921-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 129,
+      "form": 253,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm129.g2",
+    "owned_id": 34,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-finish-129.json",
+      "builds/m96-batch-b-finish-129-world.png",
+      "builds/m96-batch-b-finish-129-encounter.png",
+      "builds/m96-batch-b-finish-129-summary.png",
+      "builds/m96-batch-b-finish-129-catch-1.png",
+      "builds/m96-batch-b-finish-129-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 200,
+      "form": 719,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm200",
+    "owned_id": 35,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-b-finish-200.json",
+      "builds/m96-batch-b-finish-200-world.png",
+      "builds/m96-batch-b-finish-200-encounter.png",
+      "builds/m96-batch-b-finish-200-summary.png",
+      "builds/m96-batch-b-finish-200-catch-2.png",
+      "builds/m96-batch-b-finish-200-throws.json",
+      "builds/m96-batch-b-restart.json",
+      "builds/m96-batch-b-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 724,
+      "form": 2809,
+      "costume": 79,
+      "gender": 1,
+      "shiny": true
+    },
+    "model_address": "pm724.cFALL_2024.s",
+    "owned_id": 36,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-724.json",
+      "builds/m96-batch-c-724-world.png",
+      "builds/m96-batch-c-724-encounter.png",
+      "builds/m96-batch-c-724-summary.png",
+      "builds/m96-batch-c-724-catch-2.png",
+      "builds/m96-batch-c-724-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 37,
+      "form": 56,
+      "costume": 0,
+      "gender": 2,
+      "shiny": true
+    },
+    "model_address": "pm37.fALOLA.s",
+    "owned_id": 37,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-37.json",
+      "builds/m96-batch-c-37-world.png",
+      "builds/m96-batch-c-37-encounter.png",
+      "builds/m96-batch-c-37-summary.png",
+      "builds/m96-batch-c-37-catch-2.png",
+      "builds/m96-batch-c-37-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 77,
+      "form": 2336,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm77.fGALARIAN",
+    "owned_id": 38,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-77.json",
+      "builds/m96-batch-c-77-world.png",
+      "builds/m96-batch-c-77-encounter.png",
+      "builds/m96-batch-c-77-summary.png",
+      "builds/m96-batch-c-77-catch-3.png",
+      "builds/m96-batch-c-77-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 422,
+      "form": 97,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm422.fEAST_SEA",
+    "owned_id": 39,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-422.json",
+      "builds/m96-batch-c-422-world.png",
+      "builds/m96-batch-c-422-encounter.png",
+      "builds/m96-batch-c-422-summary.png",
+      "builds/m96-batch-c-422-catch-2.png",
+      "builds/m96-batch-c-422-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 741,
+      "form": 2679,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm741.fBAILE",
+    "owned_id": 40,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "gym_battle": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-741.json",
+      "builds/m96-batch-c-741-world.png",
+      "builds/m96-batch-c-741-encounter.png",
+      "builds/m96-batch-c-741-summary.png",
+      "builds/m96-batch-c-741-catch-2.png",
+      "builds/m96-batch-c-741-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png",
+      "builds/m96-gym-combat.json",
+      "builds/m96-gym-result.png",
+      "builds/m96-gym-victory.png",
+      "builds/m96-gym-final-state.json"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys.",
+      "Real ordinary gym fight: Oricorio HP74->70; synthetic Rattata HP20->0, defender returned and gym neutral. No new charged/dodge coverage."
+    ]
+  },
+  {
+    "variant": {
+      "species": 59,
+      "form": 2793,
+      "costume": 0,
+      "gender": 1,
+      "shiny": false
+    },
+    "model_address": "pm59.fHISUIAN",
+    "owned_id": 41,
+    "scope": "M9.6 reviewed real Pixel 5 clone gameplay; isolated CatalogScout",
+    "actions": {
+      "world": true,
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-batch-c-59.json",
+      "builds/m96-batch-c-59-world.png",
+      "builds/m96-batch-c-59-encounter.png",
+      "builds/m96-batch-c-59-summary.png",
+      "builds/m96-batch-c-59-catch-2.png",
+      "builds/m96-batch-c-59-throws.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Actual native hit/catch through ADB touches. Explicit development catch probability 1; no hit override.",
+      "Reviewed original PNGs/contact sheets and native animation samples. Sizes and repeated catches do not add identity keys."
+    ]
+  },
+  {
+    "variant": {
+      "species": 130,
+      "form": 256,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm130.g2",
+    "owned_id": 34,
+    "scope": "M9.6 actual female Magikarp evolution; isolated CatalogScout",
+    "actions": {
+      "render": true,
+      "animation": true,
+      "summary": true,
+      "evolution": true,
+      "storage": true,
+      "restart": true
+    },
+    "evidence": [
+      "builds/m96-magikarp-before-evolution.json",
+      "builds/m96-magikarp-evolution-confirm.png",
+      "builds/m96-gyarados-evolution-animation.png",
+      "builds/m96-gyarados-summary.png",
+      "builds/m96-gyarados-evolution-state.json",
+      "builds/m96-gyarados-animation.json",
+      "builds/m96-batch-c-restart.json",
+      "builds/m96-batch-c-restarted-storage.png"
+    ],
+    "notes": [
+      "Same owned ID34; native CP70 ->934, HP40 ->95, female and XS preserved. Candy453 ->54, 400 cost +1 reward.",
+      "Gyarados itself was evolved, not wild-caught or observed as a wild overworld model."
+    ]
+  },
+  {
+    "variant": {
+      "species": 143,
+      "form": 199,
+      "costume": 0,
+      "gender": 2,
+      "shiny": false
+    },
+    "model_address": "pm143",
+    "owned_id": 7,
+    "scope": "M9.6 real Snorlax raid bonus; isolated RaidScout",
+    "actions": {
+      "render": true,
+      "animation": true,
+      "encounter": true,
+      "catch": true,
+      "summary": true,
+      "storage": true,
+      "restart": true,
+      "raid_battle": true
+    },
+    "evidence": [
+      "builds/m96-snorlax-raid-combat.json",
+      "builds/m96-snorlax-summary-clear.png",
+      "builds/m96-snorlax-throw1.png",
+      "builds/m96-raids-restarted-storage.png",
+      "builds/m96-raids-after-restart.json",
+      "builds/m96-raids-replay.json"
+    ],
+    "notes": [
+      "Female appearance not previously accepted. No female wild overworld claim; native shared model pm143.",
+      "Fresh genuine victory and Premier Ball hit/catch; repeat Snorlax fixture caught ID8 too."
+    ]
+  }
+]

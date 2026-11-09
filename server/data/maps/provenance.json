@@ -1,0 +1,9 @@
+{
+  "source": "OpenStreetMap API 0.6 map extract",
+  "copyright": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "fetched_utc": "2026-10-18T17:53:22.042955+00:00",
+  "sha256": "d1abd375f62c4a8d5e3f59d168eff0e88706031d83370dd5547e5ed3f6ebfde8",
+  "radius_m": 650
+}

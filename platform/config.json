@@ -1,0 +1,26 @@
+{
+  "host": "127.0.0.1",
+  "port": 8899,
+  "data": "data/platform.json",
+  "key": "data/platform-key.json",
+  "room_address": "YOUR_ROOM_ADDRESS_HERE",
+  "mqtt": {
+    "enabled": true,
+    "host": "broker.hivemq.com",
+    "port": 8883,
+    "tls": true
+  },
+  "admin_token": "",
+  "public_url": "http://localhost:8780",
+  "name": "Dittobuffer Platform",
+  "server_root": "..",
+  "server_profile": "",
+  "poi_import": {
+    "enabled": true,
+    "radius_m": 1200,
+    "interval_s": 60,
+    "limit": 80,
+    "gym_percent": 20
+  },
+  "setup_complete": true
+}

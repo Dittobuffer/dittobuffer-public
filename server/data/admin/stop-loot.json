@@ -1,0 +1,78 @@
+{
+  "count": 19,
+  "guaranteed": [
+    {
+      "item": 1,
+      "count": 1
+    }
+  ],
+  "drops": [
+    {
+      "item": 2,
+      "weight": 20,
+      "min_level": 12,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 703,
+      "weight": 5,
+      "min_level": 4,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 705,
+      "weight": 5,
+      "min_level": 18,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 1,
+      "weight": 100,
+      "min_level": 1,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 101,
+      "weight": 25,
+      "min_level": 5,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 701,
+      "weight": 8,
+      "min_level": 8,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 201,
+      "weight": 10,
+      "min_level": 5,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 3,
+      "weight": 5,
+      "min_level": 20,
+      "min_count": 1,
+      "max_count": 1
+    },
+    {
+      "item": 4,
+      "weight": 0,
+      "min_level": 1,
+      "min_count": 1,
+      "max_count": 1
+    }
+  ],
+  "passes": {
+    "premium": 1,
+    "remote": 1
+  }
+}

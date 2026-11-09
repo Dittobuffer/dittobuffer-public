@@ -1,0 +1,7 @@
+{
+  "arlo": {"kind":"leader","character":42,"species":[1,6,212],"reward_species":1,"shields":2,"ticket":1502,"display":2,"xp":1000,"stardust":1000},
+  "cliff": {"kind":"leader","character":41,"species":[246,142,248],"reward_species":246,"shields":2,"ticket":1502,"display":2,"xp":1000,"stardust":1000},
+  "sierra": {"kind":"leader","character":43,"species":[215,131,229],"reward_species":215,"shields":2,"ticket":1502,"display":2,"xp":1000,"stardust":1000},
+  "giovanni": {"kind":"boss","character":44,"species":[53,34,144],"reward_species":144,"shields":2,"ticket":1503,"display":3,"xp":2000,"stardust":5000},
+  "decoy": {"kind":"grunt","character":45,"species":[69,70,20],"reward_species":69,"shields":0,"ticket":0,"reveal_ticket":1503,"display":3,"xp":500,"stardust":500}
+}

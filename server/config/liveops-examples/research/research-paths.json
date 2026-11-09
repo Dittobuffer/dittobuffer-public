@@ -1,0 +1,93 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "research",
+  "metadata": {
+    "name": "Field Notes: Choose a Path",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "research",
+      "name": "Field Notes: Choose a Path",
+      "description": "Native exclusive catch or landmark observations.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-06T17:00:00+00:00",
+      "end": "2026-12-11T17:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "branching",
+      "event_only": false,
+      "paths": [
+        {
+          "id": "pokemon",
+          "title": "Observe Pokemon",
+          "description": "Focus on new encounters.",
+          "rewards": [],
+          "stages": [
+            {
+              "objectives": [
+                {
+                  "event": "catch",
+                  "target": 3,
+                  "description": "Catch 3 Pokemon",
+                  "rewards": [
+                    {
+                      "type": "xp",
+                      "amount": 300
+                    }
+                  ]
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "encounter",
+                  "species": 1,
+                  "level": 10,
+                  "shiny_rate": 0
+                }
+              ],
+              "dialog": "Every observation adds a new detail to our field notes. Let us compare what you discover."
+            }
+          ]
+        },
+        {
+          "id": "landmarks",
+          "title": "Observe Landmarks",
+          "description": "Focus on nearby PokeStops.",
+          "rewards": [],
+          "stages": [
+            {
+              "objectives": [
+                {
+                  "event": "spin",
+                  "target": 3,
+                  "description": "Spin 3 times",
+                  "rewards": [
+                    {
+                      "type": "xp",
+                      "amount": 300
+                    }
+                  ]
+                }
+              ],
+              "rewards": [
+                {
+                  "type": "encounter",
+                  "species": 1,
+                  "level": 10,
+                  "shiny_rate": 0
+                }
+              ],
+              "dialog": "Every observation adds a new detail to our field notes. Let us compare what you discover."
+            }
+          ]
+        }
+      ],
+      "id": "bundle-258d1b009bf16cf8b8c2a3bc"
+    }
+  ],
+  "regions": []
+}

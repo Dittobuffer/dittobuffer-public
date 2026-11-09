@@ -1,0 +1,85 @@
+{
+  "format": "dittobuffer.liveops.bundle",
+  "schema_version": 1,
+  "bundle_type": "event",
+  "metadata": {
+    "name": "An evening spotlight",
+    "notes": "Original DittoBuffer content. Custom configurable balance, not official event data."
+  },
+  "content": [
+    {
+      "kind": "event",
+      "name": "An evening spotlight",
+      "description": "One focused spawn pool and one catch bonus.",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-11-01T11:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "rules": {
+        "spawns": [
+          {
+            "species": 1,
+            "weight": 100,
+            "level_range": [
+              5,
+              25
+            ],
+            "shiny_rate": 0
+          }
+        ],
+        "bonuses": {
+          "catch_xp": 2
+        },
+        "bonus_policy": "max",
+        "research": [
+          "bundle-f6e5a7e5728a3367c5706814"
+        ]
+      },
+      "event_type": "spotlight-hour",
+      "id": "bundle-6f85c8d7a53c54eb81825799"
+    },
+    {
+      "kind": "research",
+      "name": "An evening spotlight field notes",
+      "description": "",
+      "timezone": "Europe/Amsterdam",
+      "start": "2026-11-01T10:00:00+00:00",
+      "end": "2026-12-06T10:00:00+00:00",
+      "scope": {
+        "type": "global"
+      },
+      "priority": 50,
+      "research_type": "field",
+      "event_only": true,
+      "stages": [
+        {
+          "objectives": [
+            {
+              "event": "catch",
+              "target": 3,
+              "description": "Catch 3 Pokemon",
+              "rewards": [
+                {
+                  "type": "xp",
+                  "amount": 300
+                }
+              ]
+            }
+          ],
+          "rewards": [
+            {
+              "type": "item",
+              "item": 1,
+              "amount": 5
+            }
+          ]
+        }
+      ],
+      "id": "bundle-f6e5a7e5728a3367c5706814"
+    }
+  ],
+  "regions": []
+}

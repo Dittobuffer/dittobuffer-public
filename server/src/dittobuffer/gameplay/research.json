@@ -1,0 +1,39 @@
+{
+  "enabled": false,
+  "capacity": 3,
+  "day_offset_minutes": 0,
+  "breakthrough_rewards": [{"type":"xp","amount":500},{"type":"stardust","amount":200},{"type":"item","item":1,"amount":10}],
+  "field_tasks": {
+    "first-catch": {"event":"catch","target":1,"description":"Catch a Pokemon.","rewards":[{"type":"item","item":1,"amount":3}]},
+    "local-stop": {"event":"spin","target":1,"description":"Spin a PokeStop.","rewards":[{"type":"stardust","amount":50}]},
+    "steady-throw": {"event":"throw","target":1,"description":"Land a throw on a Pokemon.","rewards":[{"type":"xp","amount":100}]},
+    "new-neighbor": {"event":"catch","target":2,"description":"Catch 2 Pokemon.","rewards":[{"type":"encounter","species":16,"level":10}]}
+  },
+  "field_pool": [
+    {"task":"first-catch","weight":2},
+    {"task":"local-stop","weight":2},
+    {"task":"steady-throw","weight":2},
+    {"task":"new-neighbor","weight":1}
+  ],
+  "stories": [{
+    "id":"new-paths-season-one","title":"New Paths",
+    "ending":"Your first field notes are complete. Keep exploring and see what changes around you!",
+    "stages":[{
+      "dialog":"Every familiar path holds a new observation. Meet a Pokemon, visit a local stop, and practice a careful throw. Let us start a fresh notebook together.",
+      "objectives":[
+        {"event":"catch","target":1,"description":"Catch a Pokemon.","rewards":[{"type":"item","item":1,"amount":3}]},
+        {"event":"spin","target":1,"description":"Spin a PokeStop.","rewards":[{"type":"stardust","amount":50}]},
+        {"event":"throw","target":1,"description":"Land a throw on a Pokemon.","rewards":[{"type":"xp","amount":100}]}
+      ],
+      "rewards":[{"type":"xp","amount":200},{"type":"stardust","amount":100}]
+    },{
+      "dialog":"Those first notes give us a starting point. Compare a few more encounters and stops. A patient observer often finds an unexpected new neighbor.",
+      "objectives":[
+        {"event":"catch","target":2,"description":"Catch 2 Pokemon.","rewards":[{"type":"encounter","species":7,"level":10}]},
+        {"event":"spin","target":2,"description":"Spin 2 PokeStops.","rewards":[{"type":"item","item":2,"amount":5}]},
+        {"event":"throw","target":3,"description":"Land 3 throws on Pokemon.","rewards":[{"type":"stardust","amount":100}]}
+      ],
+      "rewards":[{"type":"xp","amount":300},{"type":"encounter","species":1,"level":10}]
+    }]
+  }]
+}

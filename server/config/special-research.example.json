@@ -1,0 +1,34 @@
+{
+  "research": {
+    "enabled": false,
+    "stories": [
+      {
+        "id": "local-harbor-observations",
+        "title": "A Light at the Harbor",
+        "ending": "Your observations have become part of the local research journal.",
+        "stages": [
+          {
+            "description": "Watch how nearby Pokemon respond to an evening by the water.",
+            "objectives": [
+              {
+                "event": "catch",
+                "target": 3,
+                "description": "Catch 3 Pokemon to record their behavior.",
+                "rewards": [{"type": "xp", "amount": 100}]
+              }
+            ],
+            "rewards": [
+              {
+                "type": "encounter",
+                "species": 494,
+                "level": 15,
+                "shiny_rate": 0,
+                "special_encounter": "victini_research"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

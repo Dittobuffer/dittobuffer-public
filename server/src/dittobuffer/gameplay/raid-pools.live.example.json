@@ -1,0 +1,19 @@
+{
+  "raids": {
+    "enabled": false,
+    "development_only": false,
+    "balance_note": "Disabled operator template. Supply reviewed boss pools and explicit intended live HP/CP, rewards and probabilities before enabling; no official tier balance is implied.",
+    "minimum_level": 5,
+    "egg_seconds": 120,
+    "active_seconds": 3600,
+    "rotation_seconds": 7200,
+    "lobby_seconds": 20,
+    "relobby_seconds": 20,
+    "battle_seconds": 180,
+    "participation_limit": 1,
+    "daily_free_passes": 1,
+    "premier_balls": 12,
+    "encounter_seconds": 86400,
+    "pools": []
+  }
+}

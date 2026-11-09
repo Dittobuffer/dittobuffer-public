@@ -1,0 +1,20 @@
+{
+  "pvp": {
+    "enabled": false,
+    "reference": "builds/pvp-reference.json",
+    "season": 1,
+    "season_start_ms": 1767225600000,
+    "season_end_ms": 1893456000000,
+    "minimum_level": 10,
+    "set_size": 5,
+    "daily_sets": 5,
+    "ai_backfill_enabled": true,
+    "ai_backfill_seconds": 15,
+    "ai_difficulty": "normal",
+    "ai_max_level": 40,
+    "friend_rewards_per_day": 3,
+    "friend_stardust": 100,
+    "npc_stardust": 300,
+    "set_stardust": 500
+  }
+}

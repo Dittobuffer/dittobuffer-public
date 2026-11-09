@@ -1,0 +1,66 @@
+{
+  "enabled": false,
+  "reference": "assets/pokemon/local/max/max-reference.json",
+  "reference_sha256": "e43457935016e732a64dbd2a07e20d785025387697ec609cbda00a3b4b366d45",
+  "require_complete_reference": true,
+  "candidates": "data/world/power-spots.sqlite3",
+  "timezone": "Europe/Amsterdam",
+  "reset_hour": 5,
+  "daily_limit": 800,
+  "capacity": 1500,
+  "cap_policy": "threshold",
+  "station_particles": 100,
+  "first_visit_bonus": 20,
+  "rotation_seconds": 86400,
+  "active_seconds": 86400,
+  "active_probability": 0.34,
+  "minimum_level": 20,
+  "battle_enabled": false,
+  "seed": "local-max-v1",
+  "pools": [
+    {"species": 1, "mode": 1, "tier": 1, "level": 10, "weight": 1},
+    {"species": 4, "mode": 1, "tier": 1, "level": 10, "weight": 1},
+    {"species": 7, "mode": 1, "tier": 1, "level": 10, "weight": 1},
+    {"species": 831, "mode": 1, "tier": 1, "level": 10, "weight": 1}
+  ],
+  "stationing": {
+    "enabled": false,
+    "reward_provenance": "Explicit custom development assist rewards; the authorized snapshot does not include official station Candy reward tables.",
+    "candy_per_assist": 1,
+    "xl_candy_per_assist": 0,
+    "max_candy": 5,
+    "max_xl_candy": 0
+  },
+  "schedule": {
+    "enabled": false,
+    "timezone": "Europe/Amsterdam",
+    "fold_policy": "earlier",
+    "gap_policy": "skip",
+    "regular": {"rotation_seconds": 86400},
+    "events": [{
+      "id": "max-monday",
+      "enabled": false,
+      "weekdays": [0],
+      "start": "18:00",
+      "end": "19:00",
+      "pool": [{"species": 831, "mode": 1, "tier": 1, "level": 10}]
+    }]
+  },
+  "development_balance": {
+    "provenance": "Explicit custom development tuning, not official Max server balance. Cached client definitions supply native move identities, types, UI, upgrade costs and VFX; full authoritative combat power is unavailable.",
+    "lobby_seconds": 30,
+    "battle_seconds": 300,
+    "boss_hp": 240,
+    "boss_interval_ms": 6000,
+    "boss_damage_multiplier": 0.25,
+    "meter_goal": 100,
+    "meter_per_attack": 10,
+    "max_attack_power": [200, 300, 400],
+    "guard_hp": [20, 40, 60],
+    "spirit_fraction": [0.08, 0.12, 0.16],
+    "xp": 1000,
+    "dust": 500,
+    "items": {"101": 2},
+    "premier_balls": 12
+  }
+}

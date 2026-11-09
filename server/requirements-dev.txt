@@ -1,0 +1,16 @@
+# Copyright (C) Dittobuffer Contributors
+# Copyright (C) chucny
+# Copyright (C) gekkedavi
+#
+# This file is part of Dittobuffer. It is distributed under the GNU General
+# Public License v3.0 (see LICENSE). The copyright notices in this file must
+# be preserved in all copies, forks, and derivative works. Removing or
+# altering these notices violates the license and copyright law.
+
+-r requirements.txt
+pytest==8.4.2
+grpcio-tools==1.84.0
+pyelftools==0.33
+androguard==4.1.4
+frida==17.5.1
+capstone==5.0.9

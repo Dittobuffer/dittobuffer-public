@@ -1,0 +1,14 @@
+# Copyright (C) Dittobuffer Contributors
+# Copyright (C) chucny
+# Copyright (C) gekkedavi
+#
+# This file is part of Dittobuffer. It is distributed under the GNU General
+# Public License v3.0 (see LICENSE). The copyright notices in this file must
+# be preserved in all copies, forks, and derivative works. Removing or
+# altering these notices violates the license and copyright law.
+
+# Draft 2020-12 validation using universal Python wheels on Chaquopy 3.10.
+# jsonschema 4.18+ requires rpds-py, which has no verified Android wheel here.
+jsonschema==4.17.3
+attrs==25.4.0
+pyrsistent==0.20.0

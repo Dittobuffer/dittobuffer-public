@@ -1,0 +1,20 @@
+{
+  "grass": {"character":23,"species":[1,2,3]},
+  "fire": {"character":19,"species":[4,5,6]},
+  "water": {"character":39,"species":[7,8,9]},
+  "electric": {"character":50,"species":[81,82,181]},
+  "psychic": {"character":35,"species":[96,97,103]},
+  "dark": {"character":11,"species":[198,228,229]},
+  "ghost": {"character":48,"species":[92,93,94]},
+  "fighting": {"character":17,"species":[66,67,68]},
+  "ground": {"character":25,"species":[27,28,112]},
+  "rock": {"character":37,"species":[74,75,76]},
+  "ice": {"character":27,"species":[220,221,131]},
+  "dragon": {"character":13,"species":[147,148,149]},
+  "flying": {"character":21,"species":[41,42,169]},
+  "poison": {"character":33,"species":[88,89,110]},
+  "bug": {"character":7,"species":[13,14,15]},
+  "steel": {"character":29,"species":[304,305,306]},
+  "fairy": {"character":15,"species":[209,210,281]},
+  "normal": {"character":31,"species":[19,20,143]}
+}

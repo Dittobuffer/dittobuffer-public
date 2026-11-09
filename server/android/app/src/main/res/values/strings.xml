@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) Dittobuffer Contributors
+  Copyright (C) chucny
+  Copyright (C) gekkedavi
+
+  This file is part of Dittobuffer. It is distributed under the GNU General
+  Public License v3.0 (see LICENSE). The copyright notices in this file must
+  be preserved in all copies, forks, and derivative works. Removing or
+  altering these notices violates the license and copyright law.
+-->
+
+<resources>
+    <string name="app_name">Dittobuffer</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_server">Server</string>
+    <string name="tab_admin">Admin</string>
+    <string name="tab_map">Map</string>
+    <string name="tab_settings">Settings</string>
+    <string name="shortcut_admin_short">Admin</string>
+    <string name="shortcut_admin_long">Open admin console</string>
+    <string name="shortcut_play_short">Play</string>
+    <string name="shortcut_play_long">Launch the game</string>
+    <string name="shortcut_start_short">Start</string>
+    <string name="shortcut_start_long">Start the local server</string>
+</resources>

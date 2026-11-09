@@ -1,0 +1,76 @@
+{
+  "enabled": true,
+  "auto_spawn": true,
+  "min_level": 8,
+  "balloon_interval_minutes": 60,
+  "balloon_lifetime_minutes": 20,
+  "grunts": [
+    {
+      "id": "grunt-fire",
+      "name": "Fire-type Grunt",
+      "species": 37,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    },
+    {
+      "id": "grunt-water",
+      "name": "Water-type Grunt",
+      "species": 7,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    },
+    {
+      "id": "grunt-grass",
+      "name": "Grass-type Grunt",
+      "species": 1,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    }
+  ],
+  "leaders": [
+    {
+      "id": "arlo",
+      "name": "Arlo",
+      "species": 123,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    },
+    {
+      "id": "cliff",
+      "name": "Cliff",
+      "species": 246,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    },
+    {
+      "id": "sierra",
+      "name": "Sierra",
+      "species": 92,
+      "form": 0,
+      "level": 25,
+      "iv_floor": 10,
+      "shadow": true
+    }
+  ],
+  "giovanni": {
+    "id": "giovanni",
+    "name": "Giovanni",
+    "species": 150,
+    "form": 0,
+    "level": 40,
+    "iv_floor": 10,
+    "shadow": true
+  },
+  "combat_enabled": true,
+  "hideouts_enabled": true
+}

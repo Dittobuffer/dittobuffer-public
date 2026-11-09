@@ -1,0 +1,33 @@
+{
+  "rocket": {
+    "enabled": false,
+    "reference": "assets/pokemon/local/rocket/rocket-reference.json",
+    "minimum_level": 8,
+    "seed": "replace-with-your-own-world-schedule-seed",
+    "period_seconds": 3600,
+    "duration_seconds": 1800,
+    "probability": 0.02,
+    "npc_level": 18,
+    "npc_iv": 10,
+    "reward_level": 8,
+    "encounter_seconds": 1800,
+    "premier_balls": 8,
+    "stardust": 500,
+    "xp": 500,
+    "force_fort_id": "",
+    "force_theme": "grass",
+    "leaders": "src/dittobuffer/gameplay/rocket-leaders.json",
+    "leader_level": 25,
+    "boss_level": 30,
+    "hideout_seconds": 86400,
+    "hideout_probability": 0.02,
+    "hideouts": {},
+    "balloons_enabled": false,
+    "balloon_themes": ["grass", "fire", "water"],
+    "balloon_period_seconds": 21600,
+    "balloon_duration_seconds": 1200,
+    "frustration_event_start_ms": 0,
+    "frustration_event_end_ms": 0,
+    "server_combat": true
+  }
+}
