@@ -1,0 +1,19 @@
+{
+  "epoch": 1,
+  "note": "JSON development world. Gyms and stops are defined here instead of a geographic SQLite snapshot. The home gym follows the player's reported position so a raid is always reachable.",
+  "home_gym": {
+    "id": "dev:home",
+    "name": "Kotikuntosali",
+    "description": "Local JSON world gym"
+  },
+  "pois": [
+    {
+      "id": "dev:stop",
+      "name": "Kotipysäkki",
+      "kind": 1,
+      "lat": 60.27,
+      "lng": 25.02,
+      "status": "APPROVED"
+    }
+  ]
+}

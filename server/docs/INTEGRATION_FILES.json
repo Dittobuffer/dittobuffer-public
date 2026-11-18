@@ -9,6 +9,7 @@
     ".gitattributes",
     ".github/workflows/ci.yml",
     ".gitignore",
+    "APPLY-TO-USB.bat",
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "Dockerfile",

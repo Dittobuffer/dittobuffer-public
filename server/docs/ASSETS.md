@@ -143,8 +143,9 @@ README/packaging text still says MIT. Resolve that contradiction before making a
 broader licensing claim. Game artwork, audio, APKs and configuration inputs keep
 their rights holders' conditions regardless of the source-code license.
 
-## Optional runtime restoration
+## Primary workspace restoration
 
+The new primary checkout is `E:\DittoBuffer`. See [WORKSPACE_MIGRATION.md](WORKSPACE_MIGRATION.md).
 The optional `rocket` restoration group supplies the pinned native-combat reference
 into ignored `assets/pokemon/local/rocket/`; `rocket.server_combat` is explicit opt-in.
 The accepted M23 runtime is locally restored at `assets/pokemon/local/mythical/registry.json`.

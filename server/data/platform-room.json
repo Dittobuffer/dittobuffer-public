@@ -1,0 +1,34 @@
+{
+  "room": "otso-test",
+  "published_ms": 1794983375462,
+  "body": {
+    "liveops": {
+      "enabled": true,
+      "shiny_rates": {},
+      "spawn_weights": {},
+      "spawn_percent": {},
+      "spawn_allow": [],
+      "raid_tier_weights": {
+        "1": 50.0,
+        "3": 30.0,
+        "5": 20.0,
+        "6": 0.0
+      },
+      "raid_boss_weights": {},
+      "events": [],
+      "community_days": [],
+      "shadow_overrides": {},
+      "source": ""
+    },
+    "logical_ms": 1794983375414,
+    "players": 5,
+    "active_spawns": 0,
+    "server": {
+      "title": "Otso Test Room",
+      "description": "",
+      "profile": "private-transfer",
+      "target": "0.429.2"
+    }
+  },
+  "fingerprint": "sha256:c83781c562d2d04a136a99c65f038158c809a88be6366f913dcd5c1a1c000144"
+}

@@ -99,16 +99,26 @@ class LiveopsTests(unittest.TestCase):
         self.assertEqual(world.raids(), [])
 
 
+class BridgeSpy:
+    def __init__(self):
+        self.calls = 0
+
+    def publish_room_now(self):
+        self.calls += 1
+        return True
+
+
 class NoWorkspaceAdminTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         root = Path(self.tmp.name)
         self.platform = Platform(Store(root / "platform.json"))
-        self.platform.create({"name": "standalone"})
+        self.platform.create({"name": "standalone", "host": True, "title": "Standalone"})
         self.importer = PoiImporter(root, {"enabled": False}, fetcher=lambda *_: [])
         self.world = WorldSimulator(root, self.importer, self.platform.liveops)
+        self.bridge = BridgeSpy()
         self.server = serve(self.platform, "127.0.0.1", 0, poi_importer=self.importer,
-                            world=self.world)
+                            world=self.world, bridge=self.bridge)
         self.port = self.server.server_address[1]
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
@@ -144,10 +154,15 @@ class NoWorkspaceAdminTests(unittest.TestCase):
                                    {"name": "Library", "lat": 51.5, "lng": -0.12, "kind": 1})
         self.assertEqual(status, 200)
         self.assertTrue(row["id"])
+        self.assertTrue(row["id"].startswith("manual:"))
+        self.assertGreaterEqual(self.bridge.calls, 1)
         status, value = self.request("/api/admin/pois?limit=10")
         self.assertEqual(value["total"], 1)
         status, value = self.request("/api/admin/pois/delete", {"id": row["id"]})
         self.assertTrue(value["deleted"])
+        self.assertGreaterEqual(self.bridge.calls, 2)
+        document = room_document(self.platform, None, self.importer, self.world)
+        self.assertEqual(document["state"]["body"]["pois"], [])
 
     def test_world_endpoints_work_without_a_server_workspace(self):
         status, poi = self.request("/api/admin/pois",
@@ -160,6 +175,11 @@ class NoWorkspaceAdminTests(unittest.TestCase):
                                      {"species": 25, "poi_id": poi["id"]})
         self.assertEqual(status, 200)
         self.assertEqual(spawn["species"], 25)
+        self.assertTrue(spawn["manual"])
+        self.assertGreaterEqual(self.bridge.calls, 2)
+        document = room_document(self.platform, None, self.importer, self.world)
+        self.assertEqual(len(document["state"]["body"]["spawns"]), 1)
+        self.assertEqual(document["state"]["body"]["spawns"][0]["id"], spawn["id"])
         status, raid = self.request("/api/admin/raids",
                                     {"species": 150, "tier": 5, "poi_id": poi["id"]})
         self.assertEqual(status, 200)

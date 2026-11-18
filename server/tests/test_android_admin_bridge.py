@@ -2,7 +2,6 @@
 import importlib.util
 import json
 from pathlib import Path
-from types import SimpleNamespace
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,9 +21,7 @@ def test_admin_url_requires_running_admin_and_never_enters_status():
             spec.loader.exec_module(mobile)
             assert mobile.admin_url() == 'http://127.0.0.1:8080/'
             mobile._state.update(admin_context=object(), admin=object())
-            with patch('dittobuffer.admin.access.access', return_value=SimpleNamespace(key='test-only-capability')):
-                assert mobile.admin_url() == 'http://127.0.0.1:8080/#admin=test-only-capability'
-            assert 'test-only-capability' not in mobile.status()
+            assert mobile.admin_url() == 'http://127.0.0.1:8080/'
             assert set(json.loads(mobile.status())) == {'running', 'game', 'admin', 'map'}
             mobile._state['admin'] = None
             assert mobile.admin_url() == 'http://127.0.0.1:8080/'

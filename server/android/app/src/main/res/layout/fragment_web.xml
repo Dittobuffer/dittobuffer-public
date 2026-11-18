@@ -19,6 +19,19 @@
         android:visibility="gone"/>
 
     <TextView
+        android:id="@+id/web_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="24dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/colorOnSurfaceVariant"/>
+
+    <TextView
         android:id="@+id/web_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

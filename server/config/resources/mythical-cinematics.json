@@ -5,9 +5,9 @@
   "source_catalog_version": 952,
   "source_catalog_sha256": "aa9c98c36dfae8096e43fbfc2f77cf3c2b6102a9938f57c0c3327ae5340e027d",
   "derived_catalog_sha256": "984af473b5db3b74247a1c264fc4bcb86070b3c48d65203a4f6d6c071d5a81f9",
-  "android_verification": "NATIVE_INVENTORY_VERIFIED_WITH_LIMITATIONS",
+  "android_verification": "NATIVE_INVENTORY_VERIFIED_WITH_LIMITATIONS: see docs/MILESTONE_23_MYTHICAL_CINEMATICS.md",
   "android_coverage": {
-    "device": "Generic arm64 test device / client 0.429.2",
+    "device": "Pixel 5 / 15191FDD4003PY / client 0.429.2",
     "native_controllers_exercised": 12,
     "scripted_research_captures": 19,
     "ordinary_research_captures": 1,
@@ -24,7 +24,7 @@
     "live_camera_ar_background": "UNVERIFIED",
     "celebi_teleport_effect": "NOT_POSITIVELY_OBSERVED",
     "research_claim_button_refresh": "REQUIRES_REOPEN; presentation issue remains",
-    "report": "release verification summary"
+    "report": "docs/MILESTONE_23_MYTHICAL_CINEMATICS.md"
   },
   "redistribution": "Metadata only; operator-supplied proprietary payloads are excluded",
   "encounters": {

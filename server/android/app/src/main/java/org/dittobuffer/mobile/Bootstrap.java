@@ -47,9 +47,15 @@ public final class Bootstrap {
         // Unpack them first so the authoritative bootstrap files win; otherwise
         // a stale payload certificate can overwrite the newly installed CA.
         if (!build.equals(readMarker(root, PAYLOAD_MARKER))) {
-            for (String part : PAYLOAD_PARTS) {
+            // Record progress after every part. A first run unpacks ~8 GiB; if
+            // Android kills the process mid-way (background ANR, low memory)
+            // the next launch resumes at the following part instead of
+            // restarting the whole extraction.
+            int completed = completedParts(readMarker(root, PAYLOAD_MARKER), build);
+            for (int index = completed; index < PAYLOAD_PARTS.length; index++) {
                 // Refresh entries whose bytes changed, leave identical ones alone.
-                extractPart(context, part, root, false);
+                extractPart(context, PAYLOAD_PARTS[index], root, false);
+                writeMarker(root, PAYLOAD_MARKER, build + "|" + (index + 1));
             }
             writeMarker(root, PAYLOAD_MARKER, build);
         }
@@ -57,6 +63,18 @@ public final class Bootstrap {
         if (!build.equals(readMarker(root, SERVER_MARKER))) {
             extractPart(context, SERVER_ASSET, root, true);
             writeMarker(root, SERVER_MARKER, build);
+        }
+    }
+
+    /** Parts already unpacked for this build, from a "build|part" marker. */
+    private static int completedParts(String marker, String build) {
+        int bar = marker.indexOf('|');
+        if (bar <= 0 || !marker.substring(0, bar).equals(build)) return 0;
+        try {
+            int done = Integer.parseInt(marker.substring(bar + 1).trim());
+            return Math.max(0, Math.min(done, PAYLOAD_PARTS.length));
+        } catch (NumberFormatException malformed) {
+            return 0;
         }
     }
 

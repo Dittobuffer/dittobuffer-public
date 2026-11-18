@@ -1405,8 +1405,15 @@ class Game:
             # Persist the exhausted bonus encounter even when the final throw
             # misses or breaks out. A later restart cannot refill Premier Balls.
             db.execute("UPDATE encounters SET state='fled' WHERE player_id=? AND spawn_id=?",(player,spawn['id']))
+        # Keep the client's ball counter authoritative. Sites that omit this
+        # field can leave the raid catch screen with a stale counter and no
+        # dismissable state (the "screen is locked" report).
+        remaining=0
+        if raid:remaining=max(0,raid['balls']-1)
+        elif max_reward:remaining=max(0,max_reward['balls']-1)
+        elif rocket_spawn and rocket_record:remaining=max(0,rocket_record['balls'])
         if not request.hit_pokemon:
-            return p.CatchPokemonOutProto(status=4)
+            return p.CatchPokemonOutProto(status=4,throws_remaining=remaining)
         from dittobuffer.gameplay.research import progress
         thrown=self.pokemon(spawn)
         progress(self,db,player,'throw',context={'species':thrown.pokemon_id,'types':self.species[thrown.pokemon_id]['types'],'shiny':thrown.pokemon_display.shiny,'weather_boosted':bool(thrown.pokemon_display.weather_boosted_condition),'quality':request.normalized_reticle_size,'curveball':request.spin_modifier>=.5,'ball':request.pokeball})
@@ -1418,7 +1425,7 @@ class Game:
         if secrets.randbelow(1_000_000)>=int(probability*1_000_000):
             if exhausted and rocket_spawn and not native_rocket:
                 rocket.mark_caught(db, player, rocket_record['incident_id'], spawn['id'])
-            return p.CatchPokemonOutProto(status=3 if exhausted else 2)
+            return p.CatchPokemonOutProto(status=3 if exhausted else 2,throws_remaining=remaining)
         from dittobuffer.gameplay.pokedex import ensure as ensure_pokedex
         ensure_pokedex(self,db,player)
         first_registration=not db.execute('SELECT 1 FROM pokedex_observations WHERE player_id=? AND species=? AND caught=1 LIMIT 1',(player,spawn['species'])).fetchone()
@@ -1475,7 +1482,7 @@ class Game:
                    (catch_xp+mega_xp,catch_dust,player))
         db.execute('INSERT INTO candy VALUES(?,?,?) ON CONFLICT(player_id,family) DO UPDATE SET count=count+excluded.count',
                    (player,self.species[spawn['species']]['family'],catch_candy+mega_candy))
-        out=p.CatchPokemonOutProto(status=1,captured_pokemon_id=cursor.lastrowid,display_pokedex_id=spawn['species'],capture_reason=1)
+        out=p.CatchPokemonOutProto(status=1,captured_pokemon_id=cursor.lastrowid,display_pokedex_id=spawn['species'],capture_reason=1,throws_remaining=remaining)
         out.pokemon_display.CopyFrom(pokemon.pokemon_display)
         out.display_pokemon_display.CopyFrom(pokemon.pokemon_display)
         for activity,xp,candy,dust in score_rows:

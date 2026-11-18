@@ -21,7 +21,7 @@ def game_activity(activity):
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('--serial',required=True)
+    ap.add_argument('--serial',required=True,choices=['15191FDD4003PY'])
     ap.add_argument('--battle',required=True)
     ap.add_argument('--output',required=True)
     ap.add_argument('--seconds',type=int,default=240)

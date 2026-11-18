@@ -1,5 +1,9 @@
 package org.dittobuffer.mobile;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -7,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,12 +52,26 @@ public final class ServerFragment extends Fragment {
         });
         view.findViewById(R.id.btn_server_open_admin).setOnClickListener(v -> {
             if (getActivity() instanceof MainActivity) {
-                ((com.google.android.material.bottomnavigation.BottomNavigationView)
-                        getActivity().findViewById(R.id.bottom_nav))
-                        .setSelectedItemId(R.id.nav_admin);
+                ((MainActivity) getActivity()).openTab(R.id.nav_admin);
             }
         });
+        view.findViewById(R.id.btn_server_copy).setOnClickListener(v ->
+                copyLog(Logs.tail(requireContext(), 250)));
+        view.findViewById(R.id.btn_server_share).setOnClickListener(v -> {
+            Intent send = new Intent(Intent.ACTION_SEND)
+                    .setType("text/plain")
+                    .putExtra(Intent.EXTRA_SUBJECT, "Dittobuffer server log")
+                    .putExtra(Intent.EXTRA_TEXT, Logs.tail(requireContext(), 250));
+            startActivity(Intent.createChooser(send, "Share server log"));
+        });
         return view;
+    }
+
+    private void copyLog(String text) {
+        ClipboardManager clipboard = (ClipboardManager)
+                requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+        clipboard.setPrimaryClip(ClipData.newPlainText("Dittobuffer log", text));
+        Toast.makeText(requireContext(), "Log copied", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -71,10 +90,12 @@ public final class ServerFragment extends Fragment {
         if (!isAdded()) return;
         Status.probe(requireContext(), status -> {
             if (!isAdded() || getView() == null) return;
+            String uptime = ServerRuntime.uptime();
             state.setText("Game 8445 " + (status.game ? "● TLS" : "○ down")
                     + "    Admin 8080 " + (status.admin ? "●" : "○")
                     + "    Map 8081 " + (status.map ? "●" : "○")
-                    + (ServerRuntime.isRunning() ? "    · service running" : "    · service stopped"));
+                    + (ServerRuntime.isRunning() ? "    · running" + (uptime.isEmpty() ? "" : " " + uptime)
+                        : ServerRuntime.isStarting() ? "    · starting…" : "    · service stopped"));
             log.setText(Logs.tail(requireContext(), 60));
         });
     }

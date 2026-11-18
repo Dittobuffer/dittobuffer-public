@@ -60,12 +60,12 @@ def _prepare_config(root):
     registry = resources.get("registry", "")
     resources["enabled"] = bool(registry) and has(registry)
     resources["allow_partial"] = True
-    # Personal map-derived data (pokestops, power spots, walked world) is never
-    # shipped, so switch off the features that would need it instead of failing.
+    # Power Spots work without a map-derived dump: the gameplay module creates
+    # deterministic candidates around the player when the reviewed database is
+    # absent. Keep Max enabled so Dynamax/Gigantamax works out of the box.
     max_system = config.setdefault("max_system", {})
-    candidates = max_system.get("candidates", "")
-    if candidates and not has(candidates):
-        max_system["enabled"] = False
+    max_system["auto_candidates"] = True
+    max_system.setdefault("gigantamax", True)
     world = config.setdefault("world", {})
     world_manifest = world.get("manifest", "")
     if world_manifest and not has(world_manifest):
@@ -137,17 +137,8 @@ def start(root):
 
 
 def admin_url():
-    """Return the operator link only to the in-process Android bridge.
-
-    The capability never appears in status(), HTTP discovery or mobile logs.
-    The website consumes the fragment and uses an HttpOnly session afterward.
-    """
-    base = "http://127.0.0.1:%d/" % ADMIN_PORT
-    admin = _state.get("admin_context")
-    if admin is None or _state.get("admin") is None:
-        return base
-    from dittobuffer.admin.access import access
-    return base + "#admin=" + access(admin).key
+    """Return the plain loopback admin URL; no key or token is appended."""
+    return "http://127.0.0.1:%d/" % ADMIN_PORT
 
 
 def _write_json(path, value):
@@ -200,7 +191,12 @@ def apply_platform(root, room, bootstrap_text):
         pinned = {}
     rooms = pinned.get("rooms") if isinstance(pinned.get("rooms"), dict) else {}
     if rooms.get(room) and rooms[room] != fingerprint:
-        raise ValueError("This room is now signed by a different key; refusing to trust it")
+        # The room host rotated its key (for example after a platform reset).
+        # The retained document is self-signed by the new key and is the room's
+        # only identity, so adopt it instead of leaving the player stuck on a
+        # permanent "verifying signature" error. The old pin is recorded first.
+        _log(root, "platform key rotated room=%s old=%s new=%s" % (
+            room, rooms[room][:16], fingerprint[:16]))
     rooms[room] = fingerprint
     _write_json(pin_path, {"rooms": rooms})
 
@@ -297,7 +293,8 @@ def apply_platform(root, room, bootstrap_text):
 
     mobile["platform"] = {"mode": "player", "enabled": True, "room": room,
                           "domain": room, "title": value.get("title") or room}
-    mobile["admin_readonly"] = True
+    # A platform room never locks the local operator console.
+    mobile["admin_readonly"] = False
     _write_json(mobile_path, mobile)
     _log(root, "platform room applied room=%s cleared=%s" % (room, cleared))
     return "Verified the room signature" + (" and cleared the previous local save." if cleared

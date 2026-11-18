@@ -1,0 +1,953 @@
+{
+  "base_commit": "bd2ab84010b8a47cfd72d02d2f0cb275e4817e91",
+  "branch": "integration/workspace-migration-20261027",
+  "retained_main_paths": 392,
+  "inventory_path": "docs/WORKSPACE_MIGRATION_FILES.json",
+  "self_digest_omitted": true,
+  "changed_and_added_files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "status": "modified",
+      "bytes": 2233,
+      "sha256": "8f02b5b5339264bb32134e9b0f2cce7f80a298da14e93f6cad744cc0bba17b70"
+    },
+    {
+      "path": "AGENTS.md",
+      "status": "added",
+      "bytes": 2876,
+      "sha256": "a38b98aea5bba1439a5116486596c5c2fe392ca9b91c0b04a9ea785de1ba3988"
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "bytes": 14403,
+      "sha256": "a5f2899a661283e092fa4f546ef74e9f6a271d979b2d50a4616708ac76c1fcd4"
+    },
+    {
+      "path": "START-SERVER.bat",
+      "status": "modified",
+      "bytes": 1465,
+      "sha256": "0bcbab0556f88e55fd9aa05d6c338c5597816b7446e4fb076cfd7d9703e3c7e5"
+    },
+    {
+      "path": "client/inspect-encounter.js",
+      "status": "modified",
+      "bytes": 6884,
+      "sha256": "62bc8e456532e81266aa6b70bd5deda6690ebd94cca4030d9441f7c0246de0c7"
+    },
+    {
+      "path": "client/inspect-routes.js",
+      "status": "added",
+      "bytes": 16290,
+      "sha256": "81cc15310167cb4b3500c0ce480f05861637c8ef547923ecda55ae57b1449b87"
+    },
+    {
+      "path": "client/inspect-special-research.js",
+      "status": "added",
+      "bytes": 1436,
+      "sha256": "eb7b74c4e092c9d466f9697f3a3d81d109241d3c377e5cf2a11122901de057ce"
+    },
+    {
+      "path": "client/local-max-ball.js",
+      "status": "added",
+      "bytes": 6208,
+      "sha256": "34d8a57db8fc16dd34484475b35cf200b8562f212602deb095e5d75ddb0b6126"
+    },
+    {
+      "path": "client/local-postcards.js",
+      "status": "added",
+      "bytes": 18374,
+      "sha256": "ec0214d7fe25ed773085ac362dbe1f13d6718ad444ac56b3b7bddc9cc0279ed0"
+    },
+    {
+      "path": "client/local-rocket.js",
+      "status": "added",
+      "bytes": 2821,
+      "sha256": "29eb219e40b96a5ca98b673dfad9a8fa0ac1c04c47dbf5aee94a5239d833fc53"
+    },
+    {
+      "path": "client/local-routes.js",
+      "status": "added",
+      "bytes": 4353,
+      "sha256": "327db72d95b7aeb583d7cddbdf8df165e7eafcf3df4408185a69f31e5cab7ddb"
+    },
+    {
+      "path": "client/local-social.js",
+      "status": "added",
+      "bytes": 1246,
+      "sha256": "0731501b39d1a66647c3500e7a164bc536eac62b465ab9d83da8ede280849b80"
+    },
+    {
+      "path": "client/local-ui.js",
+      "status": "modified",
+      "bytes": 5916,
+      "sha256": "02a402d6d5d69cc4b9d70aa6f3b1192a4d7ccbe774045a4625570a243ee33646"
+    },
+    {
+      "path": "client/standalone-bootstrap.js",
+      "status": "modified",
+      "bytes": 3452,
+      "sha256": "3b561feb5b48a9866fee52de1dd7b4d064af1330576503f5b4cb464aa7eee79b"
+    },
+    {
+      "path": "client/standalone/org/dittobuffer/launcher/FamilyActivity.java",
+      "status": "modified",
+      "bytes": 27250,
+      "sha256": "f47ff99985895ec49e06dddeac7654ec382d7cbdaa0721c5a5e6de1e1dd14bb7"
+    },
+    {
+      "path": "config/max.example.json",
+      "status": "modified",
+      "bytes": 2226,
+      "sha256": "0fbd2f0bc937a3497172b5ccde9935643eb195a85bcac0b392b4013471230636"
+    },
+    {
+      "path": "config/resources/avatar-assets.json",
+      "status": "added",
+      "bytes": 9177,
+      "sha256": "dd4f5ae87876ce3ae26eeb3fc0f3a2ed566e37ef3a5719557919701fa5c50985"
+    },
+    {
+      "path": "config/resources/client-runtime.json",
+      "status": "added",
+      "bytes": 239924,
+      "sha256": "20aafc400f63b776ab0cbf281449037d1cf1e672d11440147680d0945bdb7fa5"
+    },
+    {
+      "path": "config/resources/mythical-cinematics.json",
+      "status": "added",
+      "bytes": 107402,
+      "sha256": "51d3bb137d8674484d5eda40079c3994a1999ea4b55ed027d4de9ef53550d510"
+    },
+    {
+      "path": "config/resources/pokemon-assets.json",
+      "status": "added",
+      "bytes": 565643,
+      "sha256": "c5c420fa995c30ec6203fa9e06ef96dbf900c3565d3b218933f9b02a74280a1c"
+    },
+    {
+      "path": "config/resources/pokemon-max-assets.json",
+      "status": "added",
+      "bytes": 571350,
+      "sha256": "c0a656ec5b3654eb796766963afaa270a3d34bb317a97b19885e1901d10db75b"
+    },
+    {
+      "path": "config/special-research.example.json",
+      "status": "added",
+      "bytes": 933,
+      "sha256": "8392aa515a933de12b2d92bb398cdfe7308d82014256386b1adc53bd99474024"
+    },
+    {
+      "path": "docs/APK-PATCHER.md",
+      "status": "modified",
+      "bytes": 5557,
+      "sha256": "d5f126eff0269c88efccc33c5f6679821c555ed3effcbf2b28761fe0f34ae396"
+    },
+    {
+      "path": "docs/ASSETS.md",
+      "status": "modified",
+      "bytes": 7106,
+      "sha256": "16886bcb7dd3b9ecc36083cabf5f90b582835137c968b149d6dcf14906c3d1c3"
+    },
+    {
+      "path": "docs/FEATURE_PRESERVATION.json",
+      "status": "added",
+      "bytes": 8455,
+      "sha256": "ff474c63152e1c10934765180878846b1efd8e253ce4db2b14827819eb2f0028"
+    },
+    {
+      "path": "docs/INTEGRATION_FILES.json",
+      "status": "added",
+      "bytes": 24023,
+      "sha256": "1d51a6722a2e3023c1cfce523c9411d344eca8184a6a338088e3cf1bc8f35a69"
+    },
+    {
+      "path": "docs/MILESTONE_18_2_POWER_SPOT_RPC_REPAIR.md",
+      "status": "added",
+      "bytes": 24601,
+      "sha256": "99b88926e6fee260085629d4d7c0b8ba7ec51163a51039a954f20bd0f64a708b"
+    },
+    {
+      "path": "docs/MILESTONE_23_MYTHICAL_CINEMATICS.md",
+      "status": "added",
+      "bytes": 31462,
+      "sha256": "fb2db0ca3559b88eade6e11db3f384c3bbf88f0f0431c03db6441d3aa611dd20"
+    },
+    {
+      "path": "docs/PHONE-SETUP.md",
+      "status": "modified",
+      "bytes": 3986,
+      "sha256": "62683f904534b469d84d27f735cb9cbc81099f7cb8f3bb96361cf7456d732a52"
+    },
+    {
+      "path": "docs/STRUCTURE_INTEGRATION.md",
+      "status": "added",
+      "bytes": 11520,
+      "sha256": "396b665391775cea0e25ca2ff50a1fa878d7b2972fa73f18014988ef2507b7a4"
+    },
+    {
+      "path": "docs/WORKSPACE_MIGRATION.md",
+      "status": "added",
+      "bytes": 17162,
+      "sha256": "3c71578ea07b35cbc35ae11b81ca84092578e90ebd4aaca342baa6d602b418b5"
+    },
+    {
+      "path": "docs/local-resources.example.json",
+      "status": "added",
+      "bytes": 1267164,
+      "sha256": "18c1a9c209c94121cab7ec9bb569d81efc83885ca18ee28c38f48bc52c9539ca"
+    },
+    {
+      "path": "protocol/game.proto",
+      "status": "modified",
+      "bytes": 1637040,
+      "sha256": "a26a6dc20866b40a49f1d70152896e01c1cff5539829bfc4b4a30b075a8039f6"
+    },
+    {
+      "path": "protocol/game_pb2.py",
+      "status": "modified",
+      "bytes": 3004952,
+      "sha256": "66c68ff94441b58f6770d6bf1628a747778d1101c1e156d67a9c04fa97220618"
+    },
+    {
+      "path": "pyproject.toml",
+      "status": "modified",
+      "bytes": 2067,
+      "sha256": "3984bccca9edda78e1c970a9032e09c23aab8996c8c0d5c0b9bf5a0a48b2061b"
+    },
+    {
+      "path": "scripts/build-native.sh",
+      "status": "added",
+      "bytes": 1467,
+      "sha256": "a6fea9b5fc54aea89a281f822089992c2d3e16348e215606e500a9807b901331"
+    },
+    {
+      "path": "scripts/build-standalone.py",
+      "status": "modified",
+      "bytes": 9687,
+      "sha256": "20dc281ddf9a75bdaf4ea7a33058879e7f8368e5c5dc10196af7b8636961a848"
+    },
+    {
+      "path": "scripts/build-world-postcard-image.py",
+      "status": "added",
+      "bytes": 1200,
+      "sha256": "f41360bbe526d3ab27e715a1fcabb1296a4d5a9c93777ec7a3b9809e0cfb9942"
+    },
+    {
+      "path": "scripts/convert-pokemon-fbx.py",
+      "status": "added",
+      "bytes": 35304,
+      "sha256": "935b83d4f9efa23bf1b8c31dc69c2b5327b7a2ce5740218e6b39de3a787c170e"
+    },
+    {
+      "path": "scripts/convert-source-palette.py",
+      "status": "added",
+      "bytes": 5089,
+      "sha256": "145181a4db0582cdc4de4f1865b88f335038a89e55de29bc48c4b34add97474d"
+    },
+    {
+      "path": "scripts/fix-ndk-modes.py",
+      "status": "added",
+      "bytes": 8642,
+      "sha256": "7af108e2cc615243fb126c07092284e7ebe8b69b3f907d3e2736f58dfaae8712"
+    },
+    {
+      "path": "scripts/import-client-runtime.py",
+      "status": "added",
+      "bytes": 4190,
+      "sha256": "fb56f9a6d3274efb8cbfd373bb04705591cd5f2046946eabdf3284e785a710e2"
+    },
+    {
+      "path": "scripts/m17-runtime-catalog.py",
+      "status": "added",
+      "bytes": 11255,
+      "sha256": "bd7f679e18b749d67b882d19a0d4c0e733ec53d76b6fe64653c2975c90036e09"
+    },
+    {
+      "path": "scripts/m172-rocket-defeat-resources.py",
+      "status": "added",
+      "bytes": 3001,
+      "sha256": "aa463698a8b0277b588f11046f7b413ec3f4d663d7958fbcd4b0388e68826469"
+    },
+    {
+      "path": "scripts/m182-fixture.py",
+      "status": "added",
+      "bytes": 10083,
+      "sha256": "1078bfb24689d2965e0058a83d9a82ce07ff7b7988bc3a5c0261cbb85238ae79"
+    },
+    {
+      "path": "scripts/m182-server.py",
+      "status": "added",
+      "bytes": 4504,
+      "sha256": "114557a5725d22fd10e27b08a144a14e4f1a3c13849d43f268b6ab412d912f57"
+    },
+    {
+      "path": "scripts/m19-native-touch.py",
+      "status": "modified",
+      "bytes": 6359,
+      "sha256": "c5c1171366432708a9ee148b551f56670f5793d459afeaf33a383131a2744a05"
+    },
+    {
+      "path": "scripts/m20-compatible-resources.py",
+      "status": "added",
+      "bytes": 21720,
+      "sha256": "a53b46eafc222233aca29460b261531f77ba2bb5aa48d147b6319eef1ad892cb"
+    },
+    {
+      "path": "scripts/m20-route-resources.py",
+      "status": "added",
+      "bytes": 6605,
+      "sha256": "4be14c3b0899e69f19fbc5983a07cdbd3fab221784e815e15378ec4bb83c62a3"
+    },
+    {
+      "path": "scripts/m23-encounter-resources.py",
+      "status": "added",
+      "bytes": 15096,
+      "sha256": "89007bde72dfc40b6bb98d1e46b1a0e5d091f8692b45aed964d748e6cde07d44"
+    },
+    {
+      "path": "scripts/m23-fixture.py",
+      "status": "added",
+      "bytes": 8422,
+      "sha256": "35193766d9204d48dd54aa6d79afc8a76742c1fea0c73e8d4a0b1395de83bfbc"
+    },
+    {
+      "path": "scripts/m23-server.py",
+      "status": "added",
+      "bytes": 4578,
+      "sha256": "26692b886384dcbec0ac895758ebc83097ae1062d84c502827ad332a2ae5db56"
+    },
+    {
+      "path": "scripts/normalize-routes-protocol.py",
+      "status": "added",
+      "bytes": 6037,
+      "sha256": "10b8023062713c20c4cc0d195a5330712d3c505739edd3ddf8af3a89a3d7d233"
+    },
+    {
+      "path": "scripts/pokemon_asset_import.py",
+      "status": "added",
+      "bytes": 6245,
+      "sha256": "51722e0373aadedf3bbeb55d95c1b126c567f950084320f46534ccb4d734565b"
+    },
+    {
+      "path": "scripts/restore-local-resources.py",
+      "status": "added",
+      "bytes": 8700,
+      "sha256": "c06b8d7966576fba30eb68a24516c427c680a9bffa5a666bdd24e5d08d260d56"
+    },
+    {
+      "path": "scripts/retarget-local-trs-idle.py",
+      "status": "added",
+      "bytes": 4639,
+      "sha256": "60bc5bed21811de69f7286fe044ba7adfb8b146b09ebbfd8cbecccb6e703c2d6"
+    },
+    {
+      "path": "scripts/retarget-same-species-animation.py",
+      "status": "added",
+      "bytes": 9557,
+      "sha256": "1c9d90a1996e1e3e78839d61e609b719c55b9d0f6fadec0d9879e6f5bfeec55f"
+    },
+    {
+      "path": "scripts/routes-admin.py",
+      "status": "added",
+      "bytes": 10420,
+      "sha256": "a353965e5275981c0e4c929a0f48244be8f8a7b4e7caa1d89748582624ea025f"
+    },
+    {
+      "path": "scripts/routes-batch.py",
+      "status": "added",
+      "bytes": 4266,
+      "sha256": "fd353f2090ebb4d8c50c53aff26bad00d44068cb6f773ac6ec132d445f0bbace"
+    },
+    {
+      "path": "scripts/routes-gift-pool.py",
+      "status": "added",
+      "bytes": 1453,
+      "sha256": "3bd55529d6dffdbfa85da048dc5565a96fe89068d1e8edb344b21da38477d18e"
+    },
+    {
+      "path": "scripts/setup-checkout.py",
+      "status": "added",
+      "bytes": 2369,
+      "sha256": "680338660f239f8f5fef691fe09370486ba576f3199d81f3668d434c57d30284"
+    },
+    {
+      "path": "scripts/setup-native.sh",
+      "status": "added",
+      "bytes": 1264,
+      "sha256": "0bbbb48bf6751265da8fae711b52a40332efa9664d9c496a6661fdf729bebca4"
+    },
+    {
+      "path": "scripts/test-client-family.js",
+      "status": "added",
+      "bytes": 2365,
+      "sha256": "7f517c12826f04cf2e352e9fd385d4bb2361306b99aac0f60821430171aff031"
+    },
+    {
+      "path": "scripts/test-client-raids.js",
+      "status": "added",
+      "bytes": 2204,
+      "sha256": "2a20420b43ca9762da4f91491dad34f7ba6635db15126b1928040b5bdb0cd289"
+    },
+    {
+      "path": "scripts/test-client-ui.js",
+      "status": "added",
+      "bytes": 14255,
+      "sha256": "a0fb1b880da591cc9b99b85c60090f744cd732eee6afba00a9cf57fc9659ad46"
+    },
+    {
+      "path": "scripts/test-client-world.js",
+      "status": "added",
+      "bytes": 986,
+      "sha256": "91e14c75a414281bb8b20bd7bb42b02b1fec6eb30c08023006853cb22434192c"
+    },
+    {
+      "path": "scripts/test-native.sh",
+      "status": "added",
+      "bytes": 873,
+      "sha256": "c55d773129035b7d8c5a0069e8b0226e15f9a3caaeecef3dcb6f1070661030c5"
+    },
+    {
+      "path": "scripts/test.ps1",
+      "status": "added",
+      "bytes": 3324,
+      "sha256": "5dce81251b9e4ea296aaf499beba928f2c62a7b69069fffb7549fce7dd73afdc"
+    },
+    {
+      "path": "scripts/verify-native.py",
+      "status": "added",
+      "bytes": 4033,
+      "sha256": "10f8055bb9737fb6b1ee7e6a6b613f3adf0ce02d19e27df8eff39fe51dd309f5"
+    },
+    {
+      "path": "src/dittobuffer/admin/admin.py",
+      "status": "modified",
+      "bytes": 75057,
+      "sha256": "abb9eb14b4d226921048c3c40c5e838a1297e1c0e0bc8f281e7da2367212707e"
+    },
+    {
+      "path": "src/dittobuffer/cli/console.py",
+      "status": "modified",
+      "bytes": 12951,
+      "sha256": "877538bde9da4c51682e5c09c5e4e7c7ef21566889f33a62b84648bd78ace97a"
+    },
+    {
+      "path": "src/dittobuffer/cli/services.py",
+      "status": "modified",
+      "bytes": 15593,
+      "sha256": "0235ac1729bb8807b29437b07ddf8dba5cdee05bbe2cecddd0e83ca332f1c86c"
+    },
+    {
+      "path": "src/dittobuffer/core/asset_catalog.py",
+      "status": "modified",
+      "bytes": 19475,
+      "sha256": "841a0f51f6e8b607a849e159e94898083867f42c65af25a42d62028c232451af"
+    },
+    {
+      "path": "src/dittobuffer/core/database.py",
+      "status": "modified",
+      "bytes": 25965,
+      "sha256": "22c90738b4b0d19bda8a672495777a8b90f8412bbaac6b491802eaed978a249c"
+    },
+    {
+      "path": "src/dittobuffer/core/management.py",
+      "status": "modified",
+      "bytes": 17279,
+      "sha256": "2038881bf0c791c75446c40bfc3f5858f3b19824ce3c7ca2ccb3e4434abba9ec"
+    },
+    {
+      "path": "src/dittobuffer/core/master.py",
+      "status": "modified",
+      "bytes": 17780,
+      "sha256": "8a519f468dd26305ef7519e8b497dcac7328ab340b8ab54f653c78c33f662063"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/buddy_perks.py",
+      "status": "modified",
+      "bytes": 4781,
+      "sha256": "9f4704982e9545231eec820ec263d46868f18f8f1293afad350a28265bbb6bd5"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/exploration_events.py",
+      "status": "added",
+      "bytes": 1322,
+      "sha256": "06cfe770acf57a7d6056109ef37d6fea21f44695cae8bf6926f4c2a73c17ed95"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/friends.py",
+      "status": "modified",
+      "bytes": 29471,
+      "sha256": "f8274344eeca3eb1d40fe6b3e34fbb91672fd1ccc33d4491780b1429f38a5595"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/game.py",
+      "status": "modified",
+      "bytes": 107170,
+      "sha256": "776ebb09c4faf6c0e53d7082cf9ab5eb36ffdd7980e49d29c2ba95f404618ba4"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/gifts.py",
+      "status": "modified",
+      "bytes": 17368,
+      "sha256": "457398b95dbf2208d1e013e025bfa9f028c69a0727545dce053a37330765409d"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/gyms.py",
+      "status": "modified",
+      "bytes": 17950,
+      "sha256": "e9624271e98a5299f850bf8f9c5b0cc08d176c806dd1990d8b7eb95b8623f1b2"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/items.py",
+      "status": "modified",
+      "bytes": 5522,
+      "sha256": "c013448229def044d43e0feef7aa09fba89b5860d438dfabf6c576547db8880f"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/max_system.py",
+      "status": "modified",
+      "bytes": 43422,
+      "sha256": "bfd07580cc74327092e5d56cf7b6b497214d4e8c8b19d4cd7afe9e1f2f245267"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/netherlands.example.json",
+      "status": "modified",
+      "bytes": 8328,
+      "sha256": "561824a91508e7264b70a9f277d5835f42f9e09b021d43cbfe81350223c0a284"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/netherlands.json",
+      "status": "modified",
+      "bytes": 8410,
+      "sha256": "a420b1d970150aac91f1d7c06fdc8678dffd68749e3a0169b0bcbe9b7829c73a"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/pokedex.py",
+      "status": "modified",
+      "bytes": 4870,
+      "sha256": "a010e62a062fe3e6c2fdc2be943b2d48896f040f4aae27f21eb202fa114ae45f"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/pokemon_moves.py",
+      "status": "modified",
+      "bytes": 4355,
+      "sha256": "fb88b3c0826d03fe3d489fc1a8f5b760943611ec2c74f4cb5dfffab20265eeed"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/research.py",
+      "status": "modified",
+      "bytes": 20932,
+      "sha256": "87152eaeb4f5d8581e4e560d24ea1fc450fb69b5d3725c05a27e4427bf201bd3"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket-leaders.json",
+      "status": "added",
+      "bytes": 777,
+      "sha256": "26c1e84051cda809185409c31d0fd7fc342afd35d7d31be9f2e24f09ae1980c6"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket-moves.json",
+      "status": "added",
+      "bytes": 1158,
+      "sha256": "0675ddee5ce60f9ea98115b87a371930ba5a0ae7e37661a0f8e1a2293e1be0e1"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket-research.example.json",
+      "status": "added",
+      "bytes": 1769,
+      "sha256": "04c8d897f0d035cb2fdd5343bd908beeffb75a74eed1366b26f1f91090f7a5bb"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket-teams.json",
+      "status": "added",
+      "bytes": 920,
+      "sha256": "74b0852a5c74e29d8aa5014f3e7fff31af8cf42d8a76aee23a0cfaaa2960ec3f"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket.example.json",
+      "status": "added",
+      "bytes": 912,
+      "sha256": "dc274f5eded96ee0a8fac277bc67823c64393c5118a596581b02249c7a3025d5"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket_battle.py",
+      "status": "added",
+      "bytes": 19802,
+      "sha256": "eba50bd4eac102ed85b4b122e01b5b52c4fe7c9e403e31f70a30490db27533b9"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket_native.py",
+      "status": "added",
+      "bytes": 17629,
+      "sha256": "3f8430936cd24d9bd8b5ce88efd5c3165e9135bde7a4a00a42885720b8c321a3"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket_progression.py",
+      "status": "added",
+      "bytes": 7500,
+      "sha256": "3babf0d555d7c3c13e01a7bd73340901d519af9b8e73dba2b4784bedae7dfcfd"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket_resources.py",
+      "status": "added",
+      "bytes": 4755,
+      "sha256": "05de33e948a1cf203da988ed493fe3f98c854fa7a914e42a7959c913ec7acece"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/rocket_shadow.py",
+      "status": "added",
+      "bytes": 4742,
+      "sha256": "ec6f33fbbb7a6cf09ce1560e4a394eda69e4601e76bbe71ea5156c6ea2c5d3f1"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_cells.py",
+      "status": "added",
+      "bytes": 7360,
+      "sha256": "df47e141186a433b01d74ee0d2015764d0aa8415c97f97df3ed9577728d26453"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_creator.py",
+      "status": "added",
+      "bytes": 10584,
+      "sha256": "7227154e81d46560e8ae5f2210731ccc09eb5bfc7dce49ca2cf3435d9920c836"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_geometry.py",
+      "status": "added",
+      "bytes": 1642,
+      "sha256": "22104f1a011dd2a6fd3086b29e1c46292f79594ba263d8cf2d62042290eb6f42"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_graph.py",
+      "status": "added",
+      "bytes": 12113,
+      "sha256": "e2459398147c2c2130e21212e3000499ce097da2054432074d9c5d55746e9972"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_mateo.py",
+      "status": "added",
+      "bytes": 16259,
+      "sha256": "bf102e6fea2c1598be5093c18125c01583910a33a3c0e16fb6845d12213d4183"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_npc_resources.py",
+      "status": "added",
+      "bytes": 2885,
+      "sha256": "385f349dbdaa26f7702309c01af965435516b513dc8298134512b8e9049c08f9"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_publication.py",
+      "status": "added",
+      "bytes": 7261,
+      "sha256": "fee5f47369a8e84c49573e67067556312f591147e57702d17beefa2ae70d641c"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/route_rewards.py",
+      "status": "added",
+      "bytes": 2508,
+      "sha256": "94fbf3457a2b77fc03f5e72b8b2895f591aa15dfb2cfd4859968016c7ffd4c91"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/routes.example.json",
+      "status": "added",
+      "bytes": 1368,
+      "sha256": "451f27eb09875d5ef02db783a4a23d04349ea68be71c0f8b3950e3f57109c5b0"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/routes.py",
+      "status": "added",
+      "bytes": 30913,
+      "sha256": "e25b8dd6fe41a202e48e8d195f3df2002190b8232f347874104336a1514226f9"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/shop.py",
+      "status": "modified",
+      "bytes": 6767,
+      "sha256": "c4730e5878e113835dd0c9422a0d0f661c830da1c884cf0a2d87d980466a26e1"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/special_encounters.json",
+      "status": "added",
+      "bytes": 15387,
+      "sha256": "eae10e26393802a26f9430d37687ea0d316618ad2268a9c80d932a6a9ac8014b"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/special_encounters.py",
+      "status": "added",
+      "bytes": 7237,
+      "sha256": "571b89b6a007b07143ed6054a5fbaf44655e785ddff197853265517bc1389ae6"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/transfer-family.example.json",
+      "status": "modified",
+      "bytes": 8875,
+      "sha256": "956d1745fef751db6e49ec9b80cc4d477e2146af47636530c00f2149a9d6047d"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/vivillon.example.json",
+      "status": "added",
+      "bytes": 116,
+      "sha256": "8a342ce3866b45172aa11906290760838fe2cc69bf08104ab121c7e95d23d7b2"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/vivillon.py",
+      "status": "added",
+      "bytes": 10401,
+      "sha256": "73a58b67ec274917a086f8ab70237229719632fd9f2d9b903a15109cd9e0e3d4"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/world-postcards.json",
+      "status": "added",
+      "bytes": 23390,
+      "sha256": "d1ff2a197445441139953cb6de32405adf09f70e03f4c67e28a5b4b41d6dc44e"
+    },
+    {
+      "path": "src/dittobuffer/gameplay/world_postcards.py",
+      "status": "added",
+      "bytes": 5869,
+      "sha256": "d18dd2f7a285cb67b1e9d47e747a7cc3becd65aa3b78af6f1ff62a3cca197992"
+    },
+    {
+      "path": "src/dittobuffer/patcher/patch.py",
+      "status": "modified",
+      "bytes": 12679,
+      "sha256": "06cc741c1c57a203b934c0d63aae8ad92bdb22ce2aae2a8d429d0a468feb1a08"
+    },
+    {
+      "path": "src/dittobuffer/resources/world-postcard.png",
+      "status": "added",
+      "bytes": 18334,
+      "sha256": "38dc2dad6ffb8fc65df410f47bf3e5856cc1e1540c5c46f4427b95cea619ed72"
+    },
+    {
+      "path": "src/dittobuffer/runtime/http.py",
+      "status": "modified",
+      "bytes": 18318,
+      "sha256": "afba7dbfb757abb7b8f8b75e4e28946727dd97b5f99145c2a306ece39dc16086"
+    },
+    {
+      "path": "src/dittobuffer/world/world-images.example.json",
+      "status": "modified",
+      "bytes": 232,
+      "sha256": "3416e394a760d1ddf30d26abf398a4497a0ce99c3abc625aa4292a5793709b15"
+    },
+    {
+      "path": "tests/conftest.py",
+      "status": "modified",
+      "bytes": 700,
+      "sha256": "b86e26e16f72486505663ec418a563fc690f2437df6c766c8376f7d1420e67c2"
+    },
+    {
+      "path": "tests/test_client_integration.py",
+      "status": "added",
+      "bytes": 6033,
+      "sha256": "25ef1715cf3ba561663c3b7975bf97341be9e2c9941e1c5a6222479d54aa9acd"
+    },
+    {
+      "path": "tests/test_exploration_events.py",
+      "status": "added",
+      "bytes": 1922,
+      "sha256": "f85cbebac2e4557e85a253cdbf42e5943b78fc16e021fa14d5550f2896612a51"
+    },
+    {
+      "path": "tests/test_family_http.py",
+      "status": "modified",
+      "bytes": 5807,
+      "sha256": "54b71acc19b4166e58470aaa526fac31ae111e84ead37594c860f3d89fa790eb"
+    },
+    {
+      "path": "tests/test_m182_fixture_location.py",
+      "status": "added",
+      "bytes": 4073,
+      "sha256": "2bf37441ade84d737374788c87b2b93b4eb8336f03f84efc2345219dbc054bd2"
+    },
+    {
+      "path": "tests/test_max_encounter_ownership.py",
+      "status": "added",
+      "bytes": 7879,
+      "sha256": "c73f477ec6bf6359588e5a7194a1db3a0fde77d8d4a4884be4ecbb2c05a8d96b"
+    },
+    {
+      "path": "tests/test_max_form_compatibility.py",
+      "status": "added",
+      "bytes": 6594,
+      "sha256": "2f1fd8f1d415c5fc5d74c411c8751355de255178a240e22bd3037038ea57e0fa"
+    },
+    {
+      "path": "tests/test_max_http.py",
+      "status": "added",
+      "bytes": 19915,
+      "sha256": "16dc16dd1cfc6b0062db593b12d4de7aaf91f4570dfd7f9650c1994a5493aeb5"
+    },
+    {
+      "path": "tests/test_max_reference.py",
+      "status": "added",
+      "bytes": 9680,
+      "sha256": "e1ec83c5ae324dd9cd97aa6eba46c75259f3b2dd9ac4deb28cde8742f94deebc"
+    },
+    {
+      "path": "tests/test_native_build_tools.py",
+      "status": "added",
+      "bytes": 8291,
+      "sha256": "dd583f92c8a5d77b9afdd2104c7c299438a71162f55cdb388ec0c4d6f32a06b2"
+    },
+    {
+      "path": "tests/test_patcher_integration.py",
+      "status": "added",
+      "bytes": 10228,
+      "sha256": "785516360c8a7d7f27e8221a01caf03bc7c65c5f204bebd0d957f5a978e2081f"
+    },
+    {
+      "path": "tests/test_resource_restoration.py",
+      "status": "added",
+      "bytes": 10584,
+      "sha256": "a33fecace3c982ea2ddd51ac4d8d81555b8b2e5f746f9294ca1c9e97caffcbdd"
+    },
+    {
+      "path": "tests/test_rocket_defeat.py",
+      "status": "added",
+      "bytes": 4896,
+      "sha256": "23fa30a04f3cac48b8590ccf8278f73a6767aee50c1a37ef0d8ad6ab9b550a57"
+    },
+    {
+      "path": "tests/test_rocket_defeat_resources.py",
+      "status": "added",
+      "bytes": 3405,
+      "sha256": "2dd8eee91c01d6e429fc6433ff08272063baff8440b1de60bee05c57b8115fc3"
+    },
+    {
+      "path": "tests/test_rocket_native.py",
+      "status": "added",
+      "bytes": 30927,
+      "sha256": "8975a59efde96c414182374907c8bf08582282cbe5f5ff595c4ad2f76e76275c"
+    },
+    {
+      "path": "tests/test_route_cells.py",
+      "status": "added",
+      "bytes": 8411,
+      "sha256": "1d2d2f965f3537b9a0768467d8578c72ead9b1479cfe21d1cee093eabe34d857"
+    },
+    {
+      "path": "tests/test_route_graph.py",
+      "status": "added",
+      "bytes": 3199,
+      "sha256": "9d1de4b216f0f57a5ea3a8e16b584c7f1d3d3cdf99d0fc76216ca94a061d0d45"
+    },
+    {
+      "path": "tests/test_route_mateo.py",
+      "status": "added",
+      "bytes": 17828,
+      "sha256": "82c36970791e4547e1462c00e0d731e4165f193b8a775a8549f074fdfa031995"
+    },
+    {
+      "path": "tests/test_route_npc_resources.py",
+      "status": "added",
+      "bytes": 2238,
+      "sha256": "89cd3f0a977dd97d7620b9b4bba0588514066b78230d2ea5747fb9056d43ded5"
+    },
+    {
+      "path": "tests/test_route_publication.py",
+      "status": "added",
+      "bytes": 4411,
+      "sha256": "b8dedf1f82b1adfb86c133bd718404af907e0a86b2b3021ba24bfcb9ddb24e70"
+    },
+    {
+      "path": "tests/test_route_recording.py",
+      "status": "added",
+      "bytes": 3730,
+      "sha256": "724ebe5da23df175044a89b77748bd827fb8c6317602c4026286251a9d5c41c6"
+    },
+    {
+      "path": "tests/test_route_resource_overlay.py",
+      "status": "added",
+      "bytes": 4941,
+      "sha256": "934424bdb054aedfbfc6a6a11c94bf2dac4d34b030a94e102985fd120b4f07f7"
+    },
+    {
+      "path": "tests/test_route_rewards.py",
+      "status": "added",
+      "bytes": 4506,
+      "sha256": "c0eb41ce652d295baa26a762a6c191a31c53446cdee99e5bacf1b2191be58b5f"
+    },
+    {
+      "path": "tests/test_routes.py",
+      "status": "added",
+      "bytes": 19333,
+      "sha256": "0709f20882d108668cf36668b9475d0ecc3f82f859071f0632a70485e879dcd8"
+    },
+    {
+      "path": "tests/test_routes_wire_compatibility.py",
+      "status": "added",
+      "bytes": 1300,
+      "sha256": "5317077a3e0b07d8808630127fb2a350e42f2544c53c34cd17bf9de0cee87699"
+    },
+    {
+      "path": "tests/test_service_safety.py",
+      "status": "added",
+      "bytes": 10353,
+      "sha256": "feea54497de5b769b106368852ff63a4c2c3f459b315cb67ad57540386cd7121"
+    },
+    {
+      "path": "tests/test_social_gameplay.py",
+      "status": "modified",
+      "bytes": 27821,
+      "sha256": "5176bfff7f24b19e1db9c5f938a571a30cb2b76f59e960e8ab3ac650539eadee"
+    },
+    {
+      "path": "tests/test_special_encounter_resources.py",
+      "status": "added",
+      "bytes": 2612,
+      "sha256": "10c700d188e2c71ffe3a9fb4691239f469fdb94e9bc4620eb5c9d149877d408b"
+    },
+    {
+      "path": "tests/test_special_encounters.py",
+      "status": "added",
+      "bytes": 11667,
+      "sha256": "f8933d5e8f78794a08734fc34a70ca40c201e48c1298870a4b2c18ed9123fe2b"
+    },
+    {
+      "path": "tests/test_standalone.py",
+      "status": "modified",
+      "bytes": 5628,
+      "sha256": "c6e4d8f3e1f74999e69f01ce25f918a074fb9ac6e42d10a064f9c601241fc1fd"
+    },
+    {
+      "path": "tests/test_structure_integration.py",
+      "status": "added",
+      "bytes": 3540,
+      "sha256": "19154f5eb272acb452d2b7e5b37b4068bc275340fc7ea77f6e2faa8bb0d1deba"
+    },
+    {
+      "path": "tests/test_transfer_runtime.py",
+      "status": "added",
+      "bytes": 14084,
+      "sha256": "ca856257cee16607d5885e0c2920757bfae66d750e7265ee2793494e4c5c3de2"
+    },
+    {
+      "path": "tests/test_vivillon.py",
+      "status": "added",
+      "bytes": 13392,
+      "sha256": "be60ed092f4e1cfcc6dbc2a3941494999a8b3e12107ecd04d83b249cdb883d9b"
+    },
+    {
+      "path": "tests/test_workspace_migration.py",
+      "status": "added",
+      "bytes": 3378,
+      "sha256": "1c10eb5109af6b8ab082e62342f49ae7fbc0f724a3fc4c9aa2a75d57e4443b75"
+    },
+    {
+      "path": "tests/test_world_postcards.py",
+      "status": "added",
+      "bytes": 5136,
+      "sha256": "2c77527757afd02ff29d00b797c31c2dd0ae92de302f20eb84393b375b1c5ade"
+    },
+    {
+      "path": "tools/transfer-runtime.py",
+      "status": "modified",
+      "bytes": 28562,
+      "sha256": "c8d7aba714f0920225603a070b14d192de631cbc95eac6b3cf747936b3be5cf9"
+    }
+  ],
+  "private_payloads_included": false,
+  "ignore_files_changed": false
+}

@@ -23,8 +23,8 @@ BUILD_TOOLS = TOOLS / "sdk/build-tools/35.0.0"
 ANDROID_JAR = TOOLS / "sdk/platforms/android-35/android.jar"
 KEYSTORE = Path(os.environ.get("USERPROFILE", str(Path.home()))) / ".android/debug.keystore"
 PACKAGE = "org.dittobuffer.mobile"
-VERSION_CODE = "6"
-VERSION_NAME = "1.0.5"
+VERSION_CODE = "7"
+VERSION_NAME = "1.0.6"
 
 MANIFEST = """<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"

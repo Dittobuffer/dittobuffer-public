@@ -21,6 +21,9 @@ public final class HomeFragment extends Fragment {
     private TextView ports;
     private TextView payload;
     private TextView error;
+    private MaterialButton battery;
+    private MaterialButton start;
+    private MaterialButton stop;
 
     private final Runnable poll = new Runnable() {
         @Override public void run() {
@@ -39,8 +42,8 @@ public final class HomeFragment extends Fragment {
         payload = view.findViewById(R.id.home_payload);
         error = view.findViewById(R.id.home_error);
 
-        MaterialButton start = view.findViewById(R.id.btn_start);
-        MaterialButton stop = view.findViewById(R.id.btn_stop);
+        start = view.findViewById(R.id.btn_start);
+        stop = view.findViewById(R.id.btn_stop);
         MaterialButton launch = view.findViewById(R.id.btn_launch);
 
         start.setOnClickListener(v -> {
@@ -50,7 +53,7 @@ public final class HomeFragment extends Fragment {
         stop.setOnClickListener(v -> {
             ServerService.stop(requireContext());
             ServerRuntime.markStopped();
-            state.setText("Server stopped");
+            state.setText("Server is not running — press Start");
         });
         launch.setOnClickListener(v -> {
             if (!ClientKit.installed(requireContext())) {
@@ -59,7 +62,9 @@ public final class HomeFragment extends Fragment {
                 return;
             }
             if (!ServerRuntime.isRunning()) {
-                state.setText("Start the server before launching the game.");
+                state.setText(ServerRuntime.isStarting()
+                        ? "The server is starting — try Play again in a moment."
+                        : "Start the server before launching the game.");
                 return;
             }
             MainActivity.launchGame(requireContext());
@@ -68,8 +73,20 @@ public final class HomeFragment extends Fragment {
             state.setText("Installing the bundled family client…");
             ClientKit.install(requireContext(), state::setText);
         });
-        view.findViewById(R.id.btn_battery).setOnClickListener(
-                v -> MainActivity.requestBatteryExemption(requireContext()));
+        battery = view.findViewById(R.id.btn_battery);
+        battery.setOnClickListener(v -> MainActivity.requestBatteryExemption(requireContext()));
+        error.setOnClickListener(v -> {
+            error.setVisibility(View.GONE);
+            ServerService.stop(requireContext());
+            ServerRuntime.markStopped();
+            state.setText("Restarting the local server…");
+            handler.postDelayed(() -> ServerService.start(requireContext()), 1000);
+        });
+        view.findViewById(R.id.btn_home_admin).setOnClickListener(v -> {
+            if (getActivity() instanceof MainActivity) {
+                ((MainActivity) getActivity()).openTab(R.id.nav_admin);
+            }
+        });
         return view;
     }
 
@@ -91,17 +108,30 @@ public final class HomeFragment extends Fragment {
             if (!isAdded() || getView() == null) return;
             state.setText(status.game
                     ? "Server running — ready to play"
-                    : (ServerRuntime.isRunning() ? "Starting…" : "Server stopped"));
+                    : (ServerRuntime.isRunning() || ServerRuntime.isStarting()
+                        ? "Starting the server… first run unpacks the payload"
+                        : "Server is not running — press Start"));
+            String uptime = ServerRuntime.uptime();
             ports.setText("Game 8445 " + dot(status.game)
                     + "   Admin 8080 " + dot(status.admin)
-                    + "   Map 8081 " + dot(status.map));
+                    + "   Map 8081 " + dot(status.map)
+                    + (uptime.isEmpty() ? "" : "   Up " + uptime));
             payload.setText(status.payload);
+            // Never grey out Start for the whole unpack window: first run can
+            // take many minutes, and a duplicate start is ignored by the
+            // service anyway. Only a genuinely running server disables it.
+            start.setEnabled(!ServerRuntime.isRunning());
+            stop.setEnabled(ServerRuntime.isRunning() || ServerRuntime.isStarting());
+            boolean exempt = MainActivity.isBatteryExempt(requireContext());
+            battery.setText(exempt ? "Background running allowed" : "Allow background running");
+            battery.setEnabled(!exempt);
             String lastError = ServerRuntime.lastError();
             if (lastError.isEmpty()) {
                 error.setVisibility(View.GONE);
             } else {
                 error.setVisibility(View.VISIBLE);
-                error.setText(lastError.length() > 1200 ? lastError.substring(0, 1200) : lastError);
+                error.setText("The server hit a problem. Tap here to restart it.\n"
+                        + "Full details are in the Server tab.");
             }
         });
     }

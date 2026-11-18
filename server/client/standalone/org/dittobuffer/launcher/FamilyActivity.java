@@ -1,6 +1,7 @@
 package org.dittobuffer.launcher;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.security.keystore.KeyGenParameterSpec;
@@ -28,7 +29,7 @@ public final class FamilyActivity extends Activity {
     private static volatile Relay relay;
     private static boolean loaded;
     private JSONObject profile, credential;
-    private EditText origin, username, password, invitation, trainer;
+    private EditText origin, username, password, trainer;
     private TextView status;
     private Spinner fixtureLocation;
     private Spinner graphics;
@@ -80,11 +81,12 @@ public final class FamilyActivity extends Activity {
         username=field(accountCard,"Account username",false);
         password=field(accountCard,"Password (12-128 characters)",true);
         trainer=field(accountCard,"Trainer name (registration only)",false);
-        invitation=field(accountCard,"Invitation (registration only)",true);
         filledButton(accountCard,"Sign in",()->authenticate(false));
-        tonalButton(accountCard,"Create invited account",()->authenticate(true));
+        tonalButton(accountCard,"Create account",()->authenticate(true));
         textButton(accountCard,"Continue saved account",()->continueSaved());
         textButton(accountCard,"Sign out and revoke session",()->logout());
+        textButton(accountCard,"Empty app data and start fresh",()->resetAppData());
+        accountCard.addView(hint("Use Empty app data if this phone still has a session from another account or server. The game and this launcher keep their own local saves; emptying clears them so Create account starts clean."));
         page.addView(accountCard);
 
         LinearLayout gameCard=card("Game");
@@ -200,15 +202,49 @@ public final class FamilyActivity extends Activity {
         if(user!=null&&!user.isEmpty()&&pass!=null&&!pass.isEmpty()){
             username.setText(user);password.setText(pass);
             String name=getIntent().getStringExtra("dittobuffer.trainer");
-            String invite=getIntent().getStringExtra("dittobuffer.invitation");
             if(name!=null)trainer.setText(name);
-            if(invite!=null)invitation.setText(invite);
             authenticate(getIntent().getBooleanExtra("dittobuffer.register",false));
             return;
         }
         continueSaved();
     }
     private void message(String text) { runOnUiThread(()->status.setText(text)); }
+
+    /** Turn a rejected account into a clear next action instead of a raw 401. */
+    private void rejected(Exception error) {
+        String text=safe(error);message(text);
+        if(!(error instanceof ServerReject))return;
+        runOnUiThread(()->{
+            if(isFinishing()||isDestroyed())return;
+            new AlertDialog.Builder(this)
+                .setTitle("Start with empty app data?")
+                .setMessage(text+"\n\nEmpty this app's local data now? This clears the saved session, game preferences and cached runtime, so you can create a new account or sign in cleanly.")
+                .setPositiveButton("Empty app data",(dialog,which)->resetAppData())
+                .setNegativeButton("Not now",null)
+                .show();
+        });
+    }
+
+    /** Clear this package's own saves, prefs and caches without touching assets. */
+    private void resetAppData() {
+        if(loaded){message("Close the game completely, then press Empty app data again.");return;}
+        message("Emptying app data…");
+        worker.execute(()->{try {
+            getPreferences(0).edit().clear().commit();
+            wipe(getFilesDir(),false);wipe(getCacheDir(),true);wipe(getCodeCacheDir(),true);
+            runOnUiThread(()->{
+                origin.setText(profile.optString("origin"));username.setText("");password.setText("");trainer.setText("");
+                message("App data emptied. Create a new account or sign in.");
+            });
+        }catch(Exception e){message("Could not empty app data: "+safe(e));}});
+    }
+
+    private void wipe(File directory,boolean removeRoot) {
+        if(directory==null||!directory.exists())return;
+        File[] children=directory.listFiles();
+        if(children!=null)for(File child:children){if(child.isDirectory())wipe(child,true);else child.delete();}
+        if(removeRoot)directory.delete();
+    }
     private String checkedOrigin() throws Exception {
         String value=origin.getText().toString().trim().replaceAll("/+$","");URI uri=new URI(value);
         String host=uri.getHost();
@@ -220,13 +256,13 @@ public final class FamilyActivity extends Activity {
         try {
             final String server=checkedOrigin();
             final JSONObject data=new JSONObject().put("username",username.getText().toString()).put("password",password.getText().toString()).put("device_label",android.os.Build.MODEL+" standalone");
-            if(register)data.put("trainer_name",trainer.getText().toString()).put("invitation",invitation.getText().toString());
-            password.setText("");invitation.setText("");message("Contacting private server…");
+            if(register)data.put("trainer_name",trainer.getText().toString()).put("invitation","");
+            password.setText("");message("Contacting private server…");
             worker.execute(()->{try {
                 if(register)request(server,"/accounts/register",data);
                 JSONObject result=request(server,"/accounts/login",data);
                 credential=result;saveCredential(result,server);startGame(server,result);
-            }catch(Exception e){message("Sign-in failed: "+safe(e));}});
+            }catch(Exception e){rejected(e);}});
         }catch(Exception e){message(safe(e));}
     }
     private void continueSaved() {
@@ -310,7 +346,16 @@ public final class FamilyActivity extends Activity {
     JSONObject request(String server,String path,JSONObject data) throws Exception {
         HttpsURLConnection c=connection(server,path);
         if(data!=null){c.setRequestMethod("POST");c.setDoOutput(true);c.setRequestProperty("Content-Type","application/json");try(OutputStream s=c.getOutputStream()){s.write(data.toString().getBytes(StandardCharsets.UTF_8));}}
-        int status=c.getResponseCode();if(status!=200&&status!=201){c.disconnect();throw new IOException("Server rejected request ("+status+")");}
+        int status=c.getResponseCode();
+        if(status!=200&&status!=201){
+            InputStream errorStream=c.getErrorStream();String body=errorStream==null?"":read(errorStream,65536);c.disconnect();
+            String detail="";try{detail=new JSONObject(body).optString("error","");}catch(Exception ignored){}
+            String text=status==401?"This device's saved session or password was rejected. Empty app data to start a fresh account."
+                :status==409?"That username already exists on this server. Sign in instead, or empty app data and choose a new name."
+                :status==429?"Too many attempts. Wait a minute, then try again."
+                :"The server returned "+status+(detail.isEmpty()?"":": "+detail);
+            throw new ServerReject(status,text);
+        }
         try(InputStream s=c.getInputStream()){return new JSONObject(read(s,65536));}finally{c.disconnect();}
     }
     HttpsURLConnection connection(String server,String path) throws Exception {
@@ -325,6 +370,11 @@ public final class FamilyActivity extends Activity {
         // Default hostname verifier remains enabled, including IP SAN validation.
         return c;
     }
+    static final class ServerReject extends IOException {
+        final int status;
+        ServerReject(int status,String message) {super(message);this.status=status;}
+    }
+
     static String read(InputStream in,int limit) throws IOException {ByteArrayOutputStream b=new ByteArrayOutputStream();byte[] buf=new byte[8192];int n;while((n=in.read(buf))!=-1){if(b.size()+n>limit)throw new IOException("Response too large");b.write(buf,0,n);}return b.toString("UTF-8");}
 
     /** Only app-loopback HTTP. Every off-device byte uses scoped, verified HTTPS. */

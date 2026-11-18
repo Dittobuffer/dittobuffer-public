@@ -52,7 +52,7 @@ Other declarations reject import; nothing is silently discarded.
 
 ## Import and export
 
-1. Open the private administrator website link. Studio shares that session.
+1. Open `http://127.0.0.1:8080`. Studio uses the same open session.
 2. Choose **Import JSON**, upload/drop a JSON file or paste its contents.
 3. Choose **Preview JSON**. Review dates, habitats, normalized species/forms,
    shiny rates, spawn probabilities, raid rotations, rewards, dependencies,
@@ -90,15 +90,14 @@ weeks, tasks and pools is meaningful and is retained.
 
 ## Security and limits
 
-The complete website requires a server-validated administrator session for all
-privileged APIs; a player token or localhost address is insufficient. Open the
-private capability link using `scripts/open-admin.py`. Its key is stored only
-in `.private/admin-website-access.json`, exchanged for an HttpOnly SameSite
-cookie, removed from the URL fragment, and never included in exports. Studio
-uses that same session and does not request a second password. Write requests
-require CSRF and matching Origin. For off-machine access, serve behind HTTPS and
-an authenticated reverse proxy; the built-in website is intended for loopback.
-The native map/postcard resource routes remain separate from privileged APIs.
+The administrator website binds `127.0.0.1` and has no login, access key,
+cookie or session token. Opening it locally is the authorization. Use
+`scripts/open-admin.py` or open `http://127.0.0.1:8080` directly. Studio uses
+the same open session and has no second password. Data-changing actions still
+require their documented preview/confirmation steps. For off-machine access,
+serve behind HTTPS and an authenticated reverse proxy; the built-in website is
+intended for loopback. The native map/postcard resource routes remain separate
+from privileged APIs.
 
 JSON is limited to 2 MB, 32 levels, 100,000 nodes, 100 content definitions,
 100 regions and bounded individual pools/stages. Duplicate object keys,
@@ -113,4 +112,4 @@ Imports execute no files, SQL, shell, Python or JavaScript supplied by content.
 
 `research_type` accepts `field`, `special`, `timed`, `collection`, `branching`, `timed_branching`, `breakthrough`. Existing v1 bundles remain accepted; incompatible nonempty category fields are rejected rather than discarded. Stories use `stages`; Collection uses `entries` and `rewards`; branching uses two to four named `paths` with their stages/rewards; Breakthrough uses base `rewards` and a weighted `encounter_pool`. Exact bounds and filter names are in the downloadable schema. Eligibility supports levels 1-80 and completed-story prerequisites. Verified level-up gates are not editable imports.
 
-Six validated original imports are in `config/liveops-examples/research/`. Edit their dates and pool against the destination catalog, preview, then import as Draft. Neither import nor preview publishes or changes player progression. See [Research Builder](RESEARCH_BUILDER.md) and [KNOWN-ISSUES.md](KNOWN-ISSUES.md).
+Six validated original imports are in `config/liveops-examples/research/`. Edit their dates and pool against the destination catalog, preview, then import as Draft. Neither import nor preview publishes or changes player progression. See [Research Builder](RESEARCH_BUILDER.md) and [M25 acceptance](MILESTONE_25_RESEARCH_PROGRESSION.md).

@@ -1,0 +1,23 @@
+{
+  "database": "data/world/netherlands-261020-v2.sqlite3",
+  "sha256": "ca7568429854a23d5d46ffd218acbab5378d56d9d49779d9041d808b7dfec81e",
+  "epoch": 1249208389,
+  "source": {
+    "source": "https://download.geofabrik.de/europe/netherlands-261020.osm.pbf",
+    "source_file": "data/world/sources/netherlands-261020.osm.pbf",
+    "source_sha256": "466113224994119a050a215d150c0b772fde024502de041137063f994e8e55a3",
+    "source_md5": "6b00208f3ba1c8a33363735cebd9769b",
+    "bytes": 1407494620,
+    "download_verified": "2026-10-22T10:37:55.734142+00:00",
+    "license": "ODbL-1.0",
+    "attribution": "OpenStreetMap contributors",
+    "license_url": "https://www.openstreetmap.org/copyright",
+    "region": "European Netherlands; Caribbean Netherlands excluded",
+    "importer": "world-import-v1",
+    "osmium": "4.3.2",
+    "shapely": "2.1.2"
+  },
+  "published": "2026-10-22T12:25:46.248375+00:00",
+  "validation": "builds/m14-world-coverage-release.json",
+  "validation_sha256": "127e1513acc84d5bc792741fd4307ec37197eb0fe4311146680928e9dcf9d7d2"
+}

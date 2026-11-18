@@ -26,7 +26,9 @@ SCHEDULE_SCHEMA='''
 CREATE TABLE IF NOT EXISTS max_schedule_segments(station_id TEXT PRIMARY KEY REFERENCES max_stations(id),period_key TEXT NOT NULL,scheduled_start_ms INTEGER NOT NULL,scheduled_end_ms INTEGER NOT NULL,retired_ms INTEGER NOT NULL DEFAULT 0);
 CREATE INDEX IF NOT EXISTS max_station_source ON max_stations(source_id,end_ms);
 '''
-DEFAULTS=dict(enabled=False,reference='data/static/max-reference.json',reference_sha256=None,require_complete_reference=False,candidates='data/world/power-spots.sqlite3',timezone='Europe/Amsterdam',reset_hour=5,daily_limit=800,capacity=1500,station_particles=100,first_visit_bonus=20,rotation_seconds=86400,active_seconds=86400,active_probability=.34,minimum_level=20,battle_enabled=False,seed='local-max-v1',cap_policy='threshold')
+DEFAULTS=dict(enabled=False,reference='data/static/max-reference.json',reference_sha256=None,require_complete_reference=False,candidates='data/world/power-spots.sqlite3',auto_candidates=True,gigantamax=True,
+ gigantamax_species=[3,6,9,12,25,52,68,94,99,131,133,143,569,809,812,815,818,823,826,834,839,841,842,844,849,851,858,861,869,879,884,892],
+ timezone='Europe/Amsterdam',reset_hour=5,daily_limit=800,capacity=1500,station_particles=100,first_visit_bonus=20,rotation_seconds=86400,active_seconds=86400,active_probability=.34,minimum_level=20,battle_enabled=False,seed='local-max-v1',cap_policy='threshold')
 
 MANUAL_PREFIX='manual:'
 MANUAL_MAX_SECONDS=30*86400
@@ -69,8 +71,12 @@ def boss_definition(game,value):
  if species not in game.species or (species,form) not in game.forms or not game.max_reference['species_groups'].get(f'{species}:{form}') or mode not in (1,2):raise ValueError('Unsupported explicit Max species/form/mode')
  if type(weight) is not int or weight<=0 or not 1<=level<=40 or tier not in (1,2,3,4,5,7):raise ValueError('Invalid Max boss definition')
  if mode==2:
-  shared=gm(game.max_reference,'BREAD_SHARED_SETTINGS').bread_settings
-  if not any(v.pokemon_id==species and form in v.form and v.bread_mode==2 for v in shared.allowed_sourdough_pokemon):raise ValueError('Gigantamax form is not source-allowlisted')
+  # Shipped references can have an empty official G-Max allowlist. Released
+  # pools still decide what may appear; the local G-Max list opts in.
+  allowed=getattr(game,'max_gmax_species',None)
+  if allowed is None or species not in allowed:
+   shared=gm(game.max_reference,'BREAD_SHARED_SETTINGS').bread_settings
+   if not any(v.pokemon_id==species and form in v.form and v.bread_mode==2 for v in shared.allowed_sourdough_pokemon):raise ValueError('Gigantamax form is not source-allowlisted')
  return dict(species=species,form=form,mode=mode,tier=tier,level=level,weight=weight)
 
 @functools.lru_cache(maxsize=8)
@@ -96,14 +102,40 @@ def install(game):
  for key,low,high in [('reset_hour',0,23),('daily_limit',1,100000),('capacity',1,100000),('station_particles',1,10000),('first_visit_bonus',0,10000),('rotation_seconds',60,604800),('active_seconds',30,604800),('minimum_level',1,100)]:
   if type(cfg[key]) is not int or not low<=cfg[key]<=high:raise ValueError('Invalid Max '+key)
  if cfg['active_seconds']>cfg['rotation_seconds'] or type(cfg['active_probability']) not in (int,float) or not math.isfinite(cfg['active_probability']) or not 0<=cfg['active_probability']<=1 or cfg['cap_policy'] not in ('threshold','clamp'):raise ValueError('Invalid Max schedule/caps')
- game.max_reference=reference(cfg['reference'],cfg['require_complete_reference'],cfg['reference_sha256']);path=(ROOT/cfg['candidates']).resolve()
- if not path.is_relative_to(ROOT) or not path.is_file():raise ValueError('Separate Power Spot candidate database required')
- with closing(sqlite3.connect(path.as_uri()+'?mode=ro',uri=True)) as db:
-  metadata=json.loads(db.execute("SELECT value FROM metadata WHERE key='source'").fetchone()[0])
-  if metadata.get('license')!='ODbL-1.0':raise ValueError('Reviewed permitted map provenance required')
- game.max_candidates=path
- pools=cfg.get('pools',[])
+ game.max_reference=reference(cfg['reference'],cfg['require_complete_reference'],cfg['reference_sha256'])
+ # The phone build ships no map-derived Power Spot dump. An optional reviewed
+ # candidate database is still honoured; otherwise deterministic on-demand
+ # candidates are generated around the player in _candidates() below.
+ game.max_candidates=None
+ if cfg.get('candidates'):
+  path=(ROOT/cfg['candidates']).resolve()
+  if not path.is_relative_to(ROOT):raise ValueError('Power Spot candidate database must be project-local')
+  if path.is_file():
+   try:
+    with closing(sqlite3.connect(path.as_uri()+'?mode=ro',uri=True)) as candidate_db:
+     metadata=json.loads(candidate_db.execute("SELECT value FROM metadata WHERE key='source'").fetchone()[0])
+    if metadata.get('license')!='ODbL-1.0':raise ValueError('Reviewed permitted map provenance required')
+    game.max_candidates=path
+   except (sqlite3.Error,ValueError,TypeError,KeyError):
+    if not cfg.get('auto_candidates',True):raise
+ pools=list(cfg.get('pools') or [])
+ # Release local Gigantamax forms next to Dynamax so both work without any
+ # extra configuration. Explicit pools always win and are never duplicated.
+ game.max_gmax_species=set()
+ if cfg.get('gigantamax',True):
+  for value in cfg.get('gigantamax_species') or []:
+   try:species=int(value)
+   except (TypeError,ValueError):continue
+   if species not in game.species:continue
+   form=_default_form(game,species)
+   if form is None or (species,form) not in game.forms:continue
+   if not game.max_reference['species_groups'].get(f'{species}:{form}'):continue
+   game.max_gmax_species.add(species)
+   if not any(isinstance(v,dict) and int(v.get('species',0))==species and int(v.get('mode',1))==2 for v in pools):
+    pools.append(dict(species=species,form=form,mode=2,tier=5,level=20,weight=1))
+ pools=[v for v in pools if isinstance(v,dict)]
  if not pools:raise ValueError('Explicit released Max species pool required')
+ cfg['pools']=pools;game.max_config['pools']=pools
  from dittobuffer.gameplay.max_schedule import validate_config as validate_schedule
  game.max_schedule=validate_schedule(cfg.get('schedule',{}))
  released=list(pools)
@@ -324,9 +356,7 @@ def materialize(game,db,bounds):
   _retire_scheduled(db,old,now_ms())
  cfg=game.max_config;period=cfg['rotation_seconds']*1000;slot=now_ms()//period;start=slot*period;end=start+cfg['active_seconds']*1000
  if end<=now_ms():return
- with closing(sqlite3.connect(game.max_candidates.as_uri()+'?mode=ro',uri=True)) as source:
-  source.row_factory=sqlite3.Row
-  for row in source.execute('SELECT * FROM candidates WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?',bounds):
+ for row in _candidates(game,bounds):
    rng=random.Random(hashlib.sha256(f"{cfg['seed']}:{row['id']}:{slot}".encode()).digest())
    if rng.random()>=cfg['active_probability']:continue
    identity=f"{cfg['seed']}:{row['id']}:{slot}"
@@ -335,6 +365,39 @@ def materialize(game,db,bounds):
     if previous:identity+=':return:'+previous[0]
    ident='power-'+hashlib.sha256(identity.encode()).hexdigest()[:24];pool=rng.choices(cfg['pools'],weights=[v.get('weight',1) for v in cfg['pools']])[0]
    db.execute('INSERT OR IGNORE INTO max_stations VALUES(?,?,?,?,?,?,?,?,?)',(ident,row['id'],slot,row['name'],row['lat'],row['lng'],start,end,json.dumps(pool,separators=(',',':'))))
+
+def _grid_candidates(bounds):
+ """Deterministic Power Spot points for any viewport, without map data.
+
+ `bounds` is (south, north, west, east). The step is about 240 m but stretches
+ so a whole viewport is covered with a bounded number of points.
+ """
+ try:south,north,west,east=(float(v) for v in bounds)
+ except (TypeError,ValueError):return
+ if south>north:south,north=north,south
+ if west>east:west,east=east,west
+ if not (-90<=south<=90 and -90<=north<=90 and -180<=west<=180 and -180<=east<=180):return
+ step=max(.008,(north-south)/20,(east-west)/20)
+ lat=south
+ while lat<=north:
+  lng=west
+  while lng<=east:
+   lat_key=round(lat,5);lng_key=round(lng,5)
+   yield dict(id=f'auto:{lat_key:.5f}:{lng_key:.5f}',name='Power Spot',lat=lat_key,lng=lng_key)
+   lng+=step
+  lat+=step
+
+def _candidates(game,bounds):
+ """Reviewed candidates first, then deterministic points for any area."""
+ path=getattr(game,'max_candidates',None)
+ if path is not None:
+  try:
+   with closing(sqlite3.connect(path.as_uri()+'?mode=ro',uri=True)) as source:
+    source.row_factory=sqlite3.Row
+    rows=source.execute('SELECT * FROM candidates WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?',bounds).fetchall()
+   if rows:return rows
+  except sqlite3.Error:pass
+ return list(_grid_candidates(bounds))
 
 def _retire_scheduled(db,rows,stamp):
  # Keep original interval metadata and canonical definitions before shortening
@@ -359,9 +422,7 @@ def _materialize_scheduled(game,db,bounds):
   # Hand-placed spots are never part of the rotating candidate schedule.
   rows=db.execute("SELECT * FROM max_stations WHERE end_ms>? AND source_id NOT LIKE 'manual:%' AND lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?",(stamp,*bounds)).fetchall()
   _retire_scheduled(db,rows,stamp);return
- with closing(sqlite3.connect(game.max_candidates.as_uri()+'?mode=ro',uri=True)) as source:
-  source.row_factory=sqlite3.Row
-  for row in source.execute('SELECT * FROM candidates WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?',bounds):
+ for row in _candidates(game,bounds):
    identity=f"{cfg['seed']}:{row['id']}:{window.key}"
    rng=random.Random(hashlib.sha256(identity.encode()).digest())
    active=rng.random()<cfg['active_probability'];ident='power-'+hashlib.sha256(identity.encode()).hexdigest()[:24]

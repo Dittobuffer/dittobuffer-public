@@ -17,10 +17,10 @@ OUT = REPO / "apk" / "built"
 BASE = OUT / "dittobuffer-mobile-base.apk"
 PAYLOADS = sorted(OUT.glob("payload[0-9]*.apk"))
 ICON = REPO / "android/app/src/main/res/drawable-nodpi/dittobuffer_app_icon.png"
-TARGET = OUT / "Dittobuffer-1.0.5.xapk"
+TARGET = OUT / "Dittobuffer-1.0.6.xapk"
 PACKAGE = "org.dittobuffer.mobile"
-VERSION_CODE = "6"
-VERSION_NAME = "1.0.5"
+VERSION_CODE = "7"
+VERSION_NAME = "1.0.6"
 PERMISSIONS = [
     "android.permission.INTERNET",
     "android.permission.ACCESS_NETWORK_STATE",
@@ -31,7 +31,7 @@ PERMISSIONS = [
     "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
     "android.permission.REQUEST_INSTALL_PACKAGES",
 ]
-README = """Dittobuffer 1.0.5 — self-contained phone server
+README = """Dittobuffer 1.0.6 — self-contained phone server
 
 Install with an XAPK installer that supports split APKs and Zip64, or from a
 computer with Android platform-tools:

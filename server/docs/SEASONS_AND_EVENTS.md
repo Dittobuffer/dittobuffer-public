@@ -1,6 +1,6 @@
 # Seasons, Events & Research Studio (M33)
 
-Status: implemented foundation with real Pixel 5 gameplay evidence; **not the complete M33 definition of done**. See [KNOWN-ISSUES.md](KNOWN-ISSUES.md) for tested workflows and unsupported mechanics.
+Status: implemented foundation with real Pixel 5 gameplay evidence; **not the complete M33 definition of done**. See [the acceptance report](MILESTONE_33_SEASONS_EVENTS.md) for tested workflows and unsupported mechanics.
 
 ## Start and open the Studio
 
@@ -11,9 +11,7 @@ Use the maintained `src/dittobuffer` checkout, Python environment, Game Master a
 .venv\Scripts\python.exe -m dittobuffer.admin.admin --config config/family.json --port 8080
 ```
 
-Open `http://127.0.0.1:8080`, then **Seasons & Events**. **No separate Studio password or sign-in is required by default.** The user explicitly requested that the Studio use the existing admin website's access model. A fresh browser receives an automatic local-admin session. CSRF tokens, same-origin checks, confirmation and audit history remain active.
-
-Optional deployments can explicitly set `liveops.admin_auth: true` to enable the separate publisher/editor/viewer mode. This is disabled in the example and normal default. In that opt-in mode only, the first password is stored privately in `.private/studio-admin.bootstrap.txt`; `scripts/manage-studio-admin.py` can prompt for administrator passwords and roles without placing them in command-line arguments. Existing private credential files are preserved but are not required in the default mode. Restart the admin service after changing that optional policy. The older admin endpoints retain their existing access model.
+Open `http://127.0.0.1:8080`, then **Seasons & Events**. There is no login, access key, token or Studio password. The console binds `127.0.0.1`; opening it locally is the authorization. Studio uses the same open session. Publication previews, confirmations and audit history remain active.
 
 ## Create and publish
 
@@ -63,4 +61,4 @@ Habitat-scoped preview simulations currently need an explicit biome argument; th
 
 ## M25 Research integration
 
-Research Builder now supports Timed, Collection, branching, timed branching and Breakthrough pools alongside Field/Special. Their definitions use the existing publication/revision store and freeze at enrollment; no parallel progress engine is introduced. Timed, Collection, Field, Special, permanent path selection and Breakthrough reward flows were tested on Android. Timed branching is backend-only. See [KNOWN-ISSUES.md](KNOWN-ISSUES.md). Native level gates are immutable source definitions, available through the read-only Studio reference endpoint.
+Research Builder now supports Timed, Collection, branching, timed branching and Breakthrough pools alongside Field/Special. Their definitions use the existing publication/revision store and freeze at enrollment; no parallel progress engine is introduced. Timed, Collection, Field, Special, permanent path selection and Breakthrough reward flows were tested on Android. Timed branching is backend-only. See [M25 evidence and compatibility matrix](MILESTONE_25_RESEARCH_PROGRESSION.md). Native level gates are immutable source definitions, available through the read-only Studio reference endpoint.

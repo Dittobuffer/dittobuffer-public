@@ -35,7 +35,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dittobuffer Mobile 1.0.5"
+                    android:text="Dittobuffer Mobile 1.0.6"
                     android:textAppearance="?attr/textAppearanceTitleLarge"
                     android:textColor="?attr/colorOnSurface"/>
 
@@ -66,6 +66,51 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Appearance"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textColor="?attr/colorOnSurface"/>
+
+                <Spinner
+                    android:id="@+id/settings_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Follow the phone, or keep a comfortable light or dark look."
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="?attr/colorOnSurfaceVariant"/>
+
+                <Switch
+                    android:id="@+id/settings_autostart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Start the server when the app opens"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Endpoints"
                     android:textAppearance="?attr/textAppearanceTitleMedium"
                     android:textColor="?attr/colorOnSurface"/>
@@ -75,6 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:textIsSelectable="true"
                     android:fontFamily="monospace"
                     android:textSize="12sp"
                     android:textColor="?attr/colorOnSurfaceVariant"/>
@@ -160,7 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Leave room and unlock local admin"/>
+                    android:text="Leave room"/>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -178,6 +224,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Allow background running"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings_restart"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Restart local server"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings_copy_admin"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Copy admin link"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings_clear_logs"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Clear server logs"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_settings_copy"

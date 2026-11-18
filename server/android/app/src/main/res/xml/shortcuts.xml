@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="admin"
+        android:enabled="true"
+        android:icon="@drawable/ic_admin"
+        android:shortcutShortLabel="@string/shortcut_admin_short"
+        android:shortcutLongLabel="@string/shortcut_admin_long">
+        <intent
+            android:action="org.dittobuffer.mobile.OPEN_ADMIN"
+            android:targetPackage="org.dittobuffer.mobile"
+            android:targetClass="org.dittobuffer.mobile.MainActivity"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="play"
+        android:enabled="true"
+        android:icon="@drawable/ic_play"
+        android:shortcutShortLabel="@string/shortcut_play_short"
+        android:shortcutLongLabel="@string/shortcut_play_long">
+        <intent
+            android:action="org.dittobuffer.mobile.PLAY"
+            android:targetPackage="org.dittobuffer.mobile"
+            android:targetClass="org.dittobuffer.mobile.MainActivity"/>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="start"
+        android:enabled="true"
+        android:icon="@drawable/ic_dns"
+        android:shortcutShortLabel="@string/shortcut_start_short"
+        android:shortcutLongLabel="@string/shortcut_start_long">
+        <intent
+            android:action="org.dittobuffer.mobile.START_SERVER"
+            android:targetPackage="org.dittobuffer.mobile"
+            android:targetClass="org.dittobuffer.mobile.MainActivity"/>
+    </shortcut>
+</shortcuts>

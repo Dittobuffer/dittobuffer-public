@@ -28,8 +28,8 @@ Import through **Import JSON → Preview JSON**. Read all errors and warnings.
 Correct the file or ask the generator to correct exact reported paths, then
 preview again. Import as Draft, edit through Studio, preview publication and
 activate only when ready. Export the final Season to retain your edited version.
-Never provide the generator with private accounts, session cookies, database
-files or the private website access key.
+Never provide the generator with private accounts, session cookies or database
+files.
 
 
 For M25, request `research_type` from the installed schema/catalog: Field, Special, Timed, Collection, branching, timed branching or Breakthrough. Use `entries` for Collection, `paths` for branching, and `encounter_pool` for Breakthrough. Do not invent level-gate requirements: use Studio's read-only supplied 71-80 reference. Sample original imports are in `config/liveops-examples/research/`. Ask for an expiration policy and feasible spawn/method prerequisites. Native Timed branching and additional Collection acquisition methods still need device verification; successful validation is not that proof.

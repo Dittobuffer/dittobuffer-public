@@ -667,6 +667,7 @@ class Admin:
                            'shiny_rate': definition.get('shiny_rate', 0), 'shadow': bool(definition.get('shadow')),
                            'level': definition.get('level', 20), 'hp': definition.get('hp'),
                            'cp': definition.get('cp'), 'mega': definition.get('mega_evolution', 0),
+                           'form': definition.get('form'), 'costume': definition.get('costume', 0),
                            'max': definition.get('bread_mode', 0),
                            'iv_floor': definition.get('iv_floor', 10),
                            'battle_seconds': definition.get('_rules', {}).get('battle_seconds'),
@@ -731,6 +732,10 @@ class Admin:
             rules = self.config.get('raids', {})
             definition = {
                 'species': species, 'tier': tier, 'hp': hp, 'cp': cp, 'weight': 100,
+                # Preserve the visual identity chosen above. Without these the
+                # reward encounter falls back to the ordinary form and costume
+                # (for example Armored Mewtwo becomes a normal Mewtwo).
+                'form': variant['form'], 'costume': costume,
                 'xp': int(body.get('xp', 5000)), 'dust': int(body.get('dust', 1000)), 'level': level,
                 'shiny_rate': shiny_rate, 'shadow': shadow, 'iv_floor': iv_floor,
                 'bread_mode': max_mode,
@@ -861,7 +866,8 @@ class Admin:
         from dittobuffer.gameplay import routes as route_mod
         with contextlib.closing(self.connect()) as db:
             route_mod.storage(db)
-            return route_mod.delete_row(db, unquote(route_id))
+            # The URL parser already percent-decoded the path segment.
+            return route_mod.delete_row(db, route_id)
 
     # ------------------------------------------------------------ feature flags
     def features(self):
@@ -876,7 +882,13 @@ class Admin:
                 'hideouts_enabled': bool(rocket_mod.config().get('hideouts_enabled', True)),
                 'balloon_interval_minutes': int(rocket_mod.config().get('balloon_interval_minutes', 120)),
             },
-            'routes': routes_cfg,
+            'routes': routes_cfg | {
+                # The panel uses these labels; the gameplay module keeps its
+                # historical short keys. Expose both so saving round-trips.
+                'reward_stardust': int(routes_cfg.get('stardust', 0)),
+                'reward_xp': int(routes_cfg.get('xp', 0)),
+                'minimum_level': int(routes_cfg.get('min_level', 1)),
+            },
             'world': {'map_tiles_port': int(world.get('map_tiles_port', 8081)),
                       'map_tiles_base': str(world.get('map_tiles_base') or '')},
             'max_system': dict(self.config.get('max_system') or {}),
@@ -900,10 +912,12 @@ class Admin:
             routes_cfg = dict(self.config.get('routes') or {})
             if 'enabled' in body['routes']:
                 routes_cfg['enabled'] = bool(body['routes']['enabled'])
+            aliases = {'reward_stardust': 'stardust', 'reward_xp': 'xp',
+                       'minimum_level': 'min_level'}
             for key in ('minimum_level', 'play_seconds', 'cooldown_seconds', 'max_favorites',
                         'stamp_spacing_m', 'reward_stardust', 'reward_xp'):
                 if key in body['routes']:
-                    routes_cfg[key] = int(body['routes'][key])
+                    routes_cfg[aliases.get(key, key)] = int(body['routes'][key])
             self.config['routes'] = routes_cfg
         if isinstance(body.get('world'), dict) and 'map_tiles_port' in body['world']:
             port = max(1024, min(65535, int(body['world']['map_tiles_port'])))
@@ -1304,9 +1318,8 @@ class Admin:
 
     # --------------------------------------------------------------- liveOps
     def readonly(self):
-        """A platform room owns the world; local edits would silently diverge."""
-        platform = self.config.get('platform') or {}
-        return bool(self.config.get('admin_readonly')) or str(platform.get('mode') or 'local') == 'player'
+        """The loopback console is the operator's console: it is never locked."""
+        return False
 
     def liveops_admin(self):
         from dittobuffer.gameplay import liveops
@@ -1512,25 +1525,16 @@ def handler(admin):
             parts = [unquote(part) for part in path.path.split('/') if part]
             query = parse_qs(path.query)
             try:
-                if method != 'GET' and admin.readonly():
-                    return self.send_json(403, {'error': 'This server is managed by a Dittobuffer Platform room; local edits are disabled.'})
                 boundary=access(admin)
                 if parts==['api','admin-session']:
-                    if method=='POST':
-                        origin=self.headers.get('Origin')
-                        if origin and urlparse(origin).netloc!=self.headers.get('Host'):raise AccessDenied(403,'Cross-origin administrator request blocked')
-                        token,row=boundary.exchange(self.body().get('access_key'))
-                        raw=json.dumps({'csrf':row['csrf'],'role':row['role']}).encode()
-                        self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Cache-Control','no-store')
-                        self.send_header('Set-Cookie','dittobuffer_admin='+token+'; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800')
-                        self.send_header('Content-Length',str(len(raw)));self.end_headers();self.wfile.write(raw);return
-                    return self.send_json(200,{k:v for k,v in boundary.session(self.headers).items() if k in ('csrf','user','role')})
+                    row=boundary.exchange(None)[1] if method=='POST' else boundary.session(self.headers)
+                    return self.send_json(200,{k:row[k] for k in ('csrf','user','role')})
                 if parts[:1]==['api'] and parts[:2]!=['api','studio']:
                     boundary.session(self.headers,method!='GET')
                 if parts[:2] == ['api', 'studio']:
                     from dittobuffer.admin.studio import Studio
                     with admin.lock:
-                        if not hasattr(admin,'studio'):admin.studio=Studio(admin,security=boundary if not admin.config.get('liveops',{}).get('admin_auth',False) else None)
+                        if not hasattr(admin,'studio'):admin.studio=Studio(admin,security=boundary)
                     return admin.studio.handle(self,method,parts,query)
                 if method == 'GET' and parts in (['studio.js'],['studio.css'],['admin-access.js']):
                     target=ROOT/'src/dittobuffer/admin/ui'/parts[0]

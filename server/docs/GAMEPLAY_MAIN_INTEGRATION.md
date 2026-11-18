@@ -24,7 +24,7 @@ All feature branches, original worktrees and stashes are retained. A fresh integ
 
 The source includes Field, Special, Timed, Collection, branching and Research Breakthrough lifecycles, native quest projections, durable daily stamps/claim receipts, shared gameplay task events, variant Pokedex facts, first-registration XP, medals and explicit modern progression gates. Studio provides Seasons/Events scheduling, draft/preview/publication, original templates, Research Builder and bounded schema-v1 JSON import/export. M24/M34 provide earned raid summary and background repairs, alongside earlier gameplay fixes.
 
-Acceptance remains **PARTIAL**; see [KNOWN-ISSUES.md](KNOWN-ISSUES.md). These reports contain earlier actual Android observations; they are not new device tests for this combined build. Natural completion of every level 71-80 requirement, all acquisition/combat counters and remaining native wording/presentation cases is not established.
+Acceptance remains **PARTIAL** as recorded in [M25](MILESTONE_25_RESEARCH_PROGRESSION.md), [M25.1](MILESTONE_25_1_RESEARCH_UI_POLISH.md), [M33.1](MILESTONE_33_1_JSON_IMPORT_EXPORT.md) and [M34](MILESTONE_34_RAID_VICTORY_BACKGROUND.md). These reports contain earlier actual Android observations; they are not new device tests for this combined build. Natural completion of every level 71-80 requirement, all acquisition/combat counters and remaining native wording/presentation cases is not established.
 
 ## Compatibility resolutions
 
@@ -33,11 +33,11 @@ Acceptance remains **PARTIAL**; see [KNOWN-ISSUES.md](KNOWN-ISSUES.md). These re
 - Main's content-addressed resource loader keeps full CDN catalog paths, registry-disabled behavior and current external-catalog support. Its stale flattened-path regression expectations are updated to exercise the actual path-preserving contract.
 - The map listener uses the owned lifecycle/cleanup implementation while retaining main's POI and Platform startup. No per-tile synthetic stops or gyms are restored. Tests needing a POI insert an explicit isolated fixture.
 - Main's six-member Gym/Raid party template and deduplication remain alongside new level and weekly-reward templates. The merged protobuf schema retains weather typing and adds the audited native Research fields; Python bindings are regenerated from that exact schema.
-- The old deleted `START-SERVER.bat` and automatic asset-checkout CI workflow are not resurrected. Current launch instructions point to the private administrator-link helper.
+- The old deleted `START-SERVER.bat` and automatic asset-checkout CI workflow are not resurrected. Current launch instructions point to the direct `open-admin` helper.
 
 ## Android administrator and dependencies
 
-The shared website now exchanges a private operator capability for an HttpOnly session and checks CSRF on writes. Android's Admin button obtains the fragment link directly from its in-process Python bridge. The capability is not added to HTTP discovery, status JSON or logs. Platform-managed local edits remain disabled.
+The loopback administrator website has no operator capability, cookie or CSRF handshake; the loopback bind is the boundary. Android's Admin button opens the plain loopback URL. No key or token is added to HTTP discovery, status JSON or logs. Platform rooms do not lock local admin edits.
 
 Studio JSON validation adds a dependency absent from the former zero-pip Android host. `android/app/requirements-studio.txt` pins `jsonschema==4.17.3`, `attrs==25.4.0` and `pyrsistent==0.20.0`; all three selected distributions are universal Python wheels. This retains Draft 2020-12 validation without assuming an Android build of the native `rpds-py` dependency used by later jsonschema versions. The Gradle configuration requires binary distributions, failing rather than compiling unsupported native packages.
 

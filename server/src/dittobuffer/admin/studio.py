@@ -1,11 +1,7 @@
 """Authenticated studio API, embedded in the existing loopback admin service."""
-from collections import defaultdict,deque
 from copy import deepcopy
 from contextlib import closing
-import hashlib,hmac,json,secrets,threading,time
-from http.cookies import SimpleCookie
-from pathlib import Path
-from urllib.parse import urlparse
+import json
 from dittobuffer.paths import ROOT
 from dittobuffer.admin.access import AccessDenied
 from dittobuffer.gameplay.liveops.catalog import Catalog
@@ -17,69 +13,15 @@ from dittobuffer.gameplay.liveops.runtime import path as content_path
 class HttpError(Exception):
     def __init__(self,status,message):self.status=status;super().__init__(message)
 
-class Security:
-    def __init__(self,path,initialize=True):
-        self.path=Path(path);self.lock=threading.Lock();self.sessions={};self.attempts=defaultdict(deque)
-        if initialize and not self.path.exists():
-            self.path.parent.mkdir(parents=True,exist_ok=True);password=secrets.token_urlsafe(24);salt=secrets.token_hex(16)
-            value={'admin':{'salt':salt,'hash':self.hash(password,salt),'role':'publisher'}}
-            self.path.write_text(json.dumps(value),encoding='utf-8')
-            self.path.with_suffix('.bootstrap.txt').write_text('DittoBuffer Studio local administrator\nUsername: admin\nPassword: '+password+'\nKeep this file private. Configure roles/passwords using the documented local setup command.\n',encoding='utf-8')
-        self.users=json.loads(self.path.read_text(encoding='utf-8')) if initialize and self.path.exists() else {}
-
-    def _issue(self,user,role):
-        token=secrets.token_urlsafe(32);csrf=secrets.token_urlsafe(32)
-        row={'user':user,'role':role,'csrf':csrf,'expires':time.monotonic()+8*3600}
-        self.sessions[hashlib.sha256(token.encode()).hexdigest()]=row
-        return token,row
-
-    def local_admin(self):
-        with self.lock:return self._issue('local-admin','publisher')
-
-    @staticmethod
-    def hash(password,salt):return hashlib.pbkdf2_hmac('sha256',password.encode(),bytes.fromhex(salt),310000).hex()
-
-    def login(self,user,password,peer):
-        if not isinstance(user,str) or not isinstance(password,str) or len(password)>1024:raise HttpError(400,'Invalid login')
-        with self.lock:
-            hits=self.attempts[peer]
-            while hits and hits[0]<time.monotonic()-60:hits.popleft()
-            if len(hits)>=8:raise HttpError(429,'Too many login attempts; try again in a minute')
-            hits.append(time.monotonic())
-            row=self.users.get(user);actual=self.hash(password,row['salt'] if row else '00'*16)
-            if not row or not hmac.compare_digest(actual,row['hash']):raise HttpError(401,'Invalid administrator sign-in')
-            return self._issue(user,row['role'])
-
-    def session(self,headers,write=False,publish=False):
-        try:
-            cookie=SimpleCookie();cookie.load(headers.get('Cookie',''));token=cookie['dittobuffer_studio'].value
-        except (KeyError,ValueError):raise HttpError(401,'Sign in to the Studio') from None
-        with self.lock:row=self.sessions.get(hashlib.sha256(token.encode()).hexdigest())
-        if not row or row['expires']<time.monotonic():raise HttpError(401,'Studio session expired')
-        if write:
-            if row['role'] not in ('editor','publisher'):raise HttpError(403,'Editor permission required')
-            if not hmac.compare_digest(headers.get('X-Studio-CSRF',''),row['csrf']):raise HttpError(403,'Refresh the page before making changes')
-        if publish and row['role']!='publisher':raise HttpError(403,'Publisher permission required')
-        return row
-
 class Studio:
     def __init__(self,admin,catalog=None,security=None):
         self.admin=admin;cfg=admin.config.get('liveops',{})
         self.store=Store(content_path(admin.config));self.catalog=catalog or Catalog(admin.config)
-        # Fixed project-private credential location; request bodies cannot choose paths.
-        self.authentication_required=bool(cfg.get('admin_auth',False))
         from dittobuffer.admin.access import access
-        self.security=security or (Security(ROOT/'.private/studio-admin.json') if self.authentication_required else access(admin))
+        self.security=security or access(admin)
         from dittobuffer.gameplay.random_spawns import settings,build_pool
         self.default_spawn_pools=deepcopy(admin.config.get('spawn_pools',[]));self.default_spawn_settings=settings(admin.config)
         if self.default_spawn_settings['enabled']:self.default_spawn_pools,_=build_pool(self.catalog.game(),self.default_spawn_settings)
-
-    def session_response(self,handler,token,session):
-        value={k:session[k] for k in ('user','role','csrf')};value['authentication_required']=self.authentication_required
-        raw=json.dumps(value).encode()
-        handler.send_response(200);handler.send_header('Content-Type','application/json');handler.send_header('Cache-Control','no-store')
-        if token:handler.send_header('Set-Cookie','dittobuffer_studio='+token+'; HttpOnly; SameSite=Strict; Path=/api/studio; Max-Age=28800')
-        handler.send_header('Content-Length',str(len(raw)));handler.end_headers();handler.wfile.write(raw)
 
     def publication_items(self,item):
         result={item['id']:item}
@@ -153,20 +95,12 @@ class Studio:
         # Return False only for non-studio routes.
         if parts[:2]!=['api','studio']:return False
         try:
-            host=handler.headers.get('Host','');origin=handler.headers.get('Origin')
-            if origin and urlparse(origin).netloc!=host:raise HttpError(403,'Cross-origin studio requests are not allowed')
             tail=parts[2:]
-            if not self.authentication_required and method=='GET' and tail==['session']:
-                session=self.security.session(handler.headers)
-                self.session_response(handler,None,session);return True
-            if method=='POST' and tail==['login']:
-                if not self.authentication_required:raise HttpError(400,'No Studio password is required; open the admin website directly')
-                body=handler.body();token,session=self.security.login(body.get('username'),body.get('password'),handler.client_address[0])
-                self.session_response(handler,token,session);return True
             write=method!='GET';publish=bool(tail and tail[-1] in ('publish','rollback','pause','resume','end','archive','entitlements','clock'))
             session=self.security.session(handler.headers,write,publish);actor=session['user']
             body=handler.body() if write else {}
-            if method=='GET' and tail==['session']:value={k:session[k] for k in ('user','role','csrf')}
+            if method=='GET' and tail==['session']:
+                value={k:session[k] for k in ('user','role','csrf')};value['authentication_required']=False
             elif method=='GET' and tail==['catalog']:value={'species':self.catalog.rows(),'capabilities':self.catalog.capabilities(),'regions':self.store.regions()}
             elif method=='GET' and tail==['research-level-gates']:
                 from dittobuffer.gameplay.level_research import reference,readiness

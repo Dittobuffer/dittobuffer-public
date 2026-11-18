@@ -629,7 +629,17 @@ def complete(game,db,player,body):
     from dittobuffer.gameplay.species import choose_gender
     display_rng=random.Random(f'display:{row["seed"]}:{player}')
     from dittobuffer.gameplay import liveops
-    variant=pool_rules(game,boss)
+    # Older admin raids predate the form/costume fields in the definition. The
+    # stored boss Pokemon still carries the real visual identity; use it so an
+    # Armored Mewtwo (or any alternate form) is caught as itself, not a clone.
+    identity=dict(boss)
+    try:
+        boss_pokemon=p.PokemonProto.FromString(row['pokemon'])
+        identity.setdefault('form',boss_pokemon.pokemon_display.form)
+        if not identity.get('costume'):identity['costume']=boss_pokemon.pokemon_display.costume
+    except Exception:
+        pass
+    variant=pool_rules(game,identity)
     rate=liveops.shiny_rate(game,boss.get('shiny_rate',0),boss['species'],variant['form'],source='raids')
     shiny=int.from_bytes(hashlib.sha256(f'{row["seed"]}:{player}'.encode()).digest()[:4],'big')/2**32<rate
     shiny=shiny and (boss['species'],variant['form']) in game.shiny_eligible
@@ -639,7 +649,7 @@ def complete(game,db,player,body):
     iv_rng=random.Random(f'ivs:{row["seed"]}:{player}')
     reward_ivs=[iv_rng.randint(iv_floor,15) for _ in range(3)]
     pokemon=make_pokemon(p,variant,boss['species'],boss.get('level',20),reward_ivs,
-        shiny,boss.get('gender') or choose_gender(game,boss['species'],display_rng),costume=boss.get('costume',0))
+        shiny,boss.get('gender') or choose_gender(game,boss['species'],display_rng),costume=identity.get('costume',0))
     if boss.get('shadow'):pokemon.pokemon_display.alignment=1
     from dittobuffer.gameplay.pokemon_sizes import assign as assign_size
     assign_size(game,pokemon,boss,display_rng)
@@ -706,4 +716,6 @@ def encounter_details(game,db,player,body):
         from dittobuffer.gameplay.pokedex import record
         born=db.execute('SELECT data FROM spawn_attributes WHERE spawn_id=?',(m['spawn_id'],)).fetchone()
         if born:record(game,db,player,'spawn:'+str(m['spawn_id']),p.PokemonProto.FromString(born['data']))
-    return p.GetRaidEncounterDetailsOutProto(result=3 if current==9 else 1,trainer_battle_state=current,throws_remaining=m['balls'],raid_ball=5,capture_probabilities=probabilities(game),appraisal_star=3)
+    return p.GetRaidEncounterDetailsOutProto(result=3 if current==9 else 1,trainer_battle_state=current,
+        throws_remaining=0 if current==9 else max(0,m['balls']),raid_ball=5,
+        capture_probabilities=probabilities(game),appraisal_star=3)

@@ -35,4 +35,4 @@ echo "Bootstrapping Dittobuffer on ${ARCH} with $("$PYTHON" --version 2>&1)"
 
 echo
 echo "Runtime ready: $ROOT/.venv"
-echo "Start it with:  bash start-server.sh"
+echo "Start it with:  ./start-server.sh"

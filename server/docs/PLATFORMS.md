@@ -9,11 +9,11 @@ particular CPU architecture.
 | Host | Start | Notes |
 |---|---|---|
 | Windows 10/11 x64 | `START-SERVER.bat` | Uses `.venv\Scripts\python.exe`; ADB is optional. |
-| Linux x86_64 | `bash start-server.sh` | Creates `.venv` on first use. |
-| Linux ARM64 (Raspberry Pi 4/5, ARM servers) | `bash start-server.sh` | Same source; use a 64-bit Python 3.11+ build. |
-| Linux ARMv7 | `bash start-server.sh` | 32-bit Python works, but the supplied Android APK is arm64-only. |
-| Linux RISC-V 64 | `bash start-server.sh` | Python 3.11+ is required; install `python3-venv` and `python3-pip`. |
-| macOS Intel / Apple silicon | `bash start-server.sh` or double-click `start-server.command` | Use Homebrew Python 3.13 if the system Python is older than 3.11. |
+| Linux x86_64 | `./start-server.sh` | Creates `.venv` on first use. |
+| Linux ARM64 (Raspberry Pi 4/5, ARM servers) | `./start-server.sh` | Same source; use a 64-bit Python 3.11+ build. |
+| Linux ARMv7 | `./start-server.sh` | 32-bit Python works, but the supplied Android APK is arm64-only. |
+| Linux RISC-V 64 | `./start-server.sh` | Python 3.11+ is required; install `python3-venv` and `python3-pip`. |
+| macOS Intel / Apple silicon | `./start-server.sh` or double-click `start-server.command` | Use Homebrew Python 3.13 if the system Python is older than 3.11. |
 | Docker amd64 | `docker compose up --build` | Server and admin are separate containers. |
 | Docker arm64 | `docker compose up --build` | `python:3.13-slim` publishes an arm64 manifest. |
 | Docker riscv64 | `docker compose -f docker-compose.riscv64.yml up --build` | Best-effort Debian trixie image; `cryptography` may need to compile on older RISC-V toolchains. |
@@ -22,11 +22,9 @@ particular CPU architecture.
 ## Linux/macOS first run
 
 ```bash
-bash scripts/bootstrap.sh
-bash start-server.sh
+./scripts/bootstrap.sh
+./start-server.sh
 ```
-
-Use `./start-server.sh` instead when execute permissions were preserved.
 
 Then open <http://127.0.0.1:8080> for the admin panel. The game server listens on
 `https://127.0.0.1:8445`; the plain-HTTP map origin listens on

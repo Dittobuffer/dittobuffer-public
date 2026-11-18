@@ -3,8 +3,8 @@
 
 Host a room on this server (a room is only a name; no DNS is involved):
 
-    python scripts/configure-platform.py room --room "Family Test" --publish --verify
-    python scripts/configure-platform.py room --room "Family Test" --url https://rooms.example.com --token TOKEN
+    python scripts/configure-platform.py room --room "Otso Test" --publish --verify
+    python scripts/configure-platform.py room --room "Otso Test" --url https://rooms.example.com --token TOKEN
 
 Prepare the self-hosted registry (writes platform/config.json with a generated
 admin token and a public URL):

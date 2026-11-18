@@ -312,6 +312,65 @@ def list_badges(game,db,player,body):
         out.route_badges.add(route_id=route.id,route_type=route.type,start_lat=awarded.start_lat,start_lng=awarded.start_lng,route_name=route.name,route_image_url=route.image.image_url,last_play_end_time=awarded.last_played_time,num_completions=awarded.num_completions,route_duration_seconds=route.route_duration_seconds)
     return out
 
+def storage(db):
+    """Create the Routes schema for the admin console without a Game object."""
+    db.executescript(SCHEMA)
+    return db
+
+def list_rows(db):
+    rows=db.execute('SELECT * FROM routes ORDER BY created_ms DESC').fetchall()
+    result=[]
+    for row in rows:
+        try:route=p.SharedRouteProto.FromString(row['proto'])
+        except Exception:continue
+        try:points=json.loads(row['geometry'])
+        except (TypeError,ValueError):points=[]
+        result.append(dict(route_id=row['id'],name=route.name,description=route.description,
+            official=row['status']=='PUBLISHED',status=row['status'],distance_m=row['length_m'],
+            waypoints=[dict(lat=lat,lng=lng) for lat,lng in points],created_ms=row['created_ms']))
+    return result
+
+def create_row(db,body):
+    """Store a route drafted in the admin map without requiring native anchors."""
+    if not isinstance(body,dict):raise ValueError('Route must be an object')
+    name=str(body.get('name') or '').strip()
+    if not name:raise ValueError('Give the route a name')
+    points=[]
+    for item in body.get('waypoints') or []:
+        if not isinstance(item,dict):raise ValueError('Waypoints must be objects')
+        try:lat=float(item.get('lat'));lng=float(item.get('lng'))
+        except (TypeError,ValueError):raise ValueError('Waypoint coordinates must be numbers')
+        if not (-85<=lat<=85 and -180<=lng<=180):raise ValueError('Waypoint out of range')
+        points.append((lat,lng))
+    if len(points)<2:raise ValueError('Add at least two waypoints')
+    total=validate(points,1,2_000_000)
+    route_id='admin-'+hashlib.sha256((name+json.dumps(points,separators=(',',':'))).encode()).hexdigest()[:20]
+    route=p.SharedRouteProto(id=route_id,name=name[:80],description=str(body.get('description') or '')[:2000],reversible=True)
+    route.route_distance_meters=round(total);route.route_duration_seconds=round(total/1.25)
+    route.version=1;route.type=1;route.path_type=1
+    route.aggregated_stats.SetInParent();route.player_stats.SetInParent()
+    route.creator_info.creator_player_id='dittobuffer-admin'
+    route.creator_info.creator_codename='Dittobuffer Admin'
+    route.creator_info.show_creator_name=True
+    for lat,lng in points:route.waypoints.add(lat_degrees=lat,lng_degrees=lng)
+    stamp=now_ms();status='PUBLISHED'
+    db.execute('INSERT INTO routes VALUES(?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET status=excluded.status,version=excluded.version,proto=excluded.proto,geometry=excluded.geometry,length_m=excluded.length_m,updated_ms=excluded.updated_ms',
+        (route_id,None,status,route.version,route.SerializeToString(),json.dumps(points),total,json.dumps({'source':'admin-map','official':bool(body.get('official'))}),stamp,stamp))
+    ident=db.execute('SELECT rowid FROM routes WHERE id=?',(route_id,)).fetchone()[0]
+    db.execute('INSERT OR REPLACE INTO route_geo VALUES(?,?,?,?,?)',(ident,min(v[0] for v in points),max(v[0] for v in points),min(v[1] for v in points),max(v[1] for v in points)))
+    return dict(route_id=route_id,name=route.name,description=route.description,official=status=='PUBLISHED',
+                distance_m=total,waypoints=[dict(lat=lat,lng=lng) for lat,lng in points],created_ms=stamp)
+
+def delete_row(db,route_id):
+    row=db.execute('SELECT rowid FROM routes WHERE id=?',(route_id,)).fetchone()
+    if not row:raise ValueError('Unknown route')
+    db.execute('DELETE FROM route_samples WHERE attempt IN (SELECT id FROM route_attempts WHERE route=?)',(route_id,))
+    for table in ('route_attempts','route_badges','route_ratings','route_moderation_audit'):
+        db.execute(f'DELETE FROM {table} WHERE route=?',(route_id,))
+    db.execute('DELETE FROM route_geo WHERE id=?',(row[0],))
+    db.execute('DELETE FROM routes WHERE id=?',(route_id,))
+    return {'deleted':route_id}
+
 def templates(config):
     cfg={**DEFAULTS,**config.get('routes',{})}
     if not cfg['enabled']:return []

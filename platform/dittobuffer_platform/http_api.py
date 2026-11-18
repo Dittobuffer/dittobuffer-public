@@ -158,6 +158,15 @@ def handler(api: Api):
                 return False
             return True
 
+        def republish(self) -> None:
+            """Push the changed world to the retained room at once."""
+            if api.bridge is None:
+                return
+            try:
+                api.bridge.publish_room_now()
+            except Exception:
+                log.exception("Could not republish the room after an admin change")
+
         def _admin_error(self, error: Exception):
             if isinstance(error, WorkspaceNotFound):
                 return self.send_json(404, {"error": str(error)})
@@ -292,52 +301,75 @@ def handler(api: Api):
             try:
                 workspace = api.workspace
                 if suffix == ["liveops"]:
-                    return self.send_json(200, api.platform.save_liveops(body.get("settings", body)))
+                    saved = api.platform.save_liveops(body.get("settings", body))
+                    self.republish()
+                    return self.send_json(200, saved)
                 if suffix == ["pois"]:
                     if api.poi_importer is None:
                         return self.send_json(501, {"error": "POI import is not available"})
-                    return self.send_json(200, api.poi_importer.save_row(body))
+                    saved = api.poi_importer.save_row(body)
+                    self.republish()
+                    return self.send_json(200, saved)
                 if suffix == ["pois", "delete"]:
                     if api.poi_importer is None:
                         return self.send_json(501, {"error": "POI import is not available"})
-                    return self.send_json(200, {"deleted": api.poi_importer.delete_row(
-                        str(body.get("id") or ""))})
+                    deleted = api.poi_importer.delete_row(str(body.get("id") or ""))
+                    self.republish()
+                    return self.send_json(200, {"deleted": deleted})
                 if suffix == ["pois", "clear"]:
                     if api.poi_importer is None:
                         return self.send_json(501, {"error": "POI import is not available"})
-                    return self.send_json(200, api.poi_importer.clear(bool(body.get("auto_only", True))))
+                    cleared = api.poi_importer.clear(bool(body.get("auto_only", True)))
+                    self.republish()
+                    return self.send_json(200, cleared)
                 if suffix == ["world"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.save_settings(body.get("settings", body)))
+                    saved = api.world.save_settings(body.get("settings", body))
+                    self.republish()
+                    return self.send_json(200, saved)
                 if suffix == ["world", "tick"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.tick(force=True))
+                    ticked = api.world.tick(force=True)
+                    self.republish()
+                    return self.send_json(200, ticked)
                 if suffix == ["spawns"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.add_spawn(body))
+                    saved = api.world.add_spawn(body)
+                    self.republish()
+                    return self.send_json(200, saved)
                 if suffix == ["spawns", "delete"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, {"deleted": api.world.delete_spawn(str(body.get("id") or ""))})
+                    deleted = api.world.delete_spawn(str(body.get("id") or ""))
+                    self.republish()
+                    return self.send_json(200, {"deleted": deleted})
                 if suffix == ["spawns", "clear"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.clear_spawns(bool(body.get("auto_only", True))))
+                    cleared = api.world.clear_spawns(bool(body.get("auto_only", True)))
+                    self.republish()
+                    return self.send_json(200, cleared)
                 if suffix == ["raids"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.add_raid(body))
+                    saved = api.world.add_raid(body)
+                    self.republish()
+                    return self.send_json(200, saved)
                 if suffix == ["raids", "delete"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, {"deleted": api.world.delete_raid(str(body.get("id") or ""))})
+                    deleted = api.world.delete_raid(str(body.get("id") or ""))
+                    self.republish()
+                    return self.send_json(200, {"deleted": deleted})
                 if suffix == ["raids", "clear"]:
                     if api.world is None:
                         return self.send_json(501, {"error": "World simulation is not available"})
-                    return self.send_json(200, api.world.clear_raids(bool(body.get("auto_only", True))))
+                    cleared = api.world.clear_raids(bool(body.get("auto_only", True)))
+                    self.republish()
+                    return self.send_json(200, cleared)
                 if suffix == ["profile"]:
                     name = body.get("name")
                     data = body.get("data")

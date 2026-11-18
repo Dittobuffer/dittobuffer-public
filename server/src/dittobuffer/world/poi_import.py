@@ -19,7 +19,7 @@ import urllib.request
 from dittobuffer.paths import ROOT
 
 STATE = ROOT / 'data' / 'world' / 'poi-import.json'
-API = 'https://overpass.openstreetmap.fr/api/interpreter'
+API = 'https://overpass-api.de/api/interpreter'
 USER_AGENT = 'Dittobuffer/0.1 (private Pokemon server; manual POI import)'
 DEFAULTS = {
     # Always-on by default: scan slowly around whichever trainer is playing.

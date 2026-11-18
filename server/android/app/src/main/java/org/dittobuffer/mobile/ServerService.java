@@ -31,9 +31,9 @@ public final class ServerService extends Service {
     }
 
     public static void stop(Context context) {
-        Intent intent = new Intent(context, ServerService.class).setAction(ACTION_STOP);
-        context.startService(intent);
-        context.stopService(intent);
+        // stopService() is safe when the app is in the background; starting a
+        // service just to ask it to stop can throw on modern Android.
+        context.stopService(new Intent(context, ServerService.class));
     }
 
     @Override
@@ -49,8 +49,13 @@ public final class ServerService extends Service {
 
         if (!working && (worker == null || !worker.isAlive())) {
             working = true;
+            ServerRuntime.markStarting();
             final Context context = getApplicationContext();
             worker = new Thread(() -> {
+                // Unpacking 8 GiB must never compete with the UI thread, or
+                // Android reports input-dispatch ANRs and kills the process
+                // half-way through the payload.
+                android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND);
                 try {
                     String result = ServerRuntime.start(context);
                     Log.i("DittobufferMobile", "Python server: " + result);
@@ -62,6 +67,7 @@ public final class ServerService extends Service {
                     notifyState("Server failed: " + error.getClass().getSimpleName());
                 } finally {
                     working = false;
+                    if (!ServerRuntime.isRunning()) ServerRuntime.markStopped();
                 }
             }, "dittobuffer-python");
             worker.start();
@@ -87,6 +93,16 @@ public final class ServerService extends Service {
         PendingIntent open = PendingIntent.getActivity(this, 0,
                 new Intent(this, MainActivity.class),
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        Intent adminIntent = new Intent(this, MainActivity.class)
+                .putExtra(MainActivity.EXTRA_TAB, R.id.nav_admin)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent admin = PendingIntent.getActivity(this, 1, adminIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        Intent gameIntent = new Intent(this, MainActivity.class)
+                .putExtra(MainActivity.EXTRA_LAUNCH_GAME, true)
+                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent game = PendingIntent.getActivity(this, 2, gameIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
         return new NotificationCompat.Builder(this, CHANNEL)
                 .setSmallIcon(android.R.drawable.stat_sys_download_done)
                 .setContentTitle("Dittobuffer server")
@@ -94,6 +110,8 @@ public final class ServerService extends Service {
                 .setOngoing(true)
                 .setSilent(true)
                 .setContentIntent(open)
+                .addAction(android.R.drawable.ic_menu_manage, "Admin", admin)
+                .addAction(android.R.drawable.ic_media_play, "Game", game)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .build();
     }

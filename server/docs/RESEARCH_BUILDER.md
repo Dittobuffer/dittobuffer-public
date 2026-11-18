@@ -1,6 +1,6 @@
 # Research Builder
 
-Use **Seasons & Events > Research Builder** in the existing admin console. [KNOWN-ISSUES.md](KNOWN-ISSUES.md) distinguishes actual Android evidence from automated tests.
+Use **Seasons & Events > Research Builder** in the existing admin console. [M33 acceptance](MILESTONE_33_SEASONS_EVENTS.md) distinguishes actual Android evidence from automated tests.
 
 ## Build a quest
 
@@ -26,7 +26,7 @@ A Special storyline remains available to enrolled players after its event ends; 
 
 ## M25 native layouts and limits
 
-M25 adds verified native Events adapters for Timed quests (section 6), Collection Challenges (section 9), and backend support for timed branching (section 18). Field, seven-stamp Breakthrough, multistage Special, Timed, Collection, permanent branching and a Shaymin cinematic reward were exercised on the Pixel 5. Timed branching remains backend-verified only. See [KNOWN-ISSUES.md](KNOWN-ISSUES.md) for remaining gaps.
+M25 adds verified native Events adapters for Timed quests (section 6), Collection Challenges (section 9), and backend support for timed branching (section 18). Field, seven-stamp Breakthrough, multistage Special, Timed, Collection, permanent branching and a Shaymin cinematic reward were exercised on the Pixel 5. Timed branching remains backend-verified only. See [M25 acceptance and remaining gaps](MILESTONE_25_RESEARCH_PROGRESSION.md).
 
 Timed/Collection/timed-branching windows are start-inclusive and end-exclusive. Completed but unclaimed rewards expire; already granted encounter entitlements survive removal. Special stories remain permanent after enrollment. A seventh stamp freezes its Breakthrough pool and selected encounter before claim. Calendar days use configured IANA time zones, including DST.
 
@@ -34,9 +34,9 @@ Collection menus select species, methods and form. Advanced JSON supports gender
 
 **Preview research** is read-only: tasks, stages, paths, rewards, prerequisites, expiration and resource/feasibility warnings. It never grants rewards. **Level gates 71-80** is a read-only source reference: administrators cannot replace verified gate requirements in the content editor. Six original import examples are under `config/liveops-examples/research/`, also available in Templates. They are drafts until separately published.
 
-The M33 Pixel acceptance earned a Season task from a real spin, completed it through three catches, then claimed its native 300 XP award and stamp. This task was enrolled before the Field stage-reward bundling correction and correctly retained its earlier frozen reward. Later tasks use the corrected bundled configuration.
+The M33 Pixel acceptance earned a Season task from a real spin, completed it through three catches, then claimed its native 300 XP award and stamp. This task was enrolled before the Field stage-reward bundling correction and correctly retained its earlier frozen reward. Later tasks use the corrected bundled configuration. See the evidence report for exact screenshots and persistent state.
 
 
 ## M25.1 native presentation follow-up
 
-Branch cards now use original locally served card art to avoid the native white-mask/white-text combination. Completed stories retain distinct archive titles. Claimed Collection Challenges project durable Elite Collector count/history; incomplete challenges do not count. Daily/streak gates refresh on local date changes without discarding completed unclaimed criteria. See [KNOWN-ISSUES.md](KNOWN-ISSUES.md). Native Collection `Ended` wording, stable-ID history labels and confirmation illustration polish remain open.
+Branch cards now use original locally served card art to avoid the native white-mask/white-text combination. Completed stories retain distinct archive titles. Claimed Collection Challenges project durable Elite Collector count/history; incomplete challenges do not count. Daily/streak gates refresh on local date changes without discarding completed unclaimed criteria. See [M25.1 verification and remaining gaps](MILESTONE_25_1_RESEARCH_UI_POLISH.md). Native Collection `Ended` wording, stable-ID history labels and confirmation illustration polish remain open.
